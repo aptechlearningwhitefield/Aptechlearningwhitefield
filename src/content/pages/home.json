@@ -1,0 +1,635 @@
+{
+  "hero": {
+    "headline": "Build Your Future with Industry-Ready Technology Skills",
+    "subheading": "Welcome to Aptech Learning Whitefield",
+    "brandLine1": "NO 1 LEADING AI & ML, DATA SCIENCE AND IT Training Institute.",
+    "brandLine2": "",
+    "description": "Industry-focused training in AI, Data Science, Machine Learning, Full Stack Development, Data Analytics and Python.",
+    "pills": []
+  },
+  "trustBar": {
+    "stats": [
+      {
+        "id": "tb1",
+        "value": "50+",
+        "label": "Students Trained"
+      },
+      {
+        "id": "tb2",
+        "value": "100+",
+        "label": "Hiring Partners"
+      },
+      {
+        "id": "tb3",
+        "value": "30+",
+        "label": "Courses Offered"
+      },
+      {
+        "id": "tb4",
+        "value": "90%",
+        "label": "Placement Rate"
+      }
+    ]
+  },
+  "about": {
+    "badge": "Authorized Aptech Learning Franchise Centre",
+    "title": "About Aptech Learning Whitefield",
+    "subtitle": "Operated by Cheekira Tech Pvt. Ltd.",
+    "description": "Aptech Learning Whitefield is a premier technology education centre in the heart of Whitefield, Bangalore. As an Authorized Aptech Learning Franchise Centre operated by Cheekira Tech Pvt. Ltd., we deliver career-focused IT training that bridges the gap between education and industry. \n\nAptech Learning Website: https://www.aptechlearning.com/",
+    "description2": "Our programs are designed by industry experts and delivered through a blend of classroom and online learning, ensuring students gain practical, job-ready skills. From fresh graduates to working professionals, we empower every learner to achieve their career goals.",
+    "highlights": [
+      {
+        "id": "ah1",
+        "text": "Industry-aligned curriculum updated regularly"
+      },
+      {
+        "id": "ah2",
+        "text": "Experience and Guest faculty with real-world experience"
+      },
+      {
+        "id": "ah3",
+        "text": "Hands-on projects and live case studies"
+      },
+      {
+        "id": "ah4",
+        "text": "Dedicated placement assistance and career mentoring"
+      },
+      {
+        "id": "ah5",
+        "text": "Flexible classroom and online batch options"
+      },
+      {
+        "id": "ah6",
+        "text": "Globally recognized Aptech certifications"
+      }
+    ]
+  },
+  "courses": {
+    "sectionTitle": "Industry-Ready Courses for the Digital Economy",
+    "sectionSubtitle": "Choose from our comprehensive range of technology programs designed to make you job-ready",
+    "items": [
+      {
+        "id": "c1",
+        "name": "Smart Professional Program-AI & Machine Learning",
+        "duration": "348 hours",
+        "level": "Beginner to Advanced",
+        "skills": [
+          "Python",
+          "SQL",
+          "Machine Learning",
+          "NLP"
+        ],
+        "color": "blue",
+        "popular": true
+      },
+      {
+        "id": "c2",
+        "name": "Generative AI",
+        "duration": "86 hours",
+        "level": "Beginner to Intermediate",
+        "skills": ["ChatGPT", "Gemini", "Perplexity", "Claude"],
+        "color": "purple",
+        "popular": true
+      },
+      {
+        "id": "genai-accelerator",
+        "name": "GenAI Accelerator",
+        "duration": "32 hours",
+        "level": "Beginner",
+        "skills": ["ChatGPT", "Gemini", "Claude", "AI Tools"],
+        "color": "purple",
+        "popular": false
+      },
+      {
+        "id": "prompt-engineering",
+        "name": "Prompt Engineering",
+        "duration": "24 hours",
+        "level": "Beginner to Intermediate",
+        "skills": ["Prompt Design", "ChatGPT", "MidJourney", "Gemini"],
+        "color": "purple",
+        "popular": false
+      },
+      {
+        "id": "innovate-generative-ai",
+        "name": "Innovate with Generative AI",
+        "duration": "30 hours",
+        "level": "Beginner to Intermediate",
+        "skills": ["AI Workflows", "Claude", "Gemini", "Canva"],
+        "color": "purple",
+        "popular": false
+      },
+      {
+        "id": "rapid-app-development",
+        "name": "Rapid App Development Using Low/No-Code Approach",
+        "duration": "30 hours",
+        "level": "Beginner to Intermediate",
+        "skills": ["Bubble.io", "Power Apps", "Zapier", "Airtable"],
+        "color": "teal",
+        "popular": false
+      },
+      {
+        "id": "data-science-essentials",
+        "name": "Data Science Essentials",
+        "duration": "120 hours",
+        "level": "Beginner",
+        "skills": ["MongoDB", "Python", "R Programming"],
+        "color": "green",
+        "popular": false
+      },
+      {
+        "id": "data-visualization-power-bi",
+        "name": "Data Visualization using Power BI",
+        "duration": "128 hours",
+        "level": "Beginner to Intermediate",
+        "skills": ["Excel", "SQL Server", "Python", "Power BI"],
+        "color": "orange",
+        "popular": false
+      },
+      {
+        "id": "c3",
+        "name": "Smart Professional Program - Data Science",
+        "duration": "384 hours",
+        "level": "Beginner to Advanced",
+        "skills": [
+          "R Programming",
+          "Data Mining with Weka",
+          "SQL & Hadoop",
+          "Visualization"
+        ],
+        "color": "green",
+        "popular": false
+      },
+      {
+        "id": "c4",
+        "name": "Data Analytics Using Power BI",
+        "duration": "100 hours",
+        "level": "Beginner to Intermediate",
+        "skills": [
+          "Power BI",
+          "Excel",
+          "SQL",
+          "Python"
+        ],
+        "color": "orange",
+        "popular": false
+      },
+      {
+        "id": "c5",
+        "name": "Programming with Python",
+        "duration": "64 hours",
+        "level": "Beginner to Advanced",
+        "skills": [
+          "Python",
+          "Sql",
+          "Database integration",
+          "Application development"
+        ],
+        "color": "yellow",
+        "popular": false
+      },
+      {
+        "id": "c7",
+        "name": "Full Stack Python Development",
+        "duration": "260 hours",
+        "level": "Beginner to Advanced",
+        "skills": [
+          "React",
+          "Node.js",
+          "MongoDB",
+          "REST APIs"
+        ],
+        "color": "teal",
+        "popular": false
+      },
+      {
+        "id": "c8",
+        "name": "Cloud Computing",
+        "duration": "120 hours",
+        "level": "Intermediate",
+        "skills": [
+          "AWS",
+          "Azure",
+          "GCP",
+          "DevOps"
+        ],
+        "color": "sky",
+        "popular": false
+      },
+      {
+        "id": "c9",
+        "name": "Microsoft Technologies",
+        "duration": "128 hours",
+        "level": "Beginner to Advanced",
+        "skills": [
+          "MS Intune",
+          "Copilot",
+          "Azure AD",
+          "M365"
+        ],
+        "color": "indigo",
+        "popular": false
+      },
+      {
+        "id": "foundation-ai-ml",
+        "name": "Foundation Program in AI & Machine Learning",
+        "duration": "100 hours",
+        "level": "Beginner",
+        "skills": ["AI Primer", "NLP", "Machine Learning"],
+        "color": "blue",
+        "popular": false
+      },
+      {
+        "id": "advanced-ai-ml",
+        "name": "Advanced Program in AI & Machine Learning",
+        "duration": "100 hours",
+        "level": "Intermediate to Advanced",
+        "skills": ["Deep Learning", "AI APIs", "TensorFlow", "Neural Networks"],
+        "color": "blue",
+        "popular": false
+      }
+    ]
+  },
+  "whyUs": {
+    "sectionTitle": "Why Choose Aptech Learning Whitefield?",
+    "sectionSubtitle": "We combine global curriculum standards with local expertise to deliver an unmatched learning experience",
+    "features": [
+      {
+        "id": "wu1",
+        "number": "10+",
+        "title": "Industry Expert Faculty",
+        "description": "Learn from certified professionals with  4 to 10+ years of real-world industry experience across top tech companies."
+      },
+      {
+        "id": "wu2",
+        "number": "100%",
+        "title": "Hands-on Project Training",
+        "description": "Every course includes live projects, case studies and portfolio-building assignments that employers value."
+      },
+      {
+        "id": "wu3",
+        "number": "100%",
+        "title": "Placement Assistance & Career Guidance",
+        "description": "Dedicated placement cell, resume building, mock interviews and direct connections with 100+ hiring partners."
+      },
+      {
+        "id": "wu4",
+        "number": "2x",
+        "title": "Flexible Classroom & Online Batches",
+        "description": "Choose from weekday, weekend, morning or evening batches — classroom or online — to fit your schedule."
+      }
+    ]
+  },
+  "journey": {
+    "sectionTitle": "Your Learning Journey",
+    "sectionSubtitle": "A structured path from enrollment to placement — we guide you every step of the way",
+    "steps": [
+      {
+        "id": "lj1",
+        "step": "01",
+        "title": "Enroll",
+        "description": "Choose your course and batch. Get a free career counselling session to find the right fit."
+      },
+      {
+        "id": "lj2",
+        "step": "02",
+        "title": "Learn from Experts",
+        "description": "Attend live classes with industry experts. Access study materials & assignment from Aptech Online varsity  anytime."
+      },
+      {
+        "id": "lj3",
+        "step": "03",
+        "title": "Work on Projects",
+        "description": "Apply your skills on real-world projects and build a strong portfolio that stands out."
+      },
+      {
+        "id": "lj4",
+        "step": "04",
+        "title": "Get Certified",
+        "description": "Earn globally recognized Aptech certifications that validate your expertise to employers."
+      },
+      {
+        "id": "lj5",
+        "step": "05",
+        "title": "Career Support",
+        "description": "Get resume reviews, LinkedIn optimization, mock interviews and soft skills training."
+      },
+      {
+        "id": "lj6",
+        "step": "06",
+        "title": "Get Placed",
+        "description": "Connect with our 100+ hiring partners and land your dream job with our placement assistance."
+      }
+    ]
+  },
+  "placement": {
+    "sectionTitle": "Placement Assistance & Career Support",
+    "sectionSubtitle": "We don't just train you — we help you launch your career. Aptech Learning has a dedicated Placment team who works with all Center Students to help them with opportunities and placement support through Aptech Tie ups.",
+    "stats": [
+      {
+        "id": "ps1",
+        "value": "500+",
+        "label": ""
+      },
+      {
+        "id": "ps2",
+        "value": "100+",
+        "label": "Hiring Partners"
+      },
+      {
+        "id": "ps3",
+        "value": "95%",
+        "label": "Placement Rate"
+      },
+      {
+        "id": "ps4",
+        "value": "100%",
+        "label": "Career Support"
+      }
+    ],
+    "features": [
+      {
+        "id": "pf1",
+        "text": "Dedicated placement cell with industry connections"
+      },
+      {
+        "id": "pf2",
+        "text": "Resume building and LinkedIn profile optimization"
+      },
+      {
+        "id": "pf3",
+        "text": "Mock interviews with industry experts"
+      },
+      {
+        "id": "pf4",
+        "text": "Soft skills and communication training"
+      },
+      {
+        "id": "pf5",
+        "text": "Direct referrals to 50+ hiring companies"
+      },
+      {
+        "id": "pf6",
+        "text": "Lifetime alumni network access"
+      }
+    ],
+    "partners": [
+      {
+        "id": "pp1",
+        "name": "Infosys"
+      },
+      {
+        "id": "pp2",
+        "name": "Wipro"
+      },
+      {
+        "id": "pp3",
+        "name": "TCS"
+      },
+      {
+        "id": "pp4",
+        "name": "Accenture"
+      },
+      {
+        "id": "pp5",
+        "name": "Cognizant"
+      },
+      {
+        "id": "pp6",
+        "name": "HCL"
+      },
+      {
+        "id": "pp7",
+        "name": "Tech Mahindra"
+      },
+      {
+        "id": "pp8",
+        "name": "Capgemini"
+      }
+    ]
+  },
+  "corporate": {
+    "sectionTitle": "Corporate Training Solutions",
+    "sectionSubtitle": "Customized instructor-led programs for your workforce",
+    "description": "Upskill your teams with our customized corporate training programs. We deliver instructor-led, hands-on training in the latest technologies — tailored to your business needs, timeline and learning objectives.",
+    "programs": [
+      {
+        "id": "cp1",
+        "name": "AI & Machine Learning"
+      },
+      {
+        "id": "cp2",
+        "name": "Data Science & Analytics"
+      },
+      {
+        "id": "cp3",
+        "name": "Generative AI & Microsoft Copilot"
+      },
+      {
+        "id": "cp4",
+        "name": "Microsoft Intune & M365"
+      },
+      {
+        "id": "cp5",
+        "name": "Power BI & Data Visualization"
+      },
+      {
+        "id": "cp6",
+        "name": "Python for Business"
+      }
+    ],
+    "benefits": [
+      {
+        "id": "cb1",
+        "text": "Customized curriculum for your industry"
+      },
+      {
+        "id": "cb2",
+        "text": "Flexible on-site or online delivery"
+      },
+      {
+        "id": "cb3",
+        "text": "Certified trainers with industry experience"
+      },
+      {
+        "id": "cb4",
+        "text": "Post-training assessment and certification"
+      }
+    ]
+  },
+  "schoolsColleges": {
+    "sectionTitle": "Empowering Schools & Colleges",
+    "sectionSubtitle": "Building the next generation of tech talent through specialized programs",
+    "schools": {
+      "title": "For Schools",
+      "subtitle": "Future-ready programs for school students",
+      "programs": [
+        {
+          "id": "sp1",
+          "name": "Coding & Programming"
+        },
+        {
+          "id": "sp2",
+          "name": "AI & Robotics"
+        },
+        {
+          "id": "sp3",
+          "name": "Digital Literacy"
+        },
+        {
+          "id": "sp4",
+          "name": "Python for Beginners"
+        },
+        {
+          "id": "sp5",
+          "name": "Holiday Tech Camps"
+        }
+      ],
+      "description": "Engaging, age-appropriate technology programs that spark curiosity and build foundational digital skills in school students."
+    },
+    "colleges": {
+      "title": "For Colleges",
+      "subtitle": "Career readiness programs for college students",
+      "programs": [
+        {
+          "id": "col1",
+          "name": "Campus Recruitment Training"
+        },
+        {
+          "id": "col2",
+          "name": "Placement Readiness Program"
+        },
+        {
+          "id": "col3",
+          "name": "Final Year Project Guidance"
+        },
+        {
+          "id": "col4",
+          "name": "Technical Workshops"
+        },
+        {
+          "id": "col5",
+          "name": "Industry Certification Prep"
+        }
+      ],
+      "description": "Comprehensive placement readiness and technical upskilling programs that bridge the gap between college education and industry expectations."
+    }
+  },
+  "testimonials": {
+    "sectionTitle": "",
+    "sectionSubtitle": "Real stories from students who transformed their careers with Aptech Learning Whitefield",
+    "items": [
+      {
+        "id": "t1",
+        "name": "Priya Sharma",
+        "course": "Data Science",
+        "company": "Placed at MNC, Bangalore",
+        "rating": 5,
+        "quote": "The Data Science course at Aptech Learning Whitefield completely transformed my career. The hands-on projects and placement support helped me land my dream job at Infosys within 2 months of completing the course."
+      },
+      {
+        "id": "t2",
+        "name": "Balu B",
+        "course": "Full Stack Development",
+        "company": "Placed at 511 Digital Marketing, Chennai",
+        "rating": 5,
+        "quote": "Excellent faculty and curriculum. The real-world projects gave me the confidence to crack interviews. The placement team was incredibly supportive throughout the process."
+      },
+      {
+        "id": "t3",
+        "name": "Ananya Krishnan",
+        "course": "AI & Machine Learning",
+        "company": "Placed at MNC, Bangalore",
+        "rating": 5,
+        "quote": "Best IT training institute in Whitefield! The AI course content is up-to-date with industry trends. I got placed at TCS with a 40% salary hike thanks to the skills I gained here."
+      }
+    ]
+  },
+  "faqs": {
+    "sectionTitle": "Frequently Asked Questions",
+    "sectionSubtitle": "Everything you need to know about our courses and programs",
+    "items": [
+      {
+        "id": "faq1",
+        "question": "What courses does Aptech Learning Whitefield offer?",
+        "answer": "We offer a comprehensive range of IT courses specialized in AI & Machine Learning, Data Science, Generative AI, Data Analytics & Power BI, Python, Cybersecurity, Full Stack Development, Cloud Computing, Microsoft Technologies and Digital Marketing."
+      },
+      {
+        "id": "faq2",
+        "question": "Do you offer both classroom and online learning?",
+        "answer": "Yes! We offer flexible learning modes — classroom training at our Whitefield centre and live online classes. You can choose the mode that best fits your schedule and learning preference."
+      },
+      {
+        "id": "faq3",
+        "question": "What is the duration of the courses?",
+        "answer": "Course durations vary by program and are offered in hours, from short 24-hour programs to comprehensive 384-hour programs."
+      },
+      {
+        "id": "faq4",
+        "question": "Do you provide placement assistance?",
+        "answer": "Absolutely! We have a dedicated placement cell that provides resume building, LinkedIn optimization, mock interviews, soft skills training and direct referrals to our 50+ hiring partner companies. We maintain a 95% placement rate.\nPlacement assistance is applicable for long term courses called Smart Professional Programs"
+      },
+      {
+        "id": "faq5",
+        "question": "What certifications will I receive after completing a course?",
+        "answer": "Upon successful completion, you receive globally recognized Aptech certifications. These are industry-valued credentials that enhance your resume and are recognized by employers across India and internationally.\n\nExclusively in our Center, we offer Free vouchers to get certify on Microsoft, Google Certifications on selected long term programs."
+      },
+      {
+        "id": "faq6",
+        "question": "Who can enroll in your courses?",
+        "answer": "Our courses are open to students (10+2 and above), fresh graduates, working professionals looking to upskill, career changers and job seekers. We have programs suitable for all experience levels from beginner to advanced."
+      },
+      {
+        "id": "faq7",
+        "question": "Do you offer corporate training programs?",
+        "answer": "Yes, we offer customized corporate training programs for companies looking to upskill their teams. We deliver instructor-led training in AI, Data Science, Microsoft Technologies, Power BI and more — tailored to your specific business needs."
+      },
+      {
+        "id": "faq8",
+        "question": "How can I book a free career counselling session?",
+        "answer": "You can book a free career counselling session by clicking the 'Book Free Career Counselling' button on our website, calling us at +91 74113 33500, or WhatsApp-ing us. Our counsellors will help you choose the right course for your career goals."
+      }
+    ]
+  },
+  "blogs": {
+    "sectionTitle": "Resources & Insights",
+    "sectionSubtitle": "Stay updated with the latest in technology, career tips and industry trends",
+    "items": [
+      {
+        "id": "b1",
+        "category": "AI & Machine Learning",
+        "title": "Top 10 AI Skills That Will Get You Hired in 2026",
+        "excerpt": "Artificial Intelligence is reshaping every industry. Discover the most in-demand AI skills employers are looking for in Bangalore's booming tech market.",
+        "date": "July 10, 2026",
+        "readTime": "5 min read",
+        "slug": "top-ai-skills-2026"
+      },
+      {
+        "id": "b2",
+        "category": "Career Tips",
+        "title": "How to Transition into Data Science from a Non-Tech Background",
+        "excerpt": "Thinking of switching to Data Science? Here's a practical roadmap for professionals from any background to break into one of the most sought-after tech careers.",
+        "date": "July 5, 2026",
+        "readTime": "7 min read",
+        "slug": "data-science-career-transition"
+      },
+      {
+        "id": "b3",
+        "category": "Cybersecurity",
+        "title": "Why Cybersecurity is the Hottest Career in Bangalore Right Now",
+        "excerpt": "With cyber threats on the rise, companies are desperately hiring cybersecurity professionals. Learn why this is the perfect time to start your cybersecurity career.",
+        "date": "June 28, 2026",
+        "readTime": "6 min read",
+        "slug": "cybersecurity-career-bangalore"
+      }
+    ]
+  },
+  "contact": {
+    "sectionTitle": "Get in Touch",
+    "sectionSubtitle": "Have questions? Our counsellors are ready to help you choose the right course",
+    "address": "Near Kadugodi Tree Park Metro, Whitefield, Bangalore 560066",
+    "phone": "+91 74113 33500",
+    "studentEmail": "aptechlearningwhitefield@gmail.com",
+    "corporateEmail": "admin@cheekiratech.in",
+    "hours": "Mon – Sat: 10:00 AM – 7:00 PM | Sunday: Closed"
+  }
+}

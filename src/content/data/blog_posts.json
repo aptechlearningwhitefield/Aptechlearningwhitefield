@@ -1,0 +1,110 @@
+[
+  {
+    "id": "bp1",
+    "slug": "ai-machine-learning-career-2026",
+    "title": "AI & Machine Learning Careers in 2026: Skills, Salaries & How to Get Started",
+    "excerpt": "Artificial Intelligence is no longer the future — it's the present. Discover the most in-demand AI skills, realistic salary expectations, and a step-by-step roadmap to launch your AI career from Bangalore.",
+    "category": "AI & Machine Learning",
+    "author": "Aptech Learning Whitefield",
+    "date": "2026-07-10",
+    "readTime": "7 min read",
+    "featured": true,
+    "tags": [
+      "AI",
+      "Machine Learning",
+      "Career",
+      "Bangalore",
+      "IT Training"
+    ]
+  },
+  {
+    "id": "bp2",
+    "slug": "data-science-vs-data-analytics",
+    "title": "Data Science vs Data Analytics: Which Career Path is Right for You?",
+    "excerpt": "Confused between Data Science and Data Analytics? We break down the differences in roles, skills, tools, and salaries — so you can choose the right path for your goals.",
+    "category": "Data Science",
+    "author": "Aptech Learning Whitefield",
+    "date": "2026-07-05",
+    "readTime": "6 min read",
+    "featured": true,
+    "tags": [
+      "Data Science",
+      "Data Analytics",
+      "Career",
+      "Python",
+      "Power BI"
+    ]
+  },
+  {
+    "id": "bp3",
+    "slug": "python-for-beginners-whitefield",
+    "title": "Python for Beginners: Why It's the Best First Programming Language in 2026",
+    "excerpt": "Python is the world's most popular programming language — and for good reason. Learn why beginners in Whitefield and Bangalore are choosing Python as their entry point into tech careers.",
+    "category": "Python",
+    "author": "Aptech Learning Whitefield",
+    "date": "2026-06-28",
+    "readTime": "5 min read",
+    "featured": false,
+    "tags": [
+      "Python",
+      "Beginners",
+      "Programming",
+      "Whitefield",
+      "IT Training"
+    ]
+  },
+  {
+    "id": "bp4",
+    "slug": "cybersecurity-career-bangalore",
+    "title": "Cybersecurity Careers in Bangalore: Why Demand is Skyrocketing in 2026",
+    "excerpt": "With cyberattacks rising globally, cybersecurity professionals are among the most sought-after in Bangalore's IT sector. Here's what you need to know to break into this high-paying field.",
+    "category": "Cybersecurity",
+    "author": "Aptech Learning Whitefield",
+    "date": "2026-06-20",
+    "readTime": "6 min read",
+    "featured": false,
+    "tags": [
+      "Cybersecurity",
+      "Career",
+      "Bangalore",
+      "Ethical Hacking",
+      "IT Security"
+    ]
+  },
+  {
+    "id": "bp5",
+    "slug": "generative-ai-workplace-productivity",
+    "title": "How Generative AI is Transforming Workplace Productivity in 2026",
+    "excerpt": "From writing emails to generating code, Generative AI tools like ChatGPT and Copilot are reshaping how professionals work. Learn how to leverage these tools to stay ahead.",
+    "category": "Generative AI",
+    "author": "Aptech Learning Whitefield",
+    "date": "2026-06-15",
+    "readTime": "5 min read",
+    "featured": true,
+    "tags": [
+      "Generative AI",
+      "ChatGPT",
+      "Productivity",
+      "Prompt Engineering",
+      "AI Tools"
+    ]
+  },
+  {
+    "id": "bp6",
+    "slug": "cloud-computing-aws-azure-guide",
+    "title": "AWS vs Azure: Which Cloud Platform Should You Learn First?",
+    "excerpt": "Both AWS and Azure dominate the cloud market — but which one should you focus on first? We compare job demand, certifications, salaries, and learning curves to help you decide.",
+    "category": "Cloud Computing",
+    "author": "Aptech Learning Whitefield",
+    "date": "2026-06-08",
+    "readTime": "7 min read",
+    "featured": false,
+    "tags": [
+      "Cloud Computing",
+      "AWS",
+      "Azure",
+      "Certification",
+      "Career"
+    ]
+  }
+]

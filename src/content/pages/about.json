@@ -1,0 +1,225 @@
+{
+  "hero": {
+    "badge": "About Us",
+    "title": "Empowering Careers Through World-Class IT Education",
+    "subtitle": "Aptech Learning Whitefield is an Authorized Aptech Learning Franchise Centre operated by Cheekira Tech Pvt. Ltd. — bringing 35+ years of Aptech's global expertise to the heart of Whitefield, Bangalore."
+  },
+  "story": {
+    "badge": "Our Story",
+    "title": "Born in Whitefield. Built for Bangalore's IT Future.",
+    "body1": "Cheekira Tech Pvt. Ltd. was founded with a single mission: to bridge the gap between academic education and the real demands of the IT industry. Whitefield — Bangalore's technology corridor — is home to hundreds of IT companies, yet thousands of graduates struggle to land their first job due to a lack of practical, industry-aligned skills.",
+    "body2": "We partnered with Aptech Learning, India's most trusted IT training brand with over 35 years of excellence and a presence in 40+ countries, to bring world-class curriculum and globally recognized certifications to Whitefield. Today, Aptech Learning Whitefield is the go-to training centre for students, working professionals, and corporates in East Bangalore.",
+    "body3": "From our state-of-the-art classroom facility near Kadugodi Tree Park Metro to our dedicated placement cell, every aspect of our centre is designed to maximize your career outcomes.",
+    "highlights": [
+      {
+        "id": "h1",
+        "text": "Authorized Aptech Learning Franchise Centre"
+      },
+      {
+        "id": "h2",
+        "text": "Operated by Cheekira Tech Pvt. Ltd."
+      },
+      {
+        "id": "h3",
+        "text": "Located in Whitefield, Bangalore's IT hub"
+      },
+      {
+        "id": "h4",
+        "text": "Globally recognized Aptech certifications"
+      },
+      {
+        "id": "h5",
+        "text": "Industry-aligned curriculum updated regularly"
+      },
+      {
+        "id": "h6",
+        "text": "Dedicated placement cell with 100+ hiring partners"
+      }
+    ]
+  },
+  "mission": {
+    "title": "Mission, Vision & Values",
+    "mission": {
+      "label": "Our Mission",
+      "text": "To deliver industry-ready IT education that transforms careers — making quality technology training accessible, practical, and placement-focused for every student in Whitefield and beyond."
+    },
+    "vision": {
+      "label": "Our Vision",
+      "text": "To be East Bangalore's most trusted IT training destination — where every student who walks in leaves with the skills, confidence, and connections to thrive in the technology industry."
+    },
+    "values": [
+      {
+        "id": "v1",
+        "title": "Excellence",
+        "desc": "We hold ourselves to the highest standards in curriculum quality, instructor expertise, and student outcomes."
+      },
+      {
+        "id": "v2",
+        "title": "Practicality",
+        "desc": "Theory without practice is incomplete. Every course is built around real projects, real tools, and real-world scenarios."
+      },
+      {
+        "id": "v3",
+        "title": "Integrity",
+        "desc": "We are transparent about what we offer, honest about outcomes, and committed to every student's success."
+      },
+      {
+        "id": "v4",
+        "title": "Inclusivity",
+        "desc": "Whether you're a fresher, a working professional, or a career-changer — our programmes are designed for you."
+      }
+    ]
+  },
+  "aptech": {
+    "badge": "The Aptech Advantage",
+    "title": "40+ Years of Global IT Training Excellence",
+    "body": "Aptech Learning is India's most recognized IT training brand, established in 1986. With a presence in 40+ countries, 10,000+ alumni globally, and partnerships with leading technology companies, an Aptech certification is recognized and respected by employers worldwide.",
+    "stats": [
+      {
+        "id": "as1",
+        "value": "40+",
+        "label": "Years of Excellence"
+      },
+      {
+        "id": "as2",
+        "value": "40+",
+        "label": "Countries Presence"
+      },
+      {
+        "id": "as3",
+        "value": "10,000+",
+        "label": "Global Alumni"
+      },
+      {
+        "id": "as4",
+        "value": "500+",
+        "label": "Centres Worldwide"
+      }
+    ],
+    "points": [
+      {
+        "id": "ap1",
+        "text": "Globally recognized certifications accepted by top IT employers"
+      },
+      {
+        "id": "ap2",
+        "text": "Curriculum co-designed with industry leaders and updated regularly"
+      },
+      {
+        "id": "ap3",
+        "text": "Standardized quality across all franchise centres worldwide"
+      },
+      {
+        "id": "ap4",
+        "text": "Access to Aptech's national placement network and job portal"
+      }
+    ]
+  },
+  "centre": {
+    "badge": "Our Centre",
+    "title": "State-of-the-Art Facility in Whitefield",
+    "body": "Our centre is strategically located near Kadugodi Tree Park Metro Station, making it easily accessible from across Whitefield, Marathahalli, Brookefield, and ITPL. The facility is designed to create an immersive, distraction-free learning environment.",
+    "features": [
+      {
+        "id": "cf1",
+        "title": "Modern Computer Labs",
+        "desc": "High-performance workstations with the latest software tools — Python, TensorFlow, AWS, Azure, Power BI, and more."
+      },
+      {
+        "id": "cf2",
+        "title": "Air-Conditioned Classrooms",
+        "desc": "Comfortable, well-lit classrooms designed for focused learning with projectors and smart boards."
+      },
+      {
+        "id": "cf3",
+        "title": "High-Speed Internet",
+        "desc": "Dedicated high-speed fibre internet for seamless cloud labs, live coding, and online resources."
+      },
+      {
+        "id": "cf4",
+        "title": "Placement Cell",
+        "desc": "A dedicated placement room for mock interviews, resume reviews, and one-on-one career counselling sessions."
+      },
+      {
+        "id": "cf5",
+        "title": "Library & Resources",
+        "desc": "Access to Aptech's digital library, study materials, recorded sessions, and practice assessments."
+      },
+      {
+        "id": "cf6",
+        "title": "Flexible Timings",
+        "desc": "Morning, afternoon, and evening batches to accommodate students, working professionals, and weekend learners."
+      }
+    ]
+  },
+  "team": [
+    {
+      "id": "t1",
+      "name": "Centre Director",
+      "role": "Cheekira Tech Pvt. Ltd.",
+      "bio": "Leads the overall vision and operations of Aptech Learning Whitefield, ensuring every student receives world-class training and placement support."
+    },
+    {
+      "id": "t2",
+      "name": "Lead Instructor — AI & Data Science",
+      "role": "8+ Years Industry Experience",
+      "bio": "Industry practitioner with hands-on experience in AI, Machine Learning, and Data Science at leading Bangalore IT companies. Brings real-world projects into every class."
+    },
+    {
+      "id": "t3",
+      "name": "Lead Instructor — Full Stack & Cloud",
+      "role": "7+ Years Industry Experience",
+      "bio": "Full Stack developer and AWS-certified cloud architect who has worked with startups and MNCs. Specializes in making complex concepts simple and practical."
+    },
+    {
+      "id": "t4",
+      "name": "Placement Coordinator",
+      "role": "Placement & Career Services",
+      "bio": "Manages our network of 100+ hiring partners, coordinates campus drives, and provides one-on-one career coaching to every student."
+    }
+  ],
+  "achievements": [
+    {
+      "id": "ac1",
+      "value": "500+",
+      "label": "Students Placed",
+      "sub": "Across IT companies in Bangalore"
+    },
+    {
+      "id": "ac2",
+      "value": "95%+",
+      "label": "Placement Rate",
+      "sub": "Industry-leading success rate"
+    },
+    {
+      "id": "ac3",
+      "value": "100+",
+      "label": "Hiring Partners",
+      "sub": "MNCs, IT firms & startups"
+    },
+    {
+      "id": "ac4",
+      "value": "50+",
+      "label": "Schools & Colleges",
+      "sub": "Institutional partnerships"
+    },
+    {
+      "id": "ac5",
+      "value": "200+",
+      "label": "Corporate Clients",
+      "sub": "Companies trained"
+    },
+    {
+      "id": "ac6",
+      "value": "10+",
+      "label": "Courses Offered",
+      "sub": "Industry-aligned programs"
+    }
+  ],
+  "cta": {
+    "title": "Ready to Start Your IT Career?",
+    "subtitle": "Book a free career counselling session with our experts. We'll help you choose the right course and map out your path to a rewarding IT career.",
+    "cta1": "Book Free Counselling",
+    "cta2": "Call Us Now"
+  }
+}

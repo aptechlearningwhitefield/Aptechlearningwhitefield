@@ -1,0 +1,216 @@
+{
+  "pages/home/about": {
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/2246315787",
+    "searchQuery": "modern IT training institute classroom professional education India",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/1409835190",
+      "https://img1.wsimg.com/isteam/getty/1630774197"
+    ],
+    "userModified": true,
+    "createdAt": "2026-07-15T16:22:58.791Z",
+    "lastUpdated": "2026-08-20T17:23:59.092Z",
+    "gettyId": "2246315787",
+    "alternativeGettyIds": [
+      "1409835190",
+      "1630774197"
+    ],
+    "orientations": "horizontal",
+    "caption": "students presenting business project classroom"
+  },
+  "pages/home/hero": {
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/1387157405",
+    "searchQuery": "diverse students working on laptops technology training professional",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/2230782752",
+      "https://img1.wsimg.com/isteam/getty/2168767200",
+      "https://img1.wsimg.com/isteam/getty/1430133631",
+      "https://img1.wsimg.com/isteam/getty/1342228491"
+    ],
+    "userModified": false,
+    "createdAt": "2026-07-15T16:23:04.240Z",
+    "lastUpdated": "2026-07-15T16:23:04.240Z",
+    "gettyId": "1387157405",
+    "alternativeGettyIds": [
+      "2230782752",
+      "2168767200",
+      "1430133631",
+      "1342228491"
+    ],
+    "orientations": "horizontal",
+    "minimumSize": "large"
+  },
+  "pages/home/placement": {
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/1436453674",
+    "searchQuery": "professional career success job placement technology graduates",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/1214920391",
+      "https://img1.wsimg.com/isteam/getty/1132793360"
+    ],
+    "userModified": false,
+    "createdAt": "2026-07-15T16:23:05.324Z",
+    "lastUpdated": "2026-07-15T16:23:05.324Z",
+    "gettyId": "1436453674",
+    "alternativeGettyIds": [
+      "1214920391",
+      "1132793360"
+    ],
+    "orientations": "horizontal"
+  },
+  "pages/home/corporate": {
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/2254457940",
+    "searchQuery": "corporate training workshop business professionals technology",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/2153480581",
+      "https://img1.wsimg.com/isteam/getty/2208292063"
+    ],
+    "userModified": false,
+    "createdAt": "2026-07-15T16:23:06.766Z",
+    "lastUpdated": "2026-07-15T16:23:06.766Z",
+    "gettyId": "2254457940",
+    "alternativeGettyIds": [
+      "2153480581",
+      "2208292063"
+    ],
+    "orientations": "horizontal"
+  },
+  "logo/horizontal": {
+    "mediaType": "logo",
+    "currentUrl": "/airo-assets/uploads/logo-horizontal-e92dc8bf.jpg",
+    "searchQuery": "",
+    "alternatives": [
+      "/airo-assets/uploads/logo-horizontal-616ef643.jpg",
+      "/airo-assets/uploads/logo-horizontal-0dac148a.jpg",
+      "https://isteam.wsimg.com/genai-assistant/logoagent/customer/1b5e2b9c-6306-4b28-993f-80072fdd48b3/session/113a63b2-d297-490c-80cf-6ee2259bb374/horizontal-transparent-e2fd9925-f8c5-4341-9810-3871f903c56b/logo-logo.png"
+    ],
+    "userModified": true,
+    "createdAt": "2026-07-15T16:23:16.941Z",
+    "lastUpdated": "2026-07-15T16:55:34.353Z",
+    "surfaceMode": "light",
+    "generatedForSurfaceColor": "#FFFFFF",
+    "lightSurfaceUrl": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/1b5e2b9c-6306-4b28-993f-80072fdd48b3/session/113a63b2-d297-490c-80cf-6ee2259bb374/horizontal-transparent-e2fd9925-f8c5-4341-9810-3871f903c56b/logo-logo.png",
+    "uploadSources": {
+      "/airo-assets/uploads/logo-horizontal-616ef643.jpg": "8kmpkqy2he_1784134452644_file_FWaticTxim.jpg",
+      "/airo-assets/uploads/logo-horizontal-0dac148a.jpg": "8kmpkqy2he_1784134328486_file_BZP5ES5uVI.jpg",
+      "/airo-assets/uploads/logo-horizontal-e92dc8bf.jpg": "8kmpkqy2he_1784133340366_file_Pfry_BBK8x.jpg"
+    },
+    "naturalOrientation": "horizontal"
+  },
+  "logo/favicon": {
+    "mediaType": "logo",
+    "currentUrl": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/1b5e2b9c-6306-4b28-993f-80072fdd48b3/session/7d20f669-4fb1-44c0-9747-b592b3622b9b/favicon-transparent-c3cc6c7a-f391-483c-85c3-32880b76e015/logo-logo.png",
+    "searchQuery": "favicon",
+    "alternatives": [
+      "/airo-assets/uploads/airo-logo-shimmer-square.svg"
+    ],
+    "logoSourceMap": {
+      "https://isteam.wsimg.com/genai-assistant/logoagent/customer/1b5e2b9c-6306-4b28-993f-80072fdd48b3/session/7d20f669-4fb1-44c0-9747-b592b3622b9b/favicon-transparent-c3cc6c7a-f391-483c-85c3-32880b76e015/logo-logo.png": {
+        "sessionId": "7d20f669-4fb1-44c0-9747-b592b3622b9b",
+        "logoId": "c3cc6c7a-f391-483c-85c3-32880b76e015",
+        "groupId": "9d4351d3-c9a1-40fc-8473-c87946c3402e"
+      }
+    },
+    "logoGroupId": "9d4351d3-c9a1-40fc-8473-c87946c3402e",
+    "userModified": false,
+    "createdAt": "2026-07-15T16:23:41.096Z",
+    "lastUpdated": "2026-07-15T16:24:07.723Z",
+    "surfaceMode": "light",
+    "generatedForSurfaceColor": "#FFFFFF",
+    "lightSurfaceUrl": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/1b5e2b9c-6306-4b28-993f-80072fdd48b3/session/7d20f669-4fb1-44c0-9747-b592b3622b9b/favicon-transparent-c3cc6c7a-f391-483c-85c3-32880b76e015/logo-logo.png"
+  },
+  "logo/primary": {
+    "mediaType": "logo",
+    "currentUrl": "/airo-assets/uploads/logo-horizontal-616ef643.jpg",
+    "searchQuery": "",
+    "alternatives": [],
+    "userModified": true,
+    "createdAt": "2026-07-15T16:45:10.224Z",
+    "lastUpdated": "2026-07-15T16:54:12.647Z",
+    "naturalOrientation": "square",
+    "uploadSources": {
+      "/airo-assets/uploads/logo-horizontal-616ef643.jpg": "8kmpkqy2he_1784134452644_file_FWaticTxim.jpg"
+    }
+  },
+  "layouts/header/cheekira-tech-aptech-learning-whitefield": {
+    "mediaType": "image",
+    "currentUrl": "/airo-assets/uploads/layouts-header-cheekira-tech-aptech-learning-whitefield-616ef643.jpg",
+    "searchQuery": "",
+    "alternatives": [
+      "/airo-assets/uploads/layouts-header-cheekira-tech-aptech-learning-whitefield-616ef643.jpg"
+    ],
+    "userModified": false,
+    "sourceRef": "src/layouts/parts/Header.tsx:69",
+    "createdAt": "2026-07-15T16:57:35.821Z",
+    "lastUpdated": "2026-07-15T16:58:37.322Z"
+  },
+  "layouts/footer/cheekira-tech-aptech-learning-whitefield": {
+    "mediaType": "image",
+    "currentUrl": "/airo-assets/uploads/layouts-footer-cheekira-tech-aptech-learning-whitefield-616ef643.jpg",
+    "searchQuery": "",
+    "alternatives": [
+      "/airo-assets/uploads/layouts-footer-cheekira-tech-aptech-learning-whitefield-616ef643.jpg"
+    ],
+    "userModified": false,
+    "sourceRef": "src/layouts/parts/Footer.tsx:38",
+    "createdAt": "2026-07-15T16:58:52.963Z",
+    "lastUpdated": "2026-07-15T16:59:21.715Z"
+  },
+  "pages/about/aptech-advantage": {
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/2275807131",
+    "searchQuery": "global education network technology training certification professional",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/2255187723",
+      "https://img1.wsimg.com/isteam/getty/2251980710",
+      "https://img1.wsimg.com/isteam/getty/2265556904",
+      "https://img1.wsimg.com/isteam/getty/2243798402"
+    ],
+    "userModified": false,
+    "createdAt": "2026-07-15T18:01:40.231Z",
+    "lastUpdated": "2026-07-15T18:01:40.231Z",
+    "gettyId": "2275807131",
+    "alternativeGettyIds": [
+      "2255187723",
+      "2251980710",
+      "2265556904",
+      "2243798402"
+    ],
+    "requestedSize": {
+      "width": 600,
+      "height": 400,
+      "fit": "cover"
+    },
+    "orientations": "horizontal"
+  },
+  "pages/about/story": {
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/1072471128",
+    "searchQuery": "students learning technology computer lab India classroom",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/2246315787",
+      "https://img1.wsimg.com/isteam/getty/2163913043",
+      "https://img1.wsimg.com/isteam/getty/167761284",
+      "https://img1.wsimg.com/isteam/getty/1163985097"
+    ],
+    "userModified": false,
+    "createdAt": "2026-07-15T18:01:47.053Z",
+    "lastUpdated": "2026-07-15T18:01:47.053Z",
+    "gettyId": "1072471128",
+    "alternativeGettyIds": [
+      "2246315787",
+      "2163913043",
+      "167761284",
+      "1163985097"
+    ],
+    "requestedSize": {
+      "width": 600,
+      "height": 420,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "numberOfPeople": "group"
+  }
+}

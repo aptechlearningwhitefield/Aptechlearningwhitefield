@@ -1,0 +1,1201 @@
+{
+  "hero": {
+    "badge": "10+ Industry-Ready Programs",
+    "title": "Courses Designed for the Digital Economy",
+    "subtitle": "From AI and Data Science to Cybersecurity and Full Stack Development — choose a program that launches your career in tech."
+  },
+  "filters": [
+    "All Courses",
+    "AI & Data",
+    "Development",
+    "Security & Cloud",
+    "Business Tech"
+  ],
+  "items": [
+    {
+      "id": "ai-machine-learning",
+      "name": "Artificial Intelligence & Machine Learning",
+      "tagline": "SMART PROFESSIONAL PROGRAM",
+      "category": "AI & Data",
+      "duration": "348 hours",
+      "level": "Beginner to Advanced",
+      "mode": "Classroom & Online",
+      "certification": "Aptech Certified AI & ML Professional",
+      "popular": true,
+      "color": "blue",
+      "overview": "The tech industry is evolving rapidly due to the increasing use of Artificial Intelligence and Machine Learning powered technologies to perform simple and complex tasks. Due to its increasing efficiency, AI is used across various industries today. This has led to the growing demand for AI & Machine Learning professionals. The AI and ML course at Aptech Learning is curated to enable you to work with the latest software tools to transform you into industry-ready I.T. professionals.",
+      "eligibility": "10+2 or Graduation in any stream. Basic computer knowledge required. No prior programming experience needed.",
+      "skills": [
+        "Python",
+        "NumPy & Pandas",
+        "Scikit-learn",
+        "TensorFlow & Keras",
+        "Deep Learning",
+        "Natural Language Processing",
+        "Computer Vision",
+        "Model Deployment",
+        "Statistics & Probability",
+        "Feature Engineering"
+      ],
+      "projects": [
+        "Sentiment Analysis Engine",
+        "Image Classification System",
+        "Recommendation Engine",
+        "Fraud Detection Model",
+        "Chatbot with NLP"
+      ],
+      "careers": [
+        "Machine Learning Engineer",
+        "AI Developer",
+        "Data Scientist",
+        "NLP Engineer",
+        "Computer Vision Engineer"
+      ],
+      "modules": [
+        {
+          "id": "term-1",
+          "title": "TERM 1",
+          "topics": [
+            "Data Analysis with MS Excel",
+            "Data Handling using T-SQL",
+            "Managing Large Data Sets with MongoDB",
+            "Inferential Statistical Analysis",
+            "Application Based Programming in Python",
+            "Data Mining with WEKA",
+            "Capstone Project for Data Mining"
+          ]
+        },
+        {
+          "id": "term-2",
+          "title": "TERM 2",
+          "topics": [
+            "AI Primer",
+            "AI Applications of NLP",
+            "AI and ML with Python",
+            "Applied Machine Learning using Python",
+            "Deep Learning using Neural Networks",
+            "Capstone Project - Recommendation Engine and Customer Churn Prediction"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "generative-ai",
+      "name": "Generative AI & Prompt Engineering",
+      "tagline": "Master the technology reshaping every industry",
+      "category": "AI & Data",
+      "duration": "86 hours",
+      "level": "Beginner to Intermediate",
+      "mode": "Classroom & Online",
+      "certification": "Aptech Certified Generative AI Specialist",
+      "popular": true,
+      "color": "purple",
+      "overview": "Dive deep into Generative AI — the technology powering ChatGPT, Gemini, Midjourney and more. Learn prompt engineering, fine-tuning LLMs, building AI-powered applications and integrating generative AI into real-world workflows.",
+      "eligibility": "10+2 or Graduation in any stream. Basic computer knowledge required.",
+      "skills": [
+        "Prompt Engineering",
+        "ChatGPT & GPT-4",
+        "Google Gemini",
+        "LangChain",
+        "RAG Systems",
+        "Fine-tuning LLMs",
+        "AI Image Generation",
+        "Stable Diffusion",
+        "AI Automation",
+        "API Integration"
+      ],
+      "projects": [
+        "AI Content Generator",
+        "Custom Chatbot with RAG",
+        "AI Image Pipeline",
+        "Automated Report Generator",
+        "LLM-powered Search"
+      ],
+      "careers": [
+        "Prompt Engineer",
+        "AI Product Manager",
+        "Generative AI Developer",
+        "AI Content Strategist",
+        "LLM Application Developer"
+      ],
+      "modules": [
+        {
+          "id": "m1",
+          "title": "Foundations of GenAI",
+          "topics": [
+            "LLM Basics",
+            "Transformer Architecture",
+            "GPT Models",
+            "Gemini",
+            "Claude"
+          ]
+        },
+        {
+          "id": "m2",
+          "title": "Prompt Engineering",
+          "topics": [
+            "Zero-shot",
+            "Few-shot",
+            "Chain-of-Thought",
+            "ReAct",
+            "Advanced Techniques"
+          ]
+        },
+        {
+          "id": "m3",
+          "title": "Building AI Apps",
+          "topics": [
+            "LangChain",
+            "RAG",
+            "Vector Databases",
+            "API Integration",
+            "Streamlit"
+          ]
+        },
+        {
+          "id": "m4",
+          "title": "AI Image & Media",
+          "topics": [
+            "Stable Diffusion",
+            "Midjourney",
+            "DALL-E",
+            "Video AI",
+            "Audio AI"
+          ]
+        },
+        {
+          "id": "m5",
+          "title": "Fine-tuning & Deployment",
+          "topics": [
+            "Fine-tuning LLMs",
+            "LoRA",
+            "PEFT",
+            "Hugging Face",
+            "Cloud Deployment"
+          ]
+        },
+        {
+          "id": "m6",
+          "title": "AI in Business",
+          "topics": [
+            "Workflow Automation",
+            "Microsoft Copilot",
+            "AI Ethics",
+            "Use Cases",
+            "ROI"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "genai-accelerator",
+      "name": "GenAI Accelerator",
+      "tagline": "Build AI literacy and practical skills with everyday GenAI tools",
+      "category": "Generative AI",
+      "duration": "32 hours",
+      "level": "Beginner",
+      "mode": "Classroom & Online",
+      "certification": "Certificate of Completion",
+      "popular": false,
+      "color": "purple",
+      "overview": "A beginner-friendly program to build AI literacy and practical skills using everyday GenAI tools.",
+      "eligibility": "Open to educators, students and working professionals.",
+      "skills": ["AI Literacy", "Prompting", "Content Creation", "AI Tools"],
+      "projects": ["GenAI practical use cases"],
+      "careers": ["AI-Literate Educator", "AI-Literate Student", "Proficient AI Tool User"],
+      "modules": [{"id":"m1","title":"Libraries & Tools","topics":["ChatGPT","Perplexity","Claude","Gemini","Ideogram","Canva","Runway","MagicSchool AI"]},{"id":"m2","title":"Practical Applications","topics":["Hands-on Projects","Practical Use Cases","Quizzes & Assessments"]}]
+    },
+    {
+      "id": "prompt-engineering",
+      "name": "Prompt Engineering",
+      "tagline": "Craft effective prompts for GenAI models",
+      "category": "Generative AI",
+      "duration": "24 hours",
+      "level": "Beginner to Intermediate",
+      "mode": "Classroom & Online",
+      "certification": "Certificate of Completion",
+      "popular": false,
+      "color": "purple",
+      "overview": "Specialised training to craft effective prompts for maximising outputs from GenAI models.",
+      "eligibility": "Open to all learners.",
+      "skills": ["Prompt Design", "ChatGPT", "MidJourney", "Copilot", "Gemini"],
+      "projects": ["Prompt portfolio"],
+      "careers": ["Prompt Engineer"],
+      "modules": [{"id":"m1","title":"Prompt Engineering","topics":["ChatGPT Plus","MidJourney","Copilot","Gemini","Prompt optimisation"]}]
+    },
+    {
+      "id": "innovate-generative-ai",
+      "name": "Innovate with Generative AI",
+      "tagline": "Design and optimise AI-driven workflows",
+      "category": "Generative AI",
+      "duration": "30 hours",
+      "level": "Beginner to Intermediate",
+      "mode": "Classroom & Online",
+      "certification": "Certificate of Completion",
+      "popular": false,
+      "color": "purple",
+      "overview": "Learn to design, manage and optimise AI-driven workflows for creative and strategic applications.",
+      "eligibility": "Open to all learners.",
+      "skills": ["AI Workflows", "Content Creation", "AI Review", "Product Thinking"],
+      "projects": ["AI workflow project"],
+      "careers": ["AI Content Creator/Reviewer/Auditor", "AI Product Manager"],
+      "modules": [{"id":"m1","title":"Libraries & Tools","topics":["Claude","Gemini","Ideogram","Canva","RunwayML","ChatGPT","Perplexity"]}]
+    },
+    {
+      "id": "rapid-app-development",
+      "name": "Rapid App Development Using Low/No-Code Approach",
+      "tagline": "Build applications quickly with low-code and no-code platforms",
+      "category": "Development",
+      "duration": "30 hours",
+      "level": "Beginner to Intermediate",
+      "mode": "Classroom & Online",
+      "certification": "Certificate of Completion",
+      "popular": false,
+      "color": "teal",
+      "overview": "Master quick application development using no-code/low-code platforms and automation tools.",
+      "eligibility": "Open to all learners.",
+      "skills": ["Bubble.io", "Glide", "Wix", "Power Apps", "Zapier", "Airtable"],
+      "projects": ["Low-code application project"],
+      "careers": ["No-code/Low-code Web Developer", "No-code/Low-code Mobile App Developer", "No-code/Low-code Database Developer"],
+      "modules": [{"id":"m1","title":"Platforms & Automation","topics":["Bubble.io","Glide","Wix","Power Apps","OutSystems","Zapier","Power Automate","Google Sheets","Airtable"]}]
+    },
+    {
+      "id": "data-science",
+      "name": "Data Science",
+      "tagline": "Turn raw data into powerful business insights",
+      "category": "AI & Data",
+      "duration": "384 hours",
+      "level": "Beginner to Advanced",
+      "mode": "Classroom & Online",
+      "certification": "Aptech Certified Data Science Professional",
+      "popular": false,
+      "color": "green",
+      "overview": "Become a job-ready Data Scientist by mastering programming, data analysis, and real-world projects.",
+      "eligibility": "10+2 or Graduation in any stream. Basic math knowledge helpful.",
+      "skills": [
+        "Python",
+        "SQL",
+        "Statistics",
+        "MS Excel",
+        "Data Visualization",
+        "Tableau",
+        "R Programmming",
+        "Hadoop",
+        "Datasets with MongoDB",
+        "Live Projects"
+      ],
+      "projects": [
+        "Sales Forecasting Dashboard",
+        "Customer Churn Prediction",
+        "Market Basket Analysis",
+        "Healthcare Analytics",
+        "Social Media Analytics"
+      ],
+      "careers": [
+        "Data Scientist",
+        "Data Analyst",
+        "Business Intelligence Analyst",
+        "ML Engineer",
+        "Analytics Consultant"
+      ],
+      "modules": [
+        {
+          "id": "m1",
+          "title": "MS Excel & SQL",
+          "topics": [
+            "excel",
+            "Pandas",
+            "NumPy",
+            "SQL Queries",
+            "Database Connections"
+          ]
+        },
+        {
+          "id": "m2",
+          "title": "Statistical Analysis & Data sets with MongoDB",
+          "topics": [
+            "Descriptive Stats",
+            "Inferential Stats",
+            "EDA",
+            "Data Cleaning",
+            "Feature Engineering"
+          ]
+        },
+        {
+          "id": "m3",
+          "title": "Data Visualization",
+          "topics": [
+            "Matplotlib",
+            "Seaborn",
+            "Plotly",
+            "Tableau",
+            "Power BI"
+          ]
+        },
+        {
+          "id": "m4",
+          "title": "Python & Weka",
+          "topics": [
+            "Regression",
+            "Classification",
+            "Clustering",
+            "Ensemble Methods",
+            "Model Selection"
+          ]
+        },
+        {
+          "id": "m5",
+          "title": "R Programming and Hadoop",
+          "topics": [
+            "Hadoop",
+            "Spark",
+            "AWS S3",
+            "Google BigQuery",
+            "Data Pipelines"
+          ]
+        },
+        {
+          "id": "m6",
+          "title": "Capstone Projects",
+          "topics": [
+            "End-to-End Projects",
+            "Storytelling with Data",
+            "Dashboards",
+            "Presentations",
+            "Portfolio"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "data-analytics-power-bi",
+      "name": "Data Analytics & Power BI",
+      "tagline": "Transform data into decisions with visual analytics",
+      "category": "AI & Data",
+      "duration": "100 hours",
+      "level": "Beginner to Intermediate",
+      "mode": "Classroom & Online",
+      "certification": "Aptech Certified Data Analytics & Power BI Professional",
+      "popular": false,
+      "color": "orange",
+      "overview": "Gain hands-on expertise in data analytics and business intelligence using Power BI. Learn to connect, transform, analyze, and visualize data to drive smarter business decisions.",
+      "eligibility": "10+2 or Graduation in any stream. Basic Excel knowledge helpful.",
+      "skills": [
+        "Power BI Desktop",
+        "DAX",
+        "Power Query",
+        "SQL",
+        "Excel Advanced",
+        "Data Modeling",
+        "ETL",
+        "Python for Analytics",
+        "Tableau Basics",
+        "Business Intelligence"
+      ],
+      "projects": [
+        "Sales Performance Dashboard",
+        "HR Analytics Report",
+        "Financial KPI Dashboard",
+        "Supply Chain Analytics",
+        "Marketing ROI Dashboard"
+      ],
+      "careers": [
+        "Data Analyst",
+        "Business Intelligence Analyst",
+        "Power BI Developer",
+        "Reporting Analyst",
+        "MIS Executive"
+      ],
+      "modules": [
+        {
+          "id": "m1",
+          "title": "Excel & SQL Foundations",
+          "topics": [
+            "Advanced Excel",
+            "Pivot Tables",
+            "SQL Basics",
+            "Joins",
+            "Aggregations"
+          ]
+        },
+        {
+          "id": "m2",
+          "title": "Power BI Desktop",
+          "topics": [
+            "Data Import",
+            "Data Modeling",
+            "Relationships",
+            "Calculated Columns",
+            "Measures"
+          ]
+        },
+        {
+          "id": "m3",
+          "title": "DAX & Power Query",
+          "topics": [
+            "DAX Basics",
+            "Advanced DAX",
+            "Power Query M",
+            "Data Transformation",
+            "ETL"
+          ]
+        },
+        {
+          "id": "m4",
+          "title": "Visualizations & Reports",
+          "topics": [
+            "Charts & Graphs",
+            "Custom Visuals",
+            "Drill-through",
+            "Bookmarks",
+            "Mobile Reports"
+          ]
+        },
+        {
+          "id": "m5",
+          "title": "Power BI Service",
+          "topics": [
+            "Publishing Reports",
+            "Dashboards",
+            "Sharing",
+            "Row-Level Security",
+            "Scheduled Refresh"
+          ]
+        },
+        {
+          "id": "m6",
+          "title": "Python for Analytics",
+          "topics": [
+            "Pandas",
+            "Matplotlib",
+            "Seaborn",
+            "Statistical Analysis",
+            "Automation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "python",
+      "name": "Programming with Python",
+      "tagline": "Learn Python programming for application development and database integration",
+      "category": "Development",
+      "duration": "64 hours",
+      "level": "Beginner to Advanced",
+      "mode": "Classroom & Online",
+      "certification": "Aptech Certified Python Developer",
+      "popular": false,
+      "color": "yellow",
+      "overview": "Python is versatile and beginner-friendly, perfect for scripting, automation, and more.",
+      "eligibility": "10+2 or Graduation in any stream. No prior programming experience needed.",
+      "skills": [
+        "Python Basics",
+        "OOP",
+        "Data Structures",
+        "File Handling",
+        "NumPy & Pandas",
+        "Web Scraping",
+        "Django/Flask",
+        "REST APIs",
+        "Automation",
+        "Testing"
+      ],
+      "projects": [
+        "Web Scraper",
+        "REST API with Flask",
+        "Automation Scripts",
+        "Data Analysis Tool",
+        "Django Web App"
+      ],
+      "careers": [
+        "Python Developer",
+        "Backend Developer",
+        "Automation Engineer",
+        "Data Analyst",
+        "Django Developer"
+      ],
+      "modules": [
+        {
+          "id": "m1",
+          "title": "Python Fundamentals",
+          "topics": [
+            "Syntax",
+            "Variables",
+            "Control Flow",
+            "Functions",
+            "Modules"
+          ]
+        },
+        {
+          "id": "m2",
+          "title": "OOP & Data Structures",
+          "topics": [
+            "Classes",
+            "Inheritance",
+            "Lists",
+            "Dicts",
+            "Sets",
+            "Tuples"
+          ]
+        },
+        {
+          "id": "m3",
+          "title": "File Handling & Libraries",
+          "topics": [
+            "File I/O",
+            "JSON",
+            "CSV",
+            "NumPy",
+            "Pandas"
+          ]
+        },
+        {
+          "id": "m4",
+          "title": "Web Development",
+          "topics": [
+            "Flask Basics",
+            "Django",
+            "REST APIs",
+            "Templates",
+            "Databases"
+          ]
+        },
+        {
+          "id": "m5",
+          "title": "Automation & Scripting",
+          "topics": [
+            "Selenium",
+            "Web Scraping",
+            "Task Automation",
+            "Scheduling",
+            "Email Automation"
+          ]
+        },
+        {
+          "id": "m6",
+          "title": "Projects & Portfolio",
+          "topics": [
+            "Mini Projects",
+            "Capstone Project",
+            "GitHub",
+            "Code Review",
+            "Deployment"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "data-science-essentials",
+      "name": "Data Science Essentials",
+      "tagline": "Build a strong foundation in Data Science",
+      "category": "AI & Data",
+      "duration": "120 hours",
+      "level": "Beginner",
+      "mode": "Classroom & Online",
+      "certification": "Certificate of Completion",
+      "popular": false,
+      "color": "green",
+      "overview": "Build a strong foundation in Data Science with essential tools and techniques used by industry professionals.",
+      "eligibility": "Open to all learners.",
+      "skills": ["MongoDB", "Python", "R Programming"],
+      "projects": ["Data analysis project"],
+      "careers": ["Data Analyst", "Junior Data Scientist", "Research Analyst"],
+      "modules": [{"id":"m1","title":"Modules Covered","topics":["Managing Large Data Sets with MongoDB","Application Based Programming in Python","Data Science using R Programming"]}]
+    },
+    {
+      "id": "data-visualization-power-bi",
+      "name": "Data Visualization using Power BI",
+      "tagline": "Create interactive dashboards and meaningful reports",
+      "category": "AI & Data",
+      "duration": "128 hours",
+      "level": "Beginner to Intermediate",
+      "mode": "Classroom & Online",
+      "certification": "Certificate of Completion",
+      "popular": false,
+      "color": "orange",
+      "overview": "Master data visualization and business intelligence using Microsoft Power BI. Learn to connect, transform, analyze, and visualize data for data-driven decision-making.",
+      "eligibility": "Open to all learners.",
+      "skills": ["MS Excel", "SQL Server", "Python", "Power BI"],
+      "projects": ["Interactive Power BI dashboard"],
+      "careers": ["Power BI Data Analyst / Power BI Developer"],
+      "modules": [{"id":"m1","title":"Modules Covered","topics":["Data analysis with MS Excel","Data management with SQL server","Application Based programming in python","Data analytics using Power BI"]}]
+    },
+    {
+      "id": "foundation-ai-ml",
+      "name": "Foundation Program in Artificial Intelligence & Machine Learning",
+      "tagline": "Build a strong foundation in AI and ML",
+      "category": "AI & Data",
+      "duration": "100 hours",
+      "level": "Beginner",
+      "mode": "Classroom & Online",
+      "certification": "Certificate of Completion",
+      "popular": false,
+      "color": "blue",
+      "overview": "Build a strong foundation in AI and ML concepts, algorithms, and real-world applications.",
+      "eligibility": "Open to all learners.",
+      "skills": ["AI Primer", "Machine Learning", "NLP"],
+      "projects": ["AI and ML practical project"],
+      "careers": ["AI/ML Trainee", "Junior Data Analyst", "NLP Associate"],
+      "modules": [{"id":"m1","title":"Modules Covered","topics":["AI Primer – ML, DL, Neural Networks","Natural Language Processing Toolkit","Machine Learning"]}]
+    },
+    {
+      "id": "advanced-ai-ml",
+      "name": "Advanced Program in Artificial Intelligence & Machine Learning",
+      "tagline": "Advance your skills with deep learning and real-world AI projects",
+      "category": "AI & Data",
+      "duration": "100 hours",
+      "level": "Intermediate to Advanced",
+      "mode": "Classroom & Online",
+      "certification": "Certificate of Completion",
+      "popular": false,
+      "color": "blue",
+      "overview": "Advance your skills with deep learning, powerful APIs, and real-world AI projects.",
+      "eligibility": "Basic programming and AI knowledge recommended.",
+      "skills": ["Deep Learning", "AI APIs", "TensorFlow", "Neural Networks"],
+      "projects": ["Chatbot and recommendation engine"],
+      "careers": ["Deep Learning Engineer", "AI Developer", "Data Scientist"],
+      "modules": [{"id":"m1","title":"Modules Covered","topics":["Deep Learning and Machine Learning APIs","Project Chatbot and Recommendation Engine","Tensor Flow and Artificial Neural Network"]}]
+    },
+    {
+      "id": "cybersecurity",
+      "name": "Cybersecurity",
+      "tagline": "Defend the digital world — become a security expert",
+      "category": "Security & Cloud",
+      "duration": "160 hours",
+      "level": "Intermediate to Advanced",
+      "mode": "Classroom & Online",
+      "certification": "Aptech Certified Cybersecurity Professional",
+      "popular": true,
+      "color": "red",
+      "overview": "Cybersecurity is one of the fastest-growing fields in tech. This program covers ethical hacking, network security, penetration testing, VAPT, incident response and prepares you for industry certifications like CEH and CompTIA Security+.",
+      "eligibility": "Graduation in any stream. Basic networking knowledge helpful.",
+      "skills": [
+        "Ethical Hacking",
+        "Network Security",
+        "Penetration Testing",
+        "VAPT",
+        "Kali Linux",
+        "Metasploit",
+        "Wireshark",
+        "OWASP",
+        "Incident Response",
+        "SOC Operations"
+      ],
+      "projects": [
+        "Network Penetration Test",
+        "Web App Security Audit",
+        "Malware Analysis Lab",
+        "SIEM Dashboard",
+        "Incident Response Simulation"
+      ],
+      "careers": [
+        "Ethical Hacker",
+        "Penetration Tester",
+        "Security Analyst",
+        "SOC Analyst",
+        "Cybersecurity Consultant"
+      ],
+      "modules": [
+        {
+          "id": "m1",
+          "title": "Networking Fundamentals",
+          "topics": [
+            "TCP/IP",
+            "OSI Model",
+            "Protocols",
+            "Firewalls",
+            "VPNs"
+          ]
+        },
+        {
+          "id": "m2",
+          "title": "Linux & Security Tools",
+          "topics": [
+            "Kali Linux",
+            "Bash Scripting",
+            "Nmap",
+            "Wireshark",
+            "Metasploit"
+          ]
+        },
+        {
+          "id": "m3",
+          "title": "Ethical Hacking",
+          "topics": [
+            "Reconnaissance",
+            "Scanning",
+            "Exploitation",
+            "Post-Exploitation",
+            "Reporting"
+          ]
+        },
+        {
+          "id": "m4",
+          "title": "Web Application Security",
+          "topics": [
+            "OWASP Top 10",
+            "SQL Injection",
+            "XSS",
+            "CSRF",
+            "Burp Suite"
+          ]
+        },
+        {
+          "id": "m5",
+          "title": "VAPT & Forensics",
+          "topics": [
+            "Vulnerability Assessment",
+            "Penetration Testing",
+            "Digital Forensics",
+            "Malware Analysis",
+            "Reverse Engineering"
+          ]
+        },
+        {
+          "id": "m6",
+          "title": "SOC & Incident Response",
+          "topics": [
+            "SIEM",
+            "Log Analysis",
+            "Threat Intelligence",
+            "Incident Response",
+            "Compliance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-stack",
+      "name": "Full Stack Python Development",
+      "tagline": "Master front-end and back-end development with Python",
+      "category": "Development",
+      "duration": "260 hours",
+      "level": "Beginner to Advanced",
+      "mode": "Classroom & Online",
+      "certification": "Aptech Certified Full Stack Developer",
+      "popular": false,
+      "color": "teal",
+      "overview": "Master both front-end and back-end development with Python, Django, JavaScript, and modern frameworks. Build dynamic, scalable web applications with our Full Stack Python Development program.",
+      "eligibility": "10+2 or Graduation in any stream. Basic computer knowledge required.",
+      "skills": [
+        "HTML5 & CSS3",
+        "JavaScript ES6+",
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "REST APIs",
+        "Git & GitHub",
+        "TypeScript",
+        "AWS Deployment"
+      ],
+      "projects": [
+        "E-commerce Website",
+        "Social Media App",
+        "Real-time Chat App",
+        "Blog Platform",
+        "Portfolio Website"
+      ],
+      "careers": [
+        "Full Stack Developer",
+        "Frontend Developer",
+        "Backend Developer",
+        "MERN Stack Developer",
+        "Web Developer"
+      ],
+      "modules": [
+        {
+          "id": "m1",
+          "title": "HTML, CSS & JavaScript",
+          "topics": [
+            "HTML5",
+            "CSS3",
+            "Flexbox",
+            "Grid",
+            "JavaScript ES6+"
+          ]
+        },
+        {
+          "id": "m2",
+          "title": "React.js",
+          "topics": [
+            "Components",
+            "Hooks",
+            "State Management",
+            "React Router",
+            "Redux"
+          ]
+        },
+        {
+          "id": "m3",
+          "title": "Node.js & Express",
+          "topics": [
+            "Node Basics",
+            "Express.js",
+            "REST APIs",
+            "Authentication",
+            "Middleware"
+          ]
+        },
+        {
+          "id": "m4",
+          "title": "Databases",
+          "topics": [
+            "MongoDB",
+            "Mongoose",
+            "SQL Basics",
+            "PostgreSQL",
+            "Redis"
+          ]
+        },
+        {
+          "id": "m5",
+          "title": "DevOps & Deployment",
+          "topics": [
+            "Git & GitHub",
+            "Docker",
+            "AWS EC2",
+            "CI/CD",
+            "Nginx"
+          ]
+        },
+        {
+          "id": "m6",
+          "title": "Capstone Projects",
+          "topics": [
+            "Full Stack App",
+            "API Integration",
+            "Testing",
+            "Performance",
+            "Portfolio"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cloud-computing",
+      "name": "Cloud Computing",
+      "tagline": "Build and manage scalable cloud infrastructure",
+      "category": "Security & Cloud",
+      "duration": "120 hours",
+      "level": "Intermediate",
+      "mode": "Classroom & Online",
+      "certification": "Aptech Certified Cloud Computing Professional",
+      "popular": false,
+      "color": "sky",
+      "overview": "Cloud computing is the backbone of modern IT infrastructure. This program covers AWS, Microsoft Azure, Google Cloud Platform, DevOps practices and prepares you for cloud certification exams.",
+      "eligibility": "Graduation in IT/CS or equivalent. Basic networking knowledge required.",
+      "skills": [
+        "AWS",
+        "Microsoft Azure",
+        "Google Cloud",
+        "Docker",
+        "Kubernetes",
+        "Terraform",
+        "CI/CD",
+        "DevOps",
+        "Linux",
+        "Cloud Security"
+      ],
+      "projects": [
+        "Multi-tier Web App on AWS",
+        "Kubernetes Cluster Setup",
+        "CI/CD Pipeline",
+        "Serverless Application",
+        "Cloud Cost Optimization"
+      ],
+      "careers": [
+        "Cloud Engineer",
+        "DevOps Engineer",
+        "Cloud Architect",
+        "Site Reliability Engineer",
+        "Cloud Security Engineer"
+      ],
+      "modules": [
+        {
+          "id": "m1",
+          "title": "Cloud Fundamentals",
+          "topics": [
+            "Cloud Concepts",
+            "IaaS/PaaS/SaaS",
+            "AWS Core Services",
+            "Azure Basics",
+            "GCP Overview"
+          ]
+        },
+        {
+          "id": "m2",
+          "title": "AWS Deep Dive",
+          "topics": [
+            "EC2",
+            "S3",
+            "RDS",
+            "Lambda",
+            "VPC",
+            "IAM"
+          ]
+        },
+        {
+          "id": "m3",
+          "title": "Containers & Orchestration",
+          "topics": [
+            "Docker",
+            "Docker Compose",
+            "Kubernetes",
+            "Helm",
+            "EKS"
+          ]
+        },
+        {
+          "id": "m4",
+          "title": "DevOps Practices",
+          "topics": [
+            "Git",
+            "Jenkins",
+            "CI/CD",
+            "Terraform",
+            "Ansible"
+          ]
+        },
+        {
+          "id": "m5",
+          "title": "Cloud Security",
+          "topics": [
+            "IAM Best Practices",
+            "Security Groups",
+            "Encryption",
+            "Compliance",
+            "Monitoring"
+          ]
+        },
+        {
+          "id": "m6",
+          "title": "Certification Prep",
+          "topics": [
+            "AWS SAA",
+            "Azure AZ-900",
+            "GCP ACE",
+            "Practice Tests",
+            "Exam Tips"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "microsoft-technologies",
+      "name": "Microsoft Technologies",
+      "tagline": "Master the Microsoft ecosystem for enterprise IT",
+      "category": "Business Tech",
+      "duration": "120 hours",
+      "level": "Beginner to Advanced",
+      "mode": "Classroom & Online",
+      "certification": "Aptech Certified Microsoft Technologies Professional",
+      "popular": false,
+      "color": "indigo",
+      "overview": "Master the Microsoft enterprise technology stack including Microsoft Intune, Azure Active Directory, Microsoft 365, Microsoft Copilot and Windows Server administration. Ideal for IT professionals and system administrators.",
+      "eligibility": "Graduation in IT/CS or equivalent. Basic Windows knowledge required.",
+      "skills": [
+        "Microsoft Intune",
+        "Azure Active Directory",
+        "Microsoft 365",
+        "Microsoft Copilot",
+        "Windows Server",
+        "PowerShell",
+        "SharePoint",
+        "Teams Administration",
+        "Endpoint Management",
+        "Security & Compliance"
+      ],
+      "projects": [
+        "Enterprise MDM Setup with Intune",
+        "Azure AD Tenant Configuration",
+        "M365 Tenant Administration",
+        "Copilot Integration Project",
+        "PowerShell Automation Scripts"
+      ],
+      "careers": [
+        "System Administrator",
+        "IT Administrator",
+        "Microsoft 365 Administrator",
+        "Intune Administrator",
+        "Cloud Administrator"
+      ],
+      "modules": [
+        {
+          "id": "m1",
+          "title": "Microsoft 365 Fundamentals",
+          "topics": [
+            "M365 Admin Center",
+            "Exchange Online",
+            "SharePoint",
+            "Teams",
+            "OneDrive"
+          ]
+        },
+        {
+          "id": "m2",
+          "title": "Azure Active Directory",
+          "topics": [
+            "Azure AD",
+            "Users & Groups",
+            "Conditional Access",
+            "MFA",
+            "SSO"
+          ]
+        },
+        {
+          "id": "m3",
+          "title": "Microsoft Intune",
+          "topics": [
+            "MDM Basics",
+            "Device Enrollment",
+            "Compliance Policies",
+            "App Management",
+            "Autopilot"
+          ]
+        },
+        {
+          "id": "m4",
+          "title": "Microsoft Copilot",
+          "topics": [
+            "Copilot for M365",
+            "Copilot Studio",
+            "Prompt Engineering",
+            "AI Integration",
+            "Governance"
+          ]
+        },
+        {
+          "id": "m5",
+          "title": "Windows Server & PowerShell",
+          "topics": [
+            "Windows Server",
+            "Active Directory",
+            "PowerShell Scripting",
+            "Group Policy",
+            "DNS/DHCP"
+          ]
+        },
+        {
+          "id": "m6",
+          "title": "Security & Compliance",
+          "topics": [
+            "Microsoft Defender",
+            "Purview",
+            "DLP",
+            "Compliance Center",
+            "Zero Trust"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "digital-marketing",
+      "name": "Digital Marketing",
+      "tagline": "Grow brands and businesses in the digital world",
+      "category": "Business Tech",
+      "duration": "120 hours",
+      "level": "Beginner to Intermediate",
+      "mode": "Classroom & Online",
+      "certification": "Aptech Certified Digital Marketing Professional",
+      "popular": false,
+      "color": "pink",
+      "overview": "Master digital marketing from SEO and Google Ads to social media marketing, email marketing and analytics. This program prepares you to run successful digital campaigns and grow businesses online.",
+      "eligibility": "10+2 or Graduation in any stream. No prior experience needed.",
+      "skills": [
+        "SEO",
+        "Google Ads",
+        "Facebook Ads",
+        "Social Media Marketing",
+        "Email Marketing",
+        "Content Marketing",
+        "Google Analytics",
+        "WordPress",
+        "Canva",
+        "Marketing Automation"
+      ],
+      "projects": [
+        "SEO Campaign for a Website",
+        "Google Ads Campaign",
+        "Social Media Strategy",
+        "Email Marketing Campaign",
+        "Analytics Dashboard"
+      ],
+      "careers": [
+        "Digital Marketing Executive",
+        "SEO Specialist",
+        "Social Media Manager",
+        "PPC Specialist",
+        "Content Marketer"
+      ],
+      "modules": [
+        {
+          "id": "m1",
+          "title": "Digital Marketing Fundamentals",
+          "topics": [
+            "Digital Marketing Overview",
+            "Customer Journey",
+            "Marketing Funnel",
+            "Branding",
+            "Content Strategy"
+          ]
+        },
+        {
+          "id": "m2",
+          "title": "SEO & SEM",
+          "topics": [
+            "On-page SEO",
+            "Off-page SEO",
+            "Technical SEO",
+            "Google Ads",
+            "Keyword Research"
+          ]
+        },
+        {
+          "id": "m3",
+          "title": "Social Media Marketing",
+          "topics": [
+            "Facebook & Instagram Ads",
+            "LinkedIn Marketing",
+            "YouTube Marketing",
+            "Influencer Marketing",
+            "Community Management"
+          ]
+        },
+        {
+          "id": "m4",
+          "title": "Email & Content Marketing",
+          "topics": [
+            "Email Campaigns",
+            "Mailchimp",
+            "Content Creation",
+            "Blogging",
+            "Video Marketing"
+          ]
+        },
+        {
+          "id": "m5",
+          "title": "Analytics & Tools",
+          "topics": [
+            "Google Analytics 4",
+            "Search Console",
+            "Meta Business Suite",
+            "Canva",
+            "WordPress"
+          ]
+        },
+        {
+          "id": "m6",
+          "title": "Capstone & Certification Prep",
+          "topics": [
+            "Live Campaign",
+            "Google Certifications",
+            "Meta Blueprint",
+            "Portfolio",
+            "Interview Prep"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "hero": {
+    "badge": "Schools & Colleges Programs",
+    "title": "Future-Ready IT Programs for Schools & Colleges",
+    "subtitle": "Aptech Learning Whitefield partners with schools and colleges across Bangalore to deliver hands-on technology education — from coding for kids to campus placement readiness for final-year students.",
+    "cta1": "Partner With Us",
+    "cta2": "Call Us Now"
+  },
+  "schoolPrograms": [
+    {
+      "id": "sp1",
+      "title": "Coding for Kids (Age 8–14)",
+      "desc": "Fun, project-based coding using Scratch, Python basics, and game development. Builds logical thinking and creativity.",
+      "duration": "4–8 Weeks",
+      "age": "8–14 years",
+      "icon": "code"
+    },
+    {
+      "id": "sp2",
+      "title": "AI & Robotics for Schools",
+      "desc": "Hands-on introduction to Artificial Intelligence concepts, basic robotics, and automation using age-appropriate tools.",
+      "duration": "4–6 Weeks",
+      "age": "12–17 years",
+      "icon": "cpu"
+    },
+    {
+      "id": "sp3",
+      "title": "Python Programming",
+      "desc": "Structured Python course aligned with school curriculum. Covers variables, loops, functions, and mini-projects.",
+      "duration": "6–8 Weeks",
+      "age": "14–17 years",
+      "icon": "terminal"
+    },
+    {
+      "id": "sp4",
+      "title": "Holiday Tech Camps",
+      "desc": "Intensive 5–10 day holiday camps covering Web Design, App Development, Digital Art, and Game Creation.",
+      "duration": "5–10 Days",
+      "age": "10–17 years",
+      "icon": "sun"
+    },
+    {
+      "id": "sp5",
+      "title": "Digital Literacy Program",
+      "desc": "Foundational digital skills — MS Office, internet safety, email etiquette, and basic computer operations.",
+      "duration": "2–4 Weeks",
+      "age": "All ages",
+      "icon": "monitor"
+    },
+    {
+      "id": "sp6",
+      "title": "Cybersecurity Awareness",
+      "desc": "Age-appropriate cybersecurity education — online safety, password hygiene, phishing awareness, and responsible internet use.",
+      "duration": "1–2 Weeks",
+      "age": "12–17 years",
+      "icon": "shield"
+    }
+  ],
+  "collegePrograms": [
+    {
+      "id": "cp1",
+      "title": "Campus Placement Readiness",
+      "desc": "Comprehensive placement preparation — aptitude, technical rounds, group discussions, and HR interview training.",
+      "duration": "4–6 Weeks",
+      "target": "Final Year Students"
+    },
+    {
+      "id": "cp2",
+      "title": "Final Year Project Support",
+      "desc": "Guided project development in AI, Data Science, Web Development, and IoT. Includes documentation and presentation coaching.",
+      "duration": "8–12 Weeks",
+      "target": "Final Year Students"
+    },
+    {
+      "id": "cp3",
+      "title": "Industry Workshops",
+      "desc": "One-day and two-day workshops on trending topics — Generative AI, Cloud Computing, Cybersecurity, and Data Analytics.",
+      "duration": "1–2 Days",
+      "target": "All Years"
+    },
+    {
+      "id": "cp4",
+      "title": "Internship Programs",
+      "desc": "Structured internship programs with real-world projects, mentorship, and a certificate of completion from Aptech Learning.",
+      "duration": "4–8 Weeks",
+      "target": "2nd & 3rd Year"
+    },
+    {
+      "id": "cp5",
+      "title": "Add-On Certification Courses",
+      "desc": "Semester-break intensive courses in Python, Full Stack, Data Science, and Digital Marketing to boost employability.",
+      "duration": "4–8 Weeks",
+      "target": "All Years"
+    },
+    {
+      "id": "cp6",
+      "title": "MoU & Partnership Programs",
+      "desc": "Formal MoU with colleges for ongoing curriculum integration, guest lectures, lab sessions, and joint certification.",
+      "duration": "Ongoing",
+      "target": "Institutions"
+    }
+  ],
+  "benefits": [
+    {
+      "id": "b1",
+      "title": "Aptech Certified Programs",
+      "desc": "All programs carry globally recognized Aptech Learning certification, adding value to student portfolios."
+    },
+    {
+      "id": "b2",
+      "title": "Expert Instructors",
+      "desc": "Industry professionals with teaching experience deliver every session — engaging, practical, and curriculum-aligned."
+    },
+    {
+      "id": "b3",
+      "title": "Flexible Scheduling",
+      "desc": "Programs designed around school/college timetables — after school, weekends, or during holidays and semester breaks."
+    },
+    {
+      "id": "b4",
+      "title": "On-Campus Delivery",
+      "desc": "We come to your institution. No travel required for students — training delivered in your own labs or classrooms."
+    },
+    {
+      "id": "b5",
+      "title": "Hands-on Learning",
+      "desc": "Every program is project-based. Students build real things — apps, websites, data models — not just theory."
+    },
+    {
+      "id": "b6",
+      "title": "Placement Support",
+      "desc": "College students get access to our placement network and hiring partners upon course completion."
+    }
+  ],
+  "stats": [
+    {
+      "id": "st1",
+      "value": "50+",
+      "label": "Schools & Colleges Partnered"
+    },
+    {
+      "id": "st2",
+      "value": "10,000+",
+      "label": "Students Trained"
+    },
+    {
+      "id": "st3",
+      "value": "98%",
+      "label": "Student Satisfaction"
+    },
+    {
+      "id": "st4",
+      "value": "15+",
+      "label": "Programs Offered"
+    }
+  ],
+  "faqs": [
+    {
+      "id": "f1",
+      "q": "Can programs be conducted at our school/college campus?",
+      "a": "Yes! We offer on-campus delivery anywhere in Bangalore. We bring instructors, materials, and coordinate with your IT lab."
+    },
+    {
+      "id": "f2",
+      "q": "What is the minimum batch size?",
+      "a": "We can run programs for batches as small as 15 students. For larger batches, we can deploy multiple instructors simultaneously."
+    },
+    {
+      "id": "f3",
+      "q": "Do students receive certificates?",
+      "a": "Yes, all students receive Aptech Learning certificates upon successful completion, which are globally recognized."
+    },
+    {
+      "id": "f4",
+      "q": "Can the curriculum be aligned with our board/university syllabus?",
+      "a": "Absolutely. We customize content to complement your existing curriculum and can align with CBSE, ICSE, or university requirements."
+    },
+    {
+      "id": "f5",
+      "q": "How do we initiate a partnership?",
+      "a": "Simply fill the enquiry form or call us. We'll schedule a meeting with your principal/HOD, understand your needs, and present a tailored proposal within 48 hours."
+    }
+  ]
+}

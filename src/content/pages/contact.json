@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "badge": "We're Here to Help",
+    "title": "Get in Touch with Us",
+    "subtitle": "Have questions about courses, admissions, or corporate training? Reach out — our counsellors are ready to guide you."
+  },
+  "info": {
+    "address": "Aptech Learning Whitefield, Near Kadugodi Tree Park Metro, Whitefield, Bangalore – 560066",
+    "phone": "+91 74113 33500",
+    "email": "aptechlearningwhitefield@gmail.com",
+    "adminEmail": "admin@cheekiratech.in",
+    "hours": "Monday – Saturday: 10:00 AM – 7:00 PM",
+    "sunday": "Sunday: Closed",
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.9!2d77.7480!3d12.9698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAptech+Learning+Whitefield!5e0!3m2!1sen!2sin!4v1"
+  },
+  "enquiryTypes": [
+    {
+      "id": "student",
+      "label": "Student Enquiry",
+      "description": "Course admissions, fees, batch timings"
+    },
+    {
+      "id": "corporate",
+      "label": "Corporate Training",
+      "description": "Customized training for your team"
+    },
+    {
+      "id": "schools",
+      "label": "Schools & Colleges",
+      "description": "Campus programs and partnerships"
+    },
+    {
+      "id": "other",
+      "label": "General Query",
+      "description": "Any other questions or feedback"
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq1",
+      "q": "What are your batch timings?",
+      "a": "We offer flexible batches — Morning (10 AM–12 PM), Afternoon (2 PM–4 PM), Evening (5 PM–7 PM), and Weekend batches. You can choose based on your schedule."
+    },
+    {
+      "id": "faq2",
+      "q": "Do you offer online classes?",
+      "a": "Yes! We offer both classroom and live online training. Our online sessions are interactive with the same quality as in-person classes."
+    },
+    {
+      "id": "faq3",
+      "q": "Is there a placement guarantee?",
+      "a": "We provide dedicated placement assistance including resume building, mock interviews, and connecting you with our hiring partners. Our placement rate is 95%+."
+    },
+    {
+      "id": "faq4",
+      "q": "What certifications will I receive?",
+      "a": "You will receive an Aptech Learning certification which is globally recognized. We also help you prepare for industry certifications like AWS, Google, Microsoft, and more."
+    },
+    {
+      "id": "faq5",
+      "q": "Can I visit the centre before enrolling?",
+      "a": "Absolutely! We encourage you to visit our centre, meet our faculty, and attend a free demo class before making a decision. Call us to schedule a visit."
+    }
+  ]
+}

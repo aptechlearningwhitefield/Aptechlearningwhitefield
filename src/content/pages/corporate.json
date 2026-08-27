@@ -1,0 +1,221 @@
+{
+  "hero": {
+    "badge": "Corporate Training Solutions",
+    "title": "Upskill Your Team with Industry-Ready IT Training",
+    "subtitle": "Customized, instructor-led training programs for corporates in Bangalore. From AI & Data Science to Cybersecurity and Cloud — we train your workforce for tomorrow's challenges.",
+    "cta1": "Request a Proposal",
+    "cta2": "Call Us Now"
+  },
+  "stats": [
+    {
+      "id": "s1",
+      "value": "",
+      "label": ""
+    },
+    {
+      "id": "s2",
+      "value": "",
+      "label": ""
+    },
+    {
+      "id": "s3",
+      "value": "",
+      "label": ""
+    },
+    {
+      "id": "s4",
+      "value": "",
+      "label": ""
+    }
+  ],
+  "why": [
+    {
+      "id": "w1",
+      "title": "Customized Curriculum",
+      "desc": "Every program is tailored to your team's skill gaps, tools, and business goals — not a one-size-fits-all syllabus."
+    },
+    {
+      "id": "w2",
+      "title": "Flexible Delivery",
+      "desc": "On-site at your office, at our Whitefield centre, or live online — we train where it works best for your team."
+    },
+    {
+      "id": "w3",
+      "title": "Expert Instructors",
+      "desc": "Industry practitioners with 10+ years of real-world experience deliver every session — not just academics."
+    },
+    {
+      "id": "w4",
+      "title": "Hands-on Projects",
+      "desc": "Practical labs and real-world projects ensure your team can apply skills from day one on the job."
+    },
+    {
+      "id": "w5",
+      "title": "Aptech Certification",
+      "desc": "Participants receive globally recognized Aptech certifications upon successful completion."
+    },
+    {
+      "id": "w6",
+      "title": "Post-Training Support",
+      "desc": "Access to recorded sessions, study materials, and instructor Q&A for 3 months after training."
+    }
+  ],
+  "programs": [
+    {
+      "id": "p1",
+      "category": "AI & Data",
+      "title": "AI & Machine Learning for Business",
+      "desc": "Equip your team to build, deploy, and manage ML models. Covers Python, scikit-learn, TensorFlow, and real-world use cases.",
+      "duration": "3–5 Days",
+      "level": "Intermediate"
+    },
+    {
+      "id": "p2",
+      "category": "AI & Data",
+      "title": "Generative AI & Prompt Engineering",
+      "desc": "Hands-on training on ChatGPT, Copilot, and enterprise LLM tools. Learn to automate workflows and boost productivity.",
+      "duration": "1–2 Days",
+      "level": "Beginner–Intermediate"
+    },
+    {
+      "id": "p3",
+      "category": "AI & Data",
+      "title": "Data Analytics & Power BI",
+      "desc": "Transform raw data into business insights. Covers Excel, SQL, Power BI dashboards, and data storytelling.",
+      "duration": "3–4 Days",
+      "level": "Beginner–Intermediate"
+    },
+    {
+      "id": "p4",
+      "category": "AI & Data",
+      "title": "Data Science with Python",
+      "desc": "End-to-end data science pipeline — data wrangling, EDA, modelling, and visualization using Python and Jupyter.",
+      "duration": "4–5 Days",
+      "level": "Intermediate"
+    },
+    {
+      "id": "p5",
+      "category": "Security & Cloud",
+      "title": "Cybersecurity Essentials",
+      "desc": "Protect your organization from threats. Covers network security, ethical hacking basics, VAPT, and compliance.",
+      "duration": "3–5 Days",
+      "level": "Beginner–Intermediate"
+    },
+    {
+      "id": "p6",
+      "category": "Security & Cloud",
+      "title": "Cloud Computing (AWS / Azure)",
+      "desc": "Hands-on cloud fundamentals, architecture, deployment, and cost optimization for AWS and Microsoft Azure.",
+      "duration": "3–5 Days",
+      "level": "Intermediate"
+    },
+    {
+      "id": "p7",
+      "category": "Development",
+      "title": "Full Stack Web Development",
+      "desc": "Modern web development with React, Node.js, and databases. Ideal for teams building or maintaining web products.",
+      "duration": "5–10 Days",
+      "level": "Intermediate"
+    },
+    {
+      "id": "p8",
+      "category": "Development",
+      "title": "Python Programming",
+      "desc": "From scripting to automation — Python for data processing, API integration, and business workflow automation.",
+      "duration": "2–4 Days",
+      "level": "Beginner–Intermediate"
+    },
+    {
+      "id": "p9",
+      "category": "Productivity",
+      "title": "Microsoft Technologies (Office 365 / Azure AD)",
+      "desc": "Maximize productivity with Microsoft 365, Teams, SharePoint, and Azure Active Directory for enterprise teams.",
+      "duration": "2–3 Days",
+      "level": "Beginner"
+    },
+    {
+      "id": "p10",
+      "category": "Productivity",
+      "title": "Digital Marketing",
+      "desc": "SEO, SEM, social media, email marketing, and analytics — a complete digital toolkit for marketing teams.",
+      "duration": "3–5 Days",
+      "level": "Beginner–Intermediate"
+    }
+  ],
+  "process": [
+    {
+      "id": "pr1",
+      "step": "01",
+      "title": "Needs Assessment",
+      "desc": "We understand your team's current skill levels, tools used, and business objectives."
+    },
+    {
+      "id": "pr2",
+      "step": "02",
+      "title": "Custom Proposal",
+      "desc": "We design a tailored curriculum, schedule, and delivery plan — sent to you within 3 days."
+    },
+    {
+      "id": "pr3",
+      "step": "03",
+      "title": "Training Delivery",
+      "desc": "Expert instructors deliver hands-on sessions at your preferred location and time."
+    },
+    {
+      "id": "pr4",
+      "step": "04",
+      "title": "Assessment & Certification",
+      "desc": "Participants complete assessments and receive Aptech-certified credentials."
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "t1",
+      "name": "",
+      "role": "H",
+      "company": "",
+      "quote": "The AI & ML training was exactly what our data team needed. Practical, well-paced, and immediately applicable. Highly recommend Aptech Learning Whitefield."
+    },
+    {
+      "id": "t2",
+      "name": "",
+      "role": "",
+      "company": "",
+      "quote": "We trained 40 employees on Power BI in just 3 days. The instructor was outstanding and the hands-on approach made all the difference."
+    },
+    {
+      "id": "t3",
+      "name": "",
+      "role": "",
+      "company": "",
+      "quote": "Flexible scheduling, great content, and real-world projects. Our dev team's productivity jumped noticeably after the Full Stack training."
+    }
+  ],
+  "faqs": [
+    {
+      "id": "f1",
+      "q": "What is the minimum batch size for corporate training?",
+      "a": "We can train groups as small as 5 employees. For smaller teams, we also offer one-on-one or small group sessions."
+    },
+    {
+      "id": "f2",
+      "q": "Can training be conducted at our office?",
+      "a": "Yes! We offer on-site training at your premises anywhere in Bangalore. We bring the equipment, materials, and instructor."
+    },
+    {
+      "id": "f3",
+      "q": "How quickly can training be arranged?",
+      "a": "Once the proposal is approved, we can typically start training within 5–7 business days depending on availability."
+    },
+    {
+      "id": "f4",
+      "q": "Do you provide training materials?",
+      "a": "Yes, all participants receive comprehensive study materials, lab guides, and access to recorded sessions for 3 months."
+    },
+    {
+      "id": "f5",
+      "q": "Can the curriculum be customized to our tech stack?",
+      "a": "Absolutely. We tailor every program to your specific tools, frameworks, and business use cases after an initial needs assessment."
+    }
+  ]
+}

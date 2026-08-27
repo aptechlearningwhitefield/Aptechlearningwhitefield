@@ -1,0 +1,201 @@
+{
+  "hero": {
+    "badge": "Placement Assistance",
+    "title": "Your Career Starts Here",
+    "subtitle": "Aptech Learning Whitefield's dedicated placement cell connects trained students with top IT companies in Bangalore and beyond. 95%+ placement rate across all programs.",
+    "cta1": "Explore Courses",
+    "cta2": "Talk to a Counsellor"
+  },
+  "stats": [
+    {
+      "id": "s1",
+      "value": "95%+",
+      "label": "Placement Rate"
+    },
+    {
+      "id": "s2",
+      "value": "100%",
+      "label": "Continuos Placement support until successful employment"
+    },
+    {
+      "id": "s3",
+      "value": "100+",
+      "label": "Hiring Partners"
+    },
+    {
+      "id": "s4",
+      "value": "3.5–12 LPA",
+      "label": "Average Package Range"
+    }
+  ],
+  "process": [
+    {
+      "id": "pr1",
+      "step": "01",
+      "title": "Resume Building",
+      "desc": "Our placement team helps craft ATS-friendly resumes that highlight your skills, projects, and certifications effectively."
+    },
+    {
+      "id": "pr2",
+      "step": "02",
+      "title": "Mock Interviews",
+      "desc": "Multiple rounds of mock technical and HR interviews with detailed feedback to build confidence and sharpen responses."
+    },
+    {
+      "id": "pr3",
+      "step": "03",
+      "title": "Aptitude Training",
+      "desc": "Focused aptitude, logical reasoning, and verbal ability sessions to crack the first round at top companies."
+    },
+    {
+      "id": "pr4",
+      "step": "04",
+      "title": "Job Referrals",
+      "desc": "Direct referrals to our network of 100+ hiring partners — IT companies, startups, and MNCs actively hiring from our centre."
+    }
+  ],
+  "hiringPartners": [
+    {
+      "id": "hp1",
+      "name": "Reliance pvt.Ltd.",
+      "type": ""
+    },
+    {
+      "id": "hp2",
+      "name": "Wipro",
+      "type": "MNC"
+    },
+    {
+      "id": "hp3",
+      "name": "TCS",
+      "type": "MNC"
+    },
+    {
+      "id": "hp4",
+      "name": "CollegeDunia",
+      "type": ""
+    },
+    {
+      "id": "hp5",
+      "name": "HDFC",
+      "type": "Bank international"
+    },
+    {
+      "id": "hp6",
+      "name": "HCL Technologies",
+      "type": "MNC"
+    },
+    {
+      "id": "hp7",
+      "name": "GISA Infotech",
+      "type": "Pvt.ltd"
+    },
+    {
+      "id": "hp8",
+      "name": "Indianoil",
+      "type": "Corporation Ltd"
+    },
+    {
+      "id": "hp9",
+      "name": "Muthoot Finance",
+      "type": ""
+    },
+    {
+      "id": "hp10",
+      "name": "WEQ Technologies",
+      "type": ""
+    },
+    {
+      "id": "hp11",
+      "name": "Tally",
+      "type": ""
+    },
+    {
+      "id": "hp12",
+      "name": "Goldiam International",
+      "type": ""
+    }
+  ],
+  "successStories": [
+    {
+      "id": "ss1",
+      "name": "Arjun Reddy",
+      "course": "Full Stack Development",
+      "company": "Wipro",
+      "package": "4.5 LPA",
+      "quote": "The placement team at Aptech Whitefield was incredible. They helped me crack 3 interviews in 2 weeks. The mock sessions were exactly like the real thing."
+    },
+    {
+      "id": "ss2",
+      "name": "Sneha Patel",
+      "course": "Data Science",
+      "company": "Accenture",
+      "package": "6.2 LPA",
+      "quote": "I had zero coding background before joining. The structured curriculum and dedicated placement support helped me land a data analyst role at Accenture."
+    },
+    {
+      "id": "ss3",
+      "name": "Kiran Kumar",
+      "course": "AI & Machine Learning",
+      "company": "IBM India",
+      "package": "8.5 LPA",
+      "quote": "The AI course was industry-level. Real projects, real tools. My interviewer was impressed by my portfolio. Couldn't have done it without Aptech Whitefield."
+    },
+    {
+      "id": "ss4",
+      "name": "Divya Menon",
+      "course": "Cybersecurity",
+      "company": "HCL Technologies",
+      "package": "5.8 LPA",
+      "quote": "Cybersecurity was a niche choice but Aptech's network opened doors I didn't expect. Got placed within 6 weeks of completing the course."
+    },
+    {
+      "id": "ss5",
+      "name": "Rahul Singh",
+      "course": "Cloud Computing",
+      "company": "Capgemini",
+      "package": "7.0 LPA",
+      "quote": "The AWS certification prep was thorough. Passed on first attempt and got placed at Capgemini. The ROI on this course was amazing."
+    },
+    {
+      "id": "ss6",
+      "name": "Priya Nair",
+      "course": "Digital Marketing",
+      "company": "Startup (Bangalore)",
+      "package": "3.8 LPA",
+      "quote": "Got placed at a fast-growing Bangalore startup as a digital marketing executive. The practical campaigns we ran during training were my biggest interview talking points."
+    }
+  ],
+  "placementSupport": [
+    {
+      "id": "ps1",
+      "title": "Dedicated Placement Cell",
+      "desc": "A full-time placement team focused exclusively on connecting students with job opportunities."
+    },
+    {
+      "id": "ps2",
+      "title": "LinkedIn Profile Optimization",
+      "desc": "We help build a strong LinkedIn presence that attracts recruiters and showcases your skills."
+    },
+    {
+      "id": "ps3",
+      "title": "Portfolio Development",
+      "desc": "Guidance on building a project portfolio on GitHub and personal websites that stand out to employers."
+    },
+    {
+      "id": "ps4",
+      "title": "Soft Skills Training",
+      "desc": "Communication, presentation, and professional etiquette sessions to prepare you for corporate environments."
+    },
+    {
+      "id": "ps5",
+      "title": "Walk-in Drive Coordination",
+      "desc": "Regular walk-in drives and campus recruitment events organized at our centre with hiring partners."
+    },
+    {
+      "id": "ps6",
+      "title": "Alumni Network",
+      "desc": "Access to our growing alumni network of 5000+ placed professionals for mentorship and referrals."
+    }
+  ]
+}
