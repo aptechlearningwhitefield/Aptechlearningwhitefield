@@ -54,7 +54,7 @@ export default function Footer() {
           {/* Column 1: About */}
           <div className="lg:col-span-1">
             <Link to="/" className="inline-block mb-5">
-              <img src="/airo-assets/images/layouts/footer/cheekira-tech-aptech-learning-whitefield" alt="Cheekira Tech — Aptech Learning Whitefield" className="h-16 w-auto object-contain" />
+              <img src="/assets/media/layouts-footer-cheekira-tech-aptech-learning-whitefield-616ef643.jpg" alt="Cheekira Tech — Aptech Learning Whitefield" className="h-16 w-auto object-contain" />
               
             </Link>
             <div className="flex items-center gap-2 mb-3">

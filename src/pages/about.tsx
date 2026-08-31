@@ -157,7 +157,7 @@ export default function AboutPage() {
               <FadeIn delay={0.15}>
                 <div className="relative">
                   <div className="rounded-2xl overflow-hidden shadow-xl">
-                    <img src="/airo-assets/images/pages/about/story" alt="Aptech Learning Whitefield training centre in Bangalore" className="w-full h-[420px] object-cover" loading="lazy" width={600} height={420} />
+                    <img src="https://img1.wsimg.com/isteam/getty/1072471128" alt="Aptech Learning Whitefield training centre in Bangalore" className="w-full h-[420px] object-cover" loading="lazy" width={600} height={420} />
                   </div>
                   {/* Floating badge */}
                   <div className="absolute -bottom-5 -left-5 bg-[#0A1628] text-white rounded-xl p-5 shadow-xl">
@@ -258,7 +258,7 @@ export default function AboutPage() {
               <FadeIn>
                 <div className="relative">
                   <div className="rounded-2xl overflow-hidden shadow-xl">
-                    <img src="/airo-assets/images/pages/about/aptech-advantage" alt="Aptech Learning global IT training network" className="w-full h-[400px] object-cover" loading="lazy" width={600} height={400} />
+                    <img src="https://img1.wsimg.com/isteam/getty/2275807131" alt="Aptech Learning global IT training network" className="w-full h-[400px] object-cover" loading="lazy" width={600} height={400} />
                   </div>
                   {/* Stats overlay */}
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-[#0A1628]/80 via-transparent to-transparent pointer-events-none" />

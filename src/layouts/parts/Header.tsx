@@ -127,7 +127,7 @@ export default function Header() {
           <div className="flex h-20 items-center justify-between gap-4">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 shrink-0">
-              <img src="/airo-assets/images/layouts/header/cheekira-tech-aptech-learning-whitefield" alt="Cheekira Tech — Aptech Learning Whitefield" className="h-20 w-auto object-contain shrink-0" />
+              <img src="/assets/media/layouts-header-cheekira-tech-aptech-learning-whitefield-616ef643.jpg" alt="Cheekira Tech — Aptech Learning Whitefield" className="h-20 w-auto object-contain shrink-0" />
               
               <div className="hidden sm:flex flex-col leading-tight">
                 <span className="text-[11px] font-bold text-slate-800 tracking-wide uppercase">APTECH LEARNING</span>

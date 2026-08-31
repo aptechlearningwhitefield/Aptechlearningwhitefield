@@ -18,10 +18,7 @@ const courseIcons: Record<string, React.ReactNode> = {
   c7: <Globe size={24} />,
   c8: <Cloud size={24} />,
   c9: <Monitor size={24} />,
-  c10: <TrendingUp size={24} />,
-  'genai-accelerator': <Zap size={24} />,
-  'prompt-engineering': <Zap size={24} />,
-  'foundation-ai-ml': <Cpu size={24} />
+  c10: <TrendingUp size={24} />
 };
 const courseRoutes: Record<string, string> = {
   c1: 'ai-machine-learning',
@@ -201,7 +198,6 @@ function StudentEnquiryForm() {
         <select id="enq-course" name="interestedCourse" required value={formData.interestedCourse} onChange={handleChange} className="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white">
           <option value="">Select a course</option>
           <option value="AI & Machine Learning">AI & Machine Learning</option>
-          <option value="Generative AI & Prompt Engineering">Generative AI & Prompt Engineering</option>
           <option value="Data Science">Data Science</option>
           <option value="Data Analytics & Power BI">Data Analytics & Power BI</option>
           <option value="Python Programming">Python Programming</option>
@@ -436,7 +432,7 @@ export default function HomePage() {
             }} className="relative hidden lg:block">
                 
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/40">
-                  <img src="/airo-assets/images/pages/home/hero" alt="Students learning technology at Aptech Learning Whitefield, Bangalore" className="w-full h-[420px] object-cover" loading="eager" fetchPriority="high" width={600} height={420} />
+                  <img src="https://img1.wsimg.com/isteam/getty/1387157405" alt="Students learning technology at Aptech Learning Whitefield, Bangalore" className="w-full h-[420px] object-cover" loading="eager" fetchPriority="high" width={600} height={420} />
                   
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628]/40 to-transparent pointer-events-none" />
                 </div>
@@ -525,7 +521,7 @@ export default function HomePage() {
               <FadeIn delay={0.15}>
                 <div className="relative">
                   <div className="rounded-2xl overflow-hidden shadow-xl">
-                    <img src="/airo-assets/images/pages/home/about" alt="Aptech Learning Whitefield IT training institute classroom in Bangalore" className="w-full h-[420px] object-cover" loading="lazy" width={600} height={420} />
+                    <img src="https://img1.wsimg.com/isteam/getty/2246315787" alt="Aptech Learning Whitefield IT training institute classroom in Bangalore" className="w-full h-[420px] object-cover" loading="lazy" width={600} height={420} />
                     
                   </div>
                   <div className="absolute -bottom-5 -right-5 bg-[#0A1628] text-white rounded-xl p-5 shadow-xl max-w-[200px]">
@@ -552,7 +548,7 @@ export default function HomePage() {
             </FadeIn>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-              {home.courses.items.filter((course) => !['c8', 'c9'].includes(course.id)).map((course, i) => <motion.div key={course.id} initial={{
+              {home.courses.items.filter((course) => !['c2', 'c8', 'c9'].includes(course.id)).map((course, i) => <motion.div key={course.id} initial={{
               opacity: 0,
               y: 24
             }} whileInView={{
@@ -824,7 +820,6 @@ export default function HomePage() {
                         <option value="">Select training topic</option>
                         <option>AI & Machine Learning</option>
                         <option>Data Science & Analytics</option>
-                        <option>Generative AI & Microsoft Copilot</option>
                         <option>Microsoft Intune & M365</option>
                         <option>Power BI</option>
                         <option>Python for Business</option>
