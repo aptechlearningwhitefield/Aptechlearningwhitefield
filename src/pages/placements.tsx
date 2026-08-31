@@ -2,7 +2,7 @@ import { Helmet } from '@dr.pogodin/react-helmet';
 import { Link } from "react-router";
 import { motion } from 'motion/react';
 import { seoMetadata } from '../lib/seo-metadata';
-import { Briefcase, CheckCircle, Star, ArrowRight, Phone, MessageCircle, TrendingUp, Users, Award, FileText, Linkedin, Github } from 'lucide-react';
+import { Briefcase, CheckCircle, ArrowRight, Phone, MessageCircle, Users, Award, FileText, Linkedin, Github } from 'lucide-react';
 import { placements } from 'virtual:content';
 const site = 'https://www.cheekiratech.com';
 const supportIcons = [FileText, Linkedin, Github, Users, Briefcase, Award];
@@ -152,47 +152,20 @@ export default function PlacementsPage() {
               <h2 id="success-heading" className="text-3xl font-extrabold text-slate-900 mb-3">Student Success Stories</h2>
               <p className="text-slate-500 max-w-xl mx-auto">Real students. Real jobs. Real salaries.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {placements.successStories.map((story, i) => <motion.div key={story.id} initial={{
-              opacity: 0,
-              y: 20
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} viewport={{
-              once: true
-            }} transition={{
-              duration: 0.4,
-              delay: i * 0.08,
-              ease: 'easeOut' as const
-            }} className="bg-[#F8FAFC] border border-slate-100 rounded-2xl p-6">
-                  <div className="flex gap-1 mb-3">
-                    {[...Array(5)].map((_, si) => <Star key={si} size={13} className="text-yellow-400 fill-yellow-400" />)}
-                  </div>
-                  <p className="text-slate-600 text-sm leading-relaxed mb-5 italic">"{story.quote}"</p>
-                  <div className="border-t border-slate-100 pt-4">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                        <span className="text-primary font-bold text-sm">{story.name.charAt(0)}</span>
-                      </div>
-                      <div>
-                        <div className="font-semibold text-slate-900 text-sm">{story.name}</div>
-                        <div className="text-slate-400 text-xs">{story.course}</div>
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-1.5 text-xs text-slate-500">
-                        <Briefcase size={12} />
-                        <span>{story.company}</span>
-                      </div>
-                      <div className="flex items-center gap-1.5 text-xs font-semibold text-green-600">
-                        <TrendingUp size={12} />
-                        <span>{story.package}</span>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>)}
-            </div>
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.4,
+            ease: 'easeOut' as const
+          }} className="mx-auto max-w-md overflow-hidden border border-slate-100 rounded-lg shadow-sm">
+              <img src="/assets/uploads/Screenshot%202026-08-31%20181243.png" alt="Aptech Learning Whitefield student placement success stories" className="block w-full h-auto" />
+            </motion.div>
           </div>
         </section>
 
@@ -200,8 +173,8 @@ export default function PlacementsPage() {
         <section className="py-16 bg-[#F8FAFC]" aria-labelledby="support-heading">
           <div className="container mx-auto px-4">
             <div className="text-center mb-10">
-              <h2 id="support-heading" className="text-3xl font-extrabold text-slate-900 mb-3">What Our Placement Cell Offers</h2>
-              <p className="text-slate-500 max-w-xl mx-auto">End-to-end support from course completion to your first day at work.</p>
+              <h2 id="support-heading" className="text-3xl font-extrabold text-slate-900 mb-3">What Students Gain With Us</h2>
+              <p className="text-slate-500 max-w-xl mx-auto">Practical learning experiences that help students build skills, confidence, and a strong project portfolio.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {placements.placementSupport.map((item, i) => {

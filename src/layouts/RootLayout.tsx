@@ -4,7 +4,6 @@ import { ScrollRestoration } from "react-router";
 import Footer from '@/layouts/parts/Footer';
 import Header from '@/layouts/parts/Header';
 import Website from '@/layouts/Website';
-import AnimatedCursor from '@/components/AnimatedCursor';
 
 /**
  * Root layout component that wraps all pages with consistent header and footer.
@@ -31,7 +30,6 @@ export default function RootLayout({
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <ScrollRestoration />
-      <AnimatedCursor />
       <Header />
       {children}
       <Footer />

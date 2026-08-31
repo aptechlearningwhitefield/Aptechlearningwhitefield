@@ -226,7 +226,7 @@ export default function CorporateTrainingPage() {
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
 
           <div className="container mx-auto px-4 relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-3xl">
               {/* Left */}
               <motion.div initial={{
               opacity: 0,
@@ -252,24 +252,6 @@ export default function CorporateTrainingPage() {
                     <Phone size={16} /> {corporate.hero.cta2}
                   </a>
                 </div>
-              </motion.div>
-
-              {/* Right: stats */}
-              <motion.div initial={{
-              opacity: 0,
-              x: 24
-            }} animate={{
-              opacity: 1,
-              x: 0
-            }} transition={{
-              duration: 0.5,
-              delay: 0.15,
-              ease: 'easeOut' as const
-            }} className="grid grid-cols-2 gap-4">
-                {corporate.stats.map(stat => <div key={stat.id} className="bg-white/10 border border-white/15 rounded-2xl p-6 text-center backdrop-blur-sm">
-                    <div className="text-3xl font-extrabold text-white mb-1">{stat.value}</div>
-                    <div className="text-blue-200 text-sm">{stat.label}</div>
-                  </div>)}
               </motion.div>
             </div>
           </div>

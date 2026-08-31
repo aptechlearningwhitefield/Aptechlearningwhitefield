@@ -169,33 +169,33 @@
   "placementSupport": [
     {
       "id": "ps1",
-      "title": "Dedicated Placement Cell",
-      "desc": "A full-time placement team focused exclusively on connecting students with job opportunities."
+      "title": "Hands-On Projects",
+      "desc": "Build practical assignments throughout the course to strengthen your skills through doing."
     },
     {
       "id": "ps2",
-      "title": "LinkedIn Profile Optimization",
-      "desc": "We help build a strong LinkedIn presence that attracts recruiters and showcases your skills."
+      "title": "Live Projects",
+      "desc": "Work on industry-relevant project scenarios that mirror real workplace challenges."
     },
     {
       "id": "ps3",
-      "title": "Portfolio Development",
-      "desc": "Guidance on building a project portfolio on GitHub and personal websites that stand out to employers."
+      "title": "Industry Tools Training",
+      "desc": "Learn with the current tools, platforms, and workflows used by technology teams."
     },
     {
       "id": "ps4",
-      "title": "Soft Skills Training",
-      "desc": "Communication, presentation, and professional etiquette sessions to prepare you for corporate environments."
+      "title": "Expert Mentorship",
+      "desc": "Get guidance, feedback, and practical insights from experienced instructors."
     },
     {
       "id": "ps5",
-      "title": "Walk-in Drive Coordination",
-      "desc": "Regular walk-in drives and campus recruitment events organized at our centre with hiring partners."
+      "title": "Capstone Projects",
+      "desc": "Complete an end-to-end final project that brings your learning together into a portfolio-ready outcome."
     },
     {
       "id": "ps6",
-      "title": "Alumni Network",
-      "desc": "Access to our growing alumni network of 5000+ placed professionals for mentorship and referrals."
+      "title": "Interview Readiness",
+      "desc": "Practice technical and HR interviews with focused feedback to communicate your skills confidently."
     }
   ]
 }

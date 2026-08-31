@@ -4,39 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Modern custom pointer: the native arrow is hidden while the page is active. */
-html, body, a, button, input, select, textarea { cursor: none !important; }
-.animated-cursor-ring,
-.animated-cursor-dot {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 9999;
-  will-change: transform;
-}
-.animated-cursor-ring {
-  width: 30px;
-  height: 30px;
-  margin: -15px 0 0 -15px;
-  border: 1.5px solid rgba(37, 99, 235, .7);
-  border-radius: 50%;
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, .08);
-  transition: transform .12s ease, width .18s ease, height .18s ease;
-}
-.animated-cursor-dot {
-  width: 7px;
-  height: 7px;
-  margin: -3.5px 0 0 -3.5px;
-  border-radius: 50%;
-  background: #2563eb;
-  box-shadow: 0 0 12px rgba(37, 99, 235, .65);
-}
-@media (pointer: coarse) {
-  html, body, a, button, input, select, textarea { cursor: auto !important; }
-  .animated-cursor-ring, .animated-cursor-dot { display: none; }
-}
-
 @layer base {
   :root {
     /* Core Colors */

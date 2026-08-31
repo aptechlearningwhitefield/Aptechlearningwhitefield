@@ -3,18 +3,33 @@ import { Link } from "react-router";
 import { motion } from 'motion/react';
 import { useState } from 'react';
 import { seoMetadata } from '../lib/seo-metadata';
-import { School, GraduationCap, CheckCircle, ChevronDown, ChevronUp, Send, Phone, MessageCircle, ArrowRight, Code, Cpu, Terminal, Sun, Monitor, Shield, Users, Award, Clock, BookOpen } from 'lucide-react';
+import { School, GraduationCap, CheckCircle, ChevronDown, ChevronUp, Send, Phone, MessageCircle, ArrowRight, Users, Award, Clock, BookOpen } from 'lucide-react';
 import { schools } from 'virtual:content';
 const site = 'https://www.cheekiratech.com';
-const schoolIcons: Record<string, React.ReactNode> = {
-  code: <Code size={22} />,
-  cpu: <Cpu size={22} />,
-  terminal: <Terminal size={22} />,
-  sun: <Sun size={22} />,
-  monitor: <Monitor size={22} />,
-  shield: <Shield size={22} />
-};
 const benefitIcons = [Award, Users, Clock, School, BookOpen, GraduationCap];
+const schoolCollegeCourses = [
+  {
+    id: 'warrior-of-logic-building',
+    name: 'Warrior of Logic Building',
+    duration: '30 hours',
+    topics: ['Basics of Logic Building and Programming', 'Understanding C Programming'],
+    level: 'Foundation program'
+  },
+  {
+    id: 'gladiator-in-website-designing',
+    name: 'Gladiator in Website Designing',
+    duration: '30 hours',
+    topics: ['Basics of Web Designing', 'Designing Modernistic Websites'],
+    level: 'Beginner program'
+  },
+  {
+    id: 'gladiator-of-python-programming',
+    name: 'Gladiator of Python Programming',
+    duration: '30 hours',
+    topics: ['Programming with Python'],
+    level: 'Beginner program'
+  }
+];
 
 // ─── Partnership Enquiry Form ─────────────────────────────────────────────────
 function PartnershipForm() {
@@ -148,7 +163,6 @@ function PartnershipForm() {
 
 // ─── Main Page ────────────────────────────────────────────────────────────────
 export default function SchoolsCollegesPage() {
-  const [activeTab, setActiveTab] = useState<'schools' | 'colleges'>('schools');
   const [openFaq, setOpenFaq] = useState<string | null>(null);
   return <>
       <Helmet>
@@ -177,7 +191,7 @@ export default function SchoolsCollegesPage() {
         }} />
           <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
           <div className="container mx-auto px-4 relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-3xl">
               <motion.div initial={{
               opacity: 0,
               y: 24
@@ -203,55 +217,21 @@ export default function SchoolsCollegesPage() {
                   </a>
                 </div>
               </motion.div>
-              <motion.div initial={{
-              opacity: 0,
-              x: 24
-            }} animate={{
-              opacity: 1,
-              x: 0
-            }} transition={{
-              duration: 0.5,
-              delay: 0.15,
-              ease: 'easeOut' as const
-            }} className="grid grid-cols-2 gap-4">
-                {schools.stats.map(stat => <div key={stat.id} className="bg-white/10 border border-white/15 rounded-2xl p-6 text-center backdrop-blur-sm">
-                    <div className="text-3xl font-extrabold text-white mb-1">{stat.value}</div>
-                    <div className="text-blue-200 text-sm">{stat.label}</div>
-                  </div>)}
-              </motion.div>
             </div>
           </div>
         </section>
 
-        {/* Tab switcher */}
-        <section className="bg-white border-b border-slate-100" aria-label="Program type selector">
-          <div className="container mx-auto px-4">
-            <div className="flex">
-              <button onClick={() => setActiveTab('schools')} className={`flex items-center gap-2.5 px-8 py-5 font-semibold text-sm border-b-2 transition-all ${activeTab === 'schools' ? 'border-primary text-primary' : 'border-transparent text-slate-500 hover:text-slate-700'}`}>
-                <School size={18} /> School Programs
-              </button>
-              <button onClick={() => setActiveTab('colleges')} className={`flex items-center gap-2.5 px-8 py-5 font-semibold text-sm border-b-2 transition-all ${activeTab === 'colleges' ? 'border-primary text-primary' : 'border-transparent text-slate-500 hover:text-slate-700'}`}>
-                <GraduationCap size={18} /> College Programs
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* Programs */}
+        {/* Courses */}
         <section className="py-14 bg-[#F8FAFC]" aria-labelledby="programs-section-heading">
           <div className="container mx-auto px-4">
             <div className="text-center mb-10">
-              <h2 id="programs-section-heading" className="text-3xl font-extrabold text-slate-900 mb-3">
-                {activeTab === 'schools' ? 'Programs for Schools' : 'Programs for Colleges'}
-              </h2>
+              <h2 id="programs-section-heading" className="text-3xl font-extrabold text-slate-900 mb-3">Explore Our Courses</h2>
               <p className="text-slate-500 max-w-2xl mx-auto">
-                {activeTab === 'schools' ? 'Engaging, age-appropriate technology programs that spark curiosity and build future-ready skills.' : 'Career-focused programs that bridge the gap between academics and industry expectations.'}
+                Focused technology programs designed to build practical, future-ready skills for students.
               </p>
             </div>
-
-            {/* School programs */}
-            <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ${activeTab !== 'schools' ? 'hidden' : ''}`}>
-              {schools.schoolPrograms.map((prog, i) => <motion.div key={prog.id} initial={{
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {schoolCollegeCourses.map((course, i) => <motion.div key={course.id} initial={{
               opacity: 0,
               y: 20
             }} whileInView={{
@@ -264,42 +244,17 @@ export default function SchoolsCollegesPage() {
               delay: i * 0.07,
               ease: 'easeOut' as const
             }} className="bg-white border border-slate-100 rounded-2xl p-6 hover:shadow-md transition-shadow">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 text-primary">
-                    {schoolIcons[prog.icon] ?? <Code size={22} />}
+                  <div className="flex items-start justify-between gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                      <BookOpen size={22} />
+                    </div>
+                    <span className="bg-primary/10 text-primary text-xs font-semibold px-2.5 py-1 rounded-full">{course.level}</span>
                   </div>
-                  <h3 className="font-bold text-slate-900 mb-2">{prog.title}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed mb-4">{prog.desc}</p>
-                  <div className="flex items-center gap-4 text-xs text-slate-400">
-                    <span className="flex items-center gap-1.5"><Clock size={13} /> {prog.duration}</span>
-                    <span className="flex items-center gap-1.5"><Users size={13} /> {prog.age}</span>
-                  </div>
-                </motion.div>)}
-            </div>
-
-            {/* College programs */}
-            <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ${activeTab !== 'colleges' ? 'hidden' : ''}`}>
-              {schools.collegePrograms.map((prog, i) => <motion.div key={prog.id} initial={{
-              opacity: 0,
-              y: 20
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} viewport={{
-              once: true
-            }} transition={{
-              duration: 0.4,
-              delay: i * 0.07,
-              ease: 'easeOut' as const
-            }} className="bg-white border border-slate-100 rounded-2xl p-6 hover:shadow-md transition-shadow">
-                  <div className="w-12 h-12 rounded-xl bg-indigo-50 flex items-center justify-center mb-4">
-                    <GraduationCap size={22} className="text-indigo-600" />
-                  </div>
-                  <div className="inline-block bg-indigo-50 text-indigo-700 text-xs font-semibold px-2.5 py-1 rounded-full mb-3">{prog.target}</div>
-                  <h3 className="font-bold text-slate-900 mb-2">{prog.title}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed mb-4">{prog.desc}</p>
-                  <div className="flex items-center gap-1.5 text-xs text-slate-400">
-                    <Clock size={13} /> <span>{prog.duration}</span>
-                  </div>
+                  <h3 className="font-bold text-slate-900 mb-2">{course.name}</h3>
+                  <p className="flex items-center gap-1.5 text-xs text-slate-400 mb-4"><Clock size={13} /> {course.duration}</p>
+                  <ol className="space-y-1.5 text-sm text-slate-500 leading-relaxed list-decimal list-inside">
+                    {course.topics.map(topic => <li key={topic}>{topic}</li>)}
+                  </ol>
                 </motion.div>)}
             </div>
           </div>
