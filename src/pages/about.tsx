@@ -350,44 +350,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ── TEAM ─────────────────────────────────────────────────────────── */}
-        <section className="py-20 bg-white" aria-labelledby="team-heading">
-          <div className="container mx-auto px-4">
-            <FadeIn className="text-center mb-12">
-              <h2 id="team-heading" className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-3">
-                Meet Our Team
-              </h2>
-              <p className="text-slate-600 max-w-xl mx-auto">
-                Industry practitioners and career experts dedicated to your success.
-              </p>
-            </FadeIn>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {about.team.map((member, i) => <motion.div key={member.id} initial={{
-              opacity: 0,
-              y: 24
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} viewport={{
-              once: true
-            }} transition={{
-              duration: 0.4,
-              delay: i * 0.09,
-              ease: 'easeOut' as const
-            }} className="bg-[#F8FAFC] border border-slate-100 rounded-2xl p-6 text-center hover:shadow-md transition-shadow">
-                  {/* Avatar */}
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-blue-700 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                    <Users size={32} className="text-white" />
-                  </div>
-                  <h3 className="font-bold text-slate-900 text-sm mb-1">{member.name}</h3>
-                  <div className="text-primary text-xs font-semibold mb-3">{member.role}</div>
-                  <p className="text-slate-500 text-xs leading-relaxed">{member.bio}</p>
-                </motion.div>)}
-            </div>
-          </div>
-        </section>
-
         {/* ── CTA ──────────────────────────────────────────────────────────── */}
         <section className="py-20 relative overflow-hidden" style={{
         background: 'linear-gradient(135deg, #0A1628 0%, #0F2347 60%, #1a3a6b 100%)'
