@@ -141,13 +141,13 @@ export default function CoursesPage() {
               <div className="flex flex-wrap justify-center gap-6 text-sm">
                 {[{
                 icon: <Users size={16} />,
-                text: '500+ Students Trained'
+                text: '50+ Students Trained'
               }, {
                 icon: <Award size={16} />,
                 text: 'Aptech Certified Programs'
               }, {
                 icon: <CheckCircle size={16} />,
-                text: '95% Placement Rate'
+                text: '90% Placement Rate'
               }].map((item, i) => <div key={i} className="flex items-center gap-2 text-blue-200">
                     <span className="text-blue-400">{item.icon}</span>
                     <span>{item.text}</span>

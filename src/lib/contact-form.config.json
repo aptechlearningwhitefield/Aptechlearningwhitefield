@@ -9,6 +9,16 @@
       "brandId": "2f552ce6-95e4-41a1-9c1f-5bfa53009d0b",
       "categoryId": 86836292,
       "overrideEmail": "aptechlearningwhitefield@gmail.com"
+    },
+    "schools-colleges": {
+      "brandId": "2f552ce6-95e4-41a1-9c1f-5bfa53009d0b",
+      "categoryId": 86836292,
+      "overrideEmail": "aptechlearningwhitefield@gmail.com"
+    },
+    "general-enquiry": {
+      "brandId": "2f552ce6-95e4-41a1-9c1f-5bfa53009d0b",
+      "categoryId": 86836292,
+      "overrideEmail": "aptechlearningwhitefield@gmail.com"
     }
   }
 }

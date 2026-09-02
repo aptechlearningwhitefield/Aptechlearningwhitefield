@@ -120,7 +120,7 @@ export default function PlacementsPage() {
               <h2 id="partners-heading" className="text-3xl font-extrabold text-slate-900 mb-3">Our Hiring Partners</h2>
               <p className="text-slate-500 max-w-xl mx-auto">100+ companies actively recruit from Aptech Learning Whitefield — from MNCs to fast-growing startups.</p>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-4">
               {placements.hiringPartners.map((partner, i) => <motion.div key={partner.id} initial={{
               opacity: 0,
               scale: 0.95
@@ -133,11 +133,11 @@ export default function PlacementsPage() {
               duration: 0.3,
               delay: i * 0.04,
               ease: 'easeOut' as const
-            }} className="bg-white border border-slate-100 rounded-xl p-4 text-center hover:shadow-md transition-shadow">
-                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-2">
+            }} className="bg-white border border-slate-100 rounded-xl p-4 text-center hover:shadow-md transition-shadow h-full flex flex-col items-center justify-center min-h-[120px]">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-2 shrink-0">
                     <Briefcase size={18} className="text-primary" />
                   </div>
-                  <div className="font-semibold text-slate-800 text-sm">{partner.name}</div>
+                  <div className="font-semibold text-slate-800 text-sm leading-tight break-words">{partner.name}</div>
                   <div className="text-slate-400 text-xs mt-0.5">{partner.type}</div>
                 </motion.div>)}
             </div>
@@ -210,7 +210,7 @@ export default function PlacementsPage() {
           <div className="container mx-auto px-4 text-center">
             <div className="inline-flex items-center gap-2 bg-green-500/20 border border-green-400/30 rounded-full px-4 py-1.5 mb-5">
               <CheckCircle size={14} className="text-green-400" />
-              <span className="text-green-300 text-xs font-medium">95%+ Placement Rate</span>
+              <span className="text-green-300 text-xs font-medium">90% Placement Rate</span>
             </div>
             <h2 className="text-3xl font-extrabold text-white mb-3">Ready to Launch Your IT Career?</h2>
             <p className="text-blue-200 mb-8 max-w-xl mx-auto">Enroll in a course today and let our placement cell do the heavy lifting to get you hired.</p>

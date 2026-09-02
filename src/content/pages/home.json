@@ -327,8 +327,8 @@
     "stats": [
       {
         "id": "ps1",
-        "value": "500+",
-        "label": ""
+        "value": "840+",
+        "label": "Global Presence"
       },
       {
         "id": "ps2",
@@ -337,13 +337,13 @@
       },
       {
         "id": "ps3",
-        "value": "95%",
+        "value": "90%",
         "label": "Placement Rate"
       },
       {
         "id": "ps4",
         "value": "100%",
-        "label": "Career Support"
+        "label": "Placement Support"
       }
     ],
     "features": [
@@ -375,7 +375,7 @@
     "partners": [
       {
         "id": "pp1",
-        "name": "Infosys"
+        "name": "Reliance pvt.Ltd."
       },
       {
         "id": "pp2",
@@ -387,23 +387,39 @@
       },
       {
         "id": "pp4",
-        "name": "Accenture"
+        "name": "CollegeDunia"
       },
       {
         "id": "pp5",
-        "name": "Cognizant"
+        "name": "HDFC"
       },
       {
         "id": "pp6",
-        "name": "HCL"
+        "name": "HCL Technologies"
       },
       {
         "id": "pp7",
-        "name": "Tech Mahindra"
+        "name": "GISA Infotech"
       },
       {
         "id": "pp8",
-        "name": "Capgemini"
+        "name": "Indianoil"
+      },
+      {
+        "id": "pp9",
+        "name": "Muthoot Finance"
+      },
+      {
+        "id": "pp10",
+        "name": "WEQ Technologies"
+      },
+      {
+        "id": "pp11",
+        "name": "Tally"
+      },
+      {
+        "id": "pp12",
+        "name": "Goldiam International"
       }
     ]
   },
@@ -566,7 +582,7 @@
       {
         "id": "faq4",
         "question": "Do you provide placement assistance?",
-        "answer": "Absolutely! We have a dedicated placement cell that provides resume building, LinkedIn optimization, mock interviews, soft skills training and direct referrals to our 50+ hiring partner companies. We maintain a 95% placement rate.\nPlacement assistance is applicable for long term courses called Smart Professional Programs"
+        "answer": "Absolutely! We have a dedicated placement cell that provides resume building, LinkedIn optimization, mock interviews, soft skills training and direct referrals to our 50+ hiring partner companies. We maintain a 90% placement rate.\nPlacement assistance is applicable for long term courses called Smart Professional Programs"
       },
       {
         "id": "faq5",

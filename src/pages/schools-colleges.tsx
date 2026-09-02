@@ -49,7 +49,7 @@ function PartnershipForm() {
     setStatus('loading');
     try {
       // Field mapping: only the message textarea goes in messages_attributes[0].body. All other fields must be added to conversation.data as { "Label": value } pairs.
-      const res = await fetch('/api/contact/student-enquiry', {
+      const res = await fetch('/api/contact/schools-colleges', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

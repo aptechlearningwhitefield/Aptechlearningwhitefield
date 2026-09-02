@@ -78,12 +78,12 @@
       {
         "id": "as1",
         "value": "40+",
-        "label": "Years of Excellence"
+        "label": "Years of Industry Trust"
       },
       {
         "id": "as2",
-        "value": "40+",
-        "label": "Countries Presence"
+        "value": "840+",
+        "label": "Global Presence"
       },
       {
         "id": "as3",
@@ -92,8 +92,8 @@
       },
       {
         "id": "as4",
-        "value": "500+",
-        "label": "Centres Worldwide"
+        "value": "40+",
+        "label": "Countries Worldwide"
       }
     ],
     "points": [
@@ -137,13 +137,13 @@
       },
       {
         "id": "cf4",
-        "title": "Placement Cell",
-        "desc": "A dedicated placement room for mock interviews, resume reviews, and one-on-one career counselling sessions."
+        "title": "Online Varsity",
+        "desc": "A dedicated digital learning hub with recorded sessions, practice material, and self-paced support for continuous learning."
       },
       {
         "id": "cf5",
-        "title": "Library & Resources",
-        "desc": "Access to Aptech's digital library, study materials, recorded sessions, and practice assessments."
+        "title": "Ebooks",
+        "desc": "Access to curated digital learning resources, study notes, and topic-focused ebooks for deeper understanding."
       },
       {
         "id": "cf6",
@@ -181,36 +181,24 @@
   "achievements": [
     {
       "id": "ac1",
-      "value": "500+",
-      "label": "Students Placed",
-      "sub": "Across IT companies in Bangalore"
-    },
-    {
-      "id": "ac2",
-      "value": "95%+",
+      "value": "90%",
       "label": "Placement Rate",
       "sub": "Industry-leading success rate"
     },
     {
-      "id": "ac3",
+      "id": "ac2",
       "value": "100+",
       "label": "Hiring Partners",
       "sub": "MNCs, IT firms & startups"
     },
     {
-      "id": "ac4",
-      "value": "50+",
-      "label": "Schools & Colleges",
-      "sub": "Institutional partnerships"
+      "id": "ac3",
+      "value": "40+",
+      "label": "Years of Trust",
+      "sub": "Global IT training legacy"
     },
     {
       "id": "ac5",
-      "value": "200+",
-      "label": "Corporate Clients",
-      "sub": "Companies trained"
-    },
-    {
-      "id": "ac6",
       "value": "10+",
       "label": "Courses Offered",
       "sub": "Industry-aligned programs"

@@ -375,45 +375,6 @@ export default function CorporateTrainingPage() {
           </div>
         </section>
 
-        {/* Testimonials */}
-        <section className="py-16 bg-[#F8FAFC]" aria-labelledby="corp-testimonials-heading">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-10">
-              <h2 id="corp-testimonials-heading" className="text-3xl font-extrabold text-slate-900 mb-3">What Our Clients Say</h2>
-              <p className="text-slate-500">Trusted by leading companies across Bangalore.</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {corporate.testimonials.map((t, i) => <motion.div key={t.id} initial={{
-              opacity: 0,
-              y: 20
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} viewport={{
-              once: true
-            }} transition={{
-              duration: 0.4,
-              delay: i * 0.1,
-              ease: 'easeOut' as const
-            }} className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm">
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, si) => <Star key={si} size={14} className="text-yellow-400 fill-yellow-400" />)}
-                  </div>
-                  <p className="text-slate-600 text-sm leading-relaxed mb-5 italic">"{t.quote}"</p>
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                      <span className="text-primary font-bold text-sm">{t.name.charAt(0)}</span>
-                    </div>
-                    <div>
-                      <div className="font-semibold text-slate-900 text-sm">{t.name}</div>
-                      <div className="text-slate-400 text-xs">{t.role}, {t.company}</div>
-                    </div>
-                  </div>
-                </motion.div>)}
-            </div>
-          </div>
-        </section>
-
         {/* Enquiry Form + Sidebar */}
         <section id="enquiry-form" className="py-16 bg-white" aria-labelledby="corp-form-heading">
           <div className="container mx-auto px-4">

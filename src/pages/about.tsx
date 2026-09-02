@@ -105,7 +105,7 @@ export default function AboutPage() {
         {/* ── ACHIEVEMENTS BAR ─────────────────────────────────────────────── */}
         <section className="bg-white border-b border-slate-100 shadow-sm" aria-label="Key achievements">
           <div className="container mx-auto px-4 py-8">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-0">
               {about.achievements.map((item, i) => <motion.div key={item.id} initial={{
               opacity: 0,
               y: 16
@@ -262,12 +262,12 @@ export default function AboutPage() {
                   </div>
                   {/* Stats overlay */}
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-[#0A1628]/80 via-transparent to-transparent pointer-events-none" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <div className="grid grid-cols-2 gap-3">
-                      {about.aptech.stats.map((stat) => <div key={stat.id} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-3 text-center">
-                          <div className="text-2xl font-extrabold text-white">{stat.value}</div>
-                          <div className="text-blue-200 text-xs">{stat.label}</div>
-                        </div>)}
+                  <div className="absolute bottom-0 right-0 md:right-2 lg:right-8 p-6 pr-0 md:pr-2 lg:pr-6">
+                    <div className="flex flex-wrap items-center gap-4 md:gap-6 lg:gap-8">
+                        {about.aptech.stats.map((stat) => <div key={stat.id} className="w-[150px] sm:w-[170px] md:w-[190px] bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-3 flex min-h-[88px] flex-col items-center justify-center text-center">
+                            <div className="w-full text-center text-[1.8rem] md:text-[2.5rem] font-extrabold text-white leading-none tracking-tight tabular-nums whitespace-nowrap"><span className="inline-block text-center">{stat.value}</span></div>
+                            <div className="text-blue-200 text-[11px] md:text-xs mt-2 leading-snug text-center max-w-[150px]">{stat.label}</div>
+                          </div>)}
                     </div>
                   </div>
                 </div>

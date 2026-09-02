@@ -10,7 +10,7 @@ const enquiryIcons: Record<string, React.ReactNode> = {
   student: <GraduationCap size={22} />,
   corporate: <Building2 size={22} />,
   schools: <School size={22} />,
-  other: <HelpCircle size={22} />
+  general: <HelpCircle size={22} />
 };
 
 // ─── Student Enquiry Form ─────────────────────────────────────────────────────
@@ -330,9 +330,216 @@ function CorporateEnquiryForm() {
     </form>;
 }
 
+function SchoolsEnquiryForm() {
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [gotcha, setGotcha] = useState('');
+  const [institution, setInstitution] = useState('');
+  const [contactPerson, setContactPerson] = useState('');
+  const [role, setRole] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [programType, setProgramType] = useState('');
+  const [students, setStudents] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (gotcha) return;
+    setStatus('loading');
+    try {
+      const res = await fetch('/api/contact/schools-colleges', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          conversation: {
+            messages_attributes: [{ body: message || 'School/College partnership enquiry' }],
+            data: {
+              __gd_contact_form_title: 'Schools & Colleges Partnership Enquiry',
+              'Institution Name': institution,
+              'Contact Person': contactPerson,
+              'Role / Designation': role,
+              'Phone': phone,
+              'Program Type': programType,
+              'Number of Students': students
+            }
+          },
+          user: {
+            email,
+            name: contactPerson
+          }
+        })
+      });
+      const data = await res.json();
+      setStatus(data.success ? 'success' : 'error');
+    } catch {
+      setStatus('error');
+    }
+  };
+
+  if (status === 'success') {
+    return <div className="text-center py-10">
+      <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+        <CheckCircle size={32} className="text-green-500" />
+      </div>
+      <h3 className="text-xl font-bold text-slate-900 mb-2">Enquiry Received!</h3>
+      <p className="text-slate-500 mb-4">We'll reach out within 24 hours to discuss a partnership.</p>
+      <button onClick={() => setStatus('idle')} className="text-primary text-sm font-medium hover:underline">Submit another enquiry</button>
+    </div>;
+  }
+
+  return <form onSubmit={handleSubmit} className="space-y-4">
+    <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" style={{ position: 'absolute', left: '-9999px' }} aria-hidden="true" value={gotcha} onChange={e => setGotcha(e.target.value)} />
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div>
+        <label htmlFor="sc-institution" className="block text-xs font-semibold text-slate-600 mb-1.5">Institution Name *</label>
+        <input id="sc-institution" type="text" required value={institution} onChange={e => setInstitution(e.target.value)} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" placeholder="School or college name" />
+      </div>
+      <div>
+        <label htmlFor="sc-contact" className="block text-xs font-semibold text-slate-600 mb-1.5">Contact Person *</label>
+        <input id="sc-contact" type="text" required value={contactPerson} onChange={e => setContactPerson(e.target.value)} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" placeholder="Your name" />
+      </div>
+    </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div>
+        <label htmlFor="sc-role" className="block text-xs font-semibold text-slate-600 mb-1.5">Role / Designation</label>
+        <input id="sc-role" type="text" value={role} onChange={e => setRole(e.target.value)} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" placeholder="e.g. Principal, HOD, TPO" />
+      </div>
+      <div>
+        <label htmlFor="sc-phone" className="block text-xs font-semibold text-slate-600 mb-1.5">Phone Number *</label>
+        <input id="sc-phone" type="tel" required value={phone} onChange={e => setPhone(e.target.value)} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" placeholder="+91 XXXXX XXXXX" />
+      </div>
+    </div>
+    <div>
+      <label htmlFor="sc-email" className="block text-xs font-semibold text-slate-600 mb-1.5">Email Address *</label>
+      <input id="sc-email" type="email" required value={email} onChange={e => setEmail(e.target.value)} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" placeholder="official@institution.edu" />
+    </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div>
+        <label htmlFor="sc-program" className="block text-xs font-semibold text-slate-600 mb-1.5">Program Type</label>
+        <select id="sc-program" value={programType} onChange={e => setProgramType(e.target.value)} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors bg-white">
+          <option value="">Select program</option>
+          <option>Coding for Kids</option>
+          <option>AI & Robotics</option>
+          <option>Python Programming</option>
+          <option>Holiday Tech Camp</option>
+          <option>Digital Literacy</option>
+          <option>Campus Placement Readiness</option>
+          <option>Final Year Project Support</option>
+          <option>Industry Workshop</option>
+          <option>Internship Program</option>
+          <option>MoU Partnership</option>
+          <option>Multiple / Custom</option>
+        </select>
+      </div>
+      <div>
+        <label htmlFor="sc-students" className="block text-xs font-semibold text-slate-600 mb-1.5">Approx. Number of Students</label>
+        <select id="sc-students" value={students} onChange={e => setStudents(e.target.value)} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors bg-white">
+          <option value="">Select range</option>
+          <option>15–30</option>
+          <option>31–60</option>
+          <option>61–100</option>
+          <option>101–200</option>
+          <option>200+</option>
+        </select>
+      </div>
+    </div>
+    <div>
+      <label htmlFor="sc-message" className="block text-xs font-semibold text-slate-600 mb-1.5">Additional Details</label>
+      <textarea id="sc-message" rows={3} value={message} onChange={e => setMessage(e.target.value)} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors resize-none" placeholder="Tell us about your requirements, preferred dates, or any specific needs..." />
+    </div>
+    <button type="submit" disabled={status === 'loading'} className="w-full bg-primary text-white font-bold py-3.5 rounded-xl hover:bg-blue-700 transition-all hover:shadow-lg hover:shadow-blue-200 disabled:opacity-60 flex items-center justify-center gap-2 text-sm">
+      {status === 'loading' ? 'Submitting...' : <><Send size={16} /> Send Partnership Enquiry</>}
+    </button>
+    {status === 'error' && <p className="text-red-500 text-xs text-center mt-2">Something went wrong. Please call us at +91 74113 33500.</p>}
+  </form>;
+}
+
+function GeneralEnquiryForm() {
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [gotcha, setGotcha] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [mobile, setMobile] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (gotcha) return;
+    setStatus('loading');
+    try {
+      const res = await fetch('/api/contact/general-enquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          conversation: {
+            messages_attributes: [{ body: message || 'General enquiry from contact page' }],
+            data: {
+              __gd_contact_form_title: 'General Enquiry',
+              'Name': name,
+              'Mobile': mobile,
+              'Subject': subject,
+              'Message': message
+            }
+          },
+          user: {
+            email,
+            name
+          }
+        })
+      });
+      const data = await res.json();
+      setStatus(data.success ? 'success' : 'error');
+    } catch {
+      setStatus('error');
+    }
+  };
+
+  if (status === 'success') {
+    return <div className="text-center py-12">
+      <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+        <CheckCircle size={32} className="text-green-500" />
+      </div>
+      <h3 className="text-xl font-bold text-slate-900 mb-2">Enquiry Submitted!</h3>
+      <p className="text-slate-500 mb-6">Our team will get back to you shortly.</p>
+      <button onClick={() => setStatus('idle')} className="text-primary text-sm font-medium hover:underline">Submit another enquiry</button>
+    </div>;
+  }
+
+  return <form onSubmit={handleSubmit} className="space-y-4">
+    <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" style={{ position: 'absolute', left: '-9999px' }} aria-hidden="true" value={gotcha} onChange={e => setGotcha(e.target.value)} />
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div>
+        <label htmlFor="g-name" className="block text-xs font-semibold text-slate-600 mb-1.5">Full Name *</label>
+        <input id="g-name" type="text" required value={name} onChange={e => setName(e.target.value)} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" placeholder="Your full name" />
+      </div>
+      <div>
+        <label htmlFor="g-mobile" className="block text-xs font-semibold text-slate-600 mb-1.5">Mobile Number *</label>
+        <input id="g-mobile" type="tel" required value={mobile} onChange={e => setMobile(e.target.value)} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" placeholder="+91 XXXXX XXXXX" />
+      </div>
+    </div>
+    <div>
+      <label htmlFor="g-email" className="block text-xs font-semibold text-slate-600 mb-1.5">Email Address *</label>
+      <input id="g-email" type="email" required value={email} onChange={e => setEmail(e.target.value)} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" placeholder="you@example.com" />
+    </div>
+    <div>
+      <label htmlFor="g-subject" className="block text-xs font-semibold text-slate-600 mb-1.5">Subject</label>
+      <input id="g-subject" type="text" value={subject} onChange={e => setSubject(e.target.value)} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" placeholder="How can we help?" />
+    </div>
+    <div>
+      <label htmlFor="g-message" className="block text-xs font-semibold text-slate-600 mb-1.5">Message *</label>
+      <textarea id="g-message" rows={4} required value={message} onChange={e => setMessage(e.target.value)} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors resize-none" placeholder="Tell us your question or requirement..." />
+    </div>
+    <button type="submit" disabled={status === 'loading'} className="w-full bg-slate-900 text-white font-bold py-3.5 rounded-xl hover:bg-slate-800 transition-all hover:shadow-lg disabled:opacity-60 flex items-center justify-center gap-2 text-sm">
+      {status === 'loading' ? 'Submitting...' : <><Send size={16} /> Send General Enquiry</>}
+    </button>
+    {status === 'error' && <p className="text-red-500 text-xs text-center">Something went wrong. Please call us at +91 74113 33500.</p>}
+  </form>;
+}
+
 // ─── Main Page ────────────────────────────────────────────────────────────────
 export default function ContactPage() {
-  const [activeForm, setActiveForm] = useState<'student' | 'corporate'>('student');
+  const [activeForm, setActiveForm] = useState<'student' | 'corporate' | 'schools' | 'general'>('student');
   const [openFaq, setOpenFaq] = useState<string | null>(null);
   return <>
       <Helmet>
@@ -400,9 +607,7 @@ export default function ContactPage() {
         <section className="bg-white border-b border-slate-100" aria-label="Enquiry type">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
-              {contact.enquiryTypes.map(type => <button key={type.id} onClick={() => {
-              if (type.id === 'student' || type.id === 'corporate') setActiveForm(type.id);
-            }} className={`flex flex-col items-center gap-1.5 py-5 px-3 border-b-2 transition-all text-center ${type.id === activeForm || type.id === 'schools' && activeForm === 'student' || type.id === 'other' && activeForm === 'student' ? 'border-primary text-primary' : 'border-transparent text-slate-500 hover:text-slate-700'} ${type.id === activeForm ? 'border-primary text-primary' : 'border-transparent'}`}>
+              {contact.enquiryTypes.map(type => <button key={type.id} onClick={() => setActiveForm(type.id as 'student' | 'corporate' | 'schools' | 'general')} className={`flex flex-col items-center gap-1.5 py-5 px-3 border-b-2 transition-all text-center ${type.id === activeForm ? 'border-primary text-primary' : 'border-transparent text-slate-500 hover:text-slate-700'}`}>
                   <span className={`${type.id === activeForm ? 'text-primary' : 'text-slate-400'}`}>{enquiryIcons[type.id]}</span>
                   <span className="font-semibold text-sm">{type.label}</span>
                   <span className="text-xs text-slate-400 hidden md:block">{type.description}</span>
@@ -429,12 +634,18 @@ export default function ContactPage() {
                 ease: 'easeOut' as const
               }} className="bg-white border border-slate-100 rounded-2xl p-8 shadow-sm">
                   {/* Form toggle tabs */}
-                  <div className="flex gap-2 mb-7">
+                  <div className="flex flex-wrap gap-2 mb-7">
                     <button onClick={() => setActiveForm('student')} className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all ${activeForm === 'student' ? 'bg-primary text-white shadow-md shadow-blue-200' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
                       <GraduationCap size={16} /> Student Enquiry
                     </button>
                     <button onClick={() => setActiveForm('corporate')} className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all ${activeForm === 'corporate' ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
                       <Building2 size={16} /> Corporate Enquiry
+                    </button>
+                    <button onClick={() => setActiveForm('schools')} className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all ${activeForm === 'schools' ? 'bg-primary text-white shadow-md shadow-blue-200' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
+                      <School size={16} /> Schools & Colleges
+                    </button>
+                    <button onClick={() => setActiveForm('general')} className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all ${activeForm === 'general' ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
+                      <HelpCircle size={16} /> General Enquiry
                     </button>
                   </div>
 
@@ -442,10 +653,18 @@ export default function ContactPage() {
                       <h2 className="text-xl font-bold text-slate-900 mb-1">Student Enquiry Form</h2>
                       <p className="text-slate-500 text-sm mb-6">Fill in your details and our counsellor will call you back within 24 hours.</p>
                       <StudentEnquiryForm />
-                    </> : <>
+                    </> : activeForm === 'corporate' ? <>
                       <h2 className="text-xl font-bold text-slate-900 mb-1">Corporate Training Enquiry</h2>
                       <p className="text-slate-500 text-sm mb-6">Tell us about your training needs and we'll send you a customized proposal.</p>
                       <CorporateEnquiryForm />
+                    </> : activeForm === 'schools' ? <>
+                      <h2 className="text-xl font-bold text-slate-900 mb-1">Schools & Colleges Partnership Enquiry</h2>
+                      <p className="text-slate-500 text-sm mb-6">Share your institution details and we'll help plan a partnership.</p>
+                      <SchoolsEnquiryForm />
+                    </> : <>
+                      <h2 className="text-xl font-bold text-slate-900 mb-1">General Enquiry</h2>
+                      <p className="text-slate-500 text-sm mb-6">Ask anything about admissions, careers, training, or our programmes.</p>
+                      <GeneralEnquiryForm />
                     </>}
                 </motion.div>
               </div>

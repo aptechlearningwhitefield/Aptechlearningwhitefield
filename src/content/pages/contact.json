@@ -30,8 +30,8 @@
       "description": "Campus programs and partnerships"
     },
     {
-      "id": "other",
-      "label": "General Query",
+      "id": "general",
+      "label": "General Enquiry",
       "description": "Any other questions or feedback"
     }
   ],
@@ -49,7 +49,7 @@
     {
       "id": "faq3",
       "q": "Is there a placement guarantee?",
-      "a": "We provide dedicated placement assistance including resume building, mock interviews, and connecting you with our hiring partners. Our placement rate is 95%+."
+      "a": "We provide dedicated placement assistance including resume building, mock interviews, and connecting you with our hiring partners. Our placement rate is 90%."
     },
     {
       "id": "faq4",

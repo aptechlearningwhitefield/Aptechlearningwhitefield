@@ -2,14 +2,14 @@
   "hero": {
     "badge": "Placement Assistance",
     "title": "Your Career Starts Here",
-    "subtitle": "Aptech Learning Whitefield's dedicated placement cell connects trained students with top IT companies in Bangalore and beyond. 95%+ placement rate across all programs.",
+    "subtitle": "Aptech Learning Whitefield's dedicated placement cell connects trained students with top IT companies in Bangalore and beyond. 90% placement rate across all programs.",
     "cta1": "Explore Courses",
     "cta2": "Talk to a Counsellor"
   },
   "stats": [
     {
       "id": "s1",
-      "value": "95%+",
+      "value": "90%",
       "label": "Placement Rate"
     },
     {
@@ -50,8 +50,8 @@
     {
       "id": "pr4",
       "step": "04",
-      "title": "Job Referrals",
-      "desc": "Direct referrals to our network of 100+ hiring partners — IT companies, startups, and MNCs actively hiring from our centre."
+      "title": "Based on Requirement",
+      "desc": "Opportunities aligned to the needs of our hiring network and each student's profile, skills, and career objective."
     }
   ],
   "hiringPartners": [
@@ -169,7 +169,7 @@
   "placementSupport": [
     {
       "id": "ps1",
-      "title": "Hands-On Projects",
+      "title": "Hands-On Practicals",
       "desc": "Build practical assignments throughout the course to strengthen your skills through doing."
     },
     {

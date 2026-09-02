@@ -3,7 +3,7 @@ import { Link } from "react-router";
 import { motion } from 'motion/react';
 import { seoMetadata } from '../lib/seo-metadata';
 import { useState } from 'react';
-import { Phone, MessageCircle, ArrowRight, CheckCircle, Star, ChevronDown, ChevronUp, BookOpen, Users, Award, Briefcase, Clock, Monitor, Building2, GraduationCap, TrendingUp, Shield, Code, Cloud, BarChart3, Cpu, Globe, Zap, MapPin, Mail } from 'lucide-react';
+import { Phone, MessageCircle, ArrowRight, CheckCircle, Star, ChevronDown, ChevronUp, BookOpen, Users, Award, Briefcase, Clock, Monitor, Building2, GraduationCap, TrendingUp, Shield, Code, Cloud, BarChart3, Cpu, Globe, Zap, MapPin, Mail, Sparkles, BrainCircuit, Rocket, Database } from 'lucide-react';
 import { home } from 'virtual:content';
 import GoogleReviews from '@/components/GoogleReviews';
 
@@ -11,6 +11,12 @@ import GoogleReviews from '@/components/GoogleReviews';
 const courseIcons: Record<string, React.ReactNode> = {
   c1: <Cpu size={24} />,
   c2: <Zap size={24} />,
+  'genai-accelerator': <Sparkles size={24} />,
+  'prompt-engineering': <BrainCircuit size={24} />,
+  'innovate-generative-ai': <Sparkles size={24} />,
+  'rapid-app-development': <Rocket size={24} />,
+  'data-science-essentials': <Database size={24} />,
+  'data-visualization-power-bi': <BarChart3 size={24} />,
   c3: <BarChart3 size={24} />,
   c4: <TrendingUp size={24} />,
   c5: <Code size={24} />,
@@ -18,6 +24,8 @@ const courseIcons: Record<string, React.ReactNode> = {
   c7: <Globe size={24} />,
   c8: <Cloud size={24} />,
   c9: <Monitor size={24} />,
+  'foundation-ai-ml': <BrainCircuit size={24} />,
+  'advanced-ai-ml': <Cpu size={24} />,
   c10: <TrendingUp size={24} />
 };
 const courseRoutes: Record<string, string> = {
@@ -28,8 +36,11 @@ const courseRoutes: Record<string, string> = {
   c5: 'python',
   c7: 'full-stack',
   c8: 'cloud-computing',
-  c9: 'microsoft-technologies'
+  c9: 'microsoft-technologies',
+  'foundation-ai-ml': 'ai-machine-learning',
+  'advanced-ai-ml': 'ai-machine-learning'
 };
+const getCourseIcon = (courseId: string) => courseIcons[courseId] ?? <BookOpen size={24} />;
 const courseColorMap: Record<string, string> = {
   blue: 'bg-blue-50 border-blue-100 hover:border-blue-300',
   purple: 'bg-purple-50 border-purple-100 hover:border-purple-300',
@@ -463,7 +474,7 @@ export default function HomePage() {
         {/* ── TRUST BAR ────────────────────────────────────────────────────── */}
         <section className="bg-white border-b border-slate-100 shadow-sm" aria-label="Trust statistics">
           <div className="container mx-auto px-4 py-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="flex flex-wrap justify-center items-end gap-6 md:gap-10 lg:gap-16">
               {home.trustBar.stats.map((stat, i) => <motion.div key={stat.id} initial={{
               opacity: 0,
               y: 16
@@ -476,12 +487,11 @@ export default function HomePage() {
               duration: 0.4,
               delay: i * 0.1,
               ease: 'easeOut' as const
-            }} className="text-center">
-                
-                  <div className="text-3xl md:text-4xl font-extrabold text-primary">
-                    <span>{stat.value}</span>
+            }} className="w-[150px] sm:w-[180px] md:w-[200px] flex flex-col items-center justify-center text-center px-2 py-2">
+                  <div className="w-full text-center text-[2.2rem] md:text-[3rem] font-extrabold text-primary leading-none tracking-tight tabular-nums whitespace-nowrap">
+                    <span className="inline-block text-center">{stat.value}</span>
                   </div>
-                  <div className="text-sm text-slate-600 font-medium mt-1">{stat.label}</div>
+                  <div className="text-sm md:text-base text-slate-600 font-medium mt-3 leading-snug text-center max-w-[170px]">{stat.label}</div>
                 </motion.div>)}
             </div>
           </div>
@@ -571,7 +581,7 @@ export default function HomePage() {
                       Popular
                     </span>}
                   <div className={`w-11 h-11 rounded-xl flex items-center justify-center mb-4 ${courseIconColorMap[course.color] || 'text-primary bg-blue-100'}`}>
-                    {courseIcons[course.id]}
+                    {getCourseIcon(course.id)}
                   </div>
                   <h3 className="font-bold text-slate-900 text-base mb-1 leading-snug">{course.name}</h3>
                   <div className="flex items-center gap-2 mb-3"><span className="flex items-center gap-1 text-xs text-slate-500">{course.duration}</span><span className="text-slate-300">•</span><span className="text-xs text-slate-500">Beginner Level</span>
@@ -744,12 +754,11 @@ export default function HomePage() {
               </FadeIn>
 
               <FadeIn delay={0.15}>
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8">
                   <h3 className="text-white font-bold text-lg mb-6 text-center">Our Hiring Partners</h3>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                    {home.placement.partners.map((partner) => <div key={partner.id} className="bg-white/10 border border-white/20 rounded-xl py-4 px-3 flex items-center justify-center hover:bg-white/20 transition-colors">
-                      
-                        <span className="text-white font-bold text-sm text-center">{partner.name}</span>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+                    {home.placement.partners.map((partner) => <div key={partner.id} className="bg-white/10 border border-white/20 rounded-xl py-3 px-2 md:py-4 md:px-3 h-full flex items-center justify-center text-center hover:bg-white/20 transition-colors">
+                        <span className="text-white font-semibold text-xs sm:text-sm leading-tight break-words">{partner.name}</span>
                       </div>)}
                   </div>
                   <p className="text-blue-300 text-xs text-center mt-4">+ 40 more hiring partners</p>
@@ -948,11 +957,6 @@ export default function HomePage() {
                 </motion.div>)}
             </div>
 
-            <FadeIn className="text-center mt-10">
-              <Link to="/student-success" className="inline-flex items-center gap-2 border border-slate-200 text-slate-700 font-semibold px-7 py-3 rounded-xl hover:bg-slate-50 transition-colors">
-                View More Success Stories <ArrowRight size={16} />
-              </Link>
-            </FadeIn>
           </div>
         </section>
 
@@ -1046,7 +1050,7 @@ export default function HomePage() {
                         <span>•</span>
                         <span>{blog.readTime}</span>
                       </div>
-                      <Link to={`/blog/${blog.slug}`} className="text-primary text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all">
+                      <Link to={`/blogs/${blog.slug}`} className="text-primary text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all">
                       
                         Read More <ArrowRight size={14} />
                       </Link>
@@ -1054,12 +1058,6 @@ export default function HomePage() {
                   </div>
                 </motion.article>)}
             </div>
-
-            <FadeIn className="text-center mt-10">
-              <Link to="/blog" className="inline-flex items-center gap-2 border border-slate-200 text-slate-700 font-semibold px-7 py-3 rounded-xl hover:bg-slate-50 transition-colors">
-                View All Articles <ArrowRight size={16} />
-              </Link>
-            </FadeIn>
           </div>
         </section>
 
