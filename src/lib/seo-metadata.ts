@@ -1,3 +1,6 @@
+import { SITE_URL } from "./site-url";
+import { socialProfileList } from "./social-links";
+
 /**
  * SEO Metadata Configuration for Aptech Learning Whitefield
  * Centralized management of title, description, keywords, and structured data
@@ -14,9 +17,7 @@ export interface SEOMetadata {
   structuredData?: Record<string, any>;
 }
 
-const SITE_URL = 'https://www.aptechlearning-whitefield.com';
 const ORG_NAME = 'Aptech Learning Whitefield';
-const LOCATION = 'Whitefield, Bangalore';
 
 export const seoMetadata: Record<string, SEOMetadata> = {
   home: {
@@ -38,10 +39,21 @@ export const seoMetadata: Record<string, SEOMetadata> = {
       url: SITE_URL,
       address: {
         '@type': 'PostalAddress',
-        addressLocality: LOCATION,
+        streetAddress: 'Near Kadugodi Tree Park Metro',
+        addressLocality: 'Whitefield',
+        addressRegion: 'Karnataka',
+        postalCode: '560066',
         addressCountry: 'IN',
       },
-      sameAs: ['https://www.linkedin.com/company/aptech-learning'],
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 12.9846999,
+        longitude: 77.7465325,
+      },
+      telephone: '+91-74113-33500',
+      email: 'aptechlearningwhitefield@gmail.com',
+      openingHours: 'Mo-Sa 09:00-18:00',
+      sameAs: socialProfileList,
     },
   },
 

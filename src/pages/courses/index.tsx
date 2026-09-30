@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 import { useState } from 'react';
 import { Clock, ArrowRight, CheckCircle, Cpu, Zap, BarChart3, TrendingUp, Code, Globe, Cloud, Monitor, BookOpen, Award, Users } from 'lucide-react';
 import { courses } from 'virtual:content';
+import { SITE_URL as site } from '../../lib/site-url';
 const courseIcons: Record<string, React.ReactNode> = {
   'ai-machine-learning': <Cpu size={28} />,
   'generative-ai': <Zap size={28} />,
@@ -85,7 +86,6 @@ const colorMap: Record<string, {
 
 export default function CoursesPage() {
   const [activeFilter, setActiveFilter] = useState('All Courses');
-  const site = 'https://www.cheekiratech.com';
   const availableCourses = courses.items.filter((course) => !['cloud-computing', 'microsoft-technologies', 'cybersecurity', 'digital-marketing'].includes(course.id));
   return <>
       <Helmet>

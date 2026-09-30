@@ -3,8 +3,8 @@ import { Link, useParams, useNavigate } from "react-router";
 import { ArrowLeft, Clock, User, Calendar, Tag, ArrowRight, BookOpen } from 'lucide-react';
 import { useEffect } from 'react';
 import { blog_posts } from 'virtual:content';
+import { SITE_URL as site } from '../../lib/site-url';
 
-const site = 'https://www.cheekiratech.com';
 
 const categoryColors: Record<string, string> = {
   'AI & Machine Learning': 'bg-blue-50 text-blue-700',

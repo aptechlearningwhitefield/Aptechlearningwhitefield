@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, Youtube, MessageCircle } from 'lucide-react';
+import { socialProfileUrls } from '@/lib/social-links';
 const courses = [{
   href: '/courses/ai-machine-learning',
   label: 'AI & Machine Learning'
@@ -68,22 +69,10 @@ export default function Footer() {
             <div className="inline-flex items-center gap-2 bg-blue-900/40 border border-blue-700/40 rounded-lg px-3 py-2 mb-5">
             </div>
             <div className="flex items-center gap-3">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
-                
-                <Facebook size={16} />
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
-                
-                <Instagram size={16} />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
-                
-                <Linkedin size={16} />
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
-                
-                <Youtube size={16} />
-              </a>
+              {socialProfileUrls.facebook && <a href={socialProfileUrls.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"><Facebook size={16} /></a>}
+              {socialProfileUrls.instagram && <a href={socialProfileUrls.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"><Instagram size={16} /></a>}
+              {socialProfileUrls.linkedin && <a href={socialProfileUrls.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"><Linkedin size={16} /></a>}
+              {socialProfileUrls.youtube && <a href={socialProfileUrls.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"><Youtube size={16} /></a>}
               <a href="https://wa.me/917411333500" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-green-600 transition-colors">
                 
                 <MessageCircle size={16} />

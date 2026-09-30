@@ -226,6 +226,26 @@ npm run build
 - **Railway/Render** - Full-stack deployment
 - **Docker** - Containerized deployment
 
+### Enquiry storage on Vercel
+
+Contact form submissions are stored as rows in a private Google Sheet named `Enquiries`.
+To connect it after deploying:
+
+1. Create a Google Sheet, rename its first tab to `Enquiries`, and copy its ID from the URL (`/spreadsheets/d/<ID>/`).
+2. Create a Google Cloud service account, enable the Google Sheets API, and create a JSON key.
+3. Share the sheet with the service account's `client_email` as an Editor.
+4. In **Vercel → Project → Settings → Environment Variables**, add
+  `GOOGLE_SHEETS_SPREADSHEET_ID` and `GOOGLE_SERVICE_ACCOUNT_JSON`. Set the latter
+  to the complete service-account JSON on one line. Keep both variables private;
+  do not use a `VITE_` prefix or commit the key.
+5. Redeploy. The API creates the `Enquiries` header row automatically on the first
+  form submission. Open the Google Sheet to view, filter, or export enquiries to Excel.
+
+The spreadsheet is the private admin view; submissions are not exposed through a
+public listing endpoint. Until those two Vercel variables are configured and the
+sheet is shared with the service account, the form API returns an error rather than
+pretending that an enquiry was saved.
+
 ## 🔧 Configuration
 
 ### Environment Variables

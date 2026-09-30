@@ -6,6 +6,9 @@ import { useState } from 'react';
 import { Phone, MessageCircle, ArrowRight, CheckCircle, Star, ChevronDown, ChevronUp, BookOpen, Users, Award, Briefcase, Clock, Monitor, Building2, GraduationCap, TrendingUp, Shield, Code, Cloud, BarChart3, Cpu, Globe, Zap, MapPin, Mail, Sparkles, BrainCircuit, Rocket, Database } from 'lucide-react';
 import { home } from 'virtual:content';
 import GoogleReviews from '@/components/GoogleReviews';
+import ReviewSubmissionForm from '@/components/ReviewSubmissionForm';
+import { googleReviews } from '@/lib/google-reviews-data';
+import { SITE_URL as site } from '@/lib/site-url';
 
 // ─── Course icon map ──────────────────────────────────────────────────────────
 const courseIcons: Record<string, React.ReactNode> = {
@@ -242,7 +245,6 @@ function StudentEnquiryForm() {
 // ─── Main Page ────────────────────────────────────────────────────────────────
 export default function HomePage() {
   const [openFaq, setOpenFaq] = useState<string | null>(null);
-  const site = 'https://www.cheekiratech.com';
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [{

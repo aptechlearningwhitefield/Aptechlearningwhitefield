@@ -2,8 +2,8 @@ import { Helmet } from '@dr.pogodin/react-helmet';
 import { Link } from "react-router";
 import { motion } from 'motion/react';
 import { BookOpen, Clock, ArrowRight, Tag } from 'lucide-react';
+import { SITE_URL as site } from '../../lib/site-url';
 import { blog_posts } from 'virtual:content';
-const site = 'https://www.cheekiratech.com';
 const categoryColors: Record<string, string> = {
   'AI & Machine Learning': 'bg-blue-50 text-blue-700',
   'Data Science': 'bg-purple-50 text-purple-700',

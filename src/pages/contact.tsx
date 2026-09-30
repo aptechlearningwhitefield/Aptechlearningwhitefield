@@ -3,9 +3,9 @@ import { Link } from "react-router";
 import { motion } from 'motion/react';
 import { useState } from 'react';
 import { seoMetadata } from '../lib/seo-metadata';
+import { SITE_URL as site } from '../lib/site-url';
 import { Phone, Mail, MapPin, Clock, MessageCircle, CheckCircle, ChevronDown, ChevronUp, Building2, GraduationCap, School, HelpCircle, Send, ArrowRight } from 'lucide-react';
 import { contact } from 'virtual:content';
-const site = 'https://www.cheekiratech.com';
 const enquiryIcons: Record<string, React.ReactNode> = {
   student: <GraduationCap size={22} />,
   corporate: <Building2 size={22} />,

@@ -2,9 +2,9 @@ import { Helmet } from '@dr.pogodin/react-helmet';
 import { Link } from "react-router";
 import { motion } from 'motion/react';
 import { seoMetadata } from '../lib/seo-metadata';
+import { SITE_URL as site } from '../lib/site-url';
 import { CheckCircle, ArrowRight, Phone, MessageCircle, Star, Award, Users, Target, Eye, Heart, MapPin, Wifi, Monitor, BookOpen, Briefcase, Clock } from 'lucide-react';
 import { about } from 'virtual:content';
-const site = 'https://www.cheekiratech.com';
 
 // ─── Fade-in helper ───────────────────────────────────────────────────────────
 function FadeIn({
