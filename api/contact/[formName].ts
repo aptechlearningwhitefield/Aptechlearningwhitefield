@@ -89,6 +89,7 @@ async function forwardToInbox(
 
 export default async function handler(req: ApiRequest, res: ApiResponse): Promise<void> {
   if (req.method !== "POST") {
+    console.warn("[enquiries] Rejected request method", { method: req.method ?? "missing" });
     res.status(405).json({ success: false, error: "Method not allowed" });
     return;
   }

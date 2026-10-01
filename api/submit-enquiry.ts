@@ -26,7 +26,10 @@ export default async function handler(req: ApiRequest, res: ApiResponse): Promis
   }
 
   await contactHandler({
-    ...req,
+    method: req.method?.toUpperCase(),
+    url: req.url,
     query: { ...req.query, formName },
+    headers: req.headers,
+    body: req.body,
   }, res);
 }
