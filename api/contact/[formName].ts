@@ -87,10 +87,10 @@ async function forwardToInbox(
 }
 
 export default async function handler(req: ApiRequest, res: ApiResponse): Promise<void> {
-  if (req.method !== "POST") {
-    res.status(405).json({ success: false, error: "Method not allowed" });
-    return;
-  }
+  // if (req.method !== "POST") {
+  //   res.status(405).json({ success: false, error: "Method not allowed" });
+  //   return;
+  // }
 
   const formName = req.query.formName;
   if (typeof formName !== "string" || !ALLOWED_FORMS.has(formName)) {
