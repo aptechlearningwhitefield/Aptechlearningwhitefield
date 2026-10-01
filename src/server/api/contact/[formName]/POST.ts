@@ -140,11 +140,10 @@ export default async function handler(req: Request, res: Response): Promise<void
 		return;
 	}
 
-	const messageBody = body?.conversation?.messages_attributes?.[0]?.body;
-	if (!messageBody) {
-		res.status(400).json({ success: false, error: "conversation message body is required" });
-		return;
-	}
+	const submittedMessage = body?.conversation?.messages_attributes?.[0]?.body;
+	const messageBody = typeof submittedMessage === "string" && submittedMessage.trim()
+		? submittedMessage.trim()
+		: `${formName.replace(/-/g, " ")} enquiry submitted via website.`;
 
 	const config = getConfig();
 	if (!config?.forms) {

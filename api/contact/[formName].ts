@@ -120,16 +120,12 @@ export default async function handler(req: ApiRequest, res: ApiResponse): Promis
   const name = asText(user.name, 200);
   const conversation = body.conversation ?? {};
   const fields = asFormData(conversation.data);
-  const message = asText(conversation.messages_attributes?.[0]?.body, 5000);
+  const submittedMessage = asText(conversation.messages_attributes?.[0]?.body, 5000);
+  const message = submittedMessage || `${formName.replace(/-/g, " ")} enquiry submitted via website.`;
   const phone = asText(fields.Phone ?? fields.Mobile, 80);
 
   if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     res.status(400).json({ success: false, error: "A valid name and email are required" });
-    return;
-  }
-
-  if (!message) {
-    res.status(400).json({ success: false, error: "An enquiry message is required" });
     return;
   }
 

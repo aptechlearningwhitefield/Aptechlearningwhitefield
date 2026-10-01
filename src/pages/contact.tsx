@@ -559,8 +559,8 @@ function GeneralEnquiryForm() {
       <input id="g-subject" type="text" value={subject} onChange={e => setSubject(e.target.value)} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" placeholder="How can we help?" />
     </div>
     <div>
-      <label htmlFor="g-message" className="block text-xs font-semibold text-slate-600 mb-1.5">Message *</label>
-      <textarea id="g-message" rows={4} required value={message} onChange={e => setMessage(e.target.value)} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors resize-none" placeholder="Tell us your question or requirement..." />
+      <label htmlFor="g-message" className="block text-xs font-semibold text-slate-600 mb-1.5">Message (optional)</label>
+      <textarea id="g-message" rows={4} value={message} onChange={e => setMessage(e.target.value)} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors resize-none" placeholder="Tell us your question or requirement..." />
     </div>
     <button type="submit" disabled={status === 'loading'} className="w-full bg-slate-900 text-white font-bold py-3.5 rounded-xl hover:bg-slate-800 transition-all hover:shadow-lg disabled:opacity-60 flex items-center justify-center gap-2 text-sm">
       {status === 'loading' ? 'Submitting...' : <><Send size={16} /> Send General Enquiry</>}
