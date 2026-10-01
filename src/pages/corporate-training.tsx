@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { seoMetadata } from '../lib/seo-metadata';
 import { SITE_URL as site } from '../lib/site-url';
 import { trackGoogleAnalyticsEvent } from '@/lib/google-analytics';
+import { notifyEnquirySubmitted } from '@/lib/enquiry-feedback';
 import LmsCorporateProposalForm from '@/components/LmsCorporateProposalForm';
 import { Building2, CheckCircle, ChevronDown, ChevronUp, Send, Phone, MessageCircle, ArrowRight, Users, Award, Clock, Monitor, Briefcase, Zap } from 'lucide-react';
 import { corporate, corporate_training } from 'virtual:content';
@@ -69,6 +70,7 @@ function CorporateEnquiryForm() {
       const data = await res.json();
       if (data.success) {
         trackGoogleAnalyticsEvent('generate_lead', 'corporate_enquiry');
+        notifyEnquirySubmitted(data.spreadsheetSaved !== false);
         setStatus('success');
       } else setStatus('error');
     } catch {

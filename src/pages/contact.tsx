@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 import { useState } from 'react';
 import { seoMetadata } from '../lib/seo-metadata';
 import { trackGoogleAnalyticsEvent } from '@/lib/google-analytics';
+import { notifyEnquirySubmitted } from '@/lib/enquiry-feedback';
 import LmsCorporateProposalForm from '@/components/LmsCorporateProposalForm';
 import { Phone, Mail, MapPin, Clock, MessageCircle, CheckCircle, ChevronDown, ChevronUp, Building2, GraduationCap, School, HelpCircle, Send, ArrowRight } from 'lucide-react';
 import { contact } from 'virtual:content';
@@ -66,6 +67,7 @@ function StudentEnquiryForm() {
       const data = await res.json().catch(() => null);
       if (res.ok && data?.success === true) {
         trackGoogleAnalyticsEvent('generate_lead', 'contact_enquiry');
+        notifyEnquirySubmitted(data.spreadsheetSaved !== false);
         setStatus('success');
       } else {
         const message = typeof data?.error === 'string' ? data.error : `Request failed (HTTP ${res.status})`;
@@ -248,6 +250,7 @@ function CorporateEnquiryForm() {
       const data = await res.json();
       if (data.success) {
         trackGoogleAnalyticsEvent('generate_lead', 'contact_enquiry');
+        notifyEnquirySubmitted(data.spreadsheetSaved !== false);
         setStatus('success');
       } else setStatus('error');
     } catch {
@@ -389,6 +392,7 @@ function SchoolsEnquiryForm() {
       const data = await res.json();
       if (data.success) {
         trackGoogleAnalyticsEvent('generate_lead', 'contact_enquiry');
+        notifyEnquirySubmitted(data.spreadsheetSaved !== false);
         setStatus('success');
       } else setStatus('error');
     } catch {
@@ -511,6 +515,7 @@ function GeneralEnquiryForm() {
       const data = await res.json();
       if (data.success) {
         trackGoogleAnalyticsEvent('generate_lead', 'contact_enquiry');
+        notifyEnquirySubmitted(data.spreadsheetSaved !== false);
         setStatus('success');
       } else setStatus('error');
     } catch {

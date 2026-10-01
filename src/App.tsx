@@ -6,6 +6,7 @@ import AiroErrorBoundary from '../export-plugins/AiroErrorBoundary';
 import CookieBannerErrorBoundary from '@/components/CookieBannerErrorBoundary';
 import RootLayout from './layouts/RootLayout';
 import Spinner from './components/Spinner';
+import { Toaster } from './components/ui/sonner';
 import { routes } from './routes';
 
 const CookieBanner = lazy(() =>
@@ -57,6 +58,7 @@ export default function App() {
   return (
     <>
       <RouterProvider router={router} />
+      <Toaster position="top-center" richColors />
       {/*
         CookieBanner reads document.cookie and subscribes to browser events.
         App.tsx is client-only (entry-server.tsx renders the route tree

@@ -6,6 +6,7 @@ import { seoMetadata } from '../lib/seo-metadata';
 import { School, GraduationCap, CheckCircle, ChevronDown, ChevronUp, Send, Phone, MessageCircle, ArrowRight, Users, Award, Clock, BookOpen } from 'lucide-react';
 import { schools } from 'virtual:content';
 import { trackGoogleAnalyticsEvent } from '@/lib/google-analytics';
+import { notifyEnquirySubmitted } from '@/lib/enquiry-feedback';
 const benefitIcons = [Award, Users, Clock, School, BookOpen, GraduationCap];
 const schoolCollegeCourses = [
   {
@@ -78,6 +79,7 @@ function PartnershipForm() {
       const data = await res.json();
       if (data.success) {
         trackGoogleAnalyticsEvent('generate_lead', 'schools_colleges_enquiry');
+        notifyEnquirySubmitted(data.spreadsheetSaved !== false);
         setStatus('success');
       } else setStatus('error');
     } catch {

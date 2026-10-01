@@ -9,6 +9,7 @@ import GoogleReviews from '@/components/GoogleReviews';
 import ReviewSubmissionForm from '@/components/ReviewSubmissionForm';
 import { SITE_URL as site } from '@/lib/site-url';
 import { trackGoogleAnalyticsEvent } from '@/lib/google-analytics';
+import { notifyEnquirySubmitted } from '@/lib/enquiry-feedback';
 
 // ─── Course icon map ──────────────────────────────────────────────────────────
 const courseIcons: Record<string, React.ReactNode> = {
@@ -153,6 +154,7 @@ function StudentEnquiryForm() {
       const data = await res.json();
       if (data.success) {
         trackGoogleAnalyticsEvent('generate_lead', 'student_enquiry');
+        notifyEnquirySubmitted(data.spreadsheetSaved !== false);
         setStatus('success');
       } else setStatus('error');
     } catch {

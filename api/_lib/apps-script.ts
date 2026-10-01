@@ -11,8 +11,20 @@ export async function appendToAppsScript(row: AppsScriptRow): Promise<void> {
     body: JSON.stringify(row),
     signal: AbortSignal.timeout(15_000),
   });
-  if (!response.ok) throw new Error(`Google Apps Script returned HTTP ${response.status}`);
+  const responseText = await response.text();
+  if (!response.ok) {
+    throw new Error(`Google Apps Script returned HTTP ${response.status}: ${responseText.slice(0, 300)}`);
+  }
 
-  const result = await response.json() as { success?: boolean };
-  if (result.success !== true) throw new Error("Google Apps Script did not confirm that the row was saved");
+  let result: { success?: boolean; error?: string };
+  try {
+    result = JSON.parse(responseText) as { success?: boolean; error?: string };
+  } catch {
+    throw new Error(
+      `Google Apps Script returned a non-JSON response (HTTP ${response.status}); check that the Web App is deployed for public access and returns JSON`,
+    );
+  }
+  if (result.success !== true) {
+    throw new Error(result.error || "Google Apps Script did not confirm that the row was saved");
+  }
 }

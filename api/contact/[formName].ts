@@ -143,8 +143,10 @@ export default async function handler(req: ApiRequest, res: ApiResponse): Promis
 
   // The Inbox remains the primary destination; archive through Apps Script
   // when available so spreadsheet issues never discard a lead.
+  let spreadsheetSaved = false;
   try {
     await appendToAppsScript(sheetRow);
+    spreadsheetSaved = true;
     console.info("[enquiries] Apps Script archive confirmed", { formName });
   } catch (error) {
     console.error("[enquiries] Could not archive submission through Apps Script", error);
@@ -153,7 +155,7 @@ export default async function handler(req: ApiRequest, res: ApiResponse): Promis
   try {
     await forwardToInbox(formName, body, message, fields, visitorIp);
     console.info("[enquiries] GoDaddy Inbox delivery confirmed", { formName });
-    res.status(200).json({ success: true });
+    res.status(200).json({ success: true, spreadsheetSaved });
   } catch (error) {
     console.error("[enquiries] Could not deliver submission to GoDaddy Inbox", error);
     res.status(502).json({ success: false, error: "Could not deliver enquiry to the Inbox; please try again" });

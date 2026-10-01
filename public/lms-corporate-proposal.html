@@ -598,6 +598,10 @@
                 if (!response.ok || result.success !== true) {
                     throw new Error(result.error || `Submission failed (${response.status})`);
                 }
+                window.parent.postMessage({
+                    type: "aptech-enquiry-submitted",
+                    spreadsheetSaved: result.spreadsheetSaved !== false,
+                }, window.location.origin);
             } catch (error) {
                 console.error("Corporate enquiry delivery failed", error);
                 notice.textContent = "We couldn't confirm the email copy. Your request will still be sent to the LMS; for urgent help call +91 74113 33500.";
