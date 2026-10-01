@@ -1,6 +1,6 @@
 import { randomUUID } from "node:crypto";
-import { ensureSheetTab, getGoogleSheetsClient, GOOGLE_SHEETS_HEADERS } from "./_lib/google-sheets";
-import { googleReviews } from "../src/lib/google-reviews-data";
+import { ensureSheetTab, getGoogleSheetsClient, GOOGLE_SHEETS_HEADERS } from "./_lib/google-sheets.js";
+import { googleReviews } from "../src/lib/google-reviews-data.js";
 
 interface ApiRequest {
   method?: string;
