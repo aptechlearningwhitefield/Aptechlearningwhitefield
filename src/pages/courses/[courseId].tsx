@@ -101,12 +101,13 @@ function QuickEnquiry({
     setStatus('loading');
     try {
       // Field mapping: only the message textarea goes in messages_attributes[0].body. All other fields must be added to conversation.data as { "Label": value } pairs.
-      const res = await fetch('/api/contact/student-enquiry', {
+      const res = await fetch('/api/submit-enquiry', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
+          formName: 'student-enquiry',
           conversation: {
             messages_attributes: [{
               body: `Enquiry for course: ${courseId}`

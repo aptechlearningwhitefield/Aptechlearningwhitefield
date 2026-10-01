@@ -583,10 +583,11 @@
             };
 
             try {
-                const response = await fetch("/api/contact/corporate-enquiry", {
+                const response = await fetch("/api/submit-enquiry", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
+                        formName: "corporate-enquiry",
                         user: { name: fields["Contact Person"], email: value("lms_email") },
                         conversation: {
                             messages_attributes: [{ body: value("lms_comments") || "Corporate training proposal request" }],
