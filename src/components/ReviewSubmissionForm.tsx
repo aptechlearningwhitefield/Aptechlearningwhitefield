@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { CheckCircle, Send, Star } from "lucide-react";
+import { trackGoogleAnalyticsEvent } from '@/lib/google-analytics';
 
 export default function ReviewSubmissionForm() {
   const [name, setName] = useState("");
@@ -26,6 +27,7 @@ export default function ReviewSubmissionForm() {
       });
       const result = await response.json();
       if (!response.ok || !result.success) throw new Error("Review submission failed");
+      trackGoogleAnalyticsEvent('submit_review', 'website_review');
       setStatus("success");
     } catch {
       setStatus("error");

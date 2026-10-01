@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
-import { initGoogleAnalytics } from '@/lib/google-analytics';
+import { initGoogleAnalytics, initGoogleTagManager, revokeGoogleAnalyticsConsent } from '@/lib/google-analytics';
 
 const COOKIE_CONSENT_KEY = 'c2_analytics_consent';
 const COOKIE_CONSENT_EXPIRES_DAYS = 365;
@@ -135,7 +135,10 @@ export default function CookieBanner() {
         setShowBanner(true);
       } else {
         window._allowCT = consent.analytics;
-        if (consent.analytics) initGoogleAnalytics();
+        if (consent.analytics) {
+          initGoogleAnalytics();
+          initGoogleTagManager();
+        }
       }
     } catch {
       localStorage.removeItem(COOKIE_CONSENT_KEY);
@@ -148,7 +151,10 @@ export default function CookieBanner() {
   function saveConsent(analytics: boolean) {
     localStorage.setItem(COOKIE_CONSENT_KEY, JSON.stringify({ analytics, timestamp: Date.now() }));
     window._allowCT = analytics;
-    if (analytics) initGoogleAnalytics();
+    if (analytics) {
+      initGoogleAnalytics();
+      initGoogleTagManager();
+    }
     window.dispatchEvent(new CustomEvent('cookie-consent-changed', { detail: { consented: analytics } }));
     setShowBanner(false);
   }
@@ -157,6 +163,7 @@ export default function CookieBanner() {
     if (typeof window === 'undefined') return;
     localStorage.removeItem(COOKIE_CONSENT_KEY);
     window._allowCT = false;
+    revokeGoogleAnalyticsConsent();
     window.dispatchEvent(new CustomEvent('cookie-consent-changed', { detail: { consented: false } }));
     setShowBanner(true);
   }

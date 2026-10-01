@@ -1,0 +1,16 @@
+# Aptech Learning Whitefield
+
+Aptech Learning Whitefield is an IT and career training institute serving learners in Whitefield, Bangalore. The website provides information about courses, career counselling, corporate training, placements, and learning resources.
+
+## Main pages
+- [Home](https://www.aptechwhitefield.com/)
+- [Courses](https://www.aptechwhitefield.com/courses)
+- [About](https://www.aptechwhitefield.com/about)
+- [Contact](https://www.aptechwhitefield.com/contact)
+- [Corporate training](https://www.aptechwhitefield.com/corporate-training)
+- [Schools and colleges](https://www.aptechwhitefield.com/schools-colleges)
+- [Placements](https://www.aptechwhitefield.com/placements)
+- [Blog](https://www.aptechwhitefield.com/blogs)
+
+## Discovery
+- [XML sitemap](https://www.aptechwhitefield.com/sitemap.xml)

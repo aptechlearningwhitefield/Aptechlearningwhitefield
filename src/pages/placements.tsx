@@ -2,7 +2,6 @@ import { Helmet } from '@dr.pogodin/react-helmet';
 import { Link } from "react-router";
 import { motion } from 'motion/react';
 import { seoMetadata } from '../lib/seo-metadata';
-import { SITE_URL as site } from '../lib/site-url';
 import { Briefcase, CheckCircle, ArrowRight, Phone, MessageCircle, Users, Award, FileText, Linkedin, Github } from 'lucide-react';
 import { placements } from 'virtual:content';
 const supportIcons = [FileText, Linkedin, Github, Users, Briefcase, Award];

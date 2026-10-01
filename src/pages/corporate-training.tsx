@@ -4,7 +4,8 @@ import { motion } from 'motion/react';
 import { useState } from 'react';
 import { seoMetadata } from '../lib/seo-metadata';
 import { SITE_URL as site } from '../lib/site-url';
-import { Building2, CheckCircle, ChevronDown, ChevronUp, Send, Phone, MessageCircle, ArrowRight, Users, Award, Clock, Monitor, Briefcase, Star, Zap } from 'lucide-react';
+import { trackGoogleAnalyticsEvent } from '@/lib/google-analytics';
+import { Building2, CheckCircle, ChevronDown, ChevronUp, Send, Phone, MessageCircle, ArrowRight, Users, Award, Clock, Monitor, Briefcase, Zap } from 'lucide-react';
 import { corporate, corporate_training } from 'virtual:content';
 // SEO: Get corporate training metadata
 const seo = seoMetadata.corporateTraining;
@@ -64,7 +65,10 @@ function CorporateEnquiryForm() {
         })
       });
       const data = await res.json();
-      setStatus(data.success ? 'success' : 'error');
+      if (data.success) {
+        trackGoogleAnalyticsEvent('generate_lead', 'corporate_enquiry');
+        setStatus('success');
+      } else setStatus('error');
     } catch {
       setStatus('error');
     }
@@ -167,20 +171,6 @@ function CorporateEnquiryForm() {
 
 // ─── Main Page ────────────────────────────────────────────────────────────────
 export default function CorporateTrainingPage() {
-  // Apply SEO Helmet metadata
-  const helmetMeta = [
-    { name: 'description', content: seo.description },
-    { name: 'keywords', content: seo.keywords },
-    { property: 'og:title', content: seo.ogTitle },
-    { property: 'og:description', content: seo.ogDescription },
-    { property: 'og:url', content: seo.canonical },
-    { property: 'og:type', content: 'website' },
-    { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: seo.ogTitle },
-    { name: 'twitter:description', content: seo.ogDescription },
-    { name: 'robots', content: 'index, follow' }
-  ];
-  
   const [openFaq, setOpenFaq] = useState<string | null>(null);
   const [activeCategory, setActiveCategory] = useState('All');
   const jsonLd = {
@@ -210,6 +200,7 @@ export default function CorporateTrainingPage() {
         <meta name="twitter:title" content={seo.ogTitle} />
         <meta name="twitter:description" content={seo.ogDescription} />
         <meta name="robots" content="index, follow" />
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
       <main>

@@ -70,7 +70,7 @@ export async function ensureSheetTab(
       spreadsheetId,
       range: headerRange,
       valueInputOption: "RAW",
-      requestBody: { values: [headers] },
+      requestBody: { values: [[...headers]] },
     });
   }
 }

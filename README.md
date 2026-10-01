@@ -250,17 +250,12 @@ pretending that an enquiry was saved.
 
 ### Environment Variables
 
-Copy `env.example` to `.env` and configure:
+Copy `.env.example` to `.env` and configure only the values needed by your deployment. See `ENVIRONMENT_VARIABLES.md` for each variable's purpose and whether it belongs in Vercel.
 
 ```env
-VITE_APP_NAME=v8 App Template
-VITE_PUBLIC_URL=http://localhost:5173
-VITE_API_URL=http://localhost:3000/api
-NODE_ENV=development
-PORT=3000
-VITE_ENABLE_SOURCE_MAPPING=true
-VITE_ENABLE_SSR=true
-VITE_SHOW_DEV_TOOLS=false
+VITE_GA_MEASUREMENT_ID=
+GOOGLE_SHEETS_SPREADSHEET_ID=
+GOOGLE_SERVICE_ACCOUNT_JSON=
 ```
 
 ### Custom Plugins

@@ -104,7 +104,7 @@ export default function Header() {
       {/* Top bar */}
       <div className="hidden md:block bg-[#0A1628] text-white text-xs py-2">
         <div className="container mx-auto px-4 flex justify-between items-center">
-          <span className="text-slate-300 font-bold">APTECH LEARNING WHITEFIELD | LEADING IT TRAINING INSTITUTE IN BANGALORE                                                                                                                                                                                                                       CONTACT
+          <span className="text-slate-300 font-bold">APTECH LEARNING WHITEFIELD | LEADING IT TRAINING INSTITUTE IN BANGALORE
 
         </span>
           <div className="flex items-center gap-4">

@@ -7,8 +7,8 @@ import { Phone, MessageCircle, ArrowRight, CheckCircle, Star, ChevronDown, Chevr
 import { home } from 'virtual:content';
 import GoogleReviews from '@/components/GoogleReviews';
 import ReviewSubmissionForm from '@/components/ReviewSubmissionForm';
-import { googleReviews } from '@/lib/google-reviews-data';
 import { SITE_URL as site } from '@/lib/site-url';
+import { trackGoogleAnalyticsEvent } from '@/lib/google-analytics';
 
 // ─── Course icon map ──────────────────────────────────────────────────────────
 const courseIcons: Record<string, React.ReactNode> = {
@@ -151,7 +151,10 @@ function StudentEnquiryForm() {
         })
       });
       const data = await res.json();
-      if (data.success) setStatus('success');else setStatus('error');
+      if (data.success) {
+        trackGoogleAnalyticsEvent('generate_lead', 'student_enquiry');
+        setStatus('success');
+      } else setStatus('error');
     } catch {
       setStatus('error');
     }
@@ -268,6 +271,7 @@ export default function HomePage() {
         postalCode: '560066',
         addressCountry: 'IN'
       },
+      sameAs: seoMetadata.home.structuredData?.sameAs,
       openingHours: 'Mo-Sa 10:00-19:00',
       description: 'Authorized Aptech Learning Franchise Centre offering industry-ready IT training in AI, Data Science, Python, Full Stack Development and more in Whitefield, Bangalore.'
     }, {
@@ -299,7 +303,7 @@ export default function HomePage() {
         <meta name="twitter:title" content={seoMetadata.home.ogTitle} />
         <meta name="twitter:description" content={seoMetadata.home.ogDescription} />
         <meta name="robots" content="index, follow" />
-        <script type="application/ld+json">{JSON.stringify(seoMetadata.home.structuredData)}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
       <main>
@@ -970,6 +974,7 @@ export default function HomePage() {
         }
         title="What Our Students Say on Google"
         maxVisible={6} />
+        <ReviewSubmissionForm />
       
 
         {/* ── FAQs ─────────────────────────────────────────────────────────── */}

@@ -5,7 +5,7 @@ import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { loadIndexNowKey } from "./indexnow-key";
 
 // Dummy test fixture — not a real key; value is intentionally fake hex for unit testing only
-const VALID_KEY = ["a1b2c3d4e5f6", "a1b2c3d4e5f6", "a1b2c3d4e5f6", "a1b2"].join("");
+const VALID_KEY = "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4";
 
 let tmpDir: string;
 

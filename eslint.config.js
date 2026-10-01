@@ -3,6 +3,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
+import noUnsanitized from 'eslint-plugin-no-unsanitized';
 
 export default [
   {
@@ -48,11 +49,22 @@ export default [
       '@typescript-eslint': tseslint,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
+      'no-unsanitized': noUnsanitized,
     },
     rules: {
       ...js.configs.recommended.rules,
       ...tseslint.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
+      // TypeScript's compiler handles global/type names; ESLint's base
+      // no-undef rule reports false positives for DOM and Node type globals.
+      'no-undef': 'off',
+      'no-irregular-whitespace': ['error', {
+        skipStrings: true,
+        skipComments: true,
+        skipRegExps: true,
+        skipTemplates: true,
+      }],
+      'no-unsanitized/method': 'error',
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },

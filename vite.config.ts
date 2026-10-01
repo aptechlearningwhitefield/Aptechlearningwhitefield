@@ -154,6 +154,8 @@ function worktreePreviewPlugin(): Plugin {
           let cached = serverBundleCache.get(worktreeRoot);
           if (!cached || cached.mtimeMs < bundleMtime) {
             const cacheBuster: string = `?t=${bundleMtime}`;
+            // This dev-only route imports the generated bundle for an automation worktree.
+            // eslint-disable-next-line no-unsanitized/method
             const mod = await import(/* @vite-ignore */`${bundlePath}${cacheBuster}`);
             cached = { app: mod.default, mtimeMs: bundleMtime };
             serverBundleCache.set(worktreeRoot, cached);
@@ -281,6 +283,8 @@ function ssrDevPlugin(): Plugin {
       let cached = worktreeBundleCache.get(worktreeRoot);
       if (!cached || cached.mtimeMs < bundleMtime) {
         const cacheBuster: string = `?t=${bundleMtime}`;
+        // runId is validated as a restricted identifier before constructing this /tmp path.
+        // eslint-disable-next-line no-unsanitized/method
         const mod = await import(/* @vite-ignore */`${bundlePath}${cacheBuster}`);
         cached = { app: mod.default, mtimeMs: bundleMtime };
         worktreeBundleCache.set(worktreeRoot, cached);
@@ -364,7 +368,7 @@ if (corsOrigins.length === 0) {
   corsOrigins.push("*");
 }
 
-export default defineConfig(({ mode, isSsrBuild }) => ({
+export default defineConfig(({ isSsrBuild }) => ({
   envPrefix: ["VITE_", "SITE_"],
 
   plugins: [

@@ -18,7 +18,10 @@ function profileUrl(value: string | undefined, hosts: ReadonlySet<string>): stri
 
 export const socialProfileUrls = {
   facebook: profileUrl(import.meta.env.VITE_SOCIAL_FACEBOOK_URL, allowedHosts.facebook),
-  instagram: profileUrl(import.meta.env.VITE_SOCIAL_INSTAGRAM_URL, allowedHosts.instagram),
+  instagram: profileUrl(
+    import.meta.env.VITE_SOCIAL_INSTAGRAM_URL || 'https://www.instagram.com/aptechlearningwhitefield/',
+    allowedHosts.instagram,
+  ),
   linkedin: profileUrl(import.meta.env.VITE_SOCIAL_LINKEDIN_URL, allowedHosts.linkedin),
   youtube: profileUrl(import.meta.env.VITE_SOCIAL_YOUTUBE_URL, allowedHosts.youtube),
 };
