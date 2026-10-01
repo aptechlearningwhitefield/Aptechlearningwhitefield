@@ -3,7 +3,8 @@ import contactFormConfig from "../../src/lib/contact-form.config.json" with { ty
 
 interface ApiRequest {
   method?: string;
-  query: Record<string, string | string[] | undefined>;
+  url?: string;
+  query?: Record<string, string | string[] | undefined>;
   headers?: Record<string, string | string[] | undefined>;
   body?: unknown;
 }
@@ -87,16 +88,21 @@ async function forwardToInbox(
 }
 
 export default async function handler(req: ApiRequest, res: ApiResponse): Promise<void> {
-  // if (req.method !== "POST") {
-  //   res.status(405).json({ success: false, error: "Method not allowed" });
-  //   return;
-  // }
+  if (req.method !== "POST") {
+    res.status(405).json({ success: false, error: "Method not allowed" });
+    return;
+  }
 
-  const formName = req.query.formName;
+  const queryFormName = req.query?.formName;
+  const pathFormName = req.url
+    ? new URL(req.url, "https://vercel.local").pathname.match(/^\/api\/contact\/([^/]+)\/?$/)?.[1]
+    : undefined;
+  const formName = Array.isArray(queryFormName) ? queryFormName[0] : queryFormName ?? pathFormName;
   if (typeof formName !== "string" || !ALLOWED_FORMS.has(formName)) {
     res.status(404).json({ success: false, error: "Unknown enquiry form" });
     return;
   }
+  console.info("[enquiries] Contact submission received", { formName });
 
   const body = (req.body && typeof req.body === "object" ? req.body : {}) as SubmissionBody;
   if (body._gotcha) {
@@ -139,12 +145,14 @@ export default async function handler(req: ApiRequest, res: ApiResponse): Promis
   // when available so spreadsheet issues never discard a lead.
   try {
     await appendToAppsScript(sheetRow);
+    console.info("[enquiries] Apps Script archive confirmed", { formName });
   } catch (error) {
     console.error("[enquiries] Could not archive submission through Apps Script", error);
   }
 
   try {
     await forwardToInbox(formName, body, message, fields, visitorIp);
+    console.info("[enquiries] GoDaddy Inbox delivery confirmed", { formName });
     res.status(200).json({ success: true });
   } catch (error) {
     console.error("[enquiries] Could not deliver submission to GoDaddy Inbox", error);

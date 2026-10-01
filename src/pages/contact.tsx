@@ -17,6 +17,7 @@ const enquiryIcons: Record<string, React.ReactNode> = {
 // ─── Student Enquiry Form ─────────────────────────────────────────────────────
 function StudentEnquiryForm() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
   const [gotcha, setGotcha] = useState('');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -32,6 +33,7 @@ function StudentEnquiryForm() {
     e.preventDefault();
     if (gotcha) return;
     setStatus('loading');
+    setErrorMessage('');
     try {
       // Field mapping: only the message textarea goes in messages_attributes[0].body. All other fields must be added to conversation.data as { "Label": value } pairs.
       const res = await fetch('/api/contact/student-enquiry', {
@@ -61,12 +63,19 @@ function StudentEnquiryForm() {
           }
         })
       });
-      const data = await res.json();
-      if (data.success) {
+      const data = await res.json().catch(() => null);
+      if (res.ok && data?.success === true) {
         trackGoogleAnalyticsEvent('generate_lead', 'contact_enquiry');
         setStatus('success');
-      } else setStatus('error');
-    } catch {
+      } else {
+        const message = typeof data?.error === 'string' ? data.error : `Request failed (HTTP ${res.status})`;
+        console.error('[contact] Student enquiry API rejected submission', { status: res.status, message });
+        setErrorMessage(message);
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error('[contact] Student enquiry request failed', error);
+      setErrorMessage('Could not reach the enquiry service. Please call +91 74113 33500.');
       setStatus('error');
     }
   };
@@ -185,7 +194,7 @@ function StudentEnquiryForm() {
       <button type="submit" disabled={status === 'loading'} className="w-full bg-primary text-white font-bold py-3.5 rounded-xl hover:bg-blue-700 transition-all hover:shadow-lg hover:shadow-blue-200 disabled:opacity-60 flex items-center justify-center gap-2 text-sm">
         {status === 'loading' ? 'Submitting...' : <><Send size={16} /> Submit Enquiry</>}
       </button>
-      {status === 'error' && <p className="text-red-500 text-xs text-center">Something went wrong. Please call us directly at +91 74113 33500.</p>}
+      {status === 'error' && <p className="text-red-500 text-xs text-center">{errorMessage || 'Something went wrong. Please call us directly at +91 74113 33500.'}</p>}
     </form>;
 }
 
