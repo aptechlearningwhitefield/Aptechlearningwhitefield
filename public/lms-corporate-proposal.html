@@ -1,0 +1,626 @@
+﻿<!-- Note : 1. You can modify the font style and form style to suit your website. 2. Do not change name and id attributes values. 3. Code lines with comments Do not remove this code are required for the form to work properly, make sure that you do not remove these lines of code. 4. It is important that you test the modified form before going live.-->
+<div>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+        <title>Lead Form</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            .lms_form-container,
+            .lms_form-container * {
+                font-family:
+                    "Inter",
+                    -apple-system,
+                    BlinkMacSystemFont,
+                    "Segoe UI",
+                    Arial,
+                    sans-serif;
+                box-sizing: border-box;
+            }
+            .lms_form-container {
+                max-width: 600px;
+                margin: auto;
+                background: #f8f9fb;
+                padding: 28px 28px 22px;
+                border: 1px solid #e3e7ee;
+                border-radius: 18px;
+                box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+            }
+            .lms_form_title {
+                margin: 0;
+                font-size: 19px;
+                line-height: 1.3;
+                font-weight: 700;
+                color: #111827;
+            }
+            .lms_form_sub {
+                margin: 4px 0 22px;
+                font-size: 13.5px;
+                color: #6b7280;
+                font-weight: 400;
+            }
+            .lms_form-group {
+                margin-bottom: 18px;
+            }
+            .lms_form_row {
+                display: flex;
+                gap: 14px;
+            }
+            .lms_form_row .lms_form-group {
+                flex: 1;
+                min-width: 0;
+            }
+            .lms_label {
+                display: block;
+                margin-bottom: 6px;
+                font-size: 13.5px;
+                font-weight: 500;
+                color: #1f2937;
+            }
+            .lms_text-center {
+                text-align: center;
+            }
+            .lms_selected_country {
+                user-select: none;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+            }
+            .lms_country_dropdown .lms_selected_country,
+            .lms_input {
+                width: 100%;
+                padding: 10px 12px;
+                margin-top: 0;
+                border: 1px solid #e3e7ee;
+                border-radius: 8px;
+                font-size: 13.5px;
+                color: #111827;
+                background-color: #fff;
+                height: 38px;
+                line-height: 1.2em;
+                outline: none;
+                transition:
+                    border-color 0.2s ease,
+                    box-shadow 0.2s ease;
+            }
+            .lms_input::placeholder {
+                color: #9ca3af;
+                opacity: 1;
+            }
+            .lms_input:focus {
+                border-color: #3555e3;
+                box-shadow: 0 0 0 3px rgba(53, 85, 227, 0.12);
+            }
+            select.lms_input {
+                cursor: pointer;
+            }
+            textarea.lms_input {
+                height: auto;
+                min-height: 74px;
+                resize: vertical;
+                padding: 10px 12px;
+            }
+            .lms_otp_input {
+                width: 70%;
+                padding: 10px 12px;
+                border: 1px solid #e3e7ee;
+                border-radius: 8px;
+                font-size: 13.5px;
+                background-color: #fff;
+                height: 38px;
+            }
+            .lms_button[type="submit"] {
+                width: 100%;
+                background-color: #3555e3;
+                color: #fff;
+                padding: 0 16px;
+                height: 44px;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                font-size: 15px;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                transition:
+                    background-color 0.2s ease,
+                    opacity 0.2s ease;
+            }
+            .lms_button[type="submit"]:hover {
+                background-color: #2a46c4;
+            }
+            .lms_button[type="submit"]:disabled {
+                background-color: #3555e3;
+                opacity: 0.5;
+                cursor: not-allowed;
+            }
+            .lms_button[type="button"] {
+                width: 30%;
+                background-color: #3555e3;
+                color: #fff;
+                padding: 12px;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                font-size: 1em;
+            }
+            .lms_button[type="button"]:hover {
+                background-color: #2a46c4;
+            }
+            .lms_form_footer {
+                margin: 14px 0 0;
+                text-align: center;
+                font-size: 12px;
+                color: #8a94a6;
+            }
+            .lms_form_footer a {
+                color: #8a94a6;
+                text-decoration: none;
+            }
+            .lms_phone_input_wrapper {
+                display: flex;
+                gap: 8px;
+                align-items: flex-end;
+                position: relative;
+            }
+            .lms_phone_input_wrapper .lms_input#lms_mobile {
+                flex: 1;
+                min-width: 0;
+            }
+            .lms_country_dropdown {
+                position: relative;
+                flex-shrink: 0;
+                max-width: 110px;
+                width: 110px;
+            }
+            .lms_country_dropdown .lms_selected_country {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: 13px;
+            }
+            .lms_country_dropdown .lms_country_drop_list {
+                position: absolute;
+                top: calc(100% + 2px);
+                left: 0;
+                width: 220px;
+                background: #fff;
+                z-index: 10;
+                border: 1px solid #e3e7ee;
+                border-radius: 8px;
+                max-height: 0;
+                opacity: 0;
+                overflow: hidden;
+                pointer-events: none;
+                transition:
+                    max-height 0.3s ease,
+                    opacity 0.3s ease;
+                will-change: max-height, opacity;
+                box-shadow: 0 8px 24px rgba(16, 24, 40, 0.1);
+            }
+            .lms_country_dropdown .lms_country_drop_list.show {
+                max-height: 600px;
+                opacity: 1;
+                pointer-events: auto;
+            }
+            .lms_country_dropdown input#lms_country_search {
+                width: 100%;
+                padding: 10px 12px;
+                border: none;
+                border-bottom: 1px solid #e3e7ee;
+                font-size: 13.5px;
+                outline: none;
+            }
+            .lms_country_dropdown ul#lms_country_options {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                overflow-y: auto;
+                max-height: 200px;
+            }
+            .lms_country_dropdown ul#lms_country_options li {
+                padding: 8px 12px;
+                cursor: pointer;
+                font-size: 13.5px;
+                color: #111827;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .lms_country_dropdown ul#lms_country_options li:hover {
+                background-color: #f3f4f8;
+            }
+            .lms_file_upload_wrapper {
+                border: 2px dashed #e3e7ee;
+                border-radius: 8px;
+                padding: 20px;
+                text-align: center;
+                background-color: #fafafa;
+                transition: all 0.3s ease;
+                cursor: pointer;
+                position: relative;
+            }
+            .lms_file_upload_wrapper:hover {
+                border-color: #3555e3;
+                background-color: #f0f3ff;
+            }
+            .lms_file_upload_wrapper.drag-over {
+                border-color: #3555e3;
+                background-color: #e8edff;
+            }
+            .lms_file_input_hidden {
+                display: none;
+            }
+            .lms_upload_icon {
+                font-size: 48px;
+                color: #3555e3;
+                margin-bottom: 10px;
+            }
+            .lms_upload_text {
+                font-size: 14px;
+                color: #666;
+                margin-bottom: 5px;
+            }
+            .lms_upload_hint {
+                font-size: 12px;
+                color: #999;
+            }
+            .lms_error_message {
+                display: none;
+                margin-top: 10px;
+                padding: 10px;
+                background-color: #fee;
+                border: 1px solid #fcc;
+                border-radius: 6px;
+                color: #c33;
+                font-size: 13px;
+                text-align: left;
+            }
+            .lms_error_message.show {
+                display: block;
+            }
+            .lms_file_preview {
+                display: none;
+                margin-top: 15px;
+                padding: 15px;
+                background: #fff;
+                border: 1px solid #e0e0e0;
+                border-radius: 6px;
+                text-align: left;
+            }
+            .lms_file_preview.show {
+                display: block;
+            }
+            .lms_file_item {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                padding: 10px;
+                background: #f9f9f9;
+                border-radius: 4px;
+                margin-bottom: 8px;
+            }
+            .lms_file_item:last-child {
+                margin-bottom: 0;
+            }
+            .lms_file_icon {
+                font-size: 32px;
+                color: #3555e3;
+                flex-shrink: 0;
+            }
+            .lms_file_info {
+                flex: 1;
+                min-width: 0;
+            }
+            .lms_file_name {
+                font-weight: 600;
+                font-size: 14px;
+                color: #333;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .lms_file_size {
+                font-size: 12px;
+                color: #666;
+                margin-top: 2px;
+            }
+            .lms_file_actions {
+                display: flex;
+                gap: 8px;
+                flex-shrink: 0;
+            }
+            .lms_file_action_btn {
+                padding: 6px 12px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 12px;
+                transition: all 0.2s ease;
+                font-weight: 500;
+            }
+            .lms_file_action_btn:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+            }
+            .lms_file_view_btn {
+                background-color: #4caf50;
+                color: #fff;
+            }
+            .lms_file_view_btn:hover {
+                background-color: #45a049;
+            }
+            .lms_file_remove_btn {
+                background-color: #f44336;
+                color: #fff;
+            }
+            .lms_file_remove_btn:hover {
+                background-color: #da190b;
+            }
+            .lms_upload_progress {
+                margin-top: 10px;
+                padding: 10px;
+                background-color: #e3f2fd;
+                border: 1px solid #90caf9;
+                border-radius: 4px;
+                color: #1976d2;
+                font-size: 13px;
+                display: none;
+            }
+            .lms_upload_progress.show {
+                display: block;
+            }
+            .lms_modal {
+                display: none;
+                position: fixed;
+                z-index: 1000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+                align-items: center;
+                justify-content: center;
+            }
+            .lms_modal.show {
+                display: flex;
+            }
+            .lms_modal_content {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                max-width: 90%;
+                max-height: 90%;
+                overflow: auto;
+                position: relative;
+            }
+            .lms_modal_close {
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                font-size: 28px;
+                font-weight: 700;
+                color: #666;
+                cursor: pointer;
+                background: 0 0;
+                border: none;
+                padding: 0;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+            }
+            .lms_modal_close:hover {
+                color: #000;
+            }
+            .lms_modal_body {
+                margin-top: 20px;
+                text-align: center;
+            }
+            .lms_modal_body img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 4px;
+            }
+            @media (max-width: 600px) {
+                .lms_form-container {
+                    padding: 20px 16px;
+                }
+                .lms_form_row {
+                    flex-direction: column;
+                    gap: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="lms_form-container">
+            <form id="lms_lead_form">
+                <h3 class="lms_form_title">Request a Training Proposal</h3>
+                <p class="lms_form_sub">Tell us your requirements and we'll get back within 24 hours</p>
+                <div class="lms_form_row">
+                    <div class="lms_form-group">
+                        <label class="lms_label" for="lms_name">Company Name</label
+                        ><input
+                            type="text"
+                            class="lms_input"
+                            id="lms_name"
+                            name="lms_name"
+                            placeholder="Your company"
+                            required
+                        />
+                    </div>
+                    <div class="lms_form-group">
+                        <label class="lms_label" for="lms_contact_person">Contact Person</label
+                        ><input
+                            type="text"
+                            class="lms_input"
+                            id="lms_contact_person"
+                            name="lms_contact_person"
+                            placeholder="Your name"
+                            required
+                        />
+                    </div>
+                </div>
+                <div class="lms_form-group">
+                    <label class="lms_label" for="lms_email">Email Address</label
+                    ><input
+                        type="email"
+                        class="lms_input"
+                        id="lms_email"
+                        name="lms_email"
+                        placeholder="work@company.com"
+                        required
+                    />
+                </div>
+                <div class="lms_form-group">
+                    <label class="lms_label" for="lms_mobile">Phone Number</label>
+                    <div class="lms_phone_input_wrapper">
+                        <div class="lms_country_dropdown">
+                            <div class="lms_selected_country" id="lms_selected_country">+91 (IN)</div>
+                            <div class="lms_country_drop_list" id="lms_country_drop_list">
+                                <input type="text" autocomplete="off" style="display: none" /><input
+                                    type="text"
+                                    id="lms_country_search"
+                                    placeholder="Search country..."
+                                    autocomplete="off"
+                                    autocorrect="off"
+                                    spellcheck="false"
+                                    name="lms_country_search"
+                                    autocomplete="new-password"
+                                />
+                                <ul id="lms_country_options"></ul>
+                            </div>
+                        </div>
+                        <input
+                            type="text"
+                            class="lms_input"
+                            id="lms_mobile"
+                            name="lms_mobile"
+                            pattern="^\d{10}$"
+                            maxlength="10"
+                            required
+                            placeholder="+91 XXXXX XXXXX"
+                            oninput='this.value=this.value.replace(/\D/g,""),this.setCustomValidity("")'
+                            oninvalid='this.setCustomValidity("Please enter a valid 10-digit mobile number")'
+                        /><input type="hidden" name="lms_country_code" id="lms_country_code" />
+                    </div>
+                </div>
+                <div class="lms_form-group">
+                    <label class="lms_label" for="lms_product_drop">Training Requirement</label>
+                    <select id="lms_product_drop" class="lms_input" name="lms_product_drop" required>
+                        <option value="">Select training topic</option>
+                        <!-- Options will be dynamically populated -->
+                    </select>
+                </div>
+                <div class="lms_form-group">
+                    <label class="lms_label" for="lms_comments">Message</label>
+                    <textarea
+                        id="lms_comments"
+                        class="lms_input"
+                        name="lms_comments"
+                        rows="3"
+                        placeholder="Number of employees, preferred dates, location..."
+                    ></textarea>
+                </div>
+                <button class="lms_button" type="submit">
+                    Send Proposal Request <span aria-hidden="true">&rarr;</span>
+                </button>
+                <p class="lms_form_footer">
+                    Or email us at <a href="mailto:aptechlearningwhitefield@gmail.com">aptechlearningwhitefield@gmail.com</a>
+                </p>
+            </form>
+        </div>
+    </body>
+</div>
+<!-- Do not remove the below script -->
+<script>
+    // Attempt the website's GoDaddy Inbox first, then let the vendor submit to LMS.
+    (() => {
+        const form = document.getElementById("lms_lead_form");
+        if (!form) return;
+        let continueToLms = false;
+        let submitting = false;
+        const button = form.querySelector('button[type="submit"]');
+        const notice = document.createElement("p");
+        notice.setAttribute("role", "status");
+        notice.setAttribute("aria-live", "polite");
+        notice.style.cssText = "margin:10px 0;color:#b42318;font-size:13px;text-align:center";
+        button.insertAdjacentElement("afterend", notice);
+
+        form.addEventListener("submit", async (event) => {
+            if (continueToLms) {
+                continueToLms = false;
+                return;
+            }
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            if (submitting) return;
+            submitting = true;
+            button.disabled = true;
+            notice.textContent = "Sending your request…";
+
+            const value = (id) => form.querySelector(`#${id}`)?.value?.trim() || "";
+            const countryCode = value("lms_country_code");
+            const phone = `${countryCode} ${value("lms_mobile")}`.trim();
+            const fields = {
+                "Company Name": value("lms_name"),
+                "Contact Person": value("lms_contact_person"),
+                Phone: phone,
+                "Training Requirement": value("lms_product_drop"),
+            };
+
+            try {
+                const response = await fetch("/api/contact/corporate-enquiry", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        user: { name: fields["Contact Person"], email: value("lms_email") },
+                        conversation: {
+                            messages_attributes: [{ body: value("lms_comments") || "Corporate training proposal request" }],
+                            data: fields,
+                        },
+                    }),
+                });
+                const result = await response.json();
+                if (!response.ok || result.success !== true) {
+                    throw new Error(result.error || `Submission failed (${response.status})`);
+                }
+            } catch (error) {
+                console.error("Corporate enquiry delivery failed", error);
+                notice.textContent = "We couldn't confirm the email copy. Your request will still be sent to the LMS; for urgent help call +91 74113 33500.";
+            }
+
+            // Preserve delivery to the LMS even if the site's Inbox or email
+            // service is temporarily unavailable.
+            submitting = false;
+            continueToLms = true;
+            button.disabled = false;
+            form.requestSubmit();
+        }, true);
+    })();
+</script>
+<!-- Do not remove the below script -->
+<script>
+    let UNIQUE_KEY =
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBDb2RlIjoyMzMsIlVzZXJJZCI6MSwiZW1haWwiOiJhcHRlY2hsZWFybmluZ3doaXRlZmllbGRAZ21haWwuY29tIiwiQWRtaW4iOiJZZXMiLCJTb3VyY2UiOiJFbWJlZEZvcm0iLCJpYXQiOjE3OTA4MzQ0MTN9.bfolK5p1eRjowBkDOOJZ2t-HUGKQegbfXWbjdD8ev0U",
+        HOST = "https://lmsapi.treeone.one",
+        REDIRECT_TO = "https://www.aptechwhitefield.com/",
+        CAMP_ID = "5",
+        LSS_ID = "8",
+        script = document.createElement("script");
+    (script.src = HOST + "/cdn/lead-form.js"), document.head.appendChild(script);
+</script>
+<!-- Do not remove the above script -->

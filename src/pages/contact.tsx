@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 import { useState } from 'react';
 import { seoMetadata } from '../lib/seo-metadata';
 import { trackGoogleAnalyticsEvent } from '@/lib/google-analytics';
+import LmsCorporateProposalForm from '@/components/LmsCorporateProposalForm';
 import { Phone, Mail, MapPin, Clock, MessageCircle, CheckCircle, ChevronDown, ChevronUp, Building2, GraduationCap, School, HelpCircle, Send, ArrowRight } from 'lucide-react';
 import { contact } from 'virtual:content';
 const enquiryIcons: Record<string, React.ReactNode> = {
@@ -201,6 +202,7 @@ function CorporateEnquiryForm() {
   const [employees, setEmployees] = useState('');
   const [mode, setMode] = useState('');
   const [message, setMessage] = useState('');
+  if (import.meta.env.PROD) return <LmsCorporateProposalForm />;
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (gotcha) return;

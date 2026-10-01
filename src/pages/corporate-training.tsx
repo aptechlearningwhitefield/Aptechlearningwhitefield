@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { seoMetadata } from '../lib/seo-metadata';
 import { SITE_URL as site } from '../lib/site-url';
 import { trackGoogleAnalyticsEvent } from '@/lib/google-analytics';
+import LmsCorporateProposalForm from '@/components/LmsCorporateProposalForm';
 import { Building2, CheckCircle, ChevronDown, ChevronUp, Send, Phone, MessageCircle, ArrowRight, Users, Award, Clock, Monitor, Briefcase, Zap } from 'lucide-react';
 import { corporate, corporate_training } from 'virtual:content';
 // SEO: Get corporate training metadata
@@ -31,6 +32,7 @@ function CorporateEnquiryForm() {
   const [employees, setEmployees] = useState('');
   const [mode, setMode] = useState('');
   const [message, setMessage] = useState('');
+  if (import.meta.env.PROD) return <LmsCorporateProposalForm />;
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (gotcha) return;
