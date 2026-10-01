@@ -1,4 +1,4 @@
-# Environment variable reference
+﻿# Environment variable reference
 
 The project is a Vite and React frontend with Vercel Node functions in `api/`. There is no database or ORM configuration in the deployed application. The Vercel contact and review functions use Google Sheets as their persistent store. A separate Express server in `src/server/entry.ts` has a GoDaddy Inbox contact integration for non-Vercel deployments.
 
@@ -6,9 +6,9 @@ The project is a Vite and React frontend with Vercel Node functions in `api/`. T
 
 | Variable | Purpose and code location | Scope | Required in Vercel? | Where to get it |
 | --- | --- | --- | --- | --- |
-| `GOOGLE_SHEETS_SPREADSHEET_ID` | Selects the private sheet used by `api/contact/[formName].ts`, `api/reviews.ts`, and `api/_lib/google-sheets.ts`. | Server only | **Yes**, for enquiry and review persistence | Create/select the Google Sheet and copy its ID from its URL. |
-| `GOOGLE_SERVICE_ACCOUNT_JSON` | Authenticates the Google Sheets API client in `api/_lib/google-sheets.ts`. Contains private service account credentials. | Server only; secret | **Yes**, for enquiry and review persistence | Google Cloud Console: create a service account, enable Google Sheets API, create a JSON key, then share the target sheet with its `client_email` as Editor. |
-| `VITE_GA_MEASUREMENT_ID` | Optional override for GA4 in `src/lib/google-analytics.ts`. The provided measurement ID is the built-in default, so this variable can be omitted. | Browser visible; not a secret | No; add only to override the built-in ID | Google Analytics Admin → Data streams → Web stream. |
+| `GOOGLE_SHEETS_ENDPOINT` | Google Apps Script Web App URL used by `api/_lib/apps-script.ts` to write enquiry and review rows. | Server only | **Yes**, unless using the `VITE_GOOGLE_SHEETS_ENDPOINT` setting already configured in Vercel | Deploy the Apps Script as a Web App and copy its `/exec` URL. |
+| `VITE_GOOGLE_SHEETS_ENDPOINT` | Existing endpoint setting; accepted as a fallback by `api/_lib/apps-script.ts` and used by the legacy browser helper in `src/lib/api-client.ts`. | Browser visible; endpoint URL only | Yes if not setting `GOOGLE_SHEETS_ENDPOINT` | Apps Script Web App deployment URL. |
+| `VITE_GA_MEASUREMENT_ID` | Optional override for GA4 in `src/lib/google-analytics.ts`. The provided measurement ID is the built-in default, so this variable can be omitted. | Browser visible; not a secret | No; add only to override the built-in ID | Google Analytics Admin â†’ Data streams â†’ Web stream. |
 | GTM container | The public container ID is configured in `src/lib/google-analytics.ts`; the GTM script is loaded after analytics consent. It is not a secret or environment variable. | Browser visible | No | Google Tag Manager account/container. |
 | `VITE_SOCIAL_FACEBOOK_URL` | Optional Facebook profile link, validated in `src/lib/social-links.ts`. | Browser visible | No | Use the organization's official profile URL, if one exists. |
 | `VITE_SOCIAL_INSTAGRAM_URL` | Optional Instagram profile override, validated in `src/lib/social-links.ts`. The configured official profile is the built-in default. | Browser visible | No | Use the organization's official profile URL, if one exists. |
@@ -24,9 +24,9 @@ The project is a Vite and React frontend with Vercel Node functions in `api/`. T
 
 Vite's built-in `MODE`, `DEV`, and `PROD` flags are compile-time values, not deployment variables to configure. `NODE_ENV` is managed by the runtime/build tooling. `VITE_APP_NAME`, `VITE_PUBLIC_URL`, `VITE_API_URL`, `VITE_ENABLE_SOURCE_MAPPING`, `VITE_ENABLE_SSR`, and `VITE_SHOW_DEV_TOOLS` appeared in the old example or type declarations but are not read by the current app code, so they are not listed as active configuration.
 
-## Vercel setup for enquiries and data archive
+## Vercel setup for enquiries and review submissions
 
-Contact enquiries are forwarded to the configured GoDaddy Inbox by the Vercel function. Google Sheets is an optional archive for enquiries and is still used for review submissions. Add `GOOGLE_SHEETS_SPREADSHEET_ID` and `GOOGLE_SERVICE_ACCOUNT_JSON` under Vercel Project → Settings → Environment Variables only if you want that archive/review storage. Keep both server-only; never prefix either with `VITE_`. Redeploy after changing variables.
+Contact enquiries are forwarded to GoDaddy Inbox and archived through Google Apps Script. Website review submissions are also written through Apps Script. Set `GOOGLE_SHEETS_ENDPOINT` in Vercel, or keep the existing `VITE_GOOGLE_SHEETS_ENDPOINT` variable. The script must accept a flat JSON object and return `{ "success": true }`; its current implementation appends rows to the `Sheet1` tab. No service-account key is needed. Redeploy after changing the endpoint.
 
 The GA4 identifier is public configuration and is already set as the application default. No GA environment variable is needed for the current measurement ID.
 

@@ -1,4 +1,4 @@
-import { ensureSheetTab, getGoogleSheetsClient, GOOGLE_SHEETS_HEADERS } from "../_lib/google-sheets.js";
+import { appendToAppsScript } from "../_lib/apps-script.js";
 import contactFormConfig from "../../src/lib/contact-form.config.json" with { type: "json" };
 
 interface ApiRequest {
@@ -37,19 +37,6 @@ function asFormData(value: unknown): Record<string, unknown> {
   return value && typeof value === "object" && !Array.isArray(value)
     ? value as Record<string, unknown>
     : {};
-}
-
-async function appendSubmission(row: string[]): Promise<void> {
-  const { spreadsheetId, sheets } = getGoogleSheetsClient();
-  await ensureSheetTab(sheets, spreadsheetId, "Enquiries", GOOGLE_SHEETS_HEADERS.enquiries);
-
-  await sheets.spreadsheets.values.append({
-    spreadsheetId,
-    range: "Enquiries!A:W",
-    valueInputOption: "RAW",
-    insertDataOption: "INSERT_ROWS",
-    requestBody: { values: [row] },
-  });
 }
 
 function resolveInboxHost(): string {
@@ -139,38 +126,21 @@ export default async function handler(req: ApiRequest, res: ApiResponse): Promis
     return;
   }
 
-  const row = [
-    new Date().toISOString(),
-    formName,
-    name,
-    email,
-    phone,
-    message,
-    asText(fields["Company Name"]),
-    asText(fields["Institution Name"]),
-    asText(fields.Designation),
-    asText(fields["Role / Designation"]),
-    asText(fields.City),
-    asText(fields.Qualification),
-    asText(fields["Current Status"]),
-    asText(fields["Interested Course"]),
-    asText(fields["Learning Mode"]),
-    asText(fields["Joining Month"]),
-    asText(fields["Training Requirement"]),
-    asText(fields["Number of Employees"]),
-    asText(fields["Preferred Mode"]),
-    asText(fields["Program Type"]),
-    asText(fields["Number of Students"]),
-    asText(fields.Subject),
-    JSON.stringify(fields).slice(0, 5000),
-  ];
+  const sheetRow: Record<string, string> = {
+    "Enquiry Type": formName,
+    Name: name,
+    Email: email,
+    Phone: phone,
+    Message: message,
+  };
+  for (const [key, value] of Object.entries(fields)) sheetRow[key] = asText(value, 1000);
 
-  // Keep the Sheets archive when available, but the GoDaddy Inbox is the
-  // primary destination and determines whether the form submission succeeds.
+  // The Inbox remains the primary destination; archive through Apps Script
+  // when available so spreadsheet issues never discard a lead.
   try {
-    await appendSubmission(row);
+    await appendToAppsScript(sheetRow);
   } catch (error) {
-    console.error("[enquiries] Could not archive submission in Sheets", error);
+    console.error("[enquiries] Could not archive submission through Apps Script", error);
   }
 
   try {

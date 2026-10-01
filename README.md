@@ -1,18 +1,18 @@
-# V8 App Template
+﻿# V8 App Template
 
 A modern, production-ready web application template built with Vite, React, and TypeScript. Designed for AI-assisted development with component introspection, layout systems, and excellent developer experience.
 
-## 🚀 Features
+## ðŸš€ Features
 
-- **⚡ Lightning Fast**: Vite for instant hot module replacement and optimized builds
-- **🎯 Type Safe**: Full TypeScript coverage across frontend and backend
-- **🎨 Beautiful UI**: shadcn/ui components with Tailwind CSS
-- **🧠 AI-Friendly**: Component introspection for AI development tools
-- **📱 Responsive**: Mobile-first design with modern CSS
-- **🔧 Developer Experience**: Hot reload, linting, formatting, and testing setup
-- **🚀 Production Ready**: Server-side rendering (SSR), optimized builds, and deployment-ready
+- **âš¡ Lightning Fast**: Vite for instant hot module replacement and optimized builds
+- **ðŸŽ¯ Type Safe**: Full TypeScript coverage across frontend and backend
+- **ðŸŽ¨ Beautiful UI**: shadcn/ui components with Tailwind CSS
+- **ðŸ§  AI-Friendly**: Component introspection for AI development tools
+- **ðŸ“± Responsive**: Mobile-first design with modern CSS
+- **ðŸ”§ Developer Experience**: Hot reload, linting, formatting, and testing setup
+- **ðŸš€ Production Ready**: Server-side rendering (SSR), optimized builds, and deployment-ready
 
-## 🛠️ Tech Stack
+## ðŸ› ï¸ Tech Stack
 
 ### Frontend
 
@@ -38,48 +38,48 @@ A modern, production-ready web application template built with Vite, React, and 
 
 > **Requirement:** Node.js 22 or later.
 
-## 📁 Project Structure
+## ðŸ“ Project Structure
 
 ```
 v8-app-template/
-├── src/
-│   ├── components/       # React components
-│   │   ├── ui/           # shadcn/ui base components (40+ components)
-│   │   └── Spinner.tsx
-│   ├── layouts/          # Layout systems
-│   │   ├── RootLayout.tsx    # Centralized layout wrapper
-│   │   ├── Website.tsx       # Structural container
-│   │   ├── Dashboard.tsx     # Dashboard layout
-│   │   ├── RootLayout.md     # RootLayout documentation
-│   │   ├── Website.md        # Website layout documentation
-│   │   └── parts/            # Layout components
-│   │       ├── Header.tsx
-│   │       └── Footer.tsx
-│   ├── pages/            # Page components (content only)
-│   │   ├── index.tsx     # Homepage
-│   │   └── _404.tsx      # 404 page
-│   ├── lib/              # Utilities and API
-│   │   ├── utils.ts      # Utility functions
-│   │   └── api-client.ts # API client
-│   ├── server/           # Express API routes and SSR entry point
-│   │   ├── api/health/GET.ts
-│   │   └── entry.ts
-│   ├── styles/           # Global styles
-│   │   └── globals.css
-│   ├── test/             # Test setup
-│   │   └── setup.ts
-│   ├── App.tsx           # Root application component
-│   ├── main.tsx          # Application entry point
-│   ├── router.ts         # Route definitions
-│   └── routes.tsx        # Route components
-├── dev-tools/            # Development mode enhancements
-├── source-mapper/        # AI introspection plugin
-├── public/               # Static assets
-├── Dockerfile.dev        # Local Docker development image
-└── vite.config.ts        # Vite, API, SSR, and plugin configuration
+â”œâ”€â”€ src/
+â”‚   â”œâ”€â”€ components/       # React components
+â”‚   â”‚   â”œâ”€â”€ ui/           # shadcn/ui base components (40+ components)
+â”‚   â”‚   â””â”€â”€ Spinner.tsx
+â”‚   â”œâ”€â”€ layouts/          # Layout systems
+â”‚   â”‚   â”œâ”€â”€ RootLayout.tsx    # Centralized layout wrapper
+â”‚   â”‚   â”œâ”€â”€ Website.tsx       # Structural container
+â”‚   â”‚   â”œâ”€â”€ Dashboard.tsx     # Dashboard layout
+â”‚   â”‚   â”œâ”€â”€ RootLayout.md     # RootLayout documentation
+â”‚   â”‚   â”œâ”€â”€ Website.md        # Website layout documentation
+â”‚   â”‚   â””â”€â”€ parts/            # Layout components
+â”‚   â”‚       â”œâ”€â”€ Header.tsx
+â”‚   â”‚       â””â”€â”€ Footer.tsx
+â”‚   â”œâ”€â”€ pages/            # Page components (content only)
+â”‚   â”‚   â”œâ”€â”€ index.tsx     # Homepage
+â”‚   â”‚   â””â”€â”€ _404.tsx      # 404 page
+â”‚   â”œâ”€â”€ lib/              # Utilities and API
+â”‚   â”‚   â”œâ”€â”€ utils.ts      # Utility functions
+â”‚   â”‚   â””â”€â”€ api-client.ts # API client
+â”‚   â”œâ”€â”€ server/           # Express API routes and SSR entry point
+â”‚   â”‚   â”œâ”€â”€ api/health/GET.ts
+â”‚   â”‚   â””â”€â”€ entry.ts
+â”‚   â”œâ”€â”€ styles/           # Global styles
+â”‚   â”‚   â””â”€â”€ globals.css
+â”‚   â”œâ”€â”€ test/             # Test setup
+â”‚   â”‚   â””â”€â”€ setup.ts
+â”‚   â”œâ”€â”€ App.tsx           # Root application component
+â”‚   â”œâ”€â”€ main.tsx          # Application entry point
+â”‚   â”œâ”€â”€ router.ts         # Route definitions
+â”‚   â””â”€â”€ routes.tsx        # Route components
+â”œâ”€â”€ dev-tools/            # Development mode enhancements
+â”œâ”€â”€ source-mapper/        # AI introspection plugin
+â”œâ”€â”€ public/               # Static assets
+â”œâ”€â”€ Dockerfile.dev        # Local Docker development image
+â””â”€â”€ vite.config.ts        # Vite, API, SSR, and plugin configuration
 ```
 
-## 📜 Available Scripts
+## ðŸ“œ Available Scripts
 
 - `npm run dev` - Start development server with hot reload
 - `npm run build` - Build the client and SSR server bundle for production
@@ -95,7 +95,7 @@ v8-app-template/
 - `npm run clean` - Remove build output and Vite's dependency cache
 - `npm run reset` - Clean the project and reinstall dependencies
 
-## 🎨 UI Components
+## ðŸŽ¨ UI Components
 
 This template includes shadcn/ui components that are:
 
@@ -120,7 +120,7 @@ To add new components:
 npx shadcn-ui@latest add component-name
 ```
 
-## 🧠 AI Integration
+## ðŸ§  AI Integration
 
 ### Component Introspection
 
@@ -152,7 +152,7 @@ The dev-tools package provides:
 - **Type-first approach**: Comprehensive TypeScript types
 - **Standard patterns**: CRUD operations, form handling, error boundaries
 
-## 🗃️ API & Layouts
+## ðŸ—ƒï¸ API & Layouts
 
 ### API Routes
 
@@ -165,7 +165,7 @@ The template includes:
 
 **RootLayout Pattern** (recommended for multi-page sites):
 
-`App.tsx` already wraps every route in RootLayout, which renders a shared header and footer on every page. Customize them by editing `src/layouts/parts/Header.tsx` and `Footer.tsx` directly — there is no config prop. For reference, the routing shape is a pathless layout route:
+`App.tsx` already wraps every route in RootLayout, which renders a shared header and footer on every page. Customize them by editing `src/layouts/parts/Header.tsx` and `Footer.tsx` directly â€” there is no config prop. For reference, the routing shape is a pathless layout route:
 
 ```tsx
 // src/App.tsx (already wired)
@@ -198,7 +198,7 @@ export default function HomePage() {
 
 See `src/layouts/*.md` for detailed usage documentation.
 
-## 🧪 Testing
+## ðŸ§ª Testing
 
 Run tests with:
 
@@ -212,7 +212,7 @@ The template includes:
 - **React Testing Library** - Component testing utilities
 - **Jest DOM** - Custom Jest matchers
 
-## 📦 Deployment
+## ðŸ“¦ Deployment
 
 ### Build for production:
 
@@ -228,25 +228,10 @@ npm run build
 
 ### Enquiry storage on Vercel
 
-Contact form submissions are stored as rows in a private Google Sheet named `Enquiries`.
-To connect it after deploying:
+Contact form submissions are forwarded to the GoDaddy Inbox and archived through the Google Apps Script Web App. Website review submissions are written through Apps Script as well. Set `GOOGLE_SHEETS_ENDPOINT` in Vercel, or use the existing `VITE_GOOGLE_SHEETS_ENDPOINT` setting. The script must accept a flat JSON object and return `{ "success": true }`. No Google Cloud service-account key is needed for this setup.
 
-1. Create a Google Sheet, rename its first tab to `Enquiries`, and copy its ID from the URL (`/spreadsheets/d/<ID>/`).
-2. Create a Google Cloud service account, enable the Google Sheets API, and create a JSON key.
-3. Share the sheet with the service account's `client_email` as an Editor.
-4. In **Vercel → Project → Settings → Environment Variables**, add
-  `GOOGLE_SHEETS_SPREADSHEET_ID` and `GOOGLE_SERVICE_ACCOUNT_JSON`. Set the latter
-  to the complete service-account JSON on one line. Keep both variables private;
-  do not use a `VITE_` prefix or commit the key.
-5. Redeploy. The API creates the `Enquiries` header row automatically on the first
-  form submission. Open the Google Sheet to view, filter, or export enquiries to Excel.
 
-The spreadsheet is the private admin view; submissions are not exposed through a
-public listing endpoint. Until those two Vercel variables are configured and the
-sheet is shared with the service account, the form API returns an error rather than
-pretending that an enquiry was saved.
-
-## 🔧 Configuration
+## ðŸ”§ Configuration
 
 ### Environment Variables
 
@@ -254,8 +239,7 @@ Copy `.env.example` to `.env` and configure only the values needed by your deplo
 
 ```env
 VITE_GA_MEASUREMENT_ID=
-GOOGLE_SHEETS_SPREADSHEET_ID=
-GOOGLE_SERVICE_ACCOUNT_JSON=
+GOOGLE_SHEETS_ENDPOINT=
 ```
 
 ### Custom Plugins
@@ -281,7 +265,7 @@ export default defineConfig(({ mode }) => ({
 }));
 ```
 
-## 🎯 Best Practices
+## ðŸŽ¯ Best Practices
 
 ### Component Architecture
 
@@ -305,7 +289,7 @@ export default defineConfig(({ mode }) => ({
 - Follow layout documentation in `src/layouts/*.md`
 - Never duplicate header/footer config across pages
 
-## 🤝 Contributing
+## ðŸ¤ Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -314,11 +298,11 @@ export default defineConfig(({ mode }) => ({
 5. Run linting and tests
 6. Submit a pull request
 
-## 📄 License
+## ðŸ“„ License
 
 MIT License - feel free to use this template for any project.
 
-## 🙏 Acknowledgments
+## ðŸ™ Acknowledgments
 
 Built with amazing open-source tools:
 
@@ -332,4 +316,4 @@ Built with amazing open-source tools:
 
 ---
 
-**Happy coding! 🎉**
+**Happy coding! ðŸŽ‰**
