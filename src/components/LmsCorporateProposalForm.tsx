@@ -3,7 +3,12 @@ import { toast } from 'sonner';
 
 /** The LMS supplied form is hosted as a standalone document so its required
  * field IDs, names, and vendor script remain intact and isolated from React. */
-export default function LmsCorporateProposalForm() {
+type EnquiryType = 'student-enquiry' | 'corporate-enquiry' | 'schools-colleges' | 'general-enquiry';
+
+export default function LmsCorporateProposalForm({
+  enquiryType = 'corporate-enquiry',
+  context,
+}: { enquiryType?: EnquiryType; context?: string }) {
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
@@ -40,10 +45,10 @@ export default function LmsCorporateProposalForm() {
   return (
     <iframe
       ref={iframeRef}
-      src="/lms-corporate-proposal.html"
-      title="Request a corporate training proposal"
+      src={`/lms-corporate-proposal.html?enquiryType=${encodeURIComponent(enquiryType)}${context ? `&context=${encodeURIComponent(context)}` : ''}`}
+      title="Submit an enquiry to Aptech Learning Whitefield"
       className="block w-full rounded-2xl border-0"
-      style={{ height: "900px" }}
+      style={{ height: enquiryType === 'student-enquiry' ? "1120px" : "900px" }}
       loading="lazy"
     />
   );

@@ -7,6 +7,7 @@ import { School, GraduationCap, CheckCircle, ChevronDown, ChevronUp, Send, Phone
 import { schools } from 'virtual:content';
 import { trackGoogleAnalyticsEvent } from '@/lib/google-analytics';
 import { notifyEnquirySubmitted } from '@/lib/enquiry-feedback';
+import LmsCorporateProposalForm from '@/components/LmsCorporateProposalForm';
 const benefitIcons = [Award, Users, Clock, School, BookOpen, GraduationCap];
 const schoolCollegeCourses = [
   {
@@ -44,6 +45,7 @@ function PartnershipForm() {
   const [programType, setProgramType] = useState('');
   const [students, setStudents] = useState('');
   const [message, setMessage] = useState('');
+  if (import.meta.env.PROD) return <LmsCorporateProposalForm enquiryType="schools-colleges" />;
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (gotcha) return;

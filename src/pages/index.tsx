@@ -7,6 +7,7 @@ import { Phone, MessageCircle, ArrowRight, CheckCircle, Star, ChevronDown, Chevr
 import { home } from 'virtual:content';
 import GoogleReviews from '@/components/GoogleReviews';
 import ReviewSubmissionForm from '@/components/ReviewSubmissionForm';
+import LmsCorporateProposalForm from '@/components/LmsCorporateProposalForm';
 import { SITE_URL as site } from '@/lib/site-url';
 import { trackGoogleAnalyticsEvent } from '@/lib/google-analytics';
 import { notifyEnquirySubmitted } from '@/lib/enquiry-feedback';
@@ -113,6 +114,7 @@ function StudentEnquiryForm() {
     message: ''
   });
   const [gotcha, setGotcha] = useState('');
+  if (import.meta.env.PROD) return <LmsCorporateProposalForm enquiryType="student-enquiry" />;
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData((prev) => ({
       ...prev,

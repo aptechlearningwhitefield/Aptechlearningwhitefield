@@ -6,6 +6,7 @@ import { Clock, ArrowRight, CheckCircle, ChevronDown, ChevronUp, Monitor, BookOp
 import { courses } from 'virtual:content';
 import { trackGoogleAnalyticsEvent } from '@/lib/google-analytics';
 import { notifyEnquirySubmitted } from '@/lib/enquiry-feedback';
+import LmsCorporateProposalForm from '@/components/LmsCorporateProposalForm';
 const courseIcons: Record<string, React.ReactNode> = {
   'ai-machine-learning': <Cpu size={32} />,
   'generative-ai': <Zap size={32} />,
@@ -95,6 +96,7 @@ function QuickEnquiry({
   const [mobile, setMobile] = useState('');
   const [email, setEmail] = useState('');
   const [gotcha, setGotcha] = useState('');
+  if (import.meta.env.PROD) return <LmsCorporateProposalForm enquiryType="student-enquiry" context={`Course: ${courseId}`} />;
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (gotcha) return;

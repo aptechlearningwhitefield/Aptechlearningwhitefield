@@ -30,6 +30,7 @@ function StudentEnquiryForm() {
   const [learningMode, setLearningMode] = useState('');
   const [joiningMonth, setJoiningMonth] = useState('');
   const [message, setMessage] = useState('');
+  if (import.meta.env.PROD) return <LmsCorporateProposalForm enquiryType="student-enquiry" />;
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (gotcha) return;
@@ -214,7 +215,7 @@ function CorporateEnquiryForm() {
   const [employees, setEmployees] = useState('');
   const [mode, setMode] = useState('');
   const [message, setMessage] = useState('');
-  if (import.meta.env.PROD) return <LmsCorporateProposalForm />;
+  if (import.meta.env.PROD) return <LmsCorporateProposalForm enquiryType="corporate-enquiry" />;
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (gotcha) return;
@@ -363,6 +364,7 @@ function SchoolsEnquiryForm() {
   const [programType, setProgramType] = useState('');
   const [students, setStudents] = useState('');
   const [message, setMessage] = useState('');
+  if (import.meta.env.PROD) return <LmsCorporateProposalForm enquiryType="schools-colleges" />;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -489,6 +491,7 @@ function GeneralEnquiryForm() {
   const [mobile, setMobile] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
+  if (import.meta.env.PROD) return <LmsCorporateProposalForm enquiryType="general-enquiry" />;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

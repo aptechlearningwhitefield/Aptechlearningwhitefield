@@ -555,11 +555,53 @@
 </div>
 <!-- Do not remove the below script -->
 <script>
-    // Mirror the enquiry to the website Inbox without intercepting the LMS
-    // vendor's native form submission.
+    // Tag every LMS lead with the website enquiry type and mirror it to the
+    // website Inbox/Sheets without intercepting the vendor's native submit.
     (() => {
         const form = document.getElementById("lms_lead_form");
         if (!form) return;
+        const allowedTypes = new Set(["student-enquiry", "corporate-enquiry", "schools-colleges", "general-enquiry"]);
+        const requestedType = new URLSearchParams(window.location.search).get("enquiryType");
+        const enquiryType = requestedType && allowedTypes.has(requestedType) ? requestedType : "corporate-enquiry";
+        const enquiryContext = new URLSearchParams(window.location.search).get("context")?.slice(0, 300) || "";
+        const enquiryLabels = {
+            "student-enquiry": "Student Enquiry",
+            "corporate-enquiry": "Corporate Enquiry",
+            "schools-colleges": "Schools & Colleges Enquiry",
+            "general-enquiry": "General Enquiry",
+        };
+        const title = form.querySelector(".lms_form_title");
+        if (title) title.textContent = enquiryLabels[enquiryType];
+        const submitButton = form.querySelector("button[type='submit']");
+        if (submitButton) submitButton.firstChild.textContent = "Send Enquiry ";
+        if (enquiryType === "student-enquiry") {
+            form.innerHTML = `
+                <h3 class="lms_form_title">Student Enquiry Form</h3>
+                <p class="lms_form_sub">Fill in your details and we'll call you back within 24 hours</p>
+                <div class="lms_form_row">
+                    <div class="lms_form-group"><label class="lms_label" for="lms_name">Full Name *</label><input class="lms_input" id="lms_name" name="lms_name" type="text" placeholder="Your full name" required /></div>
+                    <div class="lms_form-group"><label class="lms_label" for="lms_mobile">Mobile Number *</label>
+                        <div class="lms_phone_input_wrapper">
+                            <div class="lms_country_dropdown"><div class="lms_selected_country" id="lms_selected_country">+91 (IN)</div><div class="lms_country_drop_list" id="lms_country_drop_list"><input type="text" autocomplete="off" style="display:none" /><input type="text" id="lms_country_search" name="lms_country_search" placeholder="Search country..." autocomplete="off" /><ul id="lms_country_options"></ul></div></div>
+                            <input class="lms_input" id="lms_mobile" name="lms_mobile" type="text" pattern="^\\d{10}$" maxlength="10" placeholder="+91 XXXXX XXXXX" required oninput='this.value=this.value.replace(/\\D/g,""),this.setCustomValidity("")' oninvalid='this.setCustomValidity("Please enter a valid 10-digit mobile number")' />
+                            <input type="hidden" name="lms_country_code" id="lms_country_code" value="+91" />
+                        </div>
+                    </div>
+                </div>
+                <div class="lms_form-group"><label class="lms_label" for="lms_email">Email Address *</label><input class="lms_input" id="lms_email" name="lms_email" type="email" placeholder="your@email.com" required /></div>
+                <div class="lms_form_row">
+                    <div class="lms_form-group"><label class="lms_label" for="lms_city">City</label><input class="lms_input" id="lms_city" name="lms_city" type="text" placeholder="Your city" /></div>
+                    <div class="lms_form-group"><label class="lms_label" for="lms_qualification">Qualification</label><input class="lms_input" id="lms_qualification" name="lms_qualification" type="text" placeholder="e.g. B.Tech, BCA, 12th" /></div>
+                </div>
+                <div class="lms_form-group"><label class="lms_label" for="lms_current_status">Current Status</label><select class="lms_input" id="lms_current_status" name="lms_current_status"><option value="">Select your status</option><option>Student</option><option>Fresher / Recent Graduate</option><option>Working Professional</option><option>Job Seeker</option><option>Career Break</option></select></div>
+                <div class="lms_form-group"><label class="lms_label" for="lms_product_drop">Interested Course *</label><select class="lms_input" id="lms_product_drop" name="lms_product_drop" required><option value="">Select a course</option></select></div>
+                <div class="lms_form-group"><label class="lms_label" for="lms_learning_mode">Learning Mode</label><select class="lms_input" id="lms_learning_mode" name="lms_learning_mode"><option value="">Select learning mode</option><option>Classroom (Whitefield Centre)</option><option>Online (Live Classes)</option><option>Both (Hybrid)</option></select></div>
+                <div class="lms_form-group"><label class="lms_label" for="lms_comments">Message</label><textarea class="lms_input" id="lms_comments" name="lms_comments" rows="4" placeholder="Any specific questions or requirements?"></textarea></div>
+                <button class="lms_button" type="submit">Submit Enquiry <span aria-hidden="true">&rarr;</span></button>
+            `;
+            const countryCode = document.getElementById("lms_country_code");
+            if (countryCode) countryCode.value = "+91";
+        }
         const button = form.querySelector('button[type="submit"]');
         const notice = document.createElement("p");
         notice.setAttribute("role", "status");
@@ -571,22 +613,37 @@
             const value = (id) => form.querySelector(`#${id}`)?.value?.trim() || "";
             const countryCode = value("lms_country_code");
             const phone = `${countryCode} ${value("lms_mobile")}`.trim();
-            const fields = {
+            const fields = enquiryType === "student-enquiry" ? {
+                "Mobile": phone,
+                "City": value("lms_city"),
+                "Qualification": value("lms_qualification"),
+                "Current Status": value("lms_current_status"),
+                "Interested Course": value("lms_product_drop"),
+                "Learning Mode": value("lms_learning_mode"),
+                "Website Enquiry Type": enquiryLabels[enquiryType],
+            } : {
                 "Company Name": value("lms_name"),
                 "Contact Person": value("lms_contact_person"),
                 Phone: phone,
                 "Training Requirement": value("lms_product_drop"),
+                "Website Enquiry Type": enquiryLabels[enquiryType],
+                ...(enquiryContext && { "Enquiry Context": enquiryContext }),
             };
+            const comments = form.querySelector("#lms_comments");
+            const typeNote = `Website enquiry type: ${enquiryLabels[enquiryType]}${enquiryContext ? ` | ${enquiryContext}` : ""}`;
+            if (comments && !comments.value.startsWith(typeNote)) {
+                comments.value = `${typeNote}${comments.value.trim() ? `\n${comments.value.trim()}` : ""}`;
+            }
 
             fetch("/api/submit-enquiry", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     keepalive: true,
                     body: JSON.stringify({
-                        formName: "corporate-enquiry",
-                        user: { name: fields["Contact Person"], email: value("lms_email") },
+                        formName: enquiryType,
+                        user: { name: value(enquiryType === "student-enquiry" ? "lms_name" : "lms_contact_person"), email: value("lms_email") },
                         conversation: {
-                            messages_attributes: [{ body: value("lms_comments") || "Corporate training proposal request" }],
+                            messages_attributes: [{ body: value("lms_comments") || (enquiryType === "student-enquiry" ? "New student enquiry submitted" : "Corporate training proposal request") }],
                             data: fields,
                         },
                     }),
