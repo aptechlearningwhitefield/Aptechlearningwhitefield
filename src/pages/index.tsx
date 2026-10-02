@@ -185,40 +185,37 @@ function StudentEnquiryForm() {
       
       <div className="space-y-4">
         <div>
-          <label htmlFor="enq-name" className="block text-xs font-semibold text-slate-600 mb-1.5">Full Name *</label>
-          <input id="enq-name" name="name" type="text" required value={formData.name} onChange={handleChange} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" placeholder="Your full name" />
+          <label htmlFor="enq-name" className="block text-sm font-medium text-slate-700 mb-1">Full Name *</label>
+          <input id="enq-name" name="name" type="text" required value={formData.name} onChange={handleChange} className="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your full name" />
         </div>
         <div>
-          <label htmlFor="enq-mobile" className="block text-xs font-semibold text-slate-600 mb-1.5">Mobile Number *</label>
+          <label htmlFor="enq-mobile" className="block text-sm font-medium text-slate-700 mb-1">Mobile Number *</label>
           <div className="flex gap-2">
-            <span className="flex items-center justify-center w-28 shrink-0 border border-slate-200 rounded-xl bg-white px-3 py-3 text-sm text-slate-700">+91 (IN)</span>
-            <input id="enq-mobile" name="mobile" type="tel" inputMode="numeric" required value={formData.mobile} onChange={handleChange} className="min-w-0 flex-1 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" placeholder="Enter 10-digit mobile number" />
+            <span className="flex items-center justify-center w-28 shrink-0 border border-slate-200 rounded-lg bg-white px-3 py-2.5 text-sm text-slate-700">+91 (IN)</span>
+            <input id="enq-mobile" name="mobile" type="tel" inputMode="numeric" required value={formData.mobile} onChange={handleChange} className="min-w-0 flex-1 border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Enter 10-digit mobile number" />
           </div>
         </div>
       </div>
 
       <div className="space-y-4">
         <div>
-          <label htmlFor="enq-email" className="block text-xs font-semibold text-slate-600 mb-1.5">Email Address *</label>
-          <input id="enq-email" name="email" type="email" required value={formData.email} onChange={handleChange} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" placeholder="your@email.com" />
+          <label htmlFor="enq-email" className="block text-sm font-medium text-slate-700 mb-1">Email Address *</label>
+          <input id="enq-email" name="email" type="email" required value={formData.email} onChange={handleChange} className="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="your@email.com" />
         </div>
         <div>
-          <label htmlFor="enq-city" className="block text-xs font-semibold text-slate-600 mb-1.5">City</label>
-          <input id="enq-city" name="city" type="text" value={formData.city} onChange={handleChange} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" placeholder="Your city" />
+          <label htmlFor="enq-city" className="block text-sm font-medium text-slate-700 mb-1">City</label>
+          <input id="enq-city" name="city" type="text" value={formData.city} onChange={handleChange} className="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your city" />
         </div>
       </div>
 
       <div className="space-y-4">
         <div>
-          <label htmlFor="enq-qualification" className="block text-xs font-semibold text-slate-600 mb-1.5">Qualification</label>
-          <select id="enq-qualification" name="qualification" value={formData.qualification} onChange={handleChange} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors bg-white">
-            <option value="">Select qualification</option>
-            <option>10th / SSLC</option><option>12th / PUC</option><option>Diploma</option><option>B.E / B.Tech</option><option>BCA / BSc</option><option>MCA / M.Tech</option><option>Other Graduation</option><option>Post Graduation</option>
-          </select>
+          <label htmlFor="enq-qualification" className="block text-sm font-medium text-slate-700 mb-1">Qualification</label>
+          <input id="enq-qualification" name="qualification" type="text" value={formData.qualification} onChange={handleChange} className="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="e.g. B.Tech, BCA, 12th" />
         </div>
         <div>
-          <label htmlFor="enq-status" className="block text-xs font-semibold text-slate-600 mb-1.5">Current Status</label>
-          <select id="enq-status" name="currentStatus" value={formData.currentStatus} onChange={handleChange} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors bg-white">
+          <label htmlFor="enq-status" className="block text-sm font-medium text-slate-700 mb-1">Current Status</label>
+          <select id="enq-status" name="currentStatus" value={formData.currentStatus} onChange={handleChange} className="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white">
           <option value="">Select status</option>
           <option value="Student">Student</option>
           <option value="Fresh Graduate">Fresh Graduate</option>
@@ -230,8 +227,8 @@ function StudentEnquiryForm() {
       </div>
       <div className="space-y-4">
         <div>
-        <label htmlFor="enq-course" className="block text-xs font-semibold text-slate-600 mb-1.5">Interested Course</label>
-        <select id="enq-course" name="interestedCourse" value={formData.interestedCourse} onChange={handleChange} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors bg-white">
+        <label htmlFor="enq-course" className="block text-sm font-medium text-slate-700 mb-1">Interested Course *</label>
+        <select id="enq-course" name="interestedCourse" required value={formData.interestedCourse} onChange={handleChange} className="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white">
           <option value="">Select a course</option>
           <option value="AI & Machine Learning">AI & Machine Learning</option>
           <option value="Generative AI & Prompt Engineering">Generative AI & Prompt Engineering</option>
@@ -244,8 +241,8 @@ function StudentEnquiryForm() {
         </select>
         </div>
         <div>
-        <label htmlFor="enq-mode" className="block text-xs font-semibold text-slate-600 mb-1.5">Learning Mode</label>
-        <select id="enq-mode" name="learningMode" value={formData.learningMode} onChange={handleChange} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors bg-white">
+        <label htmlFor="enq-mode" className="block text-sm font-medium text-slate-700 mb-1">Learning Mode</label>
+        <select id="enq-mode" name="learningMode" value={formData.learningMode} onChange={handleChange} className="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white">
           <option value="">Select mode</option>
           <option value="Classroom (Whitefield)">Classroom (Whitefield)</option>
           <option value="Online (Live)">Online (Live)</option>
@@ -254,14 +251,14 @@ function StudentEnquiryForm() {
         </div>
       </div>
       <div>
-        <label htmlFor="enq-month" className="block text-xs font-semibold text-slate-600 mb-1.5">Preferred Joining Month</label>
-        <select id="enq-month" name="joiningMonth" value={formData.joiningMonth} onChange={handleChange} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors bg-white">
+        <label htmlFor="enq-month" className="block text-sm font-medium text-slate-700 mb-1">Preferred Joining Month</label>
+        <select id="enq-month" name="joiningMonth" value={formData.joiningMonth} onChange={handleChange} className="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white">
           <option value="">Select month</option><option>Immediately</option><option>July 2026</option><option>August 2026</option><option>September 2026</option><option>October 2026</option><option>November 2026</option><option>December 2026</option><option>January 2027</option>
         </select>
       </div>
       <div>
-        <label htmlFor="enq-message" className="block text-xs font-semibold text-slate-600 mb-1.5">Message (optional)</label>
-        <textarea id="enq-message" name="message" rows={3} value={formData.message} onChange={handleChange} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors resize-none" placeholder="Any specific questions or requirements..." />
+        <label htmlFor="enq-message" className="block text-sm font-medium text-slate-700 mb-1">Message (optional)</label>
+        <textarea id="enq-message" name="message" rows={3} value={formData.message} onChange={handleChange} className="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-none" placeholder="Any specific questions or requirements..." />
       </div>
       <button type="submit" disabled={status === 'loading'} className="w-full bg-primary text-white font-bold py-3.5 rounded-xl hover:bg-blue-700 transition-all hover:shadow-lg hover:shadow-blue-200 disabled:opacity-60 flex items-center justify-center gap-2 text-sm">
         {status === 'loading' ? 'Submitting...' : 'Submit Enquiry'}
@@ -1168,7 +1165,7 @@ export default function HomePage() {
                   <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:p-5">
                     {!import.meta.env.PROD && <>
                     <h3 className="text-xl font-bold text-slate-900 mb-1">Student Enquiry Form</h3>
-                    <p className="text-slate-500 text-sm mb-6">Fill in your details and our counsellor will call you back within 24 hours.</p>
+                    <p className="text-slate-500 text-sm mb-6">Fill in your details and we'll call you back within 24 hours</p>
                     </>}
                     <StudentEnquiryForm />
                   </div>

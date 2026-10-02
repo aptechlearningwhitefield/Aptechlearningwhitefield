@@ -667,7 +667,7 @@ export default function ContactPage() {
               }} transition={{
                 duration: 0.3,
                 ease: 'easeOut' as const
-              }} className="bg-white border border-slate-100 rounded-2xl p-8 shadow-sm">
+              }} className={import.meta.env.PROD ? 'min-w-0' : 'bg-white border border-slate-100 rounded-2xl p-8 shadow-sm'}>
                   {/* Form toggle tabs */}
                   <div className="flex flex-wrap gap-2 mb-7">
                     <button onClick={() => setActiveForm('student')} className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all ${activeForm === 'student' ? 'bg-primary text-white shadow-md shadow-blue-200' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
