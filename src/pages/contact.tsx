@@ -710,10 +710,61 @@ export default function ContactPage() {
                       <GeneralEnquiryForm />
                     </>}
                 </motion.div>
+
+                {/* FAQs sit directly below the enquiry form. */}
+                <div className="mt-8 rounded-2xl border border-slate-100 bg-white p-6 shadow-sm md:p-8">
+                  <div className="mb-6">
+                    <h2 id="contact-faq-heading" className="text-2xl font-extrabold text-slate-900 mb-2">Frequently Asked Questions</h2>
+                    <p className="text-slate-500 text-sm">Quick answers to the most common questions we receive.</p>
+                  </div>
+                  <div className="space-y-3">
+                    {contact.faqs.map(faq => <div key={faq.id} className="border border-slate-100 rounded-xl overflow-hidden">
+                        <button onClick={() => setOpenFaq(openFaq === faq.id ? null : faq.id)} className="w-full flex items-center justify-between px-5 py-4 hover:bg-slate-50 transition-colors text-left" aria-expanded={openFaq === faq.id}>
+                          <span className="font-semibold text-slate-800 text-sm pr-4">{faq.q}</span>
+                          {openFaq === faq.id ? <ChevronUp size={18} className="text-primary shrink-0" /> : <ChevronDown size={18} className="text-slate-400 shrink-0" />}
+                        </button>
+                        {openFaq === faq.id && <div className="px-5 pb-5 text-slate-600 text-sm leading-relaxed">{faq.a}</div>}
+                      </div>)}
+                  </div>
+                  <div className="mt-7 text-center">
+                    <p className="text-slate-500 text-sm mb-3">Still have questions?</p>
+                    <a href="https://wa.me/917411333500" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-green-500 text-white font-semibold px-6 py-3 rounded-xl hover:bg-green-600 transition-colors">
+                      <MessageCircle size={18} /> Ask on WhatsApp
+                    </a>
+                  </div>
+                </div>
               </div>
 
               {/* Sidebar: contact info + map */}
               <div className="space-y-6">
+                {/* Quick links */}
+                <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm">
+                  <h3 className="text-base font-bold text-slate-900 mb-4">Explore More</h3>
+                  <div className="space-y-2">
+                    {[{
+                    to: '/courses',
+                    label: 'Browse All Courses'
+                  }, {
+                    to: '/corporate-training',
+                    label: 'Corporate Training'
+                  }, {
+                    to: '/placements',
+                    label: 'Placement Assistance'
+                  }, {
+                    to: '/schools-colleges',
+                    label: 'Schools & Colleges'
+                  }].map(link => <Link key={link.to} to={link.to} className="flex items-center gap-2.5 py-2 text-sm text-slate-600 hover:text-primary transition-colors group">
+                        <ArrowRight size={14} className="text-slate-300 group-hover:text-primary transition-colors shrink-0" />
+                        <span>{link.label}</span>
+                      </Link>)}
+                  </div>
+                </div>
+
+                <a href="https://wa.me/917411333500" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp" className="flex items-center justify-center gap-3 rounded-2xl bg-green-500 p-5 text-white shadow-sm transition-colors hover:bg-green-600">
+                  <MessageCircle size={28} />
+                  <span className="font-semibold">Chat with us on WhatsApp</span>
+                </a>
+
                 {/* Contact info card */}
                 <motion.div initial={{
                 opacity: 0,
@@ -777,66 +828,16 @@ export default function ContactPage() {
                   </div>
 
                   <div className="mt-5 pt-5 border-t border-slate-100 flex flex-col gap-2.5">
-                    <a href="https://wa.me/917411333500" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-green-500 text-white text-sm font-semibold py-3 rounded-xl hover:bg-green-600 transition-colors">
-                      <MessageCircle size={16} /> Chat on WhatsApp
-                    </a>
                     <a href={`tel:${contact.info.phone.replace(/\s/g, '')}`} className="flex items-center justify-center gap-2 border border-slate-200 text-slate-700 text-sm font-semibold py-3 rounded-xl hover:bg-slate-50 transition-colors">
                       <Phone size={16} /> Call Now
                     </a>
                   </div>
                 </motion.div>
-
-                {/* Quick links */}
-                <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm">
-                  <h3 className="text-base font-bold text-slate-900 mb-4">Explore More</h3>
-                  <div className="space-y-2">
-                    {[{
-                    to: '/courses',
-                    label: 'Browse All Courses'
-                  }, {
-                    to: '/corporate-training',
-                    label: 'Corporate Training'
-                  }, {
-                    to: '/placements',
-                    label: 'Placement Assistance'
-                  }, {
-                    to: '/schools-colleges',
-                    label: 'Schools & Colleges'
-                  }].map(link => <Link key={link.to} to={link.to} className="flex items-center gap-2.5 py-2 text-sm text-slate-600 hover:text-primary transition-colors group">
-                        <ArrowRight size={14} className="text-slate-300 group-hover:text-primary transition-colors shrink-0" />
-                        <span>{link.label}</span>
-                      </Link>)}
-                  </div>
-                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* FAQs */}
-        <section className="py-14 bg-[#F8FAFC]" aria-labelledby="contact-faq-heading">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <div className="text-center mb-10">
-              <h2 id="contact-faq-heading" className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-3">Frequently Asked Questions</h2>
-              <p className="text-slate-500">Quick answers to the most common questions we receive.</p>
-            </div>
-            <div className="space-y-3">
-              {contact.faqs.map(faq => <div key={faq.id} className="border border-slate-100 rounded-xl overflow-hidden">
-                  <button onClick={() => setOpenFaq(openFaq === faq.id ? null : faq.id)} className="w-full flex items-center justify-between px-6 py-4 hover:bg-slate-50 transition-colors text-left" aria-expanded={openFaq === faq.id}>
-                    <span className="font-semibold text-slate-800 text-sm pr-4">{faq.q}</span>
-                    {openFaq === faq.id ? <ChevronUp size={18} className="text-primary shrink-0" /> : <ChevronDown size={18} className="text-slate-400 shrink-0" />}
-                  </button>
-                  {openFaq === faq.id && <div className="px-6 pb-5 text-slate-600 text-sm leading-relaxed">{faq.a}</div>}
-                </div>)}
-            </div>
-            <div className="mt-8 text-center">
-              <p className="text-slate-500 text-sm mb-3">Still have questions?</p>
-              <a href="https://wa.me/917411333500" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-green-500 text-white font-semibold px-6 py-3 rounded-xl hover:bg-green-600 transition-colors">
-                <MessageCircle size={18} /> Ask on WhatsApp
-              </a>
-            </div>
-          </div>
-        </section>
       </main>
     </>;
 }
