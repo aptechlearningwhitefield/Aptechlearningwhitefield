@@ -925,54 +925,7 @@ export default function HomePage() {
         </section>
 
         {/* ── TESTIMONIALS ─────────────────────────────────────────────────── */}
-        <section className="py-20 bg-white" aria-labelledby="testimonials-heading">
-          <div className="container mx-auto px-4">
-            <FadeIn className="text-center mb-12">
-              <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-3">
-                {home.testimonials.sectionTitle}
-              </h2>
-              <p className="text-slate-600 max-w-2xl mx-auto">{home.testimonials.sectionSubtitle}</p>
-            </FadeIn>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {home.testimonials.items.map((t, i) => <motion.div key={t.id} initial={{
-              opacity: 0,
-              y: 24
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} viewport={{
-              once: true
-            }} transition={{
-              duration: 0.4,
-              delay: i * 0.1,
-              ease: 'easeOut' as const
-            }} className="bg-[#F8FAFC] border border-slate-100 rounded-2xl p-7 hover:shadow-md transition-all">
-                
-                  <div className="flex items-center gap-1 mb-4">
-                    {Array.from({
-                  length: t.rating
-                }).map((_, si) => <Star key={si} size={16} className="text-yellow-400 fill-yellow-400" />)}
-                  </div>
-                  <p className="text-slate-700 text-sm leading-relaxed mb-5 italic">"{t.quote}"</p>
-                  <div className="flex items-center gap-3">
-                    <div className="w-11 h-11 rounded-full bg-gradient-to-br from-primary to-blue-700 flex items-center justify-center text-white font-bold text-base">
-                      {t.name.charAt(0)}
-                    </div>
-                    <div>
-                      <div className="font-bold text-slate-900 text-sm">{t.name}</div>
-                      <div className="text-xs text-slate-500">{t.course}</div>
-                      <div className="text-xs text-primary font-medium">{t.company}</div>
-                    </div>
-                  </div>
-                </motion.div>)}
-            </div>
-
-          </div>
-        </section>
-
-        {/* ── Google Reviews ───────────────────────────────────────────────── */}
-        <GoogleReviews title="What Our Students Say on Google" maxVisible={6} />
+        <GoogleReviews title="Testimonials from Our Google Reviews" maxVisible={5} />
         <ReviewSubmissionForm />
       
 

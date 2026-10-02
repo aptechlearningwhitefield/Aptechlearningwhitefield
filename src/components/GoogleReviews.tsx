@@ -71,14 +71,14 @@ export default function GoogleReviews({
   const visible = reviews.slice(0, maxVisible);
 
   if (visible.length === 0) {
-    if (!loaded) return <section className={`py-12 px-4 ${className}`} aria-live="polite"><p className="text-center text-sm text-gray-500">Loading Google reviews…</p></section>;
-    return <section className={`py-12 px-4 ${className}`}><div className="max-w-6xl mx-auto text-center"><h2 className="text-2xl font-bold mb-3">{title}</h2><p className="text-sm text-gray-600">Google reviews are temporarily unavailable.</p><a className="mt-3 inline-block text-sm font-medium text-blue-700 hover:underline" href={googleMapsUri} target="_blank" rel="noopener noreferrer">Read our reviews on Google</a></div></section>;
+    if (!loaded) return <section id="testimonials" className={`py-12 px-4 ${className}`} aria-labelledby="google-testimonials-heading" aria-live="polite"><p className="text-center text-sm text-gray-500">Loading testimonials...</p></section>;
+    return <section id="testimonials" className={`py-12 px-4 ${className}`} aria-labelledby="google-testimonials-heading"><div className="max-w-6xl mx-auto text-center"><h2 id="google-testimonials-heading" className="text-2xl font-bold mb-3">{title}</h2><p className="text-sm text-gray-600">Google testimonials are temporarily unavailable. Please check back soon.</p><a className="mt-3 inline-block text-sm font-medium text-blue-700 hover:underline" href={googleMapsUri} target="_blank" rel="noopener noreferrer">Read all reviews on Google</a></div></section>;
   }
 
   return (
-    <section className={`py-12 px-4 ${className}`}>
+    <section id="testimonials" className={`py-12 px-4 ${className}`} aria-labelledby="google-testimonials-heading">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl font-bold text-center mb-8">{title}</h2>
+        <h2 id="google-testimonials-heading" className="text-2xl font-bold text-center mb-8">{title}</h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {visible.map((review) => {
             const stars = STAR_MAP[review.starRating] ?? 5;
@@ -107,7 +107,7 @@ export default function GoogleReviews({
                 </div>
                 <StarRating rating={stars} />
                 {review.comment && (
-                  <p className="text-sm text-gray-700 line-clamp-4">{review.comment}</p>
+                  <p className="text-sm text-gray-700 whitespace-pre-line">{review.comment}</p>
                 )}
                 <div className="mt-auto flex items-center gap-1 text-xs text-gray-400">
                   <svg className="h-3 w-3" viewBox="0 0 24 24" aria-hidden="true">
