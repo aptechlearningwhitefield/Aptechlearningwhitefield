@@ -379,7 +379,7 @@ export default function CorporateTrainingPage() {
                 <div className="bg-[#F8FAFC] border border-slate-100 rounded-2xl p-8">
                   <h2 id="corp-form-heading" className="text-2xl font-extrabold text-slate-900 mb-1">Request a Training Proposal</h2>
                   <p className="text-slate-500 text-sm mb-7">Fill in your details and we'll send a customized training plan and quote within 24 hours.</p>
-                  <CorporateEnquiryForm />
+                  {import.meta.env.PROD ? <LmsCorporateProposalForm /> : <CorporateEnquiryForm />}
                 </div>
               </div>
 
