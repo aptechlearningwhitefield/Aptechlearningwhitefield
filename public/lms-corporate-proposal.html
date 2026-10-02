@@ -547,12 +547,11 @@
 </div>
 <!-- Do not remove the below script -->
 <script>
-    // Attempt the website's GoDaddy Inbox first, then let the vendor submit to LMS.
+    // Mirror the enquiry to the website Inbox without intercepting the LMS
+    // vendor's native form submission.
     (() => {
         const form = document.getElementById("lms_lead_form");
         if (!form) return;
-        let continueToLms = false;
-        let submitting = false;
         const button = form.querySelector('button[type="submit"]');
         const notice = document.createElement("p");
         notice.setAttribute("role", "status");
@@ -560,18 +559,7 @@
         notice.style.cssText = "margin:10px 0;color:#b42318;font-size:13px;text-align:center";
         button.insertAdjacentElement("afterend", notice);
 
-        form.addEventListener("submit", async (event) => {
-            if (continueToLms) {
-                continueToLms = false;
-                return;
-            }
-            event.preventDefault();
-            event.stopImmediatePropagation();
-            if (submitting) return;
-            submitting = true;
-            button.disabled = true;
-            notice.textContent = "Sending your request…";
-
+        form.addEventListener("submit", () => {
             const value = (id) => form.querySelector(`#${id}`)?.value?.trim() || "";
             const countryCode = value("lms_country_code");
             const phone = `${countryCode} ${value("lms_mobile")}`.trim();
@@ -582,10 +570,10 @@
                 "Training Requirement": value("lms_product_drop"),
             };
 
-            try {
-                const response = await fetch("/api/submit-enquiry", {
+            fetch("/api/submit-enquiry", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
+                    keepalive: true,
                     body: JSON.stringify({
                         formName: "corporate-enquiry",
                         user: { name: fields["Contact Person"], email: value("lms_email") },
@@ -594,27 +582,22 @@
                             data: fields,
                         },
                     }),
+                })
+                .then(async (response) => {
+                    const result = await response.json().catch(() => null);
+                    if (!response.ok || result?.success !== true) {
+                        throw new Error(result?.error || `Submission failed (${response.status})`);
+                    }
+                    window.parent.postMessage({
+                        type: "aptech-enquiry-submitted",
+                        spreadsheetSaved: result.spreadsheetSaved !== false,
+                    }, window.location.origin);
+                })
+                .catch((error) => {
+                    console.error("Corporate enquiry Inbox delivery failed", error);
+                    notice.textContent = "Your request is being sent to the LMS. We couldn't confirm the email copy; for urgent help call +91 74113 33500.";
                 });
-                const result = await response.json();
-                if (!response.ok || result.success !== true) {
-                    throw new Error(result.error || `Submission failed (${response.status})`);
-                }
-                window.parent.postMessage({
-                    type: "aptech-enquiry-submitted",
-                    spreadsheetSaved: result.spreadsheetSaved !== false,
-                }, window.location.origin);
-            } catch (error) {
-                console.error("Corporate enquiry delivery failed", error);
-                notice.textContent = "We couldn't confirm the email copy. Your request will still be sent to the LMS; for urgent help call +91 74113 33500.";
-            }
-
-            // Preserve delivery to the LMS even if the site's Inbox or email
-            // service is temporarily unavailable.
-            submitting = false;
-            continueToLms = true;
-            button.disabled = false;
-            form.requestSubmit();
-        }, true);
+        });
     })();
 </script>
 <!-- Do not remove the below script -->
