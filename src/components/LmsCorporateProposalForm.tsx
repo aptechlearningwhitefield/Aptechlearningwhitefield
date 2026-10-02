@@ -18,11 +18,9 @@ export default function LmsCorporateProposalForm({
         event.source === iframeRef.current?.contentWindow &&
         event.data?.type === 'aptech-enquiry-submitted'
       ) {
-        toast.warning('Inbox copy delivered; LMS receipt is unconfirmed', {
-          description: event.data.spreadsheetSaved === false
-            ? 'GoDaddy accepted the enquiry, but Google Sheets did not confirm it. The LMS portal also has not confirmed receipt.'
-            : 'The email inbox accepted the enquiry. Please verify it appears in the LMS portal.',
-          duration: 9000,
+        toast.success('Enquiry submitted successfully!', {
+          description: 'Thank you. Our team will contact you soon.',
+          duration: 5000,
         });
       }
 

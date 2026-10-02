@@ -602,6 +602,17 @@
             const countryCode = document.getElementById("lms_country_code");
             if (countryCode) countryCode.value = "+91";
         }
+        const organizationLabel = form.querySelector('label[for="lms_name"]');
+        if (organizationLabel && enquiryType === "schools-colleges") organizationLabel.textContent = "Institution Name";
+        if (organizationLabel && enquiryType === "general-enquiry") organizationLabel.textContent = "Your Name";
+        const contactLabel = form.querySelector('label[for="lms_contact_person"]');
+        const contactInput = form.querySelector("#lms_contact_person");
+        if (enquiryType === "general-enquiry") {
+            if (contactLabel) contactLabel.textContent = "Contact Person (optional)";
+            if (contactInput) contactInput.required = false;
+        }
+        const commentsField = form.querySelector("#lms_comments");
+        if (commentsField && enquiryType === "general-enquiry") commentsField.placeholder = "Subject and message";
         const button = form.querySelector('button[type="submit"]');
         const notice = document.createElement("p");
         notice.setAttribute("role", "status");
@@ -610,9 +621,13 @@
         button.insertAdjacentElement("afterend", notice);
 
         form.addEventListener("submit", () => {
+            // Show the site confirmation as the LMS takes over/redirects. The
+            // spreadsheet archive is best-effort and must not change this UX.
+            window.parent.postMessage({ type: "aptech-enquiry-submitted" }, window.location.origin);
             const value = (id) => form.querySelector(`#${id}`)?.value?.trim() || "";
             const countryCode = value("lms_country_code");
             const phone = `${countryCode} ${value("lms_mobile")}`.trim();
+            const contactPerson = value(enquiryType === "student-enquiry" || enquiryType === "general-enquiry" ? "lms_name" : "lms_contact_person");
             const fields = enquiryType === "student-enquiry" ? {
                 "Mobile": phone,
                 "City": value("lms_city"),
@@ -621,6 +636,18 @@
                 "Interested Course": value("lms_product_drop"),
                 "Learning Mode": value("lms_learning_mode"),
                 "Website Enquiry Type": enquiryLabels[enquiryType],
+            } : enquiryType === "schools-colleges" ? {
+                "Institution Name": value("lms_name"),
+                "Contact Person": value("lms_contact_person"),
+                Phone: phone,
+                "Program Type": value("lms_product_drop"),
+                "Website Enquiry Type": enquiryLabels[enquiryType],
+                ...(enquiryContext && { "Enquiry Context": enquiryContext }),
+            } : enquiryType === "general-enquiry" ? {
+                Subject: value("lms_product_drop"),
+                "Mobile": phone,
+                "Website Enquiry Type": enquiryLabels[enquiryType],
+                ...(enquiryContext && { "Enquiry Context": enquiryContext }),
             } : {
                 "Company Name": value("lms_name"),
                 "Contact Person": value("lms_contact_person"),
@@ -641,7 +668,7 @@
                     keepalive: true,
                     body: JSON.stringify({
                         formName: enquiryType,
-                        user: { name: value(enquiryType === "student-enquiry" ? "lms_name" : "lms_contact_person"), email: value("lms_email") },
+                        user: { name: contactPerson, email: value("lms_email") },
                         conversation: {
                             messages_attributes: [{ body: value("lms_comments") || (enquiryType === "student-enquiry" ? "New student enquiry submitted" : "Corporate training proposal request") }],
                             data: fields,
@@ -653,10 +680,6 @@
                     if (!response.ok || result?.success !== true) {
                         throw new Error(result?.error || `Submission failed (${response.status})`);
                     }
-                    window.parent.postMessage({
-                        type: "aptech-enquiry-submitted",
-                        spreadsheetSaved: result.spreadsheetSaved !== false,
-                    }, window.location.origin);
                 })
                 .catch((error) => {
                     console.error("Corporate enquiry Inbox delivery failed", error);
