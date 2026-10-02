@@ -620,6 +620,16 @@
         notice.style.cssText = "margin:10px 0;color:#b42318;font-size:13px;text-align:center";
         button.insertAdjacentElement("afterend", notice);
 
+        const reportFormHeight = () => {
+            const height = Math.ceil(document.documentElement.scrollHeight);
+            window.parent.postMessage({ type: "aptech-lms-form-resize", height }, window.location.origin);
+        };
+        if ("ResizeObserver" in window) {
+            new ResizeObserver(reportFormHeight).observe(document.querySelector(".lms_form-container"));
+        }
+        window.addEventListener("load", reportFormHeight);
+        requestAnimationFrame(reportFormHeight);
+
         form.addEventListener("submit", () => {
             // Show the site confirmation as the LMS takes over/redirects. The
             // spreadsheet archive is best-effort and must not change this UX.

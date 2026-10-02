@@ -685,20 +685,28 @@ export default function ContactPage() {
                   </div>
 
                   {activeForm === 'student' ? <>
-                      <h2 className="text-xl font-bold text-slate-900 mb-1">Student Enquiry Form</h2>
-                      <p className="text-slate-500 text-sm mb-6">Fill in your details and our counsellor will call you back within 24 hours.</p>
+                      {!import.meta.env.PROD && <>
+                        <h2 className="text-xl font-bold text-slate-900 mb-1">Student Enquiry Form</h2>
+                        <p className="text-slate-500 text-sm mb-6">Fill in your details and our counsellor will call you back within 24 hours.</p>
+                      </>}
                       <StudentEnquiryForm />
                     </> : activeForm === 'corporate' ? <>
-                      <h2 className="text-xl font-bold text-slate-900 mb-1">Corporate Training Enquiry</h2>
-                      <p className="text-slate-500 text-sm mb-6">Tell us about your training needs and we'll send you a customized proposal.</p>
+                      {!import.meta.env.PROD && <>
+                        <h2 className="text-xl font-bold text-slate-900 mb-1">Corporate Training Enquiry</h2>
+                        <p className="text-slate-500 text-sm mb-6">Tell us about your training needs and we'll send you a customized proposal.</p>
+                      </>}
                       <CorporateEnquiryForm />
                     </> : activeForm === 'schools' ? <>
-                      <h2 className="text-xl font-bold text-slate-900 mb-1">Schools & Colleges Partnership Enquiry</h2>
-                      <p className="text-slate-500 text-sm mb-6">Share your institution details and we'll help plan a partnership.</p>
+                      {!import.meta.env.PROD && <>
+                        <h2 className="text-xl font-bold text-slate-900 mb-1">Schools & Colleges Partnership Enquiry</h2>
+                        <p className="text-slate-500 text-sm mb-6">Share your institution details and we'll help plan a partnership.</p>
+                      </>}
                       <SchoolsEnquiryForm />
                     </> : <>
-                      <h2 className="text-xl font-bold text-slate-900 mb-1">General Enquiry</h2>
-                      <p className="text-slate-500 text-sm mb-6">Ask anything about admissions, careers, training, or our programmes.</p>
+                      {!import.meta.env.PROD && <>
+                        <h2 className="text-xl font-bold text-slate-900 mb-1">General Enquiry</h2>
+                        <p className="text-slate-500 text-sm mb-6">Ask anything about admissions, careers, training, or our programmes.</p>
+                      </>}
                       <GeneralEnquiryForm />
                     </>}
                 </motion.div>

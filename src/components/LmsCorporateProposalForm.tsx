@@ -27,6 +27,15 @@ export default function LmsCorporateProposalForm({
       if (
         event.origin === window.location.origin &&
         event.source === iframeRef.current?.contentWindow &&
+        event.data?.type === 'aptech-lms-form-resize' &&
+        Number.isFinite(event.data.height)
+      ) {
+        iframeRef.current.style.height = `${Math.max(0, event.data.height)}px`;
+      }
+
+      if (
+        event.origin === window.location.origin &&
+        event.source === iframeRef.current?.contentWindow &&
         event.data?.type === 'aptech-lms-script-error'
       ) {
         toast.error('The LMS form could not connect', {
@@ -46,7 +55,7 @@ export default function LmsCorporateProposalForm({
       src={`/lms-corporate-proposal.html?enquiryType=${encodeURIComponent(enquiryType)}${context ? `&context=${encodeURIComponent(context)}` : ''}`}
       title="Submit an enquiry to Aptech Learning Whitefield"
       className="block w-full rounded-2xl border-0"
-      style={{ height: enquiryType === 'student-enquiry' ? "1120px" : "900px" }}
+      style={{ height: '600px' }}
       loading="lazy"
     />
   );
