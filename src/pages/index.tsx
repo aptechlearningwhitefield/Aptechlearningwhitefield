@@ -1161,8 +1161,8 @@ export default function HomePage() {
 
               {/* Enquiry form */}
               <FadeIn delay={0.15}>
-                <div className="bg-white border border-slate-100 rounded-2xl p-8 shadow-sm">
-                  <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:p-5">
+                <div className={import.meta.env.PROD ? 'min-w-0' : 'bg-white border border-slate-100 rounded-2xl p-8 shadow-sm'}>
+                  <div className={import.meta.env.PROD ? '' : 'rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:p-5'}>
                     {!import.meta.env.PROD && <>
                     <h3 className="text-xl font-bold text-slate-900 mb-1">Student Enquiry Form</h3>
                     <p className="text-slate-500 text-sm mb-6">Fill in your details and we'll call you back within 24 hours</p>
