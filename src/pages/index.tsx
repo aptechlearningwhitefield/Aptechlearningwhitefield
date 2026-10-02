@@ -111,6 +111,7 @@ function StudentEnquiryForm() {
     currentStatus: '',
     interestedCourse: '',
     learningMode: '',
+    joiningMonth: '',
     message: ''
   });
   const [gotcha, setGotcha] = useState('');
@@ -145,7 +146,8 @@ function StudentEnquiryForm() {
               'Qualification': formData.qualification,
               'Current Status': formData.currentStatus,
               'Interested Course': formData.interestedCourse,
-              'Learning Mode': formData.learningMode
+              'Learning Mode': formData.learningMode,
+              'Joining Month': formData.joiningMonth
             }
           },
           user: {
@@ -201,7 +203,10 @@ function StudentEnquiryForm() {
         </div>
         <div>
           <label htmlFor="enq-qualification" className="block text-sm font-medium text-slate-700 mb-1">Qualification</label>
-          <input id="enq-qualification" name="qualification" type="text" value={formData.qualification} onChange={handleChange} className="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="e.g. B.Tech, BCA, 12th" />
+          <select id="enq-qualification" name="qualification" value={formData.qualification} onChange={handleChange} className="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white">
+            <option value="">Select qualification</option>
+            <option>10th / SSLC</option><option>12th / PUC</option><option>Diploma</option><option>B.E / B.Tech</option><option>BCA / BSc</option><option>MCA / M.Tech</option><option>Other Graduation</option><option>Post Graduation</option>
+          </select>
         </div>
       </div>
       <div>
@@ -209,10 +214,10 @@ function StudentEnquiryForm() {
         <select id="enq-status" name="currentStatus" value={formData.currentStatus} onChange={handleChange} className="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white">
           <option value="">Select your status</option>
           <option value="Student">Student</option>
-          <option value="Fresher">Fresher / Recent Graduate</option>
+          <option value="Fresh Graduate">Fresh Graduate</option>
           <option value="Working Professional">Working Professional</option>
-          <option value="Job Seeker">Job Seeker</option>
           <option value="Career Break">Career Break</option>
+          <option value="Freelancer">Freelancer</option>
         </select>
       </div>
       <div>
@@ -220,21 +225,28 @@ function StudentEnquiryForm() {
         <select id="enq-course" name="interestedCourse" required value={formData.interestedCourse} onChange={handleChange} className="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white">
           <option value="">Select a course</option>
           <option value="AI & Machine Learning">AI & Machine Learning</option>
+          <option value="Generative AI & Prompt Engineering">Generative AI & Prompt Engineering</option>
           <option value="Data Science">Data Science</option>
           <option value="Data Analytics & Power BI">Data Analytics & Power BI</option>
           <option value="Python Programming">Python Programming</option>
-          // <option value="Cybersecurity">Cybersecurity</option>
           <option value="Full Stack Development">Full Stack Development</option>
           <option value="Digital Marketing">Digital Marketing</option>
+          <option value="Not Sure – Need Counselling">Not Sure – Need Counselling</option>
         </select>
       </div>
       <div>
         <label htmlFor="enq-mode" className="block text-sm font-medium text-slate-700 mb-1">Learning Mode</label>
         <select id="enq-mode" name="learningMode" value={formData.learningMode} onChange={handleChange} className="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white">
           <option value="">Select learning mode</option>
-          <option value="Classroom">Classroom (Whitefield Centre)</option>
-          <option value="Online">Online (Live Classes)</option>
-          <option value="Both">Both (Hybrid)</option>
+          <option value="Classroom (Whitefield)">Classroom (Whitefield)</option>
+          <option value="Online (Live)">Online (Live)</option>
+          <option value="Hybrid">Hybrid</option>
+        </select>
+      </div>
+      <div>
+        <label htmlFor="enq-month" className="block text-sm font-medium text-slate-700 mb-1">Preferred Joining Month</label>
+        <select id="enq-month" name="joiningMonth" value={formData.joiningMonth} onChange={handleChange} className="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white">
+          <option value="">Select month</option><option>Immediately</option><option>October 2026</option><option>November 2026</option><option>December 2026</option><option>January 2027</option>
         </select>
       </div>
       <div>
