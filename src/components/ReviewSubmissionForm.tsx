@@ -35,8 +35,8 @@ export default function ReviewSubmissionForm() {
   }
 
   return (
-    <section className="bg-slate-50 py-14 px-4" aria-labelledby="review-form-heading">
-      <div className="mx-auto max-w-2xl rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+    <section className="p-0" aria-labelledby="review-form-heading">
+      <div className="mx-auto w-full rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
         {status === "success" ? (
           <div className="py-6 text-center">
             <CheckCircle className="mx-auto mb-4 text-green-500" size={38} />

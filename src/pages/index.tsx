@@ -987,13 +987,12 @@ export default function HomePage() {
 
         {/* ── LIVE GOOGLE REVIEWS ──────────────────────────────────────────── */}
         <GoogleReviews title="Google Reviews" maxVisible={5} />
-        <ReviewSubmissionForm />
-      
-
         {/* ── FAQs ─────────────────────────────────────────────────────────── */}
-        <section className="py-20 bg-[#F8FAFC]" aria-labelledby="faq-heading">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <FadeIn className="text-center mb-12">
+        <section className="py-16 bg-[#F8FAFC]" aria-labelledby="faq-heading">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
+              <div>
+            <FadeIn className="text-center mb-8">
               <h2 id="faq-heading" className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-3">
                 {home.faqs.sectionTitle}
               </h2>
@@ -1024,6 +1023,9 @@ export default function HomePage() {
                       <p className="text-slate-600 text-sm leading-relaxed">{faq.answer}</p>
                     </div>}
                 </motion.div>)}
+            </div>
+              </div>
+              <ReviewSubmissionForm />
             </div>
           </div>
         </section>
