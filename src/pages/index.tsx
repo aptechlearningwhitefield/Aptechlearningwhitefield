@@ -183,18 +183,21 @@ function StudentEnquiryForm() {
       left: '-9999px'
     }} aria-hidden="true" value={gotcha} onChange={(e) => setGotcha(e.target.value)} />
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="space-y-4">
         <div>
           <label htmlFor="enq-name" className="block text-xs font-semibold text-slate-600 mb-1.5">Full Name *</label>
           <input id="enq-name" name="name" type="text" required value={formData.name} onChange={handleChange} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" placeholder="Your full name" />
         </div>
         <div>
           <label htmlFor="enq-mobile" className="block text-xs font-semibold text-slate-600 mb-1.5">Mobile Number *</label>
-          <input id="enq-mobile" name="mobile" type="tel" required value={formData.mobile} onChange={handleChange} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" placeholder="+91 XXXXX XXXXX" />
+          <div className="flex gap-2">
+            <span className="flex items-center justify-center w-28 shrink-0 border border-slate-200 rounded-xl bg-white px-3 py-3 text-sm text-slate-700">+91 (IN)</span>
+            <input id="enq-mobile" name="mobile" type="tel" inputMode="numeric" required value={formData.mobile} onChange={handleChange} className="min-w-0 flex-1 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" placeholder="Enter 10-digit mobile number" />
+          </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="space-y-4">
         <div>
           <label htmlFor="enq-email" className="block text-xs font-semibold text-slate-600 mb-1.5">Email Address *</label>
           <input id="enq-email" name="email" type="email" required value={formData.email} onChange={handleChange} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" placeholder="your@email.com" />
@@ -205,7 +208,7 @@ function StudentEnquiryForm() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="space-y-4">
         <div>
           <label htmlFor="enq-qualification" className="block text-xs font-semibold text-slate-600 mb-1.5">Qualification</label>
           <select id="enq-qualification" name="qualification" value={formData.qualification} onChange={handleChange} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors bg-white">
@@ -225,7 +228,7 @@ function StudentEnquiryForm() {
         </select>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="space-y-4">
         <div>
         <label htmlFor="enq-course" className="block text-xs font-semibold text-slate-600 mb-1.5">Interested Course</label>
         <select id="enq-course" name="interestedCourse" value={formData.interestedCourse} onChange={handleChange} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors bg-white">
