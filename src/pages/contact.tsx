@@ -15,7 +15,7 @@ const enquiryIcons: Record<string, React.ReactNode> = {
   general: <HelpCircle size={22} />
 };
 
-// ─── Student Enquiry Form ─────────────────────────────────────────────────────
+// â”€â”€â”€ Student Enquiry Form â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function StudentEnquiryForm() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
@@ -161,7 +161,7 @@ function StudentEnquiryForm() {
             <option>Python Programming</option>
             <option>Full Stack Development</option>
             <option>Digital Marketing</option>
-            <option>Not Sure – Need Counselling</option>
+            <option>Not Sure â€“ Need Counselling</option>
           </select>
         </div>
         <div>
@@ -202,7 +202,7 @@ function StudentEnquiryForm() {
     </form>;
 }
 
-// ─── Corporate Enquiry Form ───────────────────────────────────────────────────
+// â”€â”€â”€ Corporate Enquiry Form â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function CorporateEnquiryForm() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [gotcha, setGotcha] = useState('');
@@ -321,10 +321,10 @@ function CorporateEnquiryForm() {
           <label htmlFor="c-employees" className="block text-xs font-semibold text-slate-600 mb-1.5">Number of Employees</label>
           <select id="c-employees" value={employees} onChange={e => setEmployees(e.target.value)} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors bg-white">
             <option value="">Select range</option>
-            <option>1–10</option>
-            <option>11–25</option>
-            <option>26–50</option>
-            <option>51–100</option>
+            <option>1â€“10</option>
+            <option>11â€“25</option>
+            <option>26â€“50</option>
+            <option>51â€“100</option>
             <option>100+</option>
           </select>
         </div>
@@ -464,10 +464,10 @@ function SchoolsEnquiryForm() {
         <label htmlFor="sc-students" className="block text-xs font-semibold text-slate-600 mb-1.5">Approx. Number of Students</label>
         <select id="sc-students" value={students} onChange={e => setStudents(e.target.value)} className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors bg-white">
           <option value="">Select range</option>
-          <option>15–30</option>
-          <option>31–60</option>
-          <option>61–100</option>
-          <option>101–200</option>
+          <option>15â€“30</option>
+          <option>31â€“60</option>
+          <option>61â€“100</option>
+          <option>101â€“200</option>
           <option>200+</option>
         </select>
       </div>
@@ -572,7 +572,7 @@ function GeneralEnquiryForm() {
   </form>;
 }
 
-// ─── Main Page ────────────────────────────────────────────────────────────────
+// â”€â”€â”€ Main Page â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export default function ContactPage() {
   const [activeForm, setActiveForm] = useState<'student' | 'corporate' | 'schools' | 'general'>('student');
   const [openFaq, setOpenFaq] = useState<string | null>(null);
@@ -769,6 +769,13 @@ export default function ContactPage() {
                     </li>
                   </ul>
 
+                  <div className="mt-6 overflow-hidden rounded-xl border border-slate-200 shadow-sm">
+                    <div className="relative h-[220px]">
+                      <iframe title="Aptech Learning Whitefield location map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.799066371987!2d77.74653247540166!3d12.984699887331908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae0fda424af2a3%3A0x4f2a86074212fb34!2sAptech%20Learning%20Whitefield!5e0!3m2!1sen!2sin!4v1787247367708!5m2!1sen!2sin" className="h-full w-full border-0" allowFullScreen loading="lazy" referrerPolicy="strict-origin-when-cross-origin" />
+                      <a href="https://maps.google.com/?q=Aptech+Learning+Whitefield+Bangalore" target="_blank" rel="noopener noreferrer" className="absolute left-2 top-2 rounded-md bg-white px-3 py-2 text-sm font-semibold text-primary shadow hover:bg-slate-50">Open in Maps â†—</a>
+                    </div>
+                  </div>
+
                   <div className="mt-5 pt-5 border-t border-slate-100 flex flex-col gap-2.5">
                     <a href="https://wa.me/917411333500" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-green-500 text-white text-sm font-semibold py-3 rounded-xl hover:bg-green-600 transition-colors">
                       <MessageCircle size={16} /> Chat on WhatsApp
@@ -802,28 +809,6 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Google Map */}
-        <section className="bg-white" aria-label="Location map">
-          <div className="container mx-auto px-4 py-10">
-            <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-slate-900 mb-2">Find Us in Whitefield</h2>
-              <p className="text-slate-500 text-sm">Near Kadugodi Tree Park Metro Station, Whitefield, Bangalore – 560066</p>
-            </div>
-            <div className="rounded-2xl overflow-hidden border border-slate-100 shadow-sm" style={{
-            height: '400px'
-          }}>
-              <iframe title="Aptech Learning Whitefield location map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.799066371987!2d77.74653247540166!3d12.984699887331908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae0fda424af2a3%3A0x4f2a86074212fb34!2sAptech%20Learning%20Whitefield!5e0!3m2!1sen!2sin!4v1787247367708!5m2!1sen!2sin" width="100%" height="100%" style={{
-              border: 0
-            }} allowFullScreen loading="lazy" referrerPolicy="strict-origin-when-cross-origin" />
-            </div>
-            <div className="mt-4 text-center">
-              <a href="https://maps.google.com/?q=Aptech+Learning+Whitefield+Bangalore" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:underline">
-                <MapPin size={16} /> Open in Google Maps <ArrowRight size={14} />
-              </a>
             </div>
           </div>
         </section>
