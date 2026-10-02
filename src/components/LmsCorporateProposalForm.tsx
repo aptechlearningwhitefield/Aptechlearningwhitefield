@@ -16,7 +16,7 @@ export default function LmsCorporateProposalForm({
       if (
         event.origin === window.location.origin &&
         event.source === iframeRef.current?.contentWindow &&
-        event.data?.type === 'aptech-enquiry-submitted'
+        event.data?.type === 'aptech-enquiry-submitting'
       ) {
         toast.success('Enquiry submitted successfully!', {
           description: 'Thank you. Our team will contact you soon.',

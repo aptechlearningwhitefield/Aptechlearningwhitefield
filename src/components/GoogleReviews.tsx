@@ -1,14 +1,17 @@
+import { useEffect, useState } from 'react';
+
 interface Review {
   reviewId: string;
-  reviewer: { displayName: string; profilePhotoUrl?: string };
+  reviewer?: { displayName: string; profilePhotoUrl?: string; profileUrl?: string };
   starRating: 'ONE' | 'TWO' | 'THREE' | 'FOUR' | 'FIVE';
   comment?: string;
   createTime: string;
   updateTime: string;
+  googleMapsUri?: string;
 }
 
 interface GoogleReviewsProps {
-  reviews: Review[];
+  reviews?: Review[];
   title?: string;
   maxVisible?: number;
   className?: string;
@@ -37,15 +40,39 @@ function StarRating({ rating }: { rating: number }) {
 }
 
 export default function GoogleReviews({
-  reviews,
+  reviews: initialReviews = [],
   title = 'What Our Customers Say',
   maxVisible = 6,
   className = '',
 }: GoogleReviewsProps) {
+  const [reviews, setReviews] = useState(initialReviews);
+  const [googleMapsUri, setGoogleMapsUri] = useState('https://maps.google.com/?q=Aptech+Learning+Whitefield+Bangalore');
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    let active = true;
+    fetch('/api/google-reviews')
+      .then(async (response) => {
+        const result = await response.json();
+        if (!response.ok || result?.success !== true) throw new Error('Google reviews unavailable');
+        if (!active) return;
+        setReviews(result.reviews ?? []);
+        setGoogleMapsUri(result.business?.googleMapsUri || 'https://maps.google.com/?q=Aptech+Learning+Whitefield+Bangalore');
+      })
+      .catch(() => {
+        if (active) setReviews([]);
+      })
+      .finally(() => {
+        if (active) setLoaded(true);
+      });
+    return () => { active = false; };
+  }, []);
+
   const visible = reviews.slice(0, maxVisible);
 
   if (visible.length === 0) {
-    return null;
+    if (!loaded) return <section className={`py-12 px-4 ${className}`} aria-live="polite"><p className="text-center text-sm text-gray-500">Loading Google reviews…</p></section>;
+    return <section className={`py-12 px-4 ${className}`}><div className="max-w-6xl mx-auto text-center"><h2 className="text-2xl font-bold mb-3">{title}</h2><p className="text-sm text-gray-600">Google reviews are temporarily unavailable.</p><a className="mt-3 inline-block text-sm font-medium text-blue-700 hover:underline" href={googleMapsUri} target="_blank" rel="noopener noreferrer">Read our reviews on Google</a></div></section>;
   }
 
   return (
@@ -55,7 +82,7 @@ export default function GoogleReviews({
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {visible.map((review) => {
             const stars = STAR_MAP[review.starRating] ?? 5;
-            const date = new Date(review.createTime).toLocaleDateString('en-US', {
+            const date = new Date(review.createTime).toLocaleDateString('en-IN', {
               year: 'numeric',
               month: 'long',
               day: 'numeric',
@@ -66,19 +93,15 @@ export default function GoogleReviews({
                 className="rounded-lg border p-5 shadow-sm bg-white flex flex-col gap-3"
               >
                 <div className="flex items-center gap-3">
-                  {review.reviewer.profilePhotoUrl ? (
-                    <img
-                      src={review.reviewer.profilePhotoUrl}
-                      alt={review.reviewer.displayName}
-                      className="h-10 w-10 rounded-full object-cover"
-                    />
+                  {review.reviewer?.profilePhotoUrl ? (
+                    <img src={review.reviewer.profilePhotoUrl} alt={`${review.reviewer.displayName} profile`} referrerPolicy="no-referrer" className="h-10 w-10 rounded-full object-cover" />
                   ) : (
                     <div className="h-10 w-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 font-semibold text-sm">
-                      {review.reviewer.displayName.charAt(0).toUpperCase()}
+                      {(review.reviewer?.displayName ?? 'G').charAt(0).toUpperCase()}
                     </div>
                   )}
                   <div>
-                    <p className="font-medium text-sm">{review.reviewer.displayName}</p>
+                    {review.reviewer?.profileUrl ? <a href={review.reviewer.profileUrl} target="_blank" rel="noopener noreferrer" className="font-medium text-sm hover:underline">{review.reviewer.displayName}</a> : <p className="font-medium text-sm">{review.reviewer?.displayName ?? 'Google user'}</p>}
                     <p className="text-xs text-gray-500">{date}</p>
                   </div>
                 </div>
@@ -105,12 +128,13 @@ export default function GoogleReviews({
                       fill="#EA4335"
                     />
                   </svg>
-                  Google Review
+                  <a href={review.googleMapsUri || googleMapsUri} target="_blank" rel="noopener noreferrer" className="hover:underline">Google Review</a>
                 </div>
               </div>
             );
           })}
         </div>
+        <div className="mt-6 text-center"><a href={googleMapsUri} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-blue-700 hover:underline">See all reviews on Google</a></div>
       </div>
     </section>
   );

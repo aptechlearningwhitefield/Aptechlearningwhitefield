@@ -623,7 +623,7 @@
         form.addEventListener("submit", () => {
             // Show the site confirmation as the LMS takes over/redirects. The
             // spreadsheet archive is best-effort and must not change this UX.
-            window.parent.postMessage({ type: "aptech-enquiry-submitted" }, window.location.origin);
+            window.parent.postMessage({ type: "aptech-enquiry-submitting" }, window.location.origin);
             const value = (id) => form.querySelector(`#${id}`)?.value?.trim() || "";
             const countryCode = value("lms_country_code");
             const phone = `${countryCode} ${value("lms_mobile")}`.trim();
