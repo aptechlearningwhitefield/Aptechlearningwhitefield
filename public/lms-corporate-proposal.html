@@ -617,6 +617,10 @@
         CAMP_ID = "5",
         LSS_ID = "8",
         script = document.createElement("script");
-    (script.src = HOST + "/cdn/lead-form.js"), document.head.appendChild(script);
+    script.src = HOST + "/cdn/lead-form.js";
+    script.onerror = () => {
+        window.parent.postMessage({ type: "aptech-lms-script-error" }, window.location.origin);
+    };
+    document.head.appendChild(script);
 </script>
 <!-- Do not remove the above script -->
