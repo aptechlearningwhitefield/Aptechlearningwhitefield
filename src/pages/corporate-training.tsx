@@ -33,7 +33,6 @@ function CorporateEnquiryForm() {
   const [employees, setEmployees] = useState('');
   const [mode, setMode] = useState('');
   const [message, setMessage] = useState('');
-  if (import.meta.env.PROD) return <LmsCorporateProposalForm />;
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (gotcha) return;
