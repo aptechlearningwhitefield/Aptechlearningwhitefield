@@ -255,7 +255,7 @@
     {
       "id": "data-science",
       "name": "Data Science",
-      "tagline": "Turn raw data into powerful business insights",
+      "tagline": "SMART PROFESSIONAL PROGRAM",
       "category": "AI & Data",
       "duration": "384 hours",
       "level": "Beginner to Advanced",
@@ -263,30 +263,38 @@
       "certification": "Aptech Certified Data Science Professional",
       "popular": false,
       "color": "green",
-      "overview": "Become a job-ready Data Scientist by mastering programming, data analysis, and real-world projects.",
+      "overview": "The Smart Professional - Data Science course helps you gain expertise to apply data science principles in the real world. It also trains you in industry-relevant skills essential for managing large data and transforms you into a certified, industry-ready professional. Further, it helps you to prepare rich visual dashboards for data analysis using Tableau.",
       "eligibility": "Graduation in any stream. Basic math knowledge helpful.",
       "skills": [],
       "projects": [
+        "Capstone Project for Data Mining",
         "Capstone Project for Data Science"
       ],
       "careers": [
-        "Data Scientist",
-        "Data Engineer",
-        "Business Analyst"
+        "Data Analyst",
+        "Hadoop Developer"
       ],
       "modules": [
         {
-          "id": "modules-covered",
-          "title": "Modules Covered",
+          "id": "term-1",
+          "title": "TERM 1",
           "topics": [
             "Data Analysis with MS Excel",
-            "Working with MySQL",
-            "Application-Based Programming in Python",
-            "Data Analysis with R",
-            "Data Analysis with SQL",
+            "Data Handling using T-SQL",
+            "Managing Large Data Sets with MongoDB",
+            "Inferential Statistical Analysis",
+            "Application Based Programming in Python",
             "Data Mining with WEKA",
-            "Data Analytics with Python",
-            "Hadoop",
+            "Capstone Project for Data Mining"
+          ]
+        },
+        {
+          "id": "term-2",
+          "title": "TERM 2",
+          "topics": [
+            "Data Science with Python",
+            "Data Science using R Programming",
+            "Foundation of Big Data Systems with Hadoop",
             "Advanced Data Science with Python",
             "Visual Analytics with Tableau",
             "Capstone Project for Data Science"
