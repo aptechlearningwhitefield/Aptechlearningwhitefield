@@ -350,24 +350,6 @@
       "modules": [{"id":"m1","title":"Modules Covered","topics":["Managing Large Data Sets with MongoDB","Application Based Programming in Python","Data Science using R Programming"]}]
     },
     {
-      "id": "data-visualization-power-bi",
-      "name": "Data Visualization using Power BI",
-      "tagline": "Create interactive dashboards and meaningful reports",
-      "category": "AI & Data",
-      "duration": "128 hours",
-      "level": "Beginner to Intermediate",
-      "mode": "Classroom & Online",
-      "certification": "Certificate of Completion",
-      "popular": false,
-      "color": "orange",
-      "overview": "Master data visualization and business intelligence using Microsoft Power BI. Learn to connect, transform, analyze, and visualize data for data-driven decision-making.",
-      "eligibility": "Open to all learners.",
-      "skills": ["MS Excel", "SQL Server", "Python", "Power BI"],
-      "projects": [],
-      "careers": ["Power BI Data Analyst / Power BI Developer"],
-      "modules": [{"id":"m1","title":"Modules Covered","topics":["Data analysis with MS Excel","Data management with SQL server","Application Based programming in python","Data analytics using Power BI"]}]
-    },
-    {
       "id": "foundation-ai-ml",
       "name": "Foundation Program in Artificial Intelligence & Machine Learning",
       "tagline": "Build a strong foundation in AI and ML",
@@ -454,14 +436,56 @@
             "VPNs"
           ]
         },
-        {
+          "overview": "Learn Python programming for application development, database connectivity, and real-world problem solving with practical coding exercises.",
           "id": "m2",
-          "title": "Linux & Security Tools",
-          "topics": [
+          "skills": [
+            "Python Fundamentals",
+            "Object-Oriented Programming",
+            "File Handling",
+            "Database Connectivity",
+            "SQL Integration",
+            "Exception Handling",
+            "Python Modules",
+            "Mini Projects"
+          ],
+          "projects": [
+            "Student Management System",
+            "Inventory Management System"
+          ],
             "Kali Linux",
-            "Bash Scripting",
+            "Python Application Programmer",
+            "Junior Python Developer"
             "Nmap",
-            "Wireshark",
+          "modules": [
+            {
+              "id": "term-1",
+              "title": "TERM 1",
+              "topics": [
+                "Python Fundamentals",
+                "Variables, Data Types and Operators",
+                "Control Flow and Loops",
+                "Functions and Scope",
+                "Lists, Tuples and Dictionaries",
+                "String Handling",
+                "File Handling",
+                "Exception Handling",
+                "Object-Oriented Programming",
+                "Modules and Packages"
+              ]
+            },
+            {
+              "id": "term-2",
+              "title": "TERM 2",
+              "topics": [
+                "Database Connectivity with SQL",
+                "CRUD Operations",
+                "Application Development Basics",
+                "Python for Automation",
+                "Mini Project Development",
+                "Project Review and Deployment"
+              ]
+            }
+          ]
             "Metasploit"
           ]
         },
@@ -525,90 +549,84 @@
       "overview": "Master both front-end and back-end development with Python, Django, JavaScript, and modern frameworks. Build dynamic, scalable web applications with our Full Stack Python Development program.",
       "eligibility": "10+2 or Graduation in any stream. Basic computer knowledge required.",
       "skills": [
+        "Python Fundamentals",
+        "Django / Flask",
         "HTML5 & CSS3",
         "JavaScript ES6+",
-        "React.js",
-        "Node.js",
-        "Express.js",
-        "MongoDB",
         "REST APIs",
+        "MongoDB",
+        "Authentication",
         "Git & GitHub",
-        "TypeScript",
-        "AWS Deployment"
+        "Deployment"
       ],
-      "projects": [],
+      "projects": [
+        "Portfolio Website",
+        "E-commerce App",
+        "Task Management System",
+        "Capstone Project"
+      ],
       "careers": [
         "Full Stack Developer",
         "Frontend Developer",
         "Backend Developer",
-        "MERN Stack Developer",
         "Web Developer"
       ],
       "modules": [
         {
           "id": "m1",
-          "title": "HTML, CSS & JavaScript",
+          "title": "Python Fundamentals & OOP",
           "topics": [
-            "HTML5",
-            "CSS3",
-            "Flexbox",
-            "Grid",
-            "JavaScript ES6+"
+            "Python Basics",
+            "Control Flow",
+            "Functions",
+            "Object-Oriented Programming",
+            "File Handling",
+            "Error Handling"
           ]
         },
         {
           "id": "m2",
-          "title": "React.js",
+          "title": "Front-End Web Development",
           "topics": [
-            "Components",
-            "Hooks",
-            "State Management",
-            "React Router",
-            "Redux"
+            "HTML5",
+            "CSS3",
+            "Responsive Design",
+            "JavaScript ES6+",
+            "DOM Manipulation"
           ]
         },
         {
           "id": "m3",
-          "title": "Node.js & Express",
+          "title": "Django / Flask Development",
           "topics": [
-            "Node Basics",
-            "Express.js",
-            "REST APIs",
-            "Authentication",
-            "Middleware"
+            "Django Basics",
+            "Flask Basics",
+            "Routing",
+            "Templates",
+            "Forms"
           ]
         },
         {
           "id": "m4",
-          "title": "Databases",
+          "title": "Database & APIs",
           "topics": [
             "MongoDB",
-            "Mongoose",
             "SQL Basics",
-            "PostgreSQL",
-            "Redis"
+            "REST API Development",
+            "JSON Handling",
+            "Authentication",
+            "Authorization"
           ]
         },
         {
           "id": "m5",
-          "title": "DevOps & Deployment",
+          "title": "Deployment & Integration",
           "topics": [
             "Git & GitHub",
-            "Docker",
-            "AWS EC2",
-            "CI/CD",
-            "Nginx"
-          ]
-        },
-        {
-          "id": "m6",
-          "title": "Capstone Projects",
-          "topics": [
-            "Full Stack App",
-            "API Integration",
-            "Testing",
-            "Performance",
-            "Portfolio"
+            "Debugging",
+            "Project Integration",
+            "Hosting & Deployment",
+            "Final Project Review"
           ]
         }
       ]

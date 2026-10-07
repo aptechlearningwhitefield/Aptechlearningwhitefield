@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router";
-import { Menu, X, Phone, MessageCircle, ChevronDown, Cpu, Zap, BarChart3, TrendingUp, Code, Globe, Brain, Database, Layers } from 'lucide-react';
+import { Menu, X, Phone, MessageCircle, ChevronDown, Cpu, Zap, BarChart3, Code, Globe, Brain, Database, Layers } from 'lucide-react';
 import { useState } from 'react';
 interface NavChild {
   href: string;
@@ -52,9 +52,6 @@ const navItems: NavItem[] = [{
     href: '/courses/data-science-essentials',
     label: 'Data Science Essentials'
   }, {
-    href: '/courses/data-visualization-power-bi',
-    label: 'Data Visualization using Power BI'
-  }, {
     href: '/courses/foundation-ai-ml',
     label: 'Foundation AI & Machine Learning'
   }, {
@@ -88,7 +85,6 @@ const courseMenuIcons: Record<string, React.ReactNode> = {
   '/courses/python': <Code size={16} />,
   '/courses/full-stack': <Globe size={16} />,
   '/courses/data-science-essentials': <Database size={16} />,
-  '/courses/data-visualization-power-bi': <TrendingUp size={16} />,
   '/courses/foundation-ai-ml': <Cpu size={16} />,
   '/courses/advanced-ai-ml': <Brain size={16} />
 };

@@ -21,9 +21,7 @@ const courseIcons: Record<string, React.ReactNode> = {
   'innovate-generative-ai': <Sparkles size={24} />,
   'rapid-app-development': <Rocket size={24} />,
   'data-science-essentials': <Database size={24} />,
-  'data-visualization-power-bi': <BarChart3 size={24} />,
   c3: <BarChart3 size={24} />,
-  c4: <TrendingUp size={24} />,
   c5: <Code size={24} />,
   c6: <Shield size={24} />,
   c7: <Globe size={24} />,
@@ -37,7 +35,6 @@ const courseRoutes: Record<string, string> = {
   c1: 'ai-machine-learning',
   c2: 'generative-ai',
   c3: 'data-science',
-  c4: 'data-analytics-power-bi',
   c5: 'python',
   c7: 'full-stack',
   c8: 'cloud-computing',
@@ -858,7 +855,6 @@ export default function HomePage() {
                         <option>AI & Machine Learning</option>
                         <option>Data Science & Analytics</option>
                         <option>Microsoft Intune & M365</option>
-                        <option>Power BI</option>
                         <option>Python for Business</option>
                         // <option>Cybersecurity</option>
                       </select>

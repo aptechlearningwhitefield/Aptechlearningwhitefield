@@ -2,14 +2,13 @@ import { Helmet } from '@dr.pogodin/react-helmet';
 import { Link } from "react-router";
 import { motion } from 'motion/react';
 import { useState } from 'react';
-import { Clock, ArrowRight, CheckCircle, Cpu, Zap, BarChart3, TrendingUp, Code, Globe, Cloud, Monitor, BookOpen, Award, Users } from 'lucide-react';
+import { Clock, ArrowRight, CheckCircle, Cpu, Zap, BarChart3, Code, Globe, Cloud, Monitor, BookOpen, Award, Users } from 'lucide-react';
 import { courses } from 'virtual:content';
 import { SITE_URL as site } from '../../lib/site-url';
 const courseIcons: Record<string, React.ReactNode> = {
   'ai-machine-learning': <Cpu size={28} />,
   'generative-ai': <Zap size={28} />,
   'data-science': <BarChart3 size={28} />,
-  'data-analytics-power-bi': <TrendingUp size={28} />,
   'python': <Code size={28} />,
   // 'cybersecurity': <Shield size={28} />,
   'full-stack': <Globe size={28} />,

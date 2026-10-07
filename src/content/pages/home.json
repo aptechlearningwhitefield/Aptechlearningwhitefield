@@ -137,15 +137,6 @@
         "popular": false
       },
       {
-        "id": "data-visualization-power-bi",
-        "name": "Data Visualization using Power BI",
-        "duration": "128 hours",
-        "level": "Beginner to Intermediate",
-        "skills": ["Excel", "SQL Server", "Python", "Power BI"],
-        "color": "orange",
-        "popular": false
-      },
-      {
         "id": "c3",
         "name": "Smart Professional Program - Data Science",
         "duration": "384 hours",
@@ -157,20 +148,6 @@
           "Visualization"
         ],
         "color": "green",
-        "popular": false
-      },
-      {
-        "id": "c4",
-        "name": "Data Analytics Using Power BI",
-        "duration": "100 hours",
-        "level": "Beginner to Intermediate",
-        "skills": [
-          "Power BI",
-          "Excel",
-          "SQL",
-          "Python"
-        ],
-        "color": "orange",
         "popular": false
       },
       {
@@ -443,10 +420,6 @@
       {
         "id": "cp4",
         "name": "Microsoft Intune & M365"
-      },
-      {
-        "id": "cp5",
-        "name": "Power BI & Data Visualization"
       },
       {
         "id": "cp6",
