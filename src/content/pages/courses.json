@@ -537,7 +537,7 @@
     {
       "id": "full-stack",
       "name": "Full Stack Python Development",
-      "tagline": "Master front-end and back-end development with Python",
+      "tagline": "Master both front-end and back-end development",
       "category": "Development",
       "duration": "260 hours",
       "level": "Beginner to Advanced",
@@ -545,87 +545,30 @@
       "certification": "Aptech Certified Full Stack Developer",
       "popular": false,
       "color": "teal",
-      "overview": "Master both front-end and back-end development with Python, Django, JavaScript, and modern frameworks. Build dynamic, scalable web applications with our Full Stack Python Development program.",
+      "overview": "Master both front-end and back-end development with our Full Stack Python Development program. Build dynamic, scalable web applications using Python, Django, JavaScript, and modern frameworks.",
       "eligibility": "10+2 or Graduation in any stream. Basic computer knowledge required.",
-      "skills": [
-        "Python Fundamentals",
-        "Django / Flask",
-        "HTML5 & CSS3",
-        "JavaScript ES6+",
-        "REST APIs",
-        "MongoDB",
-        "Authentication",
-        "Git & GitHub",
-        "Deployment"
-      ],
+      "skills": [],
       "projects": [
-        "Portfolio Website",
-        "E-commerce App",
-        "Task Management System",
-        "Capstone Project"
+        "Project - Python Web Application Development"
       ],
       "careers": [
-        "Full Stack Developer",
-        "Frontend Developer",
-        "Backend Developer",
-        "Web Developer"
+        "Full Stack Python Developer"
       ],
       "modules": [
         {
-          "id": "m1",
-          "title": "Python Fundamentals & OOP",
+          "id": "modules-covered",
+          "title": "Modules Covered",
           "topics": [
-            "Python Basics",
-            "Control Flow",
-            "Functions",
-            "Object-Oriented Programming",
-            "File Handling",
-            "Error Handling"
-          ]
-        },
-        {
-          "id": "m2",
-          "title": "Front-End Web Development",
-          "topics": [
-            "HTML5",
-            "CSS3",
-            "Responsive Design",
-            "JavaScript ES6+",
-            "DOM Manipulation"
-          ]
-        },
-        {
-          "id": "m3",
-          "title": "Django / Flask Development",
-          "topics": [
-            "Django Basics",
-            "Flask Basics",
-            "Routing",
-            "Templates",
-            "Forms"
-          ]
-        },
-        {
-          "id": "m4",
-          "title": "Database & APIs",
-          "topics": [
-            "MongoDB",
-            "SQL Basics",
-            "REST API Development",
-            "JSON Handling",
-            "Authentication",
-            "Authorization"
-          ]
-        },
-        {
-          "id": "m5",
-          "title": "Deployment & Integration",
-          "topics": [
-            "Git & GitHub",
-            "Debugging",
-            "Project Integration",
-            "Hosting & Deployment",
-            "Final Project Review"
+            "Building Modern Websites",
+            "UI/UX for Responsive Web Design",
+            "Material UI",
+            "Front-end Web Development with ReactJS",
+            "Distributed Version Control",
+            "Working with MySQL",
+            "Agile and DevOps",
+            "Developing Applications with Python",
+            "Web Application Development using Python",
+            "Web Framework for Python (Django)"
           ]
         }
       ]
