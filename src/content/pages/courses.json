@@ -370,7 +370,17 @@
         "Data Analyst",
         "Reporting Analyst"
       ],
-      "modules": []
+      "modules": [
+        {
+          "id": "modules-covered",
+          "title": "Modules Covered",
+          "topics": [
+            "Financial Data Analysis using MS Excel",
+            "Data Management with SQL Server",
+            "Data Analytics using Power BI"
+          ]
+        }
+      ]
     },
     {
       "id": "data-visualization-power-bi",
