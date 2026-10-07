@@ -287,69 +287,28 @@
       ],
       "modules": [
         {
-          "id": "m1",
-          "title": "MS Excel & SQL",
+          "id": "term-1",
+          "title": "TERM 1",
           "topics": [
-            "excel",
-            "Pandas",
-            "NumPy",
-            "SQL Queries",
-            "Database Connections"
+            "Data Analysis with MS Excel",
+            "Data Handling using T-SQL",
+            "Managing Large Data Sets with MongoDB",
+            "Inferential Statistical Analysis",
+            "Application Based Programming in Python",
+            "Data Mining with WEKA",
+            "Capstone Project for Data Mining"
           ]
         },
         {
-          "id": "m2",
-          "title": "Statistical Analysis & Data sets with MongoDB",
+          "id": "term-2",
+          "title": "TERM 2",
           "topics": [
-            "Descriptive Stats",
-            "Inferential Stats",
-            "EDA",
-            "Data Cleaning",
-            "Feature Engineering"
-          ]
-        },
-        {
-          "id": "m3",
-          "title": "Data Visualization",
-          "topics": [
-            "Matplotlib",
-            "Seaborn",
-            "Plotly",
-            "Tableau",
-            "Power BI"
-          ]
-        },
-        {
-          "id": "m4",
-          "title": "Python & Weka",
-          "topics": [
-            "Regression",
-            "Classification",
-            "Clustering",
-            "Ensemble Methods",
-            "Model Selection"
-          ]
-        },
-        {
-          "id": "m5",
-          "title": "R Programming and Hadoop",
-          "topics": [
-            "Hadoop",
-            "Spark",
-            "AWS S3",
-            "Google BigQuery",
-            "Data Pipelines"
-          ]
-        },
-        {
-          "id": "m6",
-          "title": "Capstone Projects",
-          "topics": [
-            "End-to-End Projects",
-            "Storytelling with Data",
-            "Dashboards",
-            "Presentations",
-            "Portfolio"
+            "Data Science with Python",
+            "Data Science using R Programming",
+            "Foundation of Big Data Systems with Hadoop",
+            "Advanced Data Science with Python",
+            "Visual Analytics with Tableau",
+            "Capstone Project for Data Science"
           ]
         }
       ]

@@ -301,20 +301,20 @@ export default function CourseDetailPage() {
                       {/* Curriculum */}
                       <div className="bg-white border border-slate-100 rounded-2xl p-8">
                         <h2 className="text-xl font-bold text-slate-900 mb-5 flex items-center gap-2"><BookOpen size={20} className="text-primary" /> Course Curriculum</h2>
-                        <div className="space-y-3">
-                          {course.modules.map((mod, mi) => <div key={mod.id} className="border border-slate-100 rounded-xl overflow-hidden">
-                              <button onClick={() => setOpenModule(openModule === mod.id ? null : mod.id)} className="w-full flex items-center justify-between px-5 py-4 hover:bg-slate-50 transition-colors text-left" aria-expanded={openModule === mod.id}>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          {course.modules.map((mod, mi) => <div key={mod.id} className="border border-slate-100 rounded-xl overflow-hidden bg-slate-50/50 h-full">
+                              <button onClick={() => setOpenModule(openModule === mod.id ? null : mod.id)} className="w-full flex items-center justify-between px-4 py-3 hover:bg-slate-50 transition-colors text-left" aria-expanded={openModule === mod.id}>
                                 <div className="flex items-center gap-3">
-                                  <span className="w-7 h-7 rounded-full bg-primary/10 text-primary text-xs font-bold flex items-center justify-center shrink-0">{String(mi + 1).padStart(2, '0')}</span>
-                                  <span className="font-semibold text-slate-800">{mod.title}</span>
+                                  <span className="w-7 h-7 rounded-full bg-primary/10 text-primary text-[10px] font-bold flex items-center justify-center shrink-0">{String(mi + 1).padStart(2, '0')}</span>
+                                  <span className="font-semibold text-slate-800 text-sm">{mod.title}</span>
                                 </div>
-                                <div className="flex items-center gap-3">
-                                  <span className="text-xs text-slate-400">{mod.topics.length} topics</span>
-                                  {openModule === mod.id ? <ChevronUp size={16} className="text-primary" /> : <ChevronDown size={16} className="text-slate-400" />}
+                                <div className="flex items-center gap-2">
+                                  <span className="text-[10px] text-slate-400">{mod.topics.length} topics</span>
+                                  {openModule === mod.id ? <ChevronUp size={14} className="text-primary" /> : <ChevronDown size={14} className="text-slate-400" />}
                                 </div>
                               </button>
-                              {openModule === mod.id && <div className="px-5 pb-4 grid grid-cols-2 sm:grid-cols-3 gap-2">
-                                  {mod.topics.map((topic, ti) => <div key={ti} className="flex items-center gap-2 text-sm text-slate-600">
+                              {openModule === mod.id && <div className="px-4 pb-4 grid grid-cols-1 gap-2">
+                                  {mod.topics.map((topic, ti) => <div key={ti} className="flex items-center gap-2 text-sm text-slate-600 leading-relaxed">
                                       <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>
                                       <span>{topic}</span>
                                     </div>)}
