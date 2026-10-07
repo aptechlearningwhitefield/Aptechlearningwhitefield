@@ -343,7 +343,7 @@ export default function CourseDetailPage() {
                       </div>
 
                       {/* Projects */}
-                      <div className="bg-white border border-slate-100 rounded-2xl p-8">
+                      {course.projects && course.projects.length > 0 && <div className="bg-white border border-slate-100 rounded-2xl p-8">
                         <h2 className="text-xl font-bold text-slate-900 mb-5 flex items-center gap-2"><Briefcase size={20} className="text-primary" /> Hands-on Projects</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                           {course.projects.map((project, i) => <div key={i} className="flex items-center gap-3 bg-[#F8FAFC] border border-slate-100 rounded-xl px-4 py-3">
@@ -353,11 +353,11 @@ export default function CourseDetailPage() {
                               <span className="text-slate-700 text-sm font-medium">{project}</span>
                             </div>)}
                         </div>
-                      </div>
+                      </div>}
 
-                      {/* Career Opportunities */}
+                      {/* Exit Profile */}
                       <div className="bg-white border border-slate-100 rounded-2xl p-8">
-                        <h2 className="text-xl font-bold text-slate-900 mb-5 flex items-center gap-2"><Users size={20} className="text-primary" /> Career Opportunities</h2>
+                        <h2 className="text-xl font-bold text-slate-900 mb-5 flex items-center gap-2"><Users size={20} className="text-primary" /> Exit Profile</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                           {course.careers.map((career, i) => <div key={i} className="flex items-center gap-3 bg-[#F8FAFC] border border-slate-100 rounded-xl px-4 py-3">
                               <CheckCircle size={16} className="text-primary shrink-0" />

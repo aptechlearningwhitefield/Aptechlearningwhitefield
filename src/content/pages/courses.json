@@ -37,13 +37,7 @@
         "Statistics & Probability",
         "Feature Engineering"
       ],
-      "projects": [
-        "Sentiment Analysis Engine",
-        "Image Classification System",
-        "Recommendation Engine",
-        "Fraud Detection Model",
-        "Chatbot with NLP"
-      ],
+      "projects": [],
       "careers": [
         "Machine Learning Engineer",
         "AI Developer",
@@ -201,7 +195,7 @@
       "overview": "A beginner-friendly program to build AI literacy and practical skills using everyday GenAI tools.",
       "eligibility": "Open to educators, students and working professionals.",
       "skills": ["AI Literacy", "Prompting", "Content Creation", "AI Tools"],
-      "projects": ["GenAI practical use cases"],
+      "projects": [],
       "careers": ["AI-Literate Educator", "AI-Literate Student", "Proficient AI Tool User"],
       "modules": [{"id":"m1","title":"Libraries & Tools","topics":["ChatGPT","Perplexity","Claude","Gemini","Ideogram","Canva","Runway","MagicSchool AI"]},{"id":"m2","title":"Practical Applications","topics":["Hands-on Projects","Practical Use Cases","Quizzes & Assessments"]}]
     },
@@ -219,7 +213,7 @@
       "overview": "Specialised training to craft effective prompts for maximising outputs from GenAI models.",
       "eligibility": "Open to all learners.",
       "skills": ["Prompt Design", "ChatGPT", "MidJourney", "Copilot", "Gemini"],
-      "projects": ["Prompt portfolio"],
+      "projects": [],
       "careers": ["Prompt Engineer"],
       "modules": [{"id":"m1","title":"Prompt Engineering","topics":["ChatGPT Plus","MidJourney","Copilot","Gemini","Prompt optimisation"]}]
     },
@@ -237,7 +231,7 @@
       "overview": "Learn to design, manage and optimise AI-driven workflows for creative and strategic applications.",
       "eligibility": "Open to all learners.",
       "skills": ["AI Workflows", "Content Creation", "AI Review", "Product Thinking"],
-      "projects": ["AI workflow project"],
+      "projects": [],
       "careers": ["AI Content Creator/Reviewer/Auditor", "AI Product Manager"],
       "modules": [{"id":"m1","title":"Libraries & Tools","topics":["Claude","Gemini","Ideogram","Canva","RunwayML","ChatGPT","Perplexity"]}]
     },
@@ -255,7 +249,7 @@
       "overview": "Master quick application development using no-code/low-code platforms and automation tools.",
       "eligibility": "Open to all learners.",
       "skills": ["Bubble.io", "Glide", "Wix", "Power Apps", "Zapier", "Airtable"],
-      "projects": ["Low-code application project"],
+      "projects": [],
       "careers": ["No-code/Low-code Web Developer", "No-code/Low-code Mobile App Developer", "No-code/Low-code Database Developer"],
       "modules": [{"id":"m1","title":"Platforms & Automation","topics":["Bubble.io","Glide","Wix","Power Apps","OutSystems","Zapier","Power Automate","Google Sheets","Airtable"]}]
     },
@@ -500,13 +494,7 @@
         "Automation",
         "Testing"
       ],
-      "projects": [
-        "Web Scraper",
-        "REST API with Flask",
-        "Automation Scripts",
-        "Data Analysis Tool",
-        "Django Web App"
-      ],
+      "projects": [],
       "careers": [
         "Python Developer",
         "Backend Developer",
@@ -616,7 +604,7 @@
       "overview": "Master data visualization and business intelligence using Microsoft Power BI. Learn to connect, transform, analyze, and visualize data for data-driven decision-making.",
       "eligibility": "Open to all learners.",
       "skills": ["MS Excel", "SQL Server", "Python", "Power BI"],
-      "projects": ["Interactive Power BI dashboard"],
+      "projects": [],
       "careers": ["Power BI Data Analyst / Power BI Developer"],
       "modules": [{"id":"m1","title":"Modules Covered","topics":["Data analysis with MS Excel","Data management with SQL server","Application Based programming in python","Data analytics using Power BI"]}]
     },
@@ -634,7 +622,7 @@
       "overview": "Build a strong foundation in AI and ML concepts, algorithms, and real-world applications.",
       "eligibility": "Open to all learners.",
       "skills": ["AI Primer", "Machine Learning", "NLP"],
-      "projects": ["AI and ML practical project"],
+      "projects": [],
       "careers": ["AI/ML Trainee", "Junior Data Analyst", "NLP Associate"],
       "modules": [{"id":"m1","title":"Modules Covered","topics":["AI Primer – ML, DL, Neural Networks","Natural Language Processing Toolkit","Machine Learning"]}]
     },
@@ -652,7 +640,7 @@
       "overview": "Advance your skills with deep learning, powerful APIs, and real-world AI projects.",
       "eligibility": "Basic programming and AI knowledge recommended.",
       "skills": ["Deep Learning", "AI APIs", "TensorFlow", "Neural Networks"],
-      "projects": ["Chatbot and recommendation engine"],
+      "projects": [],
       "careers": ["Deep Learning Engineer", "AI Developer", "Data Scientist"],
       "modules": [{"id":"m1","title":"Modules Covered","topics":["Deep Learning and Machine Learning APIs","Project Chatbot and Recommendation Engine","Tensor Flow and Artificial Neural Network"]}]
     },
