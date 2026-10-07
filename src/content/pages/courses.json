@@ -324,53 +324,12 @@
       "color": "yellow",
       "overview": "Learn Python programming for application development and database integration.",
       "eligibility": "10+2 or Graduation in any stream. No prior programming experience needed.",
-      "skills": [
-        "Python Fundamentals",
-        "Object-Oriented Programming",
-        "File Handling",
-        "Database Connectivity",
-        "SQL Integration",
-        "Exception Handling",
-        "Python Modules"
-      ],
-      "projects": [
-        "Student Management System",
-        "Inventory Management System"
-      ],
+      "skills": [],
+      "projects": [],
       "careers": [
-        "Python Application Programmer",
-        "Junior Python Developer"
+        "Python Application Programmer"
       ],
-      "modules": [
-        {
-          "id": "term-1",
-          "title": "TERM 1",
-          "topics": [
-            "Python Fundamentals",
-            "Variables, Data Types and Operators",
-            "Control Flow and Loops",
-            "Functions and Scope",
-            "Lists, Tuples and Dictionaries",
-            "String Handling",
-            "File Handling",
-            "Exception Handling",
-            "Object-Oriented Programming",
-            "Modules and Packages"
-          ]
-        },
-        {
-          "id": "term-2",
-          "title": "TERM 2",
-          "topics": [
-            "Database Connectivity with SQL",
-            "CRUD Operations",
-            "Application Development Basics",
-            "Python for Automation",
-            "Mini Project Development",
-            "Project Review and Deployment"
-          ]
-        }
-      ]
+      "modules": []
     },
     {
       "id": "data-science-essentials",
