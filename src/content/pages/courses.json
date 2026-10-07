@@ -727,7 +727,13 @@
         "TypeScript",
         "AWS Deployment"
       ],
-      "projects": [],
+      "projects": [
+        "E-commerce Website",
+        "Social Media App",
+        "Real-time Chat App",
+        "Blog Platform",
+        "Portfolio Website"
+      ],
       "careers": [
         "Full Stack Developer",
         "Frontend Developer",
