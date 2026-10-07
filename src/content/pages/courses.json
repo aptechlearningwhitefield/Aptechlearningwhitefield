@@ -273,18 +273,11 @@
         "MS Excel",
         "Data Visualization",
         "Tableau",
-        "R Programmming",
+        "R Programming",
         "Hadoop",
-        "Datasets with MongoDB",
-        "Live Projects"
+        "Datasets with MongoDB"
       ],
-      "projects": [
-        "Sales Forecasting Dashboard",
-        "Customer Churn Prediction",
-        "Market Basket Analysis",
-        "Healthcare Analytics",
-        "Social Media Analytics"
-      ],
+      "projects": [],
       "careers": [
         "Data Scientist",
         "Data Analyst",
@@ -586,7 +579,7 @@
       "overview": "Build a strong foundation in Data Science with essential tools and techniques used by industry professionals.",
       "eligibility": "Open to all learners.",
       "skills": ["MongoDB", "Python", "R Programming"],
-      "projects": ["Data analysis project"],
+      "projects": [],
       "careers": ["Data Analyst", "Junior Data Scientist", "Research Analyst"],
       "modules": [{"id":"m1","title":"Modules Covered","topics":["Managing Large Data Sets with MongoDB","Application Based Programming in Python","Data Science using R Programming"]}]
     },
@@ -777,13 +770,7 @@
         "TypeScript",
         "AWS Deployment"
       ],
-      "projects": [
-        "E-commerce Website",
-        "Social Media App",
-        "Real-time Chat App",
-        "Blog Platform",
-        "Portfolio Website"
-      ],
+      "projects": [],
       "careers": [
         "Full Stack Developer",
         "Frontend Developer",
