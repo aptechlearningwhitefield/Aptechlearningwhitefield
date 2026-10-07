@@ -329,7 +329,16 @@
       "careers": [
         "Python Application Programmer"
       ],
-      "modules": []
+      "modules": [
+        {
+          "id": "modules-covered",
+          "title": "Modules Covered",
+          "topics": [
+            "Python",
+            "MySQL"
+          ]
+        }
+      ]
     },
     {
       "id": "data-science-essentials",
