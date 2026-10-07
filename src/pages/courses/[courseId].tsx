@@ -143,25 +143,25 @@ function QuickEnquiry({
         <p className="text-slate-500 text-xs mt-1">We'll call you back within 24 hours.</p>
       </div>;
   }
-  return <form onSubmit={handleSubmit} className="space-y-2">
+  return <form onSubmit={handleSubmit} className="space-y-2.5">
       <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" style={{
       position: 'absolute',
       left: '-9999px'
     }} aria-hidden="true" value={gotcha} onChange={(e) => setGotcha(e.target.value)} />
       <div>
-        <label htmlFor="qe-name" className="block text-[10px] font-medium text-slate-600 mb-1">Full Name *</label>
-        <input id="qe-name" type="text" required value={name} onChange={(e) => setName(e.target.value)} className="w-full border border-slate-200 rounded-md px-2 py-1.5 text-[11px] focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your name" />
+        <label htmlFor="qe-name" className="block text-[11px] font-medium text-slate-600 mb-1">Full Name *</label>
+        <input id="qe-name" type="text" required value={name} onChange={(e) => setName(e.target.value)} className="w-full border border-slate-200 rounded-lg px-2.5 py-2 text-[12px] focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your full name" />
       </div>
       <div>
-        <label htmlFor="qe-mobile" className="block text-[10px] font-medium text-slate-600 mb-1">Mobile *</label>
-        <input id="qe-mobile" type="tel" required value={mobile} onChange={(e) => setMobile(e.target.value)} className="w-full border border-slate-200 rounded-md px-2 py-1.5 text-[11px] focus:outline-none focus:ring-2 focus:ring-primary" placeholder="+91 XXXXX XXXXX" />
+        <label htmlFor="qe-mobile" className="block text-[11px] font-medium text-slate-600 mb-1">Mobile Number *</label>
+        <input id="qe-mobile" type="tel" required value={mobile} onChange={(e) => setMobile(e.target.value)} className="w-full border border-slate-200 rounded-lg px-2.5 py-2 text-[12px] focus:outline-none focus:ring-2 focus:ring-primary" placeholder="+91 (IN)" />
       </div>
       <div>
-        <label htmlFor="qe-email" className="block text-[10px] font-medium text-slate-600 mb-1">Email *</label>
-        <input id="qe-email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} className="w-full border border-slate-200 rounded-md px-2 py-1.5 text-[11px] focus:outline-none focus:ring-2 focus:ring-primary" placeholder="your@email.com" />
+        <label htmlFor="qe-email" className="block text-[11px] font-medium text-slate-600 mb-1">Email Address *</label>
+        <input id="qe-email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} className="w-full border border-slate-200 rounded-lg px-2.5 py-2 text-[12px] focus:outline-none focus:ring-2 focus:ring-primary" placeholder="your@email.com" />
       </div>
-      <button type="submit" disabled={status === 'loading'} className="w-full bg-primary text-white font-semibold py-2 rounded-md hover:bg-blue-700 transition-colors disabled:opacity-60 flex items-center justify-center gap-1.5 text-[11px]">
-        {status === 'loading' ? 'Submitting...' : <><BookOpen size={12} /> Enquire Now</>}
+      <button type="submit" disabled={status === 'loading'} className="w-full bg-primary text-white font-semibold py-2.5 rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-60 flex items-center justify-center gap-2 text-[12px]">
+        {status === 'loading' ? 'Submitting...' : <><BookOpen size={13} /> Enquire Now</>}
       </button>
       {status === 'error' && <p className="text-red-500 text-[10px] text-center">Something went wrong. Please call us directly.</p>}
     </form>;
@@ -379,13 +379,13 @@ export default function CourseDetailPage() {
 
                     {/* Sidebar */}
                     <div className="space-y-6">
-                      <div className="bg-white border border-slate-100 rounded-xl p-3 shadow-sm sticky top-[100px] max-w-[290px] lg:ml-auto">
-                        <h3 className="text-sm font-bold text-slate-900 mb-1">Quick Enquiry</h3>
-                        <p className="text-slate-500 text-[10px] mb-2">We'll call you back within 24 hours</p>
+                      <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm sticky top-[100px] max-w-[420px] lg:ml-auto">
+                        <h3 className="text-base font-bold text-slate-900 mb-1">Quick Enquiry</h3>
+                        <p className="text-slate-500 text-[11px] mb-3">We'll call you back within 24 hours</p>
                         <QuickEnquiry courseId={courseId ?? ""} />
-                        <div className="mt-2 pt-2 border-t border-slate-100 flex flex-col gap-1.5">
-                          <a href="tel:+917411333500" className="flex items-center justify-center gap-1.5 border border-slate-200 text-slate-700 text-[10px] font-medium py-1.5 rounded-md hover:bg-slate-50 transition-colors"><Phone size={12} /> +91 74113 33500</a>
-                          <a href="https://wa.me/917411333500" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-1.5 bg-green-500 text-white text-[10px] font-medium py-1.5 rounded-md hover:bg-green-600 transition-colors"><MessageCircle size={12} /> WhatsApp Us</a>
+                        <div className="mt-3 pt-3 border-t border-slate-100 flex flex-col gap-2">
+                          <a href="tel:+917411333500" className="flex items-center justify-center gap-2 border border-slate-200 text-slate-700 text-[11px] font-medium py-2 rounded-lg hover:bg-slate-50 transition-colors"><Phone size={13} /> +91 74113 33500</a>
+                          <a href="https://wa.me/917411333500" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-green-500 text-white text-[11px] font-medium py-2 rounded-lg hover:bg-green-600 transition-colors"><MessageCircle size={13} /> WhatsApp Us</a>
                         </div>
                       </div>
                       <div className="bg-white border border-slate-100 rounded-2xl p-6">

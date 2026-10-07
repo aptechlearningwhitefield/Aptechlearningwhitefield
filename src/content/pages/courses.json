@@ -196,7 +196,7 @@
       "skills": ["AI Literacy", "Prompting", "Content Creation", "AI Tools"],
       "projects": [],
       "careers": ["AI-Literate Educator", "AI-Literate Student", "Proficient AI Tool User"],
-      "modules": [{"id":"m1","title":"Libraries & Tools","topics":["ChatGPT","Perplexity","Claude","Gemini","Ideogram","Canva","Runway","MagicSchool AI"]},{"id":"m2","title":"Practical Applications","topics":["Hands-on Projects","Practical Use Cases","Quizzes & Assessments"]}]
+      "modules": [{"id":"m1","title":"Libraries & Tools","topics":["ChatGPT","Perplexity","Claude","Gemini","Ideogram","Canva","Runway","MagicSchool AI"]},{"id":"m2","title":"Practical Applications","topics":["Practical Use Cases","Quizzes & Assessments"]}]
     },
     {
       "id": "prompt-engineering",
@@ -336,13 +336,7 @@
         "Tableau Basics",
         "Business Intelligence"
       ],
-      "projects": [
-        "Sales Performance Dashboard",
-        "HR Analytics Report",
-        "Financial KPI Dashboard",
-        "Supply Chain Analytics",
-        "Marketing ROI Dashboard"
-      ],
+      "projects": [],
       "careers": [
         "Data Analyst",
         "Business Intelligence Analyst",
@@ -452,7 +446,7 @@
         "Data Analyst",
         "Django Developer"
       ],
-      "modules": [
+      "modules": [],
         {
           "id": "m1",
           "title": "Python Fundamentals",
@@ -727,13 +721,7 @@
         "TypeScript",
         "AWS Deployment"
       ],
-      "projects": [
-        "E-commerce Website",
-        "Social Media App",
-        "Real-time Chat App",
-        "Blog Platform",
-        "Portfolio Website"
-      ],
+      "projects": [],
       "careers": [
         "Full Stack Developer",
         "Frontend Developer",
