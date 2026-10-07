@@ -37,13 +37,12 @@
         "Statistics & Probability",
         "Feature Engineering"
       ],
-      "projects": [],
+      "projects": [
+        "Capstone Project for Data Mining",
+        "Capstone Project - Recommendation Engine and Customer Churn Prediction"
+      ],
       "careers": [
-        "Machine Learning Engineer",
-        "AI Developer",
-        "Data Scientist",
-        "NLP Engineer",
-        "Computer Vision Engineer"
+        "AI Developer"
       ],
       "modules": [
         {
@@ -277,13 +276,12 @@
         "Hadoop",
         "Datasets with MongoDB"
       ],
-      "projects": [],
+      "projects": [
+        "Capstone Project for Data Science"
+      ],
       "careers": [
-        "Data Scientist",
         "Data Analyst",
-        "Business Intelligence Analyst",
-        "ML Engineer",
-        "Analytics Consultant"
+        "Hadoop Developer"
       ],
       "modules": [
         {
