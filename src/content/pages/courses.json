@@ -446,7 +446,7 @@
         "Data Analyst",
         "Django Developer"
       ],
-      "modules": [],
+      "modules": [
         {
           "id": "m1",
           "title": "Python Fundamentals",
