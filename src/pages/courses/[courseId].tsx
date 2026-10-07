@@ -292,8 +292,8 @@ export default function CourseDetailPage() {
               {/* Body */}
               <section className="py-14 bg-[#F8FAFC]" aria-label="Course details">
                 <div className="container mx-auto px-4">
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-                    <div className="lg:col-span-2 space-y-10">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <div className="space-y-10">
 
                       {course.skills.length > 0 && <div className="bg-white border border-slate-100 rounded-2xl p-8">
                         <h2 className="text-xl font-bold text-slate-900 mb-5 flex items-center gap-2"><CheckCircle size={20} className="text-primary" /> Skills You'll Learn</h2>
@@ -376,7 +376,7 @@ export default function CourseDetailPage() {
 
                     {/* Sidebar */}
                     <div className="space-y-6">
-                      <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm sticky top-[100px] max-w-[420px] lg:ml-auto">
+                      <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm sticky top-[100px] w-full max-w-[640px] lg:ml-auto">
                         <h3 className="text-base font-bold text-slate-900 mb-1">Quick Enquiry</h3>
                         <p className="text-slate-500 text-[11px] mb-3">We'll call you back within 24 hours</p>
                         <QuickEnquiry courseId={courseId ?? ""} />
