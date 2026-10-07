@@ -296,16 +296,14 @@ export default function CourseDetailPage() {
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
                     <div className="lg:col-span-2 space-y-10">
 
-                      {/* Skills */}
-                      <div className="bg-white border border-slate-100 rounded-2xl p-8">
+                      {course.skills.length > 0 && <div className="bg-white border border-slate-100 rounded-2xl p-8">
                         <h2 className="text-xl font-bold text-slate-900 mb-5 flex items-center gap-2"><CheckCircle size={20} className="text-primary" /> Skills You'll Learn</h2>
                         <div className="flex flex-wrap gap-2.5">
                           {course.skills.map((skill, i) => <span key={i} className="bg-primary/5 border border-primary/20 text-primary text-sm font-medium px-3 py-1.5 rounded-lg">{skill}</span>)}
                         </div>
-                      </div>
+                      </div>}
 
-                      {/* Curriculum */}
-                      <div className="bg-white border border-slate-100 rounded-2xl p-8">
+                      {course.modules.length > 0 && <div className="bg-white border border-slate-100 rounded-2xl p-8">
                         <h2 className="text-xl font-bold text-slate-900 mb-5 flex items-center gap-2"><BookOpen size={20} className="text-primary" /> Course Curriculum</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                           {course.modules.map((mod, mi) => {
@@ -334,7 +332,7 @@ export default function CourseDetailPage() {
                               </div>;
                           })}
                         </div>
-                      </div>
+                      </div>}
 
                       {/* Projects */}
                       {course.projects && course.projects.length > 0 && <div className="bg-white border border-slate-100 rounded-2xl p-8">

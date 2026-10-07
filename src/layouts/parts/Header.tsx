@@ -43,9 +43,6 @@ const navItems: NavItem[] = [{
       label: 'Rapid App Development (Low/No-Code)'
     }]
   }, {
-    href: '/courses/data-analytics-power-bi',
-    label: 'Data Analytics & Power BI'
-  }, {
     href: '/courses/python',
     label: 'Python Programming'
   }, {
@@ -88,7 +85,6 @@ const courseMenuIcons: Record<string, React.ReactNode> = {
   '/courses/prompt-engineering': <Layers size={16} />,
   '/courses/innovate-generative-ai': <Zap size={16} />,
   '/courses/rapid-app-development': <Code size={16} />,
-  '/courses/data-analytics-power-bi': <TrendingUp size={16} />,
   '/courses/python': <Code size={16} />,
   '/courses/full-stack': <Globe size={16} />,
   '/courses/data-science-essentials': <Database size={16} />,

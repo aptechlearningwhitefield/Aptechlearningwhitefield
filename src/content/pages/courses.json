@@ -312,108 +312,6 @@
       ]
     },
     {
-      "id": "data-analytics-power-bi",
-      "name": "Data Analytics & Power BI",
-      "tagline": "Transform data into decisions with visual analytics",
-      "category": "AI & Data",
-      "duration": "100 hours",
-      "level": "Beginner to Intermediate",
-      "mode": "Classroom & Online",
-      "certification": "Aptech Certified Data Analytics & Power BI Professional",
-      "popular": false,
-      "color": "orange",
-      "overview": "Gain hands-on expertise in data analytics and business intelligence using Power BI. Learn to connect, transform, analyze, and visualize data to drive smarter business decisions.",
-      "eligibility": "10+2 or Graduation in any stream. Basic Excel knowledge helpful.",
-      "skills": [
-        "Power BI Desktop",
-        "DAX",
-        "Power Query",
-        "SQL",
-        "Excel Advanced",
-        "Data Modeling",
-        "ETL",
-        "Python for Analytics",
-        "Tableau Basics",
-        "Business Intelligence"
-      ],
-      "projects": [],
-      "careers": [
-        "Data Analyst",
-        "Business Intelligence Analyst",
-        "Power BI Developer",
-        "Reporting Analyst",
-        "MIS Executive"
-      ],
-      "modules": [
-        {
-          "id": "m1",
-          "title": "Excel & SQL Foundations",
-          "topics": [
-            "Advanced Excel",
-            "Pivot Tables",
-            "SQL Basics",
-            "Joins",
-            "Aggregations"
-          ]
-        },
-        {
-          "id": "m2",
-          "title": "Power BI Desktop",
-          "topics": [
-            "Data Import",
-            "Data Modeling",
-            "Relationships",
-            "Calculated Columns",
-            "Measures"
-          ]
-        },
-        {
-          "id": "m3",
-          "title": "DAX & Power Query",
-          "topics": [
-            "DAX Basics",
-            "Advanced DAX",
-            "Power Query M",
-            "Data Transformation",
-            "ETL"
-          ]
-        },
-        {
-          "id": "m4",
-          "title": "Visualizations & Reports",
-          "topics": [
-            "Charts & Graphs",
-            "Custom Visuals",
-            "Drill-through",
-            "Bookmarks",
-            "Mobile Reports"
-          ]
-        },
-        {
-          "id": "m5",
-          "title": "Power BI Service",
-          "topics": [
-            "Publishing Reports",
-            "Dashboards",
-            "Sharing",
-            "Row-Level Security",
-            "Scheduled Refresh"
-          ]
-        },
-        {
-          "id": "m6",
-          "title": "Python for Analytics",
-          "topics": [
-            "Pandas",
-            "Matplotlib",
-            "Seaborn",
-            "Statistical Analysis",
-            "Automation"
-          ]
-        }
-      ]
-    },
-    {
       "id": "python",
       "name": "Programming with Python",
       "tagline": "Learn Python programming for application development and database integration",
@@ -424,97 +322,14 @@
       "certification": "Aptech Certified Python Developer",
       "popular": false,
       "color": "yellow",
-      "overview": "Python is versatile and beginner-friendly, perfect for scripting, automation, and more.",
+      "overview": "Learn Python programming for application development and database integration.",
       "eligibility": "10+2 or Graduation in any stream. No prior programming experience needed.",
-      "skills": [
-        "Python Basics",
-        "OOP",
-        "Data Structures",
-        "File Handling",
-        "NumPy & Pandas",
-        "Web Scraping",
-        "Django/Flask",
-        "REST APIs",
-        "Automation",
-        "Testing"
-      ],
+      "skills": [],
       "projects": [],
       "careers": [
-        "Python Developer",
-        "Backend Developer",
-        "Automation Engineer",
-        "Data Analyst",
-        "Django Developer"
+        "Python Application Programmer"
       ],
-      "modules": [
-        {
-          "id": "m1",
-          "title": "Python Fundamentals",
-          "topics": [
-            "Syntax",
-            "Variables",
-            "Control Flow",
-            "Functions",
-            "Modules"
-          ]
-        },
-        {
-          "id": "m2",
-          "title": "OOP & Data Structures",
-          "topics": [
-            "Classes",
-            "Inheritance",
-            "Lists",
-            "Dicts",
-            "Sets",
-            "Tuples"
-          ]
-        },
-        {
-          "id": "m3",
-          "title": "File Handling & Libraries",
-          "topics": [
-            "File I/O",
-            "JSON",
-            "CSV",
-            "NumPy",
-            "Pandas"
-          ]
-        },
-        {
-          "id": "m4",
-          "title": "Web Development",
-          "topics": [
-            "Flask Basics",
-            "Django",
-            "REST APIs",
-            "Templates",
-            "Databases"
-          ]
-        },
-        {
-          "id": "m5",
-          "title": "Automation & Scripting",
-          "topics": [
-            "Selenium",
-            "Web Scraping",
-            "Task Automation",
-            "Scheduling",
-            "Email Automation"
-          ]
-        },
-        {
-          "id": "m6",
-          "title": "Projects & Portfolio",
-          "topics": [
-            "Mini Projects",
-            "Capstone Project",
-            "GitHub",
-            "Code Review",
-            "Deployment"
-          ]
-        }
-      ]
+      "modules": []
     },
     {
       "id": "data-science-essentials",

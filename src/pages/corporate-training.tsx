@@ -128,7 +128,6 @@ function CorporateEnquiryForm() {
             <option>AI & Machine Learning</option>
             <option>Generative AI</option>
             <option>Data Science & Analytics</option>
-            <option>Data Analytics & Power BI</option>
             <option>Python Programming</option>
             <option>Full Stack Development</option>
             <option>Cloud Computing</option>

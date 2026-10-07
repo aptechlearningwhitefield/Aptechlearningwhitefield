@@ -233,7 +233,6 @@ function StudentEnquiryForm() {
           <option value="AI & Machine Learning">AI & Machine Learning</option>
           <option value="Generative AI & Prompt Engineering">Generative AI & Prompt Engineering</option>
           <option value="Data Science">Data Science</option>
-          <option value="Data Analytics & Power BI">Data Analytics & Power BI</option>
           <option value="Python Programming">Python Programming</option>
           <option value="Full Stack Development">Full Stack Development</option>
           <option value="Digital Marketing">Digital Marketing</option>
