@@ -137,6 +137,24 @@
         "popular": false
       },
       {
+        "id": "data-analytics-power-bi",
+        "name": "Data Analytics Using Power BI",
+        "duration": "100 hours",
+        "level": "Beginner to Intermediate",
+        "skills": [],
+        "color": "orange",
+        "popular": false
+      },
+      {
+        "id": "data-visualization-power-bi",
+        "name": "Data Visualization Using Power BI",
+        "duration": "128 hours",
+        "level": "Beginner to Intermediate",
+        "skills": [],
+        "color": "orange",
+        "popular": false
+      },
+      {
         "id": "c3",
         "name": "Smart Professional Program - Data Science",
         "duration": "384 hours",

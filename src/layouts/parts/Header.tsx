@@ -52,6 +52,12 @@ const navItems: NavItem[] = [{
     href: '/courses/data-science-essentials',
     label: 'Data Science Essentials'
   }, {
+    href: '/courses/data-analytics-power-bi',
+    label: 'Data Analytics Using Power BI'
+  }, {
+    href: '/courses/data-visualization-power-bi',
+    label: 'Data Visualization Using Power BI'
+  }, {
     href: '/courses/foundation-ai-ml',
     label: 'Foundation AI & Machine Learning'
   }, {
@@ -85,6 +91,8 @@ const courseMenuIcons: Record<string, React.ReactNode> = {
   '/courses/python': <Code size={16} />,
   '/courses/full-stack': <Globe size={16} />,
   '/courses/data-science-essentials': <Database size={16} />,
+  '/courses/data-analytics-power-bi': <BarChart3 size={16} />,
+  '/courses/data-visualization-power-bi': <BarChart3 size={16} />,
   '/courses/foundation-ai-ml': <Cpu size={16} />,
   '/courses/advanced-ai-ml': <Brain size={16} />
 };

@@ -601,6 +601,20 @@
             `;
             const countryCode = document.getElementById("lms_country_code");
             if (countryCode) countryCode.value = "+91";
+            const courseSelect = document.getElementById("lms_product_drop");
+            if (courseSelect) {
+                const syncCourseOptions = () => {
+                    Array.from(courseSelect.options).forEach((option) => {
+                        if (/cyber\s*security/i.test(option.textContent || "")) option.remove();
+                    });
+                    ["Data Analytics Using Power BI", "Data Visualization Using Power BI"].forEach((label) => {
+                        const exists = Array.from(courseSelect.options).some((option) => option.textContent.trim().toLowerCase() === label.toLowerCase());
+                        if (!exists) courseSelect.add(new Option(label, label));
+                    });
+                };
+                new MutationObserver(syncCourseOptions).observe(courseSelect, { childList: true });
+                syncCourseOptions();
+            }
         }
         const organizationLabel = form.querySelector('label[for="lms_name"]');
         if (organizationLabel && enquiryType === "schools-colleges") organizationLabel.textContent = "Institution Name";

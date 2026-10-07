@@ -21,6 +21,8 @@ const courseIcons: Record<string, React.ReactNode> = {
   'innovate-generative-ai': <Sparkles size={24} />,
   'rapid-app-development': <Rocket size={24} />,
   'data-science-essentials': <Database size={24} />,
+  'data-analytics-power-bi': <TrendingUp size={24} />,
+  'data-visualization-power-bi': <BarChart3 size={24} />,
   c3: <BarChart3 size={24} />,
   c5: <Code size={24} />,
   c6: <Shield size={24} />,
@@ -35,6 +37,8 @@ const courseRoutes: Record<string, string> = {
   c1: 'ai-machine-learning',
   c2: 'generative-ai',
   c3: 'data-science',
+  'data-analytics-power-bi': 'data-analytics-power-bi',
+  'data-visualization-power-bi': 'data-visualization-power-bi',
   c5: 'python',
   c7: 'full-stack',
   c8: 'cloud-computing',
@@ -230,6 +234,8 @@ function StudentEnquiryForm() {
           <option value="AI & Machine Learning">AI & Machine Learning</option>
           <option value="Generative AI & Prompt Engineering">Generative AI & Prompt Engineering</option>
           <option value="Data Science">Data Science</option>
+          <option value="Data Analytics Using Power BI">Data Analytics Using Power BI</option>
+          <option value="Data Visualization Using Power BI">Data Visualization Using Power BI</option>
           <option value="Python Programming">Python Programming</option>
           <option value="Full Stack Development">Full Stack Development</option>
           <option value="Digital Marketing">Digital Marketing</option>

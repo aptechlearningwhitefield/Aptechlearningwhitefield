@@ -24,7 +24,7 @@
       "popular": true,
       "color": "blue",
       "overview": "The tech industry is evolving rapidly due to the increasing use of Artificial Intelligence and Machine Learning powered technologies to perform simple and complex tasks. Due to its increasing efficiency, AI is used across various industries today. This has led to the growing demand for AI & Machine Learning professionals. The AI and ML course at Aptech Learning is curated to enable you to work with the latest software tools to transform you into industry-ready I.T. professionals.",
-      "eligibility": "10+2 or Graduation in any stream. Basic computer knowledge required. No prior programming experience needed.",
+      "eligibility": "Graduation in any stream. Basic computer knowledge required. No prior programming experience needed.",
       "skills": [
         "Python",
         "NumPy & Pandas",
@@ -84,7 +84,7 @@
       "popular": true,
       "color": "purple",
       "overview": "Dive deep into Generative AI — the technology powering ChatGPT, Gemini, Midjourney and more. Learn prompt engineering, fine-tuning LLMs, building AI-powered applications and integrating generative AI into real-world workflows.",
-      "eligibility": "10+2 or Graduation in any stream. Basic computer knowledge required.",
+      "eligibility": "Graduation in any stream. Basic computer knowledge required.",
       "skills": [
         "Prompt Engineering",
         "ChatGPT & GPT-4",
@@ -264,46 +264,29 @@
       "popular": false,
       "color": "green",
       "overview": "Become a job-ready Data Scientist by mastering programming, data analysis, and real-world projects.",
-      "eligibility": "10+2 or Graduation in any stream. Basic math knowledge helpful.",
-      "skills": [
-        "Python",
-        "SQL",
-        "Statistics",
-        "MS Excel",
-        "Data Visualization",
-        "Tableau",
-        "R Programming",
-        "Hadoop",
-        "Datasets with MongoDB"
-      ],
+      "eligibility": "Graduation in any stream. Basic math knowledge helpful.",
+      "skills": [],
       "projects": [
         "Capstone Project for Data Science"
       ],
       "careers": [
-        "Data Analyst",
-        "Hadoop Developer"
+        "Data Scientist",
+        "Data Engineer",
+        "Business Analyst"
       ],
       "modules": [
         {
-          "id": "term-1",
-          "title": "TERM 1",
+          "id": "modules-covered",
+          "title": "Modules Covered",
           "topics": [
             "Data Analysis with MS Excel",
-            "Data Handling using T-SQL",
-            "Managing Large Data Sets with MongoDB",
-            "Inferential Statistical Analysis",
-            "Application Based Programming in Python",
+            "Working with MySQL",
+            "Application-Based Programming in Python",
+            "Data Analysis with R",
+            "Data Analysis with SQL",
             "Data Mining with WEKA",
-            "Capstone Project for Data Mining"
-          ]
-        },
-        {
-          "id": "term-2",
-          "title": "TERM 2",
-          "topics": [
-            "Data Science with Python",
-            "Data Science using R Programming",
-            "Foundation of Big Data Systems with Hadoop",
+            "Data Analytics with Python",
+            "Hadoop",
             "Advanced Data Science with Python",
             "Visual Analytics with Tableau",
             "Capstone Project for Data Science"
@@ -323,7 +306,7 @@
       "popular": false,
       "color": "yellow",
       "overview": "Learn Python programming for application development and database integration.",
-      "eligibility": "10+2 or Graduation in any stream. No prior programming experience needed.",
+      "eligibility": "Graduation in any stream. No prior programming experience needed.",
       "skills": [],
       "projects": [],
       "careers": [
@@ -357,6 +340,60 @@
       "projects": [],
       "careers": ["Data Analyst", "Junior Data Scientist", "Research Analyst"],
       "modules": [{"id":"m1","title":"Modules Covered","topics":["Managing Large Data Sets with MongoDB","Application Based Programming in Python","Data Science using R Programming"]}]
+    },
+    {
+      "id": "data-analytics-power-bi",
+      "name": "Data Analytics Using Power BI",
+      "tagline": "Hands-on data analytics and business intelligence using Power BI",
+      "category": "AI & Data",
+      "duration": "100 hours",
+      "level": "Beginner to Intermediate",
+      "mode": "Classroom & Online",
+      "certification": "Certificate of Completion",
+      "popular": false,
+      "color": "orange",
+      "overview": "Gain hands-on expertise in data analytics and business intelligence using Power BI. Learn to connect, transform, analyze, and visualize data to drive smarter business decisions.",
+      "eligibility": "Open to all learners.",
+      "skills": [],
+      "projects": [],
+      "careers": [
+        "Business Intelligence Analyst",
+        "Power BI Developer",
+        "Data Analyst",
+        "Reporting Analyst"
+      ],
+      "modules": []
+    },
+    {
+      "id": "data-visualization-power-bi",
+      "name": "Data Visualization Using Power BI",
+      "tagline": "Master data visualization and business intelligence using Microsoft Power BI",
+      "category": "AI & Data",
+      "duration": "128 hours",
+      "level": "Beginner to Intermediate",
+      "mode": "Classroom & Online",
+      "certification": "Certificate of Completion",
+      "popular": false,
+      "color": "orange",
+      "overview": "This program helps learners master data visualization and business intelligence using Microsoft Power BI. Students will learn how to connect, transform, analyze, and visualize data to create interactive dashboards and meaningful reports for data-driven decision-making.",
+      "eligibility": "Open to all learners.",
+      "skills": [],
+      "projects": [],
+      "careers": [
+        "Power BI Data Analyst / Power BI Developer"
+      ],
+      "modules": [
+        {
+          "id": "modules-covered",
+          "title": "Modules Covered",
+          "topics": [
+            "Data analysis with MS Excel",
+            "Data management with SQL server",
+            "Application Based programming in python",
+            "Data analytics using Power BI"
+          ]
+        }
+      ]
     },
     {
       "id": "foundation-ai-ml",
@@ -514,7 +551,7 @@
       "popular": false,
       "color": "teal",
       "overview": "Master both front-end and back-end development with our Full Stack Python Development program. Build dynamic, scalable web applications using Python, Django, JavaScript, and modern frameworks.",
-      "eligibility": "10+2 or Graduation in any stream. Basic computer knowledge required.",
+      "eligibility": "Graduation in any stream. Basic computer knowledge required.",
       "skills": [],
       "projects": [
         "Project - Python Web Application Development"
@@ -770,7 +807,7 @@
       "popular": false,
       "color": "pink",
       "overview": "Master digital marketing from SEO and Google Ads to social media marketing, email marketing and analytics. This program prepares you to run successful digital campaigns and grow businesses online.",
-      "eligibility": "10+2 or Graduation in any stream. No prior experience needed.",
+      "eligibility": "Graduation in any stream. No prior experience needed.",
       "skills": [
         "SEO",
         "Google Ads",

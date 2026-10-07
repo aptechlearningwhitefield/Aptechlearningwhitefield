@@ -11,6 +11,12 @@ const courses = [{
   href: '/courses/data-science',
   label: 'Data Science'
 }, {
+  href: '/courses/data-analytics-power-bi',
+  label: 'Data Analytics Using Power BI'
+}, {
+  href: '/courses/data-visualization-power-bi',
+  label: 'Data Visualization Using Power BI'
+}, {
   href: '/courses/python',
   label: 'Python Programming'
 }, {
