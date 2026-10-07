@@ -324,12 +324,53 @@
       "color": "yellow",
       "overview": "Learn Python programming for application development and database integration.",
       "eligibility": "10+2 or Graduation in any stream. No prior programming experience needed.",
-      "skills": [],
-      "projects": [],
-      "careers": [
-        "Python Application Programmer"
+      "skills": [
+        "Python Fundamentals",
+        "Object-Oriented Programming",
+        "File Handling",
+        "Database Connectivity",
+        "SQL Integration",
+        "Exception Handling",
+        "Python Modules"
       ],
-      "modules": []
+      "projects": [
+        "Student Management System",
+        "Inventory Management System"
+      ],
+      "careers": [
+        "Python Application Programmer",
+        "Junior Python Developer"
+      ],
+      "modules": [
+        {
+          "id": "term-1",
+          "title": "TERM 1",
+          "topics": [
+            "Python Fundamentals",
+            "Variables, Data Types and Operators",
+            "Control Flow and Loops",
+            "Functions and Scope",
+            "Lists, Tuples and Dictionaries",
+            "String Handling",
+            "File Handling",
+            "Exception Handling",
+            "Object-Oriented Programming",
+            "Modules and Packages"
+          ]
+        },
+        {
+          "id": "term-2",
+          "title": "TERM 2",
+          "topics": [
+            "Database Connectivity with SQL",
+            "CRUD Operations",
+            "Application Development Basics",
+            "Python for Automation",
+            "Mini Project Development",
+            "Project Review and Deployment"
+          ]
+        }
+      ]
     },
     {
       "id": "data-science-essentials",
@@ -436,56 +477,14 @@
             "VPNs"
           ]
         },
-          "overview": "Learn Python programming for application development, database connectivity, and real-world problem solving with practical coding exercises.",
+        {
           "id": "m2",
-          "skills": [
-            "Python Fundamentals",
-            "Object-Oriented Programming",
-            "File Handling",
-            "Database Connectivity",
-            "SQL Integration",
-            "Exception Handling",
-            "Python Modules",
-            "Mini Projects"
-          ],
-          "projects": [
-            "Student Management System",
-            "Inventory Management System"
-          ],
+          "title": "Linux & Security Tools",
+          "topics": [
             "Kali Linux",
-            "Python Application Programmer",
-            "Junior Python Developer"
+            "Bash Scripting",
             "Nmap",
-          "modules": [
-            {
-              "id": "term-1",
-              "title": "TERM 1",
-              "topics": [
-                "Python Fundamentals",
-                "Variables, Data Types and Operators",
-                "Control Flow and Loops",
-                "Functions and Scope",
-                "Lists, Tuples and Dictionaries",
-                "String Handling",
-                "File Handling",
-                "Exception Handling",
-                "Object-Oriented Programming",
-                "Modules and Packages"
-              ]
-            },
-            {
-              "id": "term-2",
-              "title": "TERM 2",
-              "topics": [
-                "Database Connectivity with SQL",
-                "CRUD Operations",
-                "Application Development Basics",
-                "Python for Automation",
-                "Mini Project Development",
-                "Project Review and Deployment"
-              ]
-            }
-          ]
+            "Wireshark",
             "Metasploit"
           ]
         },
