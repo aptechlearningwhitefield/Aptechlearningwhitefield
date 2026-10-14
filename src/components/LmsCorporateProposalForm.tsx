@@ -55,10 +55,10 @@ export default function LmsCorporateProposalForm({
   return (
     <>
       {submitted && (
-        <div role="status" aria-live="polite" className="py-12 text-center">
-          <CheckCircle size={40} className="mx-auto mb-4 text-green-500" />
-          <h3 className="mb-2 text-xl font-bold text-slate-900">Thank You!</h3>
-          <p className="text-slate-500">Your enquiry has been submitted. Our team will contact you soon.</p>
+        <div role="status" aria-live="polite" className="py-20 text-center md:py-28">
+          <CheckCircle size={64} className="mx-auto mb-6 text-green-500" />
+          <h3 className="mb-4 text-4xl font-extrabold text-slate-900">Thank You!</h3>
+          <p className="text-lg text-slate-600">Your enquiry has been submitted. Our team will contact you soon.</p>
         </div>
       )}
       <iframe
@@ -66,9 +66,8 @@ export default function LmsCorporateProposalForm({
         src={`/lms-corporate-proposal.html?enquiryType=${encodeURIComponent(enquiryType)}${context ? `&context=${encodeURIComponent(context)}` : ''}`}
         title="Submit an enquiry to Aptech Learning Whitefield"
         className="block w-full rounded-2xl border-0"
-        style={{ height: '600px' }}
+        style={{ height: '600px', display: submitted ? 'none' : 'block' }}
         loading="lazy"
-        hidden={submitted}
       />
     </>
   );
