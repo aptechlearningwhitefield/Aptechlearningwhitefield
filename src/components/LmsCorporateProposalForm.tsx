@@ -1,5 +1,6 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { toast } from 'sonner';
+import { CheckCircle } from 'lucide-react';
 
 /** The LMS supplied form is hosted as a standalone document so its required
  * field IDs, names, and vendor script remain intact and isolated from React. */
@@ -10,6 +11,7 @@ export default function LmsCorporateProposalForm({
   context,
 }: { enquiryType?: EnquiryType; context?: string }) {
   const iframeRef = useRef<HTMLIFrameElement>(null);
+  const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
@@ -18,6 +20,7 @@ export default function LmsCorporateProposalForm({
         event.source === iframeRef.current?.contentWindow &&
         event.data?.type === 'aptech-enquiry-submitting'
       ) {
+        setSubmitted(true);
         toast.success('Enquiry submitted successfully!', {
           description: 'Thank you. Our team will contact you soon.',
           duration: 5000,
@@ -50,13 +53,23 @@ export default function LmsCorporateProposalForm({
   }, []);
 
   return (
-    <iframe
-      ref={iframeRef}
-      src={`/lms-corporate-proposal.html?enquiryType=${encodeURIComponent(enquiryType)}${context ? `&context=${encodeURIComponent(context)}` : ''}`}
-      title="Submit an enquiry to Aptech Learning Whitefield"
-      className="block w-full rounded-2xl border-0"
-      style={{ height: '600px' }}
-      loading="lazy"
-    />
+    <>
+      {submitted && (
+        <div role="status" aria-live="polite" className="py-12 text-center">
+          <CheckCircle size={40} className="mx-auto mb-4 text-green-500" />
+          <h3 className="mb-2 text-xl font-bold text-slate-900">Thank You!</h3>
+          <p className="text-slate-500">Your enquiry has been submitted. Our team will contact you soon.</p>
+        </div>
+      )}
+      <iframe
+        ref={iframeRef}
+        src={`/lms-corporate-proposal.html?enquiryType=${encodeURIComponent(enquiryType)}${context ? `&context=${encodeURIComponent(context)}` : ''}`}
+        title="Submit an enquiry to Aptech Learning Whitefield"
+        className="block w-full rounded-2xl border-0"
+        style={{ height: '600px' }}
+        loading="lazy"
+        hidden={submitted}
+      />
+    </>
   );
 }

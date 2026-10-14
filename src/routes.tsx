@@ -9,6 +9,7 @@ import PlacementsPage from './pages/placements';
 import BlogPage from './pages/blog/index';
 import BlogDetailPage from './pages/blog/[slug]';
 import AboutPage from './pages/about';
+import ThankYouPage from './pages/thank-you';
 import ProdNotFoundPage from './pages/_404';
 import DevNotFoundPage from '../export-plugins/PageNotFound';
 
@@ -29,6 +30,9 @@ export const routes: RouteObject[] = [{
   path: '/contact',
   element: <ContactPage />
 }, {
+  path: '/thank-you',
+  element: <ThankYouPage />
+}, {
   path: '/corporate-training',
   element: <CorporateTrainingPage />
 }, {
@@ -47,5 +51,5 @@ export const routes: RouteObject[] = [{
   path: '*',
   element: <NotFoundPage />
 }];
-export type Path = '/' | '/courses' | '/courses/:courseId' | '/contact';
+export type Path = '/' | '/courses' | '/courses/:courseId' | '/contact' | '/thank-you';
 export type Params = Record<string, string | undefined>;
