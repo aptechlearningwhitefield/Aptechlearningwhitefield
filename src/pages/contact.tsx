@@ -17,7 +17,7 @@ const enquiryIcons: Record<string, React.ReactNode> = {
 
 // â”€â”€â”€ Student Enquiry Form â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function StudentEnquiryForm() {
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
   const [gotcha, setGotcha] = useState('');
   const [name, setName] = useState('');
@@ -82,16 +82,6 @@ function StudentEnquiryForm() {
       setStatus('error');
     }
   };
-  if (status === 'success') {
-    return <div className="text-center py-12">
-        <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <CheckCircle size={32} className="text-green-500" />
-        </div>
-        <h3 className="text-xl font-bold text-slate-900 mb-2">Enquiry Submitted!</h3>
-        <p className="text-slate-500 mb-6">Our counsellor will call you back within 24 hours.</p>
-        <button onClick={() => setStatus('idle')} className="text-primary text-sm font-medium hover:underline">Submit another enquiry</button>
-      </div>;
-  }
   return <form onSubmit={handleSubmit} className="space-y-4">
       <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" style={{
       position: 'absolute',
