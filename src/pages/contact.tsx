@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 import { useState } from 'react';
 import { seoMetadata } from '../lib/seo-metadata';
 import { trackGoogleAnalyticsEvent } from '@/lib/google-analytics';
-import { notifyEnquirySubmitted } from '@/lib/enquiry-feedback';
+import { notifyEnquirySubmitted, redirectToStudentEnquiryThankYou } from '@/lib/enquiry-feedback';
 import LmsCorporateProposalForm from '@/components/LmsCorporateProposalForm';
 import { Phone, Mail, MapPin, Clock, MessageCircle, CheckCircle, ChevronDown, ChevronUp, Building2, GraduationCap, School, HelpCircle, Send, ArrowRight } from 'lucide-react';
 import { contact } from 'virtual:content';
@@ -69,8 +69,7 @@ function StudentEnquiryForm() {
       const data = await res.json().catch(() => null);
       if (res.ok && data?.success === true) {
         trackGoogleAnalyticsEvent('generate_lead', 'contact_enquiry');
-        notifyEnquirySubmitted(data.spreadsheetSaved !== false);
-        setStatus('success');
+        redirectToStudentEnquiryThankYou();
       } else {
         const message = typeof data?.error === 'string' ? data.error : `Request failed (HTTP ${res.status})`;
         console.error('[contact] Student enquiry API rejected submission', { status: res.status, message });

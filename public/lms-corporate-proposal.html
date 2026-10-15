@@ -717,7 +717,9 @@
     let UNIQUE_KEY =
             "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBDb2RlIjoyMzMsIlVzZXJJZCI6MSwiZW1haWwiOiJhcHRlY2hsZWFybmluZ3doaXRlZmllbGRAZ21haWwuY29tIiwiQWRtaW4iOiJZZXMiLCJTb3VyY2UiOiJFbWJlZEZvcm0iLCJpYXQiOjE3OTA4MzQ0MTN9.bfolK5p1eRjowBkDOOJZ2t-HUGKQegbfXWbjdD8ev0U",
         HOST = "https://lmsapi.treeone.one",
-        REDIRECT_TO = "https://www.aptechwhitefield.com/thank-you",
+        REDIRECT_TO = new URLSearchParams(window.location.search).get("enquiryType") === "student-enquiry"
+            ? "https://course.aptechwhitefield.com/thankyou/"
+            : "https://www.aptechwhitefield.com/thank-you",
         CAMP_ID = "6",
         LSS_ID = "8",
         script = document.createElement("script");

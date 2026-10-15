@@ -1,5 +1,11 @@
 import { toast } from 'sonner';
 
+export const STUDENT_ENQUIRY_THANK_YOU_URL = 'https://course.aptechwhitefield.com/thankyou/';
+
+export function redirectToStudentEnquiryThankYou() {
+  window.location.assign(STUDENT_ENQUIRY_THANK_YOU_URL);
+}
+
 export function notifyEnquirySubmitted(spreadsheetSaved = true) {
   if (!spreadsheetSaved) {
     toast.warning('Enquiry received, but not saved to Google Sheets', {

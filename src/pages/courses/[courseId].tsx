@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { Clock, ArrowRight, CheckCircle, ChevronDown, ChevronUp, Monitor, BookOpen, Award, Users, Briefcase, Phone, MessageCircle, Cpu, Zap, BarChart3, Code, Globe, Cloud } from 'lucide-react';
 import { courses } from 'virtual:content';
 import { trackGoogleAnalyticsEvent } from '@/lib/google-analytics';
-import { notifyEnquirySubmitted } from '@/lib/enquiry-feedback';
+import { redirectToStudentEnquiryThankYou } from '@/lib/enquiry-feedback';
 import LmsCorporateProposalForm from '@/components/LmsCorporateProposalForm';
 const courseIcons: Record<string, React.ReactNode> = {
   'ai-machine-learning': <Cpu size={32} />,
@@ -130,8 +130,7 @@ function QuickEnquiry({
       const data = await res.json();
       if (data.success) {
         trackGoogleAnalyticsEvent('generate_lead', 'course_enquiry');
-        notifyEnquirySubmitted(data.spreadsheetSaved !== false);
-        setStatus('success');
+        redirectToStudentEnquiryThankYou();
       } else setStatus('error');
     } catch {
       setStatus('error');

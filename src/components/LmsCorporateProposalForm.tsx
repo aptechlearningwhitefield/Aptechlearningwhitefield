@@ -20,11 +20,13 @@ export default function LmsCorporateProposalForm({
         event.source === iframeRef.current?.contentWindow &&
         event.data?.type === 'aptech-enquiry-submitting'
       ) {
-        setSubmitted(true);
-        toast.success('Enquiry submitted successfully!', {
-          description: 'Thank you. Our team will contact you soon.',
-          duration: 5000,
-        });
+        if (enquiryType !== 'student-enquiry') {
+          setSubmitted(true);
+          toast.success('Enquiry submitted successfully!', {
+            description: 'Thank you. Our team will contact you soon.',
+            duration: 5000,
+          });
+        }
       }
 
       if (
@@ -50,7 +52,7 @@ export default function LmsCorporateProposalForm({
 
     window.addEventListener('message', handleMessage);
     return () => window.removeEventListener('message', handleMessage);
-  }, []);
+  }, [enquiryType]);
 
   return (
     <>
