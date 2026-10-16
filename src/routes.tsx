@@ -10,6 +10,7 @@ import BlogPage from './pages/blog/index';
 import BlogDetailPage from './pages/blog/[slug]';
 import AboutPage from './pages/about';
 import ThankYouPage from './pages/thank-you';
+import { PolicyPage } from './pages/policies';
 import ProdNotFoundPage from './pages/_404';
 import DevNotFoundPage from '../export-plugins/PageNotFound';
 
@@ -47,6 +48,12 @@ export const routes: RouteObject[] = [{
 }, {
   path: '/blogs/:slug',
   element: <BlogDetailPage />
+}, {
+  path: '/privacy',
+  element: <PolicyPage policy="privacy" />
+}, {
+  path: '/terms',
+  element: <PolicyPage policy="terms" />
 }, {
   path: '*',
   element: <NotFoundPage />

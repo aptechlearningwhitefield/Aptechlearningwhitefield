@@ -6,6 +6,7 @@ import { readFileSync } from "node:fs";
 // <api-imports>
 import contact_formName_post_0 from "./api/contact/[formName]/POST";
 import health_get_1 from "./api/health/GET";
+import submit_enquiry_post_2 from "../../api/submit-enquiry";
 // </api-imports>
 import { seoRoutes } from "../lib/seo-routes";
 import {
@@ -87,6 +88,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // <api-registrations>
 app.post("/api/contact/:formName", contact_formName_post_0);
+app.post("/api/submit-enquiry", submit_enquiry_post_2);
 app.get("/api/health", health_get_1);
 // </api-registrations>
 

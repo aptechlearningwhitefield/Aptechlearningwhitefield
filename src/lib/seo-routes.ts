@@ -38,6 +38,8 @@ export const seoRoutes: SeoRoute[] = [
   { path: "/schools-colleges", changefreq: "monthly", priority: 0.8 },
   { path: "/placements", changefreq: "monthly", priority: 0.8 },
   { path: "/blogs", changefreq: "monthly", priority: 0.8 },
+  { path: "/privacy", changefreq: "yearly", priority: 0.5 },
+  { path: "/terms", changefreq: "yearly", priority: 0.5 },
   { path: "/courses/ai-machine-learning", changefreq: "monthly", priority: 0.7 },
   { path: "/courses/generative-ai", changefreq: "monthly", priority: 0.7 },
   { path: "/courses/genai-accelerator", changefreq: "monthly", priority: 0.6 },
