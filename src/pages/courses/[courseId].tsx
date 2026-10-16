@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 import { useState } from 'react';
 import { Clock, ArrowRight, CheckCircle, ChevronDown, ChevronUp, Monitor, BookOpen, Award, Users, Briefcase, Phone, MessageCircle, Cpu, Zap, BarChart3, Code, Globe, Cloud } from 'lucide-react';
 import { courses } from 'virtual:content';
+import { getCourseSeoKeywords } from '@/lib/seo-metadata';
 import { trackGoogleAnalyticsEvent } from '@/lib/google-analytics';
 import { redirectToStudentEnquiryThankYou } from '@/lib/enquiry-feedback';
 import LmsCorporateProposalForm from '@/components/LmsCorporateProposalForm';
@@ -194,10 +195,12 @@ export default function CourseDetailPage() {
       </main>;
   }
   const url = `${site}/courses/${courseId}`;
+  const keywords = getCourseSeoKeywords(metaCourse.id);
   return <>
       <Helmet>
         <title>{metaCourse.name} Course in Whitefield Bangalore | Aptech Learning</title>
         <meta name="description" content={`${metaCourse.name} course at Aptech Learning Whitefield. ${metaCourse.duration} program. ${metaCourse.overview.slice(0, 120)}...`} />
+        {keywords && <meta name="keywords" content={keywords} />}
         <link rel="canonical" href={url} />
         <meta property="og:title" content={`${metaCourse.name} Course | Aptech Learning Whitefield`} />
         <meta property="og:description" content={metaCourse.overview.slice(0, 160)} />

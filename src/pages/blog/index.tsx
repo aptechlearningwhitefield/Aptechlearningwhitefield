@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 import { BookOpen, Clock, ArrowRight, Tag } from 'lucide-react';
 import { SITE_URL as site } from '../../lib/site-url';
 import { blog_posts } from 'virtual:content';
+import { blogListingSeoKeywords } from '../../lib/seo-metadata';
 const categoryColors: Record<string, string> = {
   'AI & Machine Learning': 'bg-blue-50 text-blue-700',
   'Data Science': 'bg-purple-50 text-purple-700',
@@ -28,6 +29,7 @@ export default function BlogPage() {
       <Helmet>
         <title>IT Training Blog | AI, Data Science, Python Tips | Aptech Learning Whitefield</title>
         <meta name="description" content="Expert articles on AI, Machine Learning, Data Science, Python, Cybersecurity, and IT careers in Bangalore. Learn from Aptech Learning Whitefield's training experts." />
+        <meta name="keywords" content={blogListingSeoKeywords} />
         <link rel="canonical" href={`${site}/blogs`} />
         <meta property="og:title" content="IT Training Blog | Aptech Learning Whitefield Bangalore" />
         <meta property="og:description" content="Career guides, tech tutorials, and industry insights on AI, Data Science, Python, Cybersecurity, and Cloud Computing from Aptech Learning Whitefield." />

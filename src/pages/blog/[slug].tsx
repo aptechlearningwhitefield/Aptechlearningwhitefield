@@ -4,6 +4,7 @@ import { ArrowLeft, Clock, User, Calendar, Tag, ArrowRight, BookOpen } from 'luc
 import { useEffect } from 'react';
 import { blog_posts } from 'virtual:content';
 import { SITE_URL as site } from '../../lib/site-url';
+import { getBlogSeoKeywords } from '../../lib/seo-metadata';
 
 
 const categoryColors: Record<string, string> = {
@@ -13,6 +14,13 @@ const categoryColors: Record<string, string> = {
   'Cybersecurity': 'bg-red-50 text-red-700',
   'Generative AI': 'bg-orange-50 text-orange-700',
   'Cloud Computing': 'bg-sky-50 text-sky-700'
+};
+
+const aiCareerImages = {
+  learner: '/assets/blog-images/ai-machine-learning-career-2026/ai-career-learner.png',
+  workspace: '/assets/blog-images/ai-machine-learning-career-2026/ai-machine-learning-workspace.png',
+  lifecycle: '/assets/blog-images/ai-machine-learning-career-2026/machine-learning-lifecycle.png',
+  progression: '/assets/blog-images/ai-machine-learning-career-2026/career-progression-salary-growth.png',
 };
 
 export default function BlogDetailPage() {
@@ -35,6 +43,10 @@ export default function BlogDetailPage() {
   const relatedPosts = blog_posts
     .filter(p => p.category === post.category && p.slug !== post.slug)
     .slice(0, 3);
+  const isAiCareerArticle = post.slug === 'ai-machine-learning-career-2026';
+  const coverImage = isAiCareerArticle
+    ? `${site}${aiCareerImages.learner}`
+    : `${site}/airo-assets/images/blogs/default-blog-image`;
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -42,7 +54,7 @@ export default function BlogDetailPage() {
     '@id': `${site}/blogs/${post.slug}#article`,
     headline: post.title,
     description: post.excerpt,
-    image: `${site}/airo-assets/images/blogs/default-blog-image`,
+    image: coverImage,
     datePublished: post.date,
     dateModified: post.date,
     author: {
@@ -53,19 +65,21 @@ export default function BlogDetailPage() {
       '@id': `${site}/#organization`
     }
   };
+  const keywords = getBlogSeoKeywords(post.slug);
 
   return <>
     <Helmet>
       <title>{post.title} | Aptech Learning Whitefield Blog</title>
       <meta name="description" content={post.excerpt} />
+      {keywords && <meta name="keywords" content={keywords} />}
       <link rel="canonical" href={`${site}/blogs/${post.slug}`} />
       <meta property="og:title" content={post.title} />
       <meta property="og:description" content={post.excerpt} />
       <meta property="og:url" content={`${site}/blogs/${post.slug}`} />
       <meta property="og:type" content="article" />
-      <meta property="og:image" content={`${site}/airo-assets/images/blogs/default-blog-image`} />
+      <meta property="og:image" content={coverImage} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:image" content={`${site}/airo-assets/images/blogs/default-blog-image`} />
+      <meta name="twitter:image" content={coverImage} />
       <meta name="twitter:title" content={post.title} />
       <meta name="twitter:description" content={post.excerpt} />
       <meta name="robots" content="index, follow" />
@@ -123,6 +137,21 @@ export default function BlogDetailPage() {
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="prose prose-lg max-w-none text-slate-700 leading-relaxed">
+            {isAiCareerArticle && (
+              <figure className="mb-8">
+                <img
+                  src={aiCareerImages.learner}
+                  alt="A learner studying machine learning at a laptop in a collaborative workspace"
+                  width={1365}
+                  height={768}
+                  fetchPriority="high"
+                  className="w-full h-auto rounded-xl"
+                />
+                <figcaption className="mt-2 text-center text-sm text-slate-500">
+                  Building an AI career takes focused learning and practical work.
+                </figcaption>
+              </figure>
+            )}
             <div className="bg-blue-50 border-l-4 border-primary p-6 rounded-r-lg mb-8">
               <p className="font-semibold text-primary mb-2">Article Overview</p>
               <p>{post.excerpt}</p>
@@ -135,6 +164,22 @@ export default function BlogDetailPage() {
                 curious about the IT industry, this guide provides practical knowledge and actionable steps.
               </p>
 
+              {isAiCareerArticle && (
+                <figure className="my-8">
+                  <img
+                    src={aiCareerImages.workspace}
+                    alt="Machine learning, data analysis, and Python study materials beside a laptop"
+                    width={1152}
+                    height={768}
+                    loading="lazy"
+                    className="w-full h-auto rounded-xl"
+                  />
+                  <figcaption className="mt-2 text-center text-sm text-slate-500">
+                    AI careers draw on programming, data analysis, and machine learning skills.
+                  </figcaption>
+                </figure>
+              )}
+
               <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Key Takeaways</h2>
               <ul className="space-y-3 list-disc list-inside">
                 <li>Understanding the current market demand for {post.category} professionals</li>
@@ -144,12 +189,44 @@ export default function BlogDetailPage() {
                 <li>Why hands-on learning is crucial in the IT industry</li>
               </ul>
 
+              {isAiCareerArticle && (
+                <figure className="my-8">
+                  <img
+                    src={aiCareerImages.lifecycle}
+                    alt="Machine learning lifecycle: data preparation, model training, model evaluation, and deployment"
+                    width={1152}
+                    height={768}
+                    loading="lazy"
+                    className="w-full h-auto rounded-xl"
+                  />
+                  <figcaption className="mt-2 text-center text-sm text-slate-500">
+                    A typical machine-learning workflow moves from preparing data to deploying a model.
+                  </figcaption>
+                </figure>
+              )}
+
               <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Why This Matters</h2>
               <p>
                 The IT industry is evolving rapidly, and staying updated with trends is essential for career success. 
                 At Aptech Learning Whitefield, we ensure our curriculum aligns with industry requirements, helping you 
                 build relevant skills that employers actually look for.
               </p>
+
+              {isAiCareerArticle && (
+                <figure className="my-8">
+                  <img
+                    src={aiCareerImages.progression}
+                    alt="Career progression from early-career learning to mid-career growth and senior expertise"
+                    width={979}
+                    height={768}
+                    loading="lazy"
+                    className="w-full h-auto rounded-xl"
+                  />
+                  <figcaption className="mt-2 text-center text-sm text-slate-500">
+                    Career growth develops from foundational learning to greater responsibility and expertise.
+                  </figcaption>
+                </figure>
+              )}
 
               <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Next Steps</h2>
               <p>

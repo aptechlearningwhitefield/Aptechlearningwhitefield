@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { Clock, ArrowRight, CheckCircle, Cpu, Zap, BarChart3, Code, Globe, Cloud, Monitor, BookOpen, Award, Users } from 'lucide-react';
 import { courses } from 'virtual:content';
 import { SITE_URL as site } from '../../lib/site-url';
+import { courseListingSeoKeywords } from '../../lib/seo-metadata';
 const courseIcons: Record<string, React.ReactNode> = {
   'ai-machine-learning': <Cpu size={28} />,
   'generative-ai': <Zap size={28} />,
@@ -92,6 +93,7 @@ export default function CoursesPage() {
       <Helmet>
         <title>IT Courses in Whitefield Bangalore | Aptech Learning Whitefield</title>
         <meta name="description" content="Explore 10+ industry-ready IT courses at Aptech Learning Whitefield — AI, Machine Learning, Data Science, Python, Full Stack Development, Cloud Computing and more. Classroom & online batches available." />
+        <meta name="keywords" content={courseListingSeoKeywords} />
         <link rel="canonical" href={`${site}/courses`} />
         <meta property="og:title" content="IT Courses in Whitefield Bangalore | Aptech Learning Whitefield" />
         <meta property="og:description" content="10+ industry-ready IT courses in Whitefield, Bangalore. AI, Data Science, Python, Full Stack, Cloud Computing and more." />
