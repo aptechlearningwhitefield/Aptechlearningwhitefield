@@ -123,6 +123,22 @@
   line-height: 1.75;
 }
 
+.ai-career-article a {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.ai-career-article a:hover {
+  color: #1d4ed8;
+}
+
+.ai-career-article a:focus-visible {
+  border-radius: 2px;
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
 .ai-career-article p {
   margin: 0 0 1rem;
 }
