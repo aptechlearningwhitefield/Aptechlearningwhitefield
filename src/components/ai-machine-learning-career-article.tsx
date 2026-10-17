@@ -91,7 +91,7 @@ const faqs = [
 
 export default function AiMachineLearningCareerArticle() {
   return (
-    <article className="ai-career-article max-w-none text-slate-700">
+    <article className="blog-article max-w-none text-slate-700">
       <ArticleImage
         src={images.hero}
         alt="Young technology professional exploring AI and machine learning on a laptop."

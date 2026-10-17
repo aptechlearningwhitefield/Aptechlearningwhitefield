@@ -12,6 +12,7 @@ import {
 import { useEffect } from "react";
 import { blog_posts } from "virtual:content";
 import AiMachineLearningCareerArticle from "../../components/ai-machine-learning-career-article";
+import DataScienceVsDataAnalyticsArticle from "../../components/data-science-vs-data-analytics-article";
 import { SITE_URL as site } from "../../lib/site-url";
 import {
   blogSeoMetadata,
@@ -31,6 +32,8 @@ const aiCareerImages = {
   learner:
     "/assets/blog-images/ai-machine-learning-career-2026/ai-career-learner.png",
 };
+const dataScienceVsAnalyticsHero =
+  "/assets/blog-images/data-science-vs-data-analytics/data-science-vs-data-analytics-career.png";
 
 export default function BlogDetailPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -53,9 +56,13 @@ export default function BlogDetailPage() {
     .filter((p) => p.category === post.category && p.slug !== post.slug)
     .slice(0, 3);
   const isAiCareerArticle = post.slug === "ai-machine-learning-career-2026";
+  const isDataScienceVsAnalyticsArticle =
+    post.slug === "data-science-vs-data-analytics";
   const coverImage = isAiCareerArticle
     ? `${site}${aiCareerImages.learner}`
-    : `${site}/airo-assets/images/blogs/default-blog-image`;
+    : isDataScienceVsAnalyticsArticle
+      ? `${site}${dataScienceVsAnalyticsHero}`
+      : `${site}/airo-assets/images/blogs/default-blog-image`;
   const blogSeo = blogSeoMetadata[post.slug];
   const seoTitle = blogSeo?.title ?? `${post.title} | Aptech Learning Whitefield Blog`;
   const seoDescription = blogSeo?.description ?? post.excerpt;
@@ -172,6 +179,8 @@ export default function BlogDetailPage() {
           <div className="container mx-auto px-4 max-w-4xl">
             {isAiCareerArticle ? (
               <AiMachineLearningCareerArticle />
+            ) : isDataScienceVsAnalyticsArticle ? (
+              <DataScienceVsDataAnalyticsArticle />
             ) : (
               <div className="prose prose-lg max-w-none text-slate-700 leading-relaxed">
                 <div className="bg-blue-50 border-l-4 border-primary p-6 rounded-r-lg mb-8">

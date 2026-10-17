@@ -68,7 +68,7 @@ export const blogSeoKeywords: Record<string, string> = {
   "ai-machine-learning-career-2026":
     "best course for career switch to it, which course has more job opportunities in bangalore, ai ml career, ai jobs, machine learning jobs, ai ml career in whitefield, ai ml career in bangalore, ai ml career near itpl, ai jobs in bangalore, ai jobs in marathahalli, ai jobs in whitefield, machine learning jobs in kr puram, machine learning jobs for freshers in bangalore, machine learning jobs in whitefield, ai ml career guide for beginners",
   "data-science-vs-data-analytics":
-    "data science vs full stack development, can non it graduate learn data science, data analyst jobs in whitefield, data science vs data analytics, data science career, data analyst career, data science vs data analytics in whitefield, data science vs data analytics in bangalore, data science vs data analytics near itpl, data science career in bangalore, data science career in marathahalli, data science career in whitefield, data analyst career in kr puram, data analyst career for freshers in bangalore, data analyst career in whitefield, data science vs data analytics guide for beginners",
+    "data science vs data analytics, data analyst jobs in whitefield, data science course in whitefield, data science courses in bangalore with placement, smart pro data science aptech, data analytics and power bi, data science career, data analyst career, data science vs data analytics in whitefield, data science vs data analytics in bangalore, data science vs data analytics near itpl, data science career in bangalore, data science career in marathahalli, data science career in whitefield, data analyst career for freshers in bangalore, data science vs data analytics guide for beginners",
   "python-for-beginners-whitefield":
     "python vs java which to learn first, python developer salary in bangalore for freshers, python for beginners, learn python, python jobs, python for beginners in whitefield, python for beginners in bangalore, python for beginners near itpl, learn python in bangalore, learn python in marathahalli, learn python in whitefield, python jobs in kr puram, python jobs for freshers in bangalore, python jobs in whitefield, python for beginners guide for beginners",
   "cybersecurity-career-bangalore":
@@ -302,15 +302,15 @@ export const blogSeoMetadata: Record<string, CourseSEOMetadata> = {
       "Real talk on moving into AI from sales, support, finance or non-tech roles. What to learn first, how long it takes and where to find openings near Whitefield.",
   },
   "data-science-vs-data-analytics": {
-    title: "Data Science vs Full Stack Development | Bangalore Careers",
+    title: "Data Science vs Data Analytics: Which Career Path is Right for You?",
     description:
-      "Data science vs full stack development vs data analytics: compare the skills, salaries and day-to-day work in Bangalore to pick the right career path for you.",
-    ogTitle: "Data or Development? Choosing Your Tech Path in Bangalore",
+      "Compare data science and data analytics, including their skills, tools, career opportunities and learning paths, to decide which direction suits you.",
+    ogTitle: "Data Science vs Data Analytics: Which Career Path Is Right for You?",
     ogDescription:
-      "One path is about finding answers in numbers, the other is about building products people use. Here's how to tell which one suits your strengths and interests.",
-    twitterTitle: "Can Non-IT Grads Go Into Data Science? A Bangalore Guide",
+      "Explore the differences between data science and data analytics, the skills each path uses and practical ways to choose where to start.",
+    twitterTitle: "Data Science vs Data Analytics: A Career Guide",
     twitterDescription:
-      "Yes, many do. We compare data science, data analytics and full stack careers, explain the learning curve for each and share honest tips for complete beginners.",
+      "Compare the day-to-day work, tools, skills and learning paths for data science and data analytics before choosing your next step.",
   },
   "python-for-beginners-whitefield": {
     title: "Python vs Java: Which to Learn First? | Bangalore Guide",
