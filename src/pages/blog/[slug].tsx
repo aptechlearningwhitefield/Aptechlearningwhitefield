@@ -57,7 +57,7 @@ export default function BlogDetailPage() {
     ? "Best Course for Career Switch to IT? AI & ML in Bangalore"
     : `${post.title} | Aptech Learning Whitefield Blog`;
   const seoDescription = isAiCareerArticle
-    ? "Looking for the best course for a career switch to IT? See why AI and ML stand out in Bangalore, which roles are opening up and how to take your very first step."
+    ? "Looking for the best course for career switch to IT? See why AI and ML stand out in Bangalore, which roles are opening up and how to take your very first step."
     : post.excerpt;
   const socialTitle = isAiCareerArticle
     ? "Switching to Tech? Why AI & ML Is a Smart Bet in Bangalore"
