@@ -4,10 +4,14 @@ import { motion } from 'motion/react';
 import { useState } from 'react';
 import { Clock, ArrowRight, CheckCircle, ChevronDown, ChevronUp, Monitor, BookOpen, Award, Users, Briefcase, Phone, MessageCircle, Cpu, Zap, BarChart3, Code, Globe, Cloud } from 'lucide-react';
 import { courses } from 'virtual:content';
-import { getCourseSeoKeywords } from '@/lib/seo-metadata';
+import {
+  getCourseSEOMetadata,
+  getCourseSeoKeywords,
+} from '@/lib/seo-metadata';
 import { trackGoogleAnalyticsEvent } from '@/lib/google-analytics';
 import { redirectToStudentEnquiryThankYou } from '@/lib/enquiry-feedback';
 import LmsCorporateProposalForm from '@/components/LmsCorporateProposalForm';
+import { SITE_URL as site } from '@/lib/site-url';
 const courseIcons: Record<string, React.ReactNode> = {
   'ai-machine-learning': <Cpu size={32} />,
   'generative-ai': <Zap size={32} />,
@@ -182,10 +186,8 @@ export default function CourseDetailPage() {
     }
     return initial;
   });
-  const site = 'https://www.cheekiratech.com';
-
   // Find course for SEO/meta only (not for rendering content)
-  const metaCourse = courses.items.find((c) => c.id === courseId && !['cloud-computing', 'microsoft-technologies'].includes(c.id));
+  const metaCourse = courses.items.find((c) => c.id === courseId);
   if (!metaCourse) {
     return <main className="min-h-[60vh] flex items-center justify-center">
         <div className="text-center">
@@ -196,17 +198,31 @@ export default function CourseDetailPage() {
   }
   const url = `${site}/courses/${courseId}`;
   const keywords = getCourseSeoKeywords(metaCourse.id);
+  const seo = getCourseSEOMetadata(metaCourse.id);
+  const title =
+    seo?.title ?? `${metaCourse.name} Course in Whitefield Bangalore | Aptech Learning`;
+  const description =
+    seo?.description ??
+    `${metaCourse.name} course at Aptech Learning Whitefield. ${metaCourse.duration} program. ${metaCourse.overview.slice(0, 120)}...`;
+  const ogTitle =
+    seo?.ogTitle ?? `${metaCourse.name} Course | Aptech Learning Whitefield`;
+  const ogDescription = seo?.ogDescription ?? metaCourse.overview.slice(0, 160);
   return <>
       <Helmet>
-        <title>{metaCourse.name} Course in Whitefield Bangalore | Aptech Learning</title>
-        <meta name="description" content={`${metaCourse.name} course at Aptech Learning Whitefield. ${metaCourse.duration} program. ${metaCourse.overview.slice(0, 120)}...`} />
+        <title>{title}</title>
+        <meta name="description" content={description} />
         {keywords && <meta name="keywords" content={keywords} />}
         <link rel="canonical" href={url} />
-        <meta property="og:title" content={`${metaCourse.name} Course | Aptech Learning Whitefield`} />
-        <meta property="og:description" content={metaCourse.overview.slice(0, 160)} />
+        <meta property="og:title" content={ogTitle} />
+        <meta property="og:description" content={ogDescription} />
         <meta property="og:url" content={url} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={seo?.twitterTitle ?? ogTitle} />
+        <meta
+          name="twitter:description"
+          content={seo?.twitterDescription ?? ogDescription}
+        />
         <script type="application/ld+json">{JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'Course',
@@ -237,7 +253,7 @@ export default function CourseDetailPage() {
         </nav>
 
         {/* Render each course, show only the matching one */}
-        {courses.items.filter((course) => !['cloud-computing', 'microsoft-technologies'].includes(course.id)).map((course) => {
+        {courses.items.map((course) => {
         const c = colorMap[course.color] ?? colorMap.blue;
         return <div key={course.id} className={course.id !== courseId ? 'hidden' : ''}>
 

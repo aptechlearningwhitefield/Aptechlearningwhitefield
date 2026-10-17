@@ -314,8 +314,8 @@ export default function HomePage() {
         <meta property="og:url" content={seoMetadata.home.canonical} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={seoMetadata.home.ogTitle} />
-        <meta name="twitter:description" content={seoMetadata.home.ogDescription} />
+        <meta name="twitter:title" content={seoMetadata.home.twitterTitle} />
+        <meta name="twitter:description" content={seoMetadata.home.twitterDescription} />
         <meta name="robots" content="index, follow" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>

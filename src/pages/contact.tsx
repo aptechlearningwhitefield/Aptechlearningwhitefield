@@ -577,8 +577,8 @@ export default function ContactPage() {
         <meta property="og:url" content={seoMetadata.contact.canonical} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={seoMetadata.contact.ogTitle} />
-        <meta name="twitter:description" content={seoMetadata.contact.ogDescription} />
+        <meta name="twitter:title" content={seoMetadata.contact.twitterTitle} />
+        <meta name="twitter:description" content={seoMetadata.contact.twitterDescription} />
         <meta name="robots" content="index, follow" />
       </Helmet>
 

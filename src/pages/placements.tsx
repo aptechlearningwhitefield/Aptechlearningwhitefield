@@ -17,8 +17,8 @@ export default function PlacementsPage() {
         <meta property="og:url" content={seoMetadata.placements.canonical} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={seoMetadata.placements.ogTitle} />
-        <meta name="twitter:description" content={seoMetadata.placements.ogDescription} />
+        <meta name="twitter:title" content={seoMetadata.placements.twitterTitle} />
+        <meta name="twitter:description" content={seoMetadata.placements.twitterDescription} />
         <meta name="robots" content="index, follow" />
         <script type="application/ld+json">{JSON.stringify(seoMetadata.placements.structuredData)}</script>
       </Helmet>

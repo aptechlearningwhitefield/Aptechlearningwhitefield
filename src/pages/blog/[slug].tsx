@@ -13,7 +13,10 @@ import { useEffect } from "react";
 import { blog_posts } from "virtual:content";
 import AiMachineLearningCareerArticle from "../../components/ai-machine-learning-career-article";
 import { SITE_URL as site } from "../../lib/site-url";
-import { getBlogSeoKeywords } from "../../lib/seo-metadata";
+import {
+  blogSeoMetadata,
+  getBlogSeoKeywords,
+} from "../../lib/seo-metadata";
 
 const categoryColors: Record<string, string> = {
   "AI & Machine Learning": "bg-blue-50 text-blue-700",
@@ -53,33 +56,20 @@ export default function BlogDetailPage() {
   const coverImage = isAiCareerArticle
     ? `${site}${aiCareerImages.learner}`
     : `${site}/airo-assets/images/blogs/default-blog-image`;
-  const seoTitle = isAiCareerArticle
-    ? "Best Course for Career Switch to IT? AI & ML in Bangalore"
-    : `${post.title} | Aptech Learning Whitefield Blog`;
-  const seoDescription = isAiCareerArticle
-    ? "Looking for the best course for career switch to IT? See why AI and ML stand out in Bangalore, which roles are opening up and how to take your very first step."
-    : post.excerpt;
-  const socialTitle = isAiCareerArticle
-    ? "Switching to Tech? Why AI & ML Is a Smart Bet in Bangalore"
-    : post.title;
-  const socialDescription = isAiCareerArticle
-    ? "Changing careers is scary. This guide lays out the AI and ML roles companies are hiring for, the skills that matter most and a realistic plan to get there."
-    : post.excerpt;
-  const twitterTitle = isAiCareerArticle
-    ? "Stuck in the Wrong Job? How to Move Into Tech in Bangalore"
-    : post.title;
-  const twitterDescription = isAiCareerArticle
-    ? "Real talk on moving into AI from sales, support, finance or non-tech roles. What to learn first, how long it takes and where to find openings near Whitefield."
-    : post.excerpt;
-  const keywords = isAiCareerArticle
-    ? "best course for career switch to it, which course has more job opportunities in bangalore, ai ml career, ai jobs, machine learning jobs, ai ml career in whitefield, ai ml career in bangalore, ai ml career near itpl, ai jobs in bangalore, ai jobs in marathahalli, ai jobs in whitefield, machine learning jobs in kr puram, machine learning jobs for freshers in bangalore, machine learning jobs in whitefield, ai ml career guide for beginners"
-    : getBlogSeoKeywords(post.slug);
+  const blogSeo = blogSeoMetadata[post.slug];
+  const seoTitle = blogSeo?.title ?? `${post.title} | Aptech Learning Whitefield Blog`;
+  const seoDescription = blogSeo?.description ?? post.excerpt;
+  const socialTitle = blogSeo?.ogTitle ?? post.title;
+  const socialDescription = blogSeo?.ogDescription ?? post.excerpt;
+  const twitterTitle = blogSeo?.twitterTitle ?? post.title;
+  const twitterDescription = blogSeo?.twitterDescription ?? post.excerpt;
+  const keywords = getBlogSeoKeywords(post.slug);
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "@id": `${site}/blogs/${post.slug}#article`,
-    headline: post.title,
+    headline: seoTitle,
     description: seoDescription,
     image: coverImage,
     datePublished: post.date,

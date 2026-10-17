@@ -183,8 +183,8 @@ export default function SchoolsCollegesPage() {
         <meta property="og:url" content={seoMetadata.schoolsColleges.canonical} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={seoMetadata.schoolsColleges.ogTitle} />
-        <meta name="twitter:description" content={seoMetadata.schoolsColleges.ogDescription} />
+        <meta name="twitter:title" content={seoMetadata.schoolsColleges.twitterTitle} />
+        <meta name="twitter:description" content={seoMetadata.schoolsColleges.twitterDescription} />
         <meta name="robots" content="index, follow" />
       </Helmet>
 

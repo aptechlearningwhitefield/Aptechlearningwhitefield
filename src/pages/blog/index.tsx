@@ -27,17 +27,19 @@ const jsonLd = {
 export default function BlogPage() {
   return <>
       <Helmet>
-        <title>IT Training Blog | AI, Data Science, Python Tips | Aptech Learning Whitefield</title>
-        <meta name="description" content="Expert articles on AI, Machine Learning, Data Science, Python, Cybersecurity, and IT careers in Bangalore. Learn from Aptech Learning Whitefield's training experts." />
+        <title>Which Course Has More Job Opportunities in Bangalore? | Blog</title>
+        <meta name="description" content="Which course has more job opportunities in Bangalore? Our blog breaks it down, plus Aptech vs online courses and online vs offline classes, in plain words." />
         <meta name="keywords" content={blogListingSeoKeywords} />
         <link rel="canonical" href={`${site}/blogs`} />
-        <meta property="og:title" content="IT Training Blog | Aptech Learning Whitefield Bangalore" />
-        <meta property="og:description" content="Career guides, tech tutorials, and industry insights on AI, Data Science, Python, Cybersecurity, and Cloud Computing from Aptech Learning Whitefield." />
+        <meta property="og:title" content="Honest IT Career Advice for Bangalore Learners | Aptech Blog" />
+        <meta property="og:description" content="No hype, no jargon. Practical guides on choosing a course, switching careers, salaries and what employers really look for, written by our own Whitefield team." />
         <meta property="og:url" content={`${site}/blogs`} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${site}/assets/cheekira-logo.jpg`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={`${site}/assets/cheekira-logo.jpg`} />
+        <meta name="twitter:title" content="Online or Offline Classes? Answers for Bangalore Learners" />
+        <meta name="twitter:description" content="Torn between online courses and classroom learning? Unsure which skill pays off? Read short, useful guides from Aptech Whitefield before you make your move." />
         <meta name="robots" content="index, follow" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>

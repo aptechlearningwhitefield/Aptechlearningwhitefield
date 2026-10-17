@@ -91,15 +91,19 @@ export default function CoursesPage() {
   const availableCourses = courses.items.filter((course) => !['cloud-computing', 'microsoft-technologies', 'cybersecurity', 'digital-marketing'].includes(course.id));
   return <>
       <Helmet>
-        <title>IT Courses in Whitefield Bangalore | Aptech Learning Whitefield</title>
-        <meta name="description" content="Explore 10+ industry-ready IT courses at Aptech Learning Whitefield — AI, Machine Learning, Data Science, Python, Full Stack Development, Cloud Computing and more. Classroom & online batches available." />
+        <title>Top Software Training Institute in Whitefield, Bangalore</title>
+        <meta name="description" content="Compare every course at our software training institute in Whitefield: Python, data, AI, full stack, cloud and more, with short-term options and job support." />
         <meta name="keywords" content={courseListingSeoKeywords} />
         <link rel="canonical" href={`${site}/courses`} />
-        <meta property="og:title" content="IT Courses in Whitefield Bangalore | Aptech Learning Whitefield" />
-        <meta property="og:description" content="10+ industry-ready IT courses in Whitefield, Bangalore. AI, Data Science, Python, Full Stack, Cloud Computing and more." />
+        <meta property="og:title" content="Find the IT Course That Fits Your Goals | Aptech Bangalore" />
+        <meta property="og:description" content="Not sure where to start? Browse our courses by career goal, the time you can give each week and your skill level, then talk to a counsellor for free advice." />
         <meta property="og:url" content={`${site}/courses`} />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content={`${site}/assets/cheekira-logo.jpg`} />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={`${site}/assets/cheekira-logo.jpg`} />
+        <meta name="twitter:title" content="Which IT Course Is Right for You? Aptech Bangalore Guide" />
+        <meta name="twitter:description" content="Short-term courses with job placement, weekend batches for working people and beginner tracks for first-timers. See everything Aptech Whitefield offers today." />
         <script type="application/ld+json">{JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'ItemList',

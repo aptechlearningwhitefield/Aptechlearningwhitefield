@@ -200,8 +200,8 @@ export default function CorporateTrainingPage() {
         <meta property="og:url" content={seo.canonical} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={seo.ogTitle} />
-        <meta name="twitter:description" content={seo.ogDescription} />
+        <meta name="twitter:title" content={seo.twitterTitle} />
+        <meta name="twitter:description" content={seo.twitterDescription} />
         <meta name="robots" content="index, follow" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>

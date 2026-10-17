@@ -49,8 +49,8 @@ export default function AboutPage() {
         <meta property="og:url" content={seoMetadata.about.canonical} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={seoMetadata.about.ogTitle} />
-        <meta name="twitter:description" content={seoMetadata.about.ogDescription} />
+        <meta name="twitter:title" content={seoMetadata.about.twitterTitle} />
+        <meta name="twitter:description" content={seoMetadata.about.twitterDescription} />
         <meta name="robots" content="index, follow" />
       </Helmet>
 
