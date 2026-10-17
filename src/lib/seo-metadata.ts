@@ -291,7 +291,7 @@ export const courseSeoMetadata: Record<string, CourseSEOMetadata> = {
 
 export const blogSeoMetadata: Record<string, CourseSEOMetadata> = {
   "ai-machine-learning-career-2026": {
-    title: "Best Course for Career Switch to IT? AI & ML in Bangalore",
+    title: "AI & Machine Learning Careers in 2026: Skills, Salaries & How to Get Started",
     description:
       "Looking for the best course for career switch to IT? See why AI and ML stand out in Bangalore, which roles are opening up and how to take your very first step.",
     ogTitle: "Switching to Tech? Why AI & ML Is a Smart Bet in Bangalore",
