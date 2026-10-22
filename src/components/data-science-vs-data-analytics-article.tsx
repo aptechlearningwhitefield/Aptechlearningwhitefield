@@ -11,7 +11,6 @@ const images = {
 };
 
 const courseUrl = "/courses/data-science";
-const analyticsCourseUrl = "/courses/data-analytics-power-bi";
 const coursesUrl = "/courses";
 
 function ArticleImage({
@@ -550,11 +549,10 @@ export default function DataScienceVsDataAnalyticsArticle() {
       </p>
       <p>
         Aptech Learning Whitefield lists programmes in{" "}
-        <a href={courseUrl}>Data Science</a> and{" "}
-        <a href={analyticsCourseUrl}>Data Analytics &amp; Power BI</a>. The
-        appropriate option depends on whether you want to focus initially on
-        reporting and business intelligence or develop broader programming,
-        statistical analysis and modelling skills.
+        Data Science and Data Analytics &amp; Power BI. The appropriate option
+        depends on whether you want to focus initially on reporting and business
+        intelligence or develop broader programming, statistical analysis and
+        modelling skills.
       </p>
       <p>
         If you are exploring a{" "}
@@ -565,13 +563,11 @@ export default function DataScienceVsDataAnalyticsArticle() {
       </p>
       <p>
         You may also come across searches for{" "}
-        <a href={courseUrl}>
-          data science courses in Bangalore with placement
-        </a>
-        . If placement assistance is important to you, ask the provider what
-        support is included, what eligibility conditions apply and what
-        verified outcome information is available. Do not assume that enrolling
-        in a course guarantees employment.
+        data science courses in Bangalore with placement. If placement
+        assistance is important to you, ask the provider what support is
+        included, what eligibility conditions apply and what verified outcome
+        information is available. Do not assume that enrolling in a course
+        guarantees employment.
       </p>
       <p>
         When researching{" "}
