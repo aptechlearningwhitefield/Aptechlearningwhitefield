@@ -65,9 +65,11 @@ export default function DataScienceVsDataAnalyticsArticle() {
       </p>
       <p>
         In this guide, we compare{" "}
-        <a href="#difference">data science vs data analytics</a>, explore their
-        skills and career opportunities, and explain how beginners can choose
-        the right learning path.
+        <a href="https://www.aptechwhitefield.com/courses/data-analytics-power-bi?utm_source=website&utm_medium=blog&utm_campaign=organic">
+          data science vs data analytics
+        </a>
+        , explore their skills and career opportunities, and explain how
+        beginners can choose the right learning path.
       </p>
 
       <h2 id="difference">
