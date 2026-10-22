@@ -4,6 +4,8 @@ const images = {
     "/assets/blog-images/data-science-vs-data-analytics/data-analytics-vs-data-science-infographic.png",
   analytics:
     "/assets/blog-images/data-science-vs-data-analytics/data-analyst-skills-tools.png",
+  scienceSkills:
+    "/assets/blog-images/data-science-vs-data-analytics/data-scientist-skills.png",
   career:
     "/assets/blog-images/data-science-vs-data-analytics/data-science-data-analytics-career-path.jpg",
 };
@@ -27,7 +29,7 @@ function ArticleImage({
         src={src}
         alt={alt}
         loading={loading}
-        className="h-auto w-full rounded-xl"
+        className="block h-auto w-full"
       />
     </figure>
   );
@@ -35,7 +37,7 @@ function ArticleImage({
 
 export default function DataScienceVsDataAnalyticsArticle() {
   return (
-    <article className="blog-article data-comparison-article max-w-none text-slate-700">
+    <article className="blog-article data-comparison-article max-w-none text-left text-slate-700">
       <ArticleImage
         src={images.hero}
         alt="Data science and data analytics career comparison with dashboards on a computer screen."
@@ -155,11 +157,6 @@ export default function DataScienceVsDataAnalyticsArticle() {
         analysis. Always review the actual responsibilities listed in a job
         description before deciding which career to pursue.
       </p>
-      <ArticleImage
-        src={images.analytics}
-        alt="Data analyst reviewing business intelligence dashboards, charts and reports."
-      />
-
       <h2>What Is Data Analytics?</h2>
       <p>
         Data analytics is the process of examining data to answer questions and
@@ -275,6 +272,10 @@ export default function DataScienceVsDataAnalyticsArticle() {
         exact requirements depend on the position, but several foundational
         skills are useful across many roles.
       </p>
+      <ArticleImage
+        src={images.analytics}
+        alt="Data analyst reviewing business intelligence dashboards, charts and reports."
+      />
       <h3>Excel and Spreadsheet Skills</h3>
       <p>
         Spreadsheets help analysts organise information, perform calculations
@@ -309,6 +310,10 @@ export default function DataScienceVsDataAnalyticsArticle() {
       </p>
 
       <h2>Skills Required for a Career in Data Science</h2>
+      <ArticleImage
+        src={images.scienceSkills}
+        alt="Data scientist working with code, datasets and predictive analytics dashboards."
+      />
       <p>
         Data science uses many of the same foundations as analytics, with
         additional emphasis on programming, statistical reasoning and model
@@ -375,7 +380,7 @@ export default function DataScienceVsDataAnalyticsArticle() {
       <h3>How to Research Opportunities in Your Area</h3>
       <p>
         If you are researching{" "}
-        <a href="https://www.google.com/search?q=data+analyst+jobs+in+Whitefield">
+        <a href="https://www.aptechwhitefield.com/courses/data-analytics-power-bi?utm_source=website&utm_medium=blog&utm_campaign=organic">
           data analyst jobs in Whitefield
         </a>
         , review current job listings instead of relying on general claims

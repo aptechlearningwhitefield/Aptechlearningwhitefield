@@ -214,6 +214,31 @@
   margin-block: 1rem;
 }
 
+.data-comparison-article {
+  max-width: 52rem;
+  margin-inline: auto;
+  color: #111827;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.data-comparison-article h2 {
+  font-size: 1.5rem;
+}
+
+.data-comparison-article h3 {
+  font-size: 1.125rem;
+}
+
+.data-comparison-article figure {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.data-comparison-article img {
+  max-width: 100%;
+}
+
 @media print {
   .data-comparison-article h2,
   .data-comparison-article h3 {
