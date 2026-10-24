@@ -28,7 +28,7 @@ function ArticleImage({
         src={src}
         alt={alt}
         loading={loading}
-        className="block h-auto w-full"
+        className="w-full h-auto rounded-xl"
       />
     </figure>
   );
