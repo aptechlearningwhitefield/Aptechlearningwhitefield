@@ -36,7 +36,7 @@ function ArticleImage({
 
 export default function WeekendComputerClassesWhitefieldArticle() {
   return (
-    <article className="blog-article weekend-computer-classes-article max-w-none text-left text-slate-700">
+    <article className="blog-article max-w-none text-slate-700">
       <ArticleImage
         src={images.hero}
         alt="Weekend computer classes in Whitefield, Bangalore, for digital skills and Generative AI learning."
