@@ -1,3 +1,4 @@
+
 import { Helmet } from "@dr.pogodin/react-helmet";
 import { Link, useParams, useNavigate } from "react-router";
 import {
@@ -13,6 +14,7 @@ import { useEffect } from "react";
 import { blog_posts } from "virtual:content";
 import AiMachineLearningCareerArticle from "../../components/ai-machine-learning-career-article";
 import DataScienceVsDataAnalyticsArticle from "../../components/data-science-vs-data-analytics-article";
+import WeekendComputerClassesWhitefieldArticle from "../../components/weekend-computer-classes-whitefield-article";
 import { SITE_URL as site } from "../../lib/site-url";
 import {
   blogSeoMetadata,
@@ -32,8 +34,12 @@ const aiCareerImages = {
   learner:
     "/assets/blog-images/ai-machine-learning-career-2026/ai-career-learner.png",
 };
+
 const dataScienceVsAnalyticsHero =
   "/assets/blog-images/data-science-vs-data-analytics/data-science-vs-data-analytics-career.png";
+
+const weekendComputerClassesHero =
+  "/assets/blog-images/weekend-computer-classes-whitefield/weekend-computer-classes-image1.png";
 
 export default function BlogDetailPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -55,16 +61,27 @@ export default function BlogDetailPage() {
   const relatedPosts = blog_posts
     .filter((p) => p.category === post.category && p.slug !== post.slug)
     .slice(0, 3);
-  const isAiCareerArticle = post.slug === "ai-machine-learning-career-2026";
+
+  const isAiCareerArticle =
+    post.slug === "ai-machine-learning-career-2026";
+
   const isDataScienceVsAnalyticsArticle =
     post.slug === "data-science-vs-data-analytics";
+
+  const isWeekendComputerClassesArticle =
+    post.slug === "weekend-computer-classes-whitefield-bangalore";
+
   const coverImage = isAiCareerArticle
     ? `${site}${aiCareerImages.learner}`
     : isDataScienceVsAnalyticsArticle
       ? `${site}${dataScienceVsAnalyticsHero}`
-      : `${site}/airo-assets/images/blogs/default-blog-image`;
+      : isWeekendComputerClassesArticle
+        ? `${site}${weekendComputerClassesHero}`
+        : `${site}/airo-assets/images/blogs/default-blog-image`;
+
   const blogSeo = blogSeoMetadata[post.slug];
-  const seoTitle = blogSeo?.title ?? `${post.title} | Aptech Learning Whitefield Blog`;
+  const seoTitle =
+    blogSeo?.title ?? `${post.title} | Aptech Learning Whitefield Blog`;
   const seoDescription = blogSeo?.description ?? post.excerpt;
   const socialTitle = blogSeo?.ogTitle ?? post.title;
   const socialDescription = blogSeo?.ogDescription ?? post.excerpt;
@@ -107,11 +124,13 @@ export default function BlogDetailPage() {
         <meta name="twitter:title" content={twitterTitle} />
         <meta name="twitter:description" content={twitterDescription} />
         <meta name="robots" content="index, follow" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(jsonLd)}
+        </script>
       </Helmet>
 
       <main>
-        {/* ── Back Button ─────────────────────────────────────────────────────── */}
+        {/* Back Button */}
         <div className="bg-white border-b border-slate-100 sticky top-0 z-10">
           <div className="container mx-auto px-4 py-4">
             <Link
@@ -127,15 +146,19 @@ export default function BlogDetailPage() {
           </div>
         </div>
 
-        {/* ── Article Header ────────────────────────────────────────────────────── */}
+        {/* Article Header */}
         <section className="py-12 md:py-16 bg-gradient-to-b from-slate-50 to-white border-b border-slate-100">
           <div className="container mx-auto px-4 max-w-4xl">
             <div className="mb-6 flex flex-wrap gap-3 items-center">
               <span
-                className={`text-xs font-bold px-3 py-1.5 rounded-full ${categoryColors[post.category] ?? "bg-slate-100 text-slate-600"}`}
+                className={`text-xs font-bold px-3 py-1.5 rounded-full ${
+                  categoryColors[post.category] ??
+                  "bg-slate-100 text-slate-600"
+                }`}
               >
                 {post.category}
               </span>
+
               <div className="flex flex-wrap gap-2">
                 {post.tags.slice(0, 3).map((tag, i) => (
                   <span
@@ -148,14 +171,17 @@ export default function BlogDetailPage() {
                 ))}
               </div>
             </div>
+
             <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">
               {post.title}
             </h1>
+
             <div className="flex flex-wrap items-center gap-6 text-sm text-slate-600">
               <div className="flex items-center gap-2">
                 <User size={16} />
                 <span>{post.author}</span>
               </div>
+
               <div className="flex items-center gap-2">
                 <Calendar size={16} />
                 <span>
@@ -166,6 +192,7 @@ export default function BlogDetailPage() {
                   })}
                 </span>
               </div>
+
               <div className="flex items-center gap-2">
                 <Clock size={16} />
                 <span>{post.readTime}</span>
@@ -174,13 +201,15 @@ export default function BlogDetailPage() {
           </div>
         </section>
 
-        {/* ── Article Content ─────────────────────────────────────────────────── */}
+        {/* Article Content */}
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4 max-w-4xl">
             {isAiCareerArticle ? (
               <AiMachineLearningCareerArticle />
             ) : isDataScienceVsAnalyticsArticle ? (
               <DataScienceVsDataAnalyticsArticle />
+            ) : isWeekendComputerClassesArticle ? (
+              <WeekendComputerClassesWhitefieldArticle />
             ) : (
               <div className="prose prose-lg max-w-none text-slate-700 leading-relaxed">
                 <div className="bg-blue-50 border-l-4 border-primary p-6 rounded-r-lg mb-8">
@@ -193,16 +222,17 @@ export default function BlogDetailPage() {
                 <div className="space-y-6 text-slate-600">
                   <p>
                     This article from Aptech Learning Whitefield covers
-                    essential insights about <strong>{post.category}</strong>.
-                    Whether you're a student looking to start your career, a
-                    working professional aiming to upskill, or someone curious
-                    about the IT industry, this guide provides practical
-                    knowledge and actionable steps.
+                    essential insights about{" "}
+                    <strong>{post.category}</strong>. Whether you're a student
+                    looking to start your career, a working professional aiming
+                    to upskill, or someone curious about the IT industry, this
+                    guide provides practical knowledge and actionable steps.
                   </p>
 
                   <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">
                     Key Takeaways
                   </h2>
+
                   <ul className="space-y-3 list-disc list-inside">
                     <li>
                       Understanding the current market demand for{" "}
@@ -219,12 +249,15 @@ export default function BlogDetailPage() {
                     <li>
                       How structured training accelerates your career growth
                     </li>
-                    <li>Why hands-on learning is crucial in the IT industry</li>
+                    <li>
+                      Why hands-on learning is crucial in the IT industry
+                    </li>
                   </ul>
 
                   <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">
                     Why This Matters
                   </h2>
+
                   <p>
                     The IT industry is evolving rapidly, and staying updated
                     with trends is essential for career success. At Aptech
@@ -236,12 +269,13 @@ export default function BlogDetailPage() {
                   <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">
                     Next Steps
                   </h2>
+
                   <p>
-                    Ready to take action? Our comprehensive training programs in{" "}
-                    {post.category} are designed to equip you with the skills
-                    and confidence needed to excel in this field. Whether you're
-                    starting from scratch or looking to advance your expertise,
-                    we have the right course for you.
+                    Ready to take action? Our comprehensive training programs
+                    in {post.category} are designed to equip you with the
+                    skills and confidence needed to excel in this field.
+                    Whether you're starting from scratch or looking to advance
+                    your expertise, we have the right course for you.
                   </p>
                 </div>
 
@@ -249,10 +283,12 @@ export default function BlogDetailPage() {
                   <h3 className="text-xl font-bold text-slate-900 mb-3">
                     Ready to Master {post.category}?
                   </h3>
+
                   <p className="text-slate-600 mb-6">
                     Join hundreds of students at Aptech Learning Whitefield who
                     are building successful IT careers.
                   </p>
+
                   <div className="flex flex-wrap justify-center gap-4">
                     <Link
                       to="/courses"
@@ -260,6 +296,7 @@ export default function BlogDetailPage() {
                     >
                       Explore Our Courses <ArrowRight size={16} />
                     </Link>
+
                     <Link
                       to="/contact"
                       className="inline-flex items-center gap-2 bg-slate-200 text-slate-900 font-semibold px-6 py-3 rounded-lg hover:bg-slate-300 transition-colors"
@@ -273,7 +310,7 @@ export default function BlogDetailPage() {
           </div>
         </section>
 
-        {/* ── Related Articles ─────────────────────────────────────────────────── */}
+        {/* Related Articles */}
         {relatedPosts.length > 0 && (
           <section className="py-12 md:py-16 bg-slate-50 border-t border-slate-100">
             <div className="container mx-auto px-4">
@@ -299,18 +336,25 @@ export default function BlogDetailPage() {
                         className="text-primary/40 group-hover:text-primary/60 transition-colors"
                       />
                     </div>
+
                     <div className="p-5">
                       <span
-                        className={`text-xs font-bold px-2.5 py-1 rounded-full ${categoryColors[relPost.category] ?? "bg-slate-100 text-slate-600"}`}
+                        className={`text-xs font-bold px-2.5 py-1 rounded-full ${
+                          categoryColors[relPost.category] ??
+                          "bg-slate-100 text-slate-600"
+                        }`}
                       >
                         {relPost.category}
                       </span>
+
                       <h3 className="font-bold text-slate-900 mt-3 mb-2 line-clamp-2 group-hover:text-primary transition-colors">
                         {relPost.title}
                       </h3>
+
                       <p className="text-slate-600 text-sm line-clamp-2 mb-4">
                         {relPost.excerpt}
                       </p>
+
                       <div className="flex items-center gap-2 text-xs text-slate-500">
                         <Clock size={12} />
                         {relPost.readTime}
@@ -323,17 +367,19 @@ export default function BlogDetailPage() {
           </section>
         )}
 
-        {/* ── CTA Section ──────────────────────────────────────────────────────── */}
+        {/* CTA Section */}
         <section className="py-12 md:py-16 bg-gradient-to-r from-primary to-blue-700 text-white">
           <div className="container mx-auto px-4 text-center max-w-3xl">
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
               Transform Your IT Career Today
             </h2>
+
             <p className="text-lg text-blue-100 mb-8">
               Don't just read about IT careers — build one with our
               industry-ready training programs at Aptech Learning Whitefield,
               Bangalore.
             </p>
+
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/courses"
@@ -341,6 +387,7 @@ export default function BlogDetailPage() {
               >
                 Start Your Course <ArrowRight size={18} />
               </Link>
+
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-blue-600 text-white font-bold px-8 py-4 rounded-lg border-2 border-white hover:bg-blue-700 transition-all"
