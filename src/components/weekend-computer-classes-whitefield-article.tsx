@@ -1,4 +1,3 @@
-
 const images = {
   hero: "/assets/blog-images/weekend-computer-classes-whitefield/weekend-computer-classes-image1.png",
   genai:
