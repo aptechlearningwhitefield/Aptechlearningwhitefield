@@ -1,4 +1,3 @@
-
 import { Helmet } from "@dr.pogodin/react-helmet";
 import { Link, useParams, useNavigate } from "react-router";
 import {
@@ -15,6 +14,7 @@ import { blog_posts } from "virtual:content";
 import AiMachineLearningCareerArticle from "../../components/ai-machine-learning-career-article";
 import DataScienceVsDataAnalyticsArticle from "../../components/data-science-vs-data-analytics-article";
 import WeekendComputerClassesWhitefieldArticle from "../../components/weekend-computer-classes-whitefield-article";
+import PythonVsJavaArticle from "../../components/python-vs-java-article";
 import { SITE_URL as site } from "../../lib/site-url";
 import {
   blogSeoMetadata,
@@ -40,6 +40,9 @@ const dataScienceVsAnalyticsHero =
 
 const weekendComputerClassesHero =
   "/assets/blog-images/weekend-computer-classes-whitefield/weekend-computer-classes-image1.png";
+
+const pythonVsJavaHero =
+  "/assets/blog-images/python-vs-java/python-vs-java-img1.png";
 
 export default function BlogDetailPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -71,13 +74,18 @@ export default function BlogDetailPage() {
   const isWeekendComputerClassesArticle =
     post.slug === "weekend-computer-classes-whitefield-bangalore";
 
+  const isPythonVsJavaArticle =
+    post.slug === "python-for-beginners-whitefield";
+
   const coverImage = isAiCareerArticle
     ? `${site}${aiCareerImages.learner}`
     : isDataScienceVsAnalyticsArticle
       ? `${site}${dataScienceVsAnalyticsHero}`
       : isWeekendComputerClassesArticle
         ? `${site}${weekendComputerClassesHero}`
-        : `${site}/airo-assets/images/blogs/default-blog-image`;
+        : isPythonVsJavaArticle
+          ? `${site}${pythonVsJavaHero}`
+          : `${site}/airo-assets/images/blogs/default-blog-image`;
 
   const blogSeo = blogSeoMetadata[post.slug];
   const seoTitle =
@@ -210,6 +218,8 @@ export default function BlogDetailPage() {
               <DataScienceVsDataAnalyticsArticle />
             ) : isWeekendComputerClassesArticle ? (
               <WeekendComputerClassesWhitefieldArticle />
+            ) : isPythonVsJavaArticle ? (
+              <PythonVsJavaArticle />
             ) : (
               <div className="prose prose-lg max-w-none text-slate-700 leading-relaxed">
                 <div className="bg-blue-50 border-l-4 border-primary p-6 rounded-r-lg mb-8">
