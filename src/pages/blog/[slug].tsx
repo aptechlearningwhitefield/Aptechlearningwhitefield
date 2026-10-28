@@ -15,6 +15,7 @@ import AiMachineLearningCareerArticle from "../../components/ai-machine-learning
 import DataScienceVsDataAnalyticsArticle from "../../components/data-science-vs-data-analytics-article";
 import WeekendComputerClassesWhitefieldArticle from "../../components/weekend-computer-classes-whitefield-article";
 import PythonVsJavaArticle from "../../components/python-vs-java-article";
+import CybersecurityItSkillsBangaloreArticle from "../../components/cybersecurity-it-skills-bangalore-article";
 import { SITE_URL as site } from "../../lib/site-url";
 import {
   blogSeoMetadata,
@@ -43,6 +44,9 @@ const weekendComputerClassesHero =
 
 const pythonVsJavaHero =
   "/assets/blog-images/python-vs-java/python-vs-java-img1.png";
+
+const cybersecurityItSkillsHero =
+  "/assets/blog-images/Skills%20needed%20to%20get%20IT%20Job/Skills%20needed%20to%20get%20IT%20Job%20img1.png";
 
 export default function BlogDetailPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -77,6 +81,9 @@ export default function BlogDetailPage() {
   const isPythonVsJavaArticle =
     post.slug === "python-for-beginners-whitefield";
 
+  const isCybersecurityItSkillsArticle =
+    post.slug === "cybersecurity-career-bangalore";
+
   const coverImage = isAiCareerArticle
     ? `${site}${aiCareerImages.learner}`
     : isDataScienceVsAnalyticsArticle
@@ -85,7 +92,9 @@ export default function BlogDetailPage() {
         ? `${site}${weekendComputerClassesHero}`
         : isPythonVsJavaArticle
           ? `${site}${pythonVsJavaHero}`
-          : `${site}/airo-assets/images/blogs/default-blog-image`;
+          : isCybersecurityItSkillsArticle
+            ? `${site}${cybersecurityItSkillsHero}`
+            : `${site}/airo-assets/images/blogs/default-blog-image`;
 
   const blogSeo = blogSeoMetadata[post.slug];
   const seoTitle =
@@ -220,6 +229,8 @@ export default function BlogDetailPage() {
               <WeekendComputerClassesWhitefieldArticle />
             ) : isPythonVsJavaArticle ? (
               <PythonVsJavaArticle />
+            ) : isCybersecurityItSkillsArticle ? (
+              <CybersecurityItSkillsBangaloreArticle />
             ) : (
               <div className="prose prose-lg max-w-none text-slate-700 leading-relaxed">
                 <div className="bg-blue-50 border-l-4 border-primary p-6 rounded-r-lg mb-8">
