@@ -15,7 +15,7 @@ import AiMachineLearningCareerArticle from "../../components/ai-machine-learning
 import DataScienceVsDataAnalyticsArticle from "../../components/data-science-vs-data-analytics-article";
 import WeekendComputerClassesWhitefieldArticle from "../../components/weekend-computer-classes-whitefield-article";
 import PythonVsJavaArticle from "../../components/python-vs-java-article";
-import CybersecurityItSkillsBangaloreArticle from "../../components/cybersecurity-it-skills-bangalore-article";
+import CybersecurityItSkillsBangaloreArticle from "../../components/Skills Needed to get an IT Job";
 import { SITE_URL as site } from "../../lib/site-url";
 import {
   blogSeoMetadata,
