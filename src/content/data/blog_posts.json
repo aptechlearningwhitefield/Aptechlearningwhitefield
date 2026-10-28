@@ -1,5 +1,25 @@
 [
   {
+    "id": "bp3",
+    "slug": "python-for-beginners-whitefield",
+    "title": "Python vs Java: Which to Learn First? | Bangalore Guide",
+    "excerpt": "Python vs Java which to learn first? We compare ease of learning, job demand and the Python developer salary in Bangalore for freshers to help you decide well.",
+    "category": "Python",
+    "author": "Aptech Learning Whitefield",
+    "date": "2026-10-28",
+    "readTime": "9 min read",
+    "featured": true,
+    "tags": [
+      "Python",
+      "Python vs Java",
+      "Java",
+      "Beginners",
+      "Programming",
+      "Whitefield",
+      "IT Training"
+    ]
+  },
+  {
     "id": "bp7",
     "slug": "weekend-computer-classes-whitefield-bangalore",
     "title": "Weekend Computer Classes in Whitefield, Bangalore: Learn Generative AI for Workplace Productivity",
@@ -18,7 +38,6 @@
       "Bangalore"
     ]
   },
-
   {
     "id": "bp1",
     "slug": "ai-machine-learning-career-2026",
@@ -53,24 +72,6 @@
       "Career",
       "Python",
       "Power BI"
-    ]
-  },
-  {
-    "id": "bp3",
-    "slug": "python-for-beginners-whitefield",
-    "title": "Python vs Java: Which to Learn First? | Bangalore Guide",
-    "excerpt": "Python vs Java which to learn first? We compare ease of learning, job demand and the Python developer salary in Bangalore for freshers to help you decide well.",
-    "category": "Python",
-    "author": "Aptech Learning Whitefield",
-    "date": "2026-06-28",
-    "readTime": "5 min read",
-    "featured": false,
-    "tags": [
-      "Python",
-      "Beginners",
-      "Programming",
-      "Whitefield",
-      "IT Training"
     ]
   },
   {
