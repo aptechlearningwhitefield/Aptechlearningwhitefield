@@ -1,3 +1,4 @@
+
 import { Helmet } from "@dr.pogodin/react-helmet";
 import { Link, useParams, useNavigate } from "react-router";
 import {
@@ -11,11 +12,14 @@ import {
 } from "lucide-react";
 import { useEffect } from "react";
 import { blog_posts } from "virtual:content";
+
 import AiMachineLearningCareerArticle from "../../components/ai-machine-learning-career-article";
 import DataScienceVsDataAnalyticsArticle from "../../components/data-science-vs-data-analytics-article";
 import WeekendComputerClassesWhitefieldArticle from "../../components/weekend-computer-classes-whitefield-article";
 import PythonVsJavaArticle from "../../components/python-vs-java-article";
 import CybersecurityItSkillsBangaloreArticle from "../../components/cybersecurity-it-skills-bangalore-article";
+import BestItCourseAfterBscAwsVsAzureArticle from "../../components/best-it-course-after-bsc-aws-vs-azure-article";
+
 import { SITE_URL as site } from "../../lib/site-url";
 import {
   blogSeoMetadata,
@@ -47,6 +51,9 @@ const pythonVsJavaHero =
 
 const cybersecurityItSkillsHero =
   "/assets/blog-images/Skills%20needed%20to%20get%20IT%20Job/Skills%20needed%20to%20get%20IT%20Job%20img1.png";
+
+const bestItCourseAfterBscHero =
+  "/assets/blog-images/best-it-course-after-bsc-aws-vs-azure/aws-vs-azure-image1.png";
 
 export default function BlogDetailPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -84,6 +91,9 @@ export default function BlogDetailPage() {
   const isCybersecurityItSkillsArticle =
     post.slug === "cybersecurity-career-bangalore";
 
+  const isBestItCourseAfterBscArticle =
+    post.slug === "best-it-course-after-bsc-aws-vs-azure-bangalore";
+
   const coverImage = isAiCareerArticle
     ? `${site}${aiCareerImages.learner}`
     : isDataScienceVsAnalyticsArticle
@@ -94,16 +104,21 @@ export default function BlogDetailPage() {
           ? `${site}${pythonVsJavaHero}`
           : isCybersecurityItSkillsArticle
             ? `${site}${cybersecurityItSkillsHero}`
-            : `${site}/airo-assets/images/blogs/default-blog-image`;
+            : isBestItCourseAfterBscArticle
+              ? `${site}${bestItCourseAfterBscHero}`
+              : `${site}/airo-assets/images/blogs/default-blog-image`;
 
   const blogSeo = blogSeoMetadata[post.slug];
+
   const seoTitle =
     blogSeo?.title ?? `${post.title} | Aptech Learning Whitefield Blog`;
+
   const seoDescription = blogSeo?.description ?? post.excerpt;
   const socialTitle = blogSeo?.ogTitle ?? post.title;
   const socialDescription = blogSeo?.ogDescription ?? post.excerpt;
   const twitterTitle = blogSeo?.twitterTitle ?? post.title;
   const twitterDescription = blogSeo?.twitterDescription ?? post.excerpt;
+
   const keywords = getBlogSeoKeywords(post.slug);
 
   const jsonLd = {
@@ -128,19 +143,29 @@ export default function BlogDetailPage() {
     <>
       <Helmet>
         <title>{seoTitle}</title>
+
         <meta name="description" content={seoDescription} />
+
         {keywords && <meta name="keywords" content={keywords} />}
-        <link rel="canonical" href={`${site}/blogs/${post.slug}`} />
+
+        <link
+          rel="canonical"
+          href={`${site}/blogs/${post.slug}`}
+        />
+
         <meta property="og:title" content={socialTitle} />
         <meta property="og:description" content={socialDescription} />
         <meta property="og:url" content={`${site}/blogs/${post.slug}`} />
         <meta property="og:type" content="article" />
         <meta property="og:image" content={coverImage} />
+
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={coverImage} />
         <meta name="twitter:title" content={twitterTitle} />
         <meta name="twitter:description" content={twitterDescription} />
+
         <meta name="robots" content="index, follow" />
+
         <script type="application/ld+json">
           {JSON.stringify(jsonLd)}
         </script>
@@ -231,6 +256,8 @@ export default function BlogDetailPage() {
               <PythonVsJavaArticle />
             ) : isCybersecurityItSkillsArticle ? (
               <CybersecurityItSkillsBangaloreArticle />
+            ) : isBestItCourseAfterBscArticle ? (
+              <BestItCourseAfterBscAwsVsAzureArticle />
             ) : (
               <div className="prose prose-lg max-w-none text-slate-700 leading-relaxed">
                 <div className="bg-blue-50 border-l-4 border-primary p-6 rounded-r-lg mb-8">
