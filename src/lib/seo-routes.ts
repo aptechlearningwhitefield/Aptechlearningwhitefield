@@ -62,6 +62,6 @@ export const seoRoutes: SeoRoute[] = [
   { path: "/blogs/data-science-vs-data-analytics", changefreq: "monthly", priority: 0.6 },
   { path: "/blogs/python-for-beginners-whitefield", changefreq: "monthly", priority: 0.6 },
   { path: "/blogs/cybersecurity-career-bangalore", changefreq: "monthly", priority: 0.6 },
-  { path: "/blogs/generative-ai-workplace-productivity", changefreq: "monthly", priority: 0.6 },
   { path: "/blogs/cloud-computing-aws-azure-guide", changefreq: "monthly", priority: 0.6 },
+  { path: "/blogs/which-computer-course-is-best-after-12th", changefreq: "monthly", priority: 0.6 },
 ];

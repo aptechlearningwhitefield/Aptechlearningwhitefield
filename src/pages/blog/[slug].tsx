@@ -8,7 +8,6 @@ import {
   Calendar,
   Tag,
   ArrowRight,
-  BookOpen,
 } from "lucide-react";
 import { useEffect } from "react";
 import { blog_posts } from "virtual:content";
@@ -19,6 +18,8 @@ import WeekendComputerClassesWhitefieldArticle from "../../components/weekend-co
 import PythonVsJavaArticle from "../../components/python-vs-java-article";
 import CybersecurityItSkillsBangaloreArticle from "../../components/cybersecurity-it-skills-bangalore-article";
 import BestItCourseAfterBscAwsVsAzureArticle from "../../components/best-it-course-after-bsc-aws-vs-azure-article";
+import BestItCourseAfterBcomArticle from "../../components/best-it-course-after-bcom-article";
+import WhichComputerCourseBestAfter12thArticle from "../../components/which-computer-course-best-after-12th-article";
 
 import { SITE_URL as site } from "../../lib/site-url";
 import {
@@ -53,7 +54,11 @@ const cybersecurityItSkillsHero =
   "/assets/blog-images/Skills%20needed%20to%20get%20IT%20Job/Skills%20needed%20to%20get%20IT%20Job%20img1.png";
 
 const bestItCourseAfterBscHero =
-  "/assets/blog-images/best-it-course-after-bsc-aws-vs-azure/aws-vs-azure-image1.png";
+  "/assets/blog-images/best-it-course-after-bsc-aws-vs-azure/best-it-course-after-bsc-aws-azure-bangalore.png";
+const bestItCourseAfterBcomHero =
+  "/assets/blog-images/best-it-course-after-bcom/best-it-course-after-bcom-career-guide.webp";
+const whichComputerCourseAfter12thHero =
+  "/assets/blog-images/computer-course-after-12th/computer-course-after-12th-career-guide.webp";
 
 export default function BlogDetailPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -70,11 +75,6 @@ export default function BlogDetailPage() {
   if (!post) {
     return null;
   }
-
-  // Get related articles (same category, excluding current)
-  const relatedPosts = blog_posts
-    .filter((p) => p.category === post.category && p.slug !== post.slug)
-    .slice(0, 3);
 
   const isAiCareerArticle =
     post.slug === "ai-machine-learning-career-2026";
@@ -94,6 +94,12 @@ export default function BlogDetailPage() {
   const isBestItCourseAfterBscArticle =
     post.slug === "best-it-course-after-bsc-aws-vs-azure-bangalore";
 
+  const isBestItCourseAfterBcomArticle =
+    post.slug === "best-it-course-after-bcom";
+
+  const isWhichComputerCourseAfter12thArticle =
+    post.slug === "which-computer-course-is-best-after-12th";
+
   const coverImage = isAiCareerArticle
     ? `${site}${aiCareerImages.learner}`
     : isDataScienceVsAnalyticsArticle
@@ -106,7 +112,11 @@ export default function BlogDetailPage() {
             ? `${site}${cybersecurityItSkillsHero}`
             : isBestItCourseAfterBscArticle
               ? `${site}${bestItCourseAfterBscHero}`
-              : `${site}/airo-assets/images/blogs/default-blog-image`;
+              : isBestItCourseAfterBcomArticle
+                ? `${site}${bestItCourseAfterBcomHero}`
+                : isWhichComputerCourseAfter12thArticle
+                  ? `${site}${whichComputerCourseAfter12thHero}`
+                : `${site}/airo-assets/images/blogs/default-blog-image`;
 
   const blogSeo = blogSeoMetadata[post.slug];
 
@@ -258,6 +268,10 @@ export default function BlogDetailPage() {
               <CybersecurityItSkillsBangaloreArticle />
             ) : isBestItCourseAfterBscArticle ? (
               <BestItCourseAfterBscAwsVsAzureArticle />
+            ) : isBestItCourseAfterBcomArticle ? (
+              <BestItCourseAfterBcomArticle />
+            ) : isWhichComputerCourseAfter12thArticle ? (
+              <WhichComputerCourseBestAfter12thArticle />
             ) : (
               <div className="prose prose-lg max-w-none text-slate-700 leading-relaxed">
                 <div className="bg-blue-50 border-l-4 border-primary p-6 rounded-r-lg mb-8">
@@ -357,63 +371,6 @@ export default function BlogDetailPage() {
             )}
           </div>
         </section>
-
-        {/* Related Articles */}
-        {relatedPosts.length > 0 && (
-          <section className="py-12 md:py-16 bg-slate-50 border-t border-slate-100">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-extrabold text-slate-900 mb-3">
-                  Related Articles
-                </h2>
-                <p className="text-slate-600">
-                  Explore more {post.category} insights
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                {relatedPosts.map((relPost) => (
-                  <Link
-                    key={relPost.id}
-                    to={`/blogs/${relPost.slug}`}
-                    className="group bg-white border border-slate-100 rounded-xl overflow-hidden hover:shadow-lg transition-shadow"
-                  >
-                    <div className="h-32 bg-gradient-to-br from-primary/20 to-blue-900/30 flex items-center justify-center group-hover:from-primary/30 group-hover:to-blue-900/40 transition-all">
-                      <BookOpen
-                        size={32}
-                        className="text-primary/40 group-hover:text-primary/60 transition-colors"
-                      />
-                    </div>
-
-                    <div className="p-5">
-                      <span
-                        className={`text-xs font-bold px-2.5 py-1 rounded-full ${
-                          categoryColors[relPost.category] ??
-                          "bg-slate-100 text-slate-600"
-                        }`}
-                      >
-                        {relPost.category}
-                      </span>
-
-                      <h3 className="font-bold text-slate-900 mt-3 mb-2 line-clamp-2 group-hover:text-primary transition-colors">
-                        {relPost.title}
-                      </h3>
-
-                      <p className="text-slate-600 text-sm line-clamp-2 mb-4">
-                        {relPost.excerpt}
-                      </p>
-
-                      <div className="flex items-center gap-2 text-xs text-slate-500">
-                        <Clock size={12} />
-                        {relPost.readTime}
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
 
         {/* CTA Section */}
         <section className="py-12 md:py-16 bg-gradient-to-r from-primary to-blue-700 text-white">

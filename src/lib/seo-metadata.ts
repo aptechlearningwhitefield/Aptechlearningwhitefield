@@ -65,17 +65,19 @@ export const courseSeoKeywords: Record<string, string> = {
 };
 
 export const blogSeoKeywords: Record<string, string> = {
+  "which-computer-course-is-best-after-12th":
+    "which computer course is best after 12th, computer courses after 12th, best it course after ba, best it course after bsc, best it course after bcom, programming course for beginners, full stack course, data analytics course, artificial intelligence course, computer education in whitefield, computer courses in bangalore",
+  "best-it-course-after-bcom":
+    "best it course after bcom, tally vs advanced excel for accounting jobs, short term computer courses with job placement, accounting software, business data, excel skills, data analytics, programming fundamentals, career transition, digital skills",
   "ai-machine-learning-career-2026":
     "best course for career switch to it, which course has more job opportunities in bangalore, ai ml career, ai jobs, machine learning jobs, ai ml career in whitefield, ai ml career in bangalore, ai ml career near itpl, ai jobs in bangalore, ai jobs in marathahalli, ai jobs in whitefield, machine learning jobs in kr puram, machine learning jobs for freshers in bangalore, machine learning jobs in whitefield, ai ml career guide for beginners",
   "data-science-vs-data-analytics":
-    "data science vs full stack development, can non it graduate learn data science, data analyst jobs in whitefield, data science vs data analytics, data science career, data analyst career, data science vs data analytics in whitefield, data science vs data analytics in bangalore, data science vs data analytics near itpl, data science career in bangalore, data science career in marathahalli, data science career in whitefield, data analyst career in kr puram, data analyst career for freshers in bangalore, data analyst career in whitefield, data science vs data analytics guide for beginners",
+    "data science vs data analytics, data analyst jobs in whitefield, data science course in whitefield, data science courses in bangalore with placement, smart pro data science aptech, data analytics and power bi, data science career, data analyst career, data science vs data analytics in whitefield, data science vs data analytics in bangalore, data science vs data analytics near itpl, data science career in bangalore, data science career in marathahalli, data science career in whitefield, data analyst career for freshers in bangalore, data science vs data analytics guide for beginners",
   "python-for-beginners-whitefield":
     "python vs java which to learn first, python developer salary in bangalore for freshers, python for beginners, learn python, python jobs, python for beginners in whitefield, python for beginners in bangalore, python for beginners near itpl, learn python in bangalore, learn python in marathahalli, learn python in whitefield, python jobs in kr puram, python jobs for freshers in bangalore, python jobs in whitefield, python for beginners guide for beginners",
   "cybersecurity-career-bangalore":
     "skills needed to get it job in bangalore, which course has more job opportunities in bangalore, cyber security career, cyber security jobs, ethical hacking career, cyber security career in whitefield, cyber security career in bangalore, cyber security career near itpl, cyber security jobs in bangalore, cyber security jobs in marathahalli, cyber security jobs in whitefield, ethical hacking career in kr puram, ethical hacking career for freshers in bangalore, ethical hacking career in whitefield, cyber security career guide for beginners",
-  "generative-ai-workplace-productivity":
-    "weekend computer classes for working professionals whitefield, artificial intelligence course in bangalore, generative ai at work, ai productivity tools, ai skills for professionals, generative ai at work in whitefield, generative ai at work in bangalore, generative ai at work near itpl, ai productivity tools in bangalore, ai productivity tools in marathahalli, ai productivity tools in whitefield, ai skills for professionals in kr puram, ai skills for professionals for freshers in bangalore, ai skills for professionals in whitefield, generative ai at work guide for beginners",
-  "cloud-computing-aws-azure-guide":
+  "best-it-course-after-bsc-aws-vs-azure-bangalore":
     "best it course after bsc, which course has more job opportunities in bangalore, aws vs azure, cloud computing career, cloud certification, aws vs azure in whitefield, aws vs azure in bangalore, aws vs azure near itpl, cloud computing career in bangalore, cloud computing career in marathahalli, cloud computing career in whitefield, cloud certification in kr puram, cloud certification for freshers in bangalore, cloud certification in whitefield, aws vs azure guide for beginners",
 };
 
@@ -140,7 +142,8 @@ export const courseSeoMetadata: Record<string, CourseSEOMetadata> = {
     ogTitle: "Start Your AI Journey With Zero Coding | Aptech, Bangalore",
     ogDescription:
       "Never touched AI before? That's fine. This course starts from scratch and shows you how to use generative AI for ideas, content and simple problem-solving.",
-    twitterTitle: "New to AI? Try Our Beginner-Friendly GenAI Course, Bangalore",
+    twitterTitle:
+      "New to AI? Try Our Beginner-Friendly GenAI Course, Bangalore",
     twitterDescription:
       "Students, homemakers, business owners and job seekers are all welcome. Learn what generative AI can do for you in a relaxed classroom near ITPL, Whitefield.",
   },
@@ -162,7 +165,8 @@ export const courseSeoMetadata: Record<string, CourseSEOMetadata> = {
     ogTitle: "Learn to Turn Raw Data Into Decisions | Aptech, Bangalore",
     ogDescription:
       "Companies have more data than ever and too few people who can read it. Build that skill with real case studies, hands-on labs and support from friendly mentors.",
-    twitterTitle: "Thinking About Data Science? Start Your Journey in Bangalore",
+    twitterTitle:
+      "Thinking About Data Science? Start Your Journey in Bangalore",
     twitterDescription:
       "Whether you're a fresher, an engineer or switching from another field, our Smart Pro Data Science course in Bangalore gives you a clear path to a data role.",
   },
@@ -195,7 +199,8 @@ export const courseSeoMetadata: Record<string, CourseSEOMetadata> = {
     ogTitle: "Make Spreadsheets Work for You, Not Against You | Bangalore",
     ogDescription:
       "Stop wrestling with messy spreadsheets. Learn shortcuts, smart formulas and clean charts that make your reports faster to build and much easier to understand.",
-    twitterTitle: "Still Doing Reports the Hard Way? Excel Classes in Bangalore",
+    twitterTitle:
+      "Still Doing Reports the Hard Way? Excel Classes in Bangalore",
     twitterDescription:
       "Pivot tables, VLOOKUP, dashboards and more. Practical Excel and Power BI classes at Aptech Whitefield for students, accountants and busy office professionals.",
   },
@@ -290,8 +295,30 @@ export const courseSeoMetadata: Record<string, CourseSEOMetadata> = {
 };
 
 export const blogSeoMetadata: Record<string, CourseSEOMetadata> = {
+  "which-computer-course-is-best-after-12th": {
+    title: "Top Computer Courses After 12th in Bangalore | Aptech Learning",
+    description:
+      "Compare programming, web development, data analytics, AI, and business technology courses after Class 12. Learn what to consider before choosing.",
+    ogTitle: "Choosing a Computer Course After Class 12",
+    ogDescription:
+      "Explore technology learning areas, beginner requirements, and course-selection tips to help you choose a computer course after 12th.",
+    twitterTitle: "Which Computer Course Should You Choose After 12th?",
+    twitterDescription:
+      "Compare programming, web development, analytics, AI, and business technology before choosing your next learning path.",
+  },
+  "best-it-course-after-bcom": {
+    title: "Best IT Courses After BCom in Whitefield | Aptech Learning",
+    description:
+      "Explore IT courses after BCom, from accounting software and data analytics to programming. Compare skills, career paths and learning options before you choose.",
+    ogTitle: "From Commerce to Technology: Explore Your Next Career Step",
+    ogDescription:
+      "A commerce degree can lead to more than traditional accounting roles. Explore technology learning paths and the skills that may support your next step.",
+    twitterTitle: "Which IT Skills Should a BCom Graduate Learn?",
+    twitterDescription:
+      "Compare accounting technology, data analytics and programming paths. Use this practical guide to identify a learning direction that fits your goals.",
+  },
   "ai-machine-learning-career-2026": {
-    title: "Best Course for Career Switch to IT? AI & ML in Bangalore",
+    title: "AI & Machine Learning Career 2026: Skills & Roles | Aptech",
     description:
       "Looking for the best course for career switch to IT? See why AI and ML stand out in Bangalore, which roles are opening up and how to take your very first step.",
     ogTitle: "Switching to Tech? Why AI & ML Is a Smart Bet in Bangalore",
@@ -301,19 +328,23 @@ export const blogSeoMetadata: Record<string, CourseSEOMetadata> = {
     twitterDescription:
       "Real talk on moving into AI from sales, support, finance or non-tech roles. What to learn first, how long it takes and where to find openings near Whitefield.",
   },
+  "weekend-computer-classes-whitefield-bangalore": {
+    title: "Weekend Computer Classes in Whitefield, Bangalore | Aptech",
+  },
   "data-science-vs-data-analytics": {
-    title: "Data Science vs Full Stack Development | Bangalore Careers",
+    title: "Data Science vs Data Analytics: Which to Choose? | Aptech",
     description:
-      "Data science vs full stack development vs data analytics: compare the skills, salaries and day-to-day work in Bangalore to pick the right career path for you.",
-    ogTitle: "Data or Development? Choosing Your Tech Path in Bangalore",
+      "Compare data science and data analytics, including their skills, tools, career opportunities and learning paths, to decide which direction suits you.",
+    ogTitle:
+      "Data Science vs Data Analytics: Which Career Path Is Right for You?",
     ogDescription:
-      "One path is about finding answers in numbers, the other is about building products people use. Here's how to tell which one suits your strengths and interests.",
-    twitterTitle: "Can Non-IT Grads Go Into Data Science? A Bangalore Guide",
+      "Explore the differences between data science and data analytics, the skills each path uses and practical ways to choose where to start.",
+    twitterTitle: "Data Science vs Data Analytics: A Career Guide",
     twitterDescription:
-      "Yes, many do. We compare data science, data analytics and full stack careers, explain the learning curve for each and share honest tips for complete beginners.",
+      "Compare the day-to-day work, tools, skills and learning paths for data science and data analytics before choosing your next step.",
   },
   "python-for-beginners-whitefield": {
-    title: "Python vs Java: Which to Learn First? | Bangalore Guide",
+    title: "Python for Beginners in Whitefield, Bangalore | Aptech",
     description:
       "Python vs Java which to learn first? We compare ease of learning, job demand and the Python developer salary in Bangalore for freshers to help you decide well.",
     ogTitle: "Your First Programming Language, Picked Right | Bangalore",
@@ -324,7 +355,7 @@ export const blogSeoMetadata: Record<string, CourseSEOMetadata> = {
       "See typical starting salaries, the skills recruiters check for and a simple roadmap to go from zero coding knowledge to your very first Python job near ITPL.",
   },
   "cybersecurity-career-bangalore": {
-    title: "Skills Needed to Get IT Job in Bangalore | Cybersecurity",
+    title: "Cybersecurity Career in Bangalore: Skills & Jobs | Aptech",
     description:
       "Skills needed to get IT job in Bangalore are changing fast. See why cybersecurity is booming, which certifications help and how complete beginners can break in.",
     ogTitle: "Why Cybersecurity Is One of Bangalore's Hottest IT Careers",
@@ -334,19 +365,8 @@ export const blogSeoMetadata: Record<string, CourseSEOMetadata> = {
     twitterDescription:
       "A practical starter guide for students and career switchers: the tools to learn, the certifications worth your money and how to land that first security role.",
   },
-  "generative-ai-workplace-productivity": {
-    title: "Weekend Computer Classes in Whitefield, Bangalore | GenAI",
-    description:
-      "Weekend computer classes for working professionals in Whitefield. See how generative AI is changing everyday work and how to upskill without quitting your job.",
-    ogTitle: "How Generative AI Is Changing Daily Office Work in Bangalore",
-    ogDescription:
-      "Emails drafted in seconds, reports summarised in minutes. Here are real ways teams use generative AI at work today, and the skills that will help you keep up.",
-    twitterTitle: "Busy All Week? Upskill in AI on Weekends Here in Bangalore",
-    twitterDescription:
-      "You don't need a career break to learn something new. Short weekend sessions near ITPL help working people use AI tools confidently in their day-to-day jobs.",
-  },
-  "cloud-computing-aws-azure-guide": {
-    title: "Best IT Course After BSc? AWS vs Azure Guide for Bangalore",
+  "best-it-course-after-bsc-aws-vs-azure-bangalore": {
+    title: "Best IT Course After BSc: AWS vs Azure in Bangalore | Aptech",
     description:
       "Is cloud computing the best IT course after BSc? We compare AWS and Azure, the certifications that matter and the cloud jobs opening up all across Bangalore.",
     ogTitle: "AWS or Azure: Which Cloud Should You Learn First? Bangalore",
@@ -372,152 +392,154 @@ export function getBlogSeoKeywords(slug: string): string | undefined {
   return blogSeoKeywords[slug];
 }
 
-const ORG_NAME = 'Aptech Learning Whitefield';
+const ORG_NAME = "Aptech Learning Whitefield";
 
 export const seoMetadata: Record<string, SEOMetadata> = {
   home: {
-    title: 'Best Computer Institute in Whitefield, Bangalore | Aptech',
+    title: "Best Computer Institute in Whitefield, Bangalore | Aptech",
     description:
-      'Looking for a computer institute in Whitefield? Aptech near ITPL teaches Python, data science, AI and full stack in small batches, with real placement support.',
+      "Looking for a computer institute in Whitefield? Aptech near ITPL teaches Python, data science, AI and full stack in small batches, with real placement support.",
     keywords:
-      'computer institute in whitefield, aptech whitefield, aptech whitefield bangalore, computer training institute in whitefield bangalore, computer classes in whitefield, aptech near me, computer course near me, aptech bangalore, computer institute, it training institute, computer training centre, best computer institute in whitefield, computer institute near itpl, it training institute in bangalore, it training institute near itpl whitefield, computer training centre in whitefield, best computer institute in bangalore, computer institute near marathahalli, computer institute in mahadevapura, top it training institute in whitefield',
+      "computer institute in whitefield, aptech whitefield, aptech whitefield bangalore, computer training institute in whitefield bangalore, computer classes in whitefield, aptech near me, computer course near me, aptech bangalore, computer institute, it training institute, computer training centre, best computer institute in whitefield, computer institute near itpl, it training institute in bangalore, it training institute near itpl whitefield, computer training centre in whitefield, best computer institute in bangalore, computer institute near marathahalli, computer institute in mahadevapura, top it training institute in whitefield",
     canonical: `${SITE_URL}/`,
-    ogTitle: 'Learn Job-Ready Tech Skills Near ITPL, Bangalore | Aptech',
+    ogTitle: "Learn Job-Ready Tech Skills Near ITPL, Bangalore | Aptech",
     ogDescription:
       "From your first line of code to your first job offer, Aptech Whitefield walks with you. Practical classes, patient trainers and a placement team in your corner.",
-    twitterTitle: 'New to Tech or Switching Careers? Start Here in Bangalore',
+    twitterTitle: "New to Tech or Switching Careers? Start Here in Bangalore",
     twitterDescription:
       "Weekday or weekend, fresher or working pro, there's a batch for you at Aptech Whitefield near ITPL. Drop in for a free demo class and see how we teach first.",
     structuredData: {
-      '@context': 'https://schema.org',
-      '@type': 'EducationalOrganization',
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
       name: ORG_NAME,
       description:
-        'Leading IT training institute offering industry-ready courses in AI, Data Science, Python, and Full Stack Development',
+        "Leading IT training institute offering industry-ready courses in AI, Data Science, Python, and Full Stack Development",
       url: SITE_URL,
       address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Near Kadugodi Tree Park Metro',
-        addressLocality: 'Whitefield',
-        addressRegion: 'Karnataka',
-        postalCode: '560066',
-        addressCountry: 'IN',
+        "@type": "PostalAddress",
+        streetAddress: "Near Kadugodi Tree Park Metro",
+        addressLocality: "Whitefield",
+        addressRegion: "Karnataka",
+        postalCode: "560066",
+        addressCountry: "IN",
       },
       geo: {
-        '@type': 'GeoCoordinates',
+        "@type": "GeoCoordinates",
         latitude: 12.9846999,
         longitude: 77.7465325,
       },
-      telephone: '+91-74113-33500',
-      email: 'aptechlearningwhitefield@gmail.com',
-      openingHours: 'Mo-Sa 09:00-18:00',
+      telephone: "+91-74113-33500",
+      email: "aptechlearningwhitefield@gmail.com",
+      openingHours: "Mo-Sa 09:00-18:00",
       sameAs: socialProfileList,
     },
   },
 
   about: {
-    title: 'Aptech Learning Whitefield, Bangalore | About Our Institute',
+    title: "Aptech Learning Whitefield, Bangalore | About Our Institute",
     description:
       "Aptech Learning Whitefield brings Aptech's trusted computer education to east Bangalore. Meet our trainers, see how we teach and why learners stay with us.",
     keywords:
-      'aptech learning whitefield, aptech computer education whitefield, is aptech worth it, aptech certificate value, is aptech certificate valid for jobs, is aptech recognised by government of india, aptech whitefield reviews, aptech learning, aptech computer education, aptech institute, aptech learning bangalore, aptech computer education bangalore, aptech institute whitefield, aptech institute bangalore, aptech learning near itpl, aptech computer education near itpl, aptech institute near me, aptech computer education near me, aptech learning centre whitefield',
+      "aptech learning whitefield, aptech computer education whitefield, is aptech worth it, aptech certificate value, is aptech certificate valid for jobs, is aptech recognised by government of india, aptech whitefield reviews, aptech learning, aptech computer education, aptech institute, aptech learning bangalore, aptech computer education bangalore, aptech institute whitefield, aptech institute bangalore, aptech learning near itpl, aptech computer education near itpl, aptech institute near me, aptech computer education near me, aptech learning centre whitefield",
     canonical: `${SITE_URL}/about`,
-    ogTitle: 'Meet the Trainers and Mentors Behind Our Bangalore Centre',
+    ogTitle: "Meet the Trainers and Mentors Behind Our Bangalore Centre",
     ogDescription:
       "We're a team of trainers, counsellors and placement mentors near ITPL who care about one thing: helping you learn tech properly and land work you're proud of.",
-    twitterTitle: 'Is Aptech Worth It? An Honest Look From Bangalore Learners',
+    twitterTitle: "Is Aptech Worth It? An Honest Look From Bangalore Learners",
     twitterDescription:
-      'Curious whether Aptech is worth it? Read how our Whitefield centre teaches, who our trainers are and what our learners say about the experience, in their words.',
+      "Curious whether Aptech is worth it? Read how our Whitefield centre teaches, who our trainers are and what our learners say about the experience, in their words.",
   },
 
   contact: {
-    title: 'Aptech Whitefield Contact Number & Address, ITPL Bangalore',
+    title: "Aptech Whitefield Contact Number & Address, ITPL Bangalore",
     description:
-      'Find the Aptech Whitefield contact number, address and centre timings near ITPL. Call us or walk in, and our counsellors will help you choose the right course.',
+      "Find the Aptech Whitefield contact number, address and centre timings near ITPL. Call us or walk in, and our counsellors will help you choose the right course.",
     keywords:
-      'aptech whitefield contact number, aptech whitefield address, aptech whitefield timings, free demo class computer course whitefield, computer institute in marathahalli, computer classes in kadugodi, computer institute near hoodi, computer institute near brookefield, computer course in kr puram, computer course in mahadevapura, computer classes in varthur, computer classes near hope farm, computer classes in kundalahalli, computer institute near hoskote, aptech whitefield, aptech centre, computer institute, aptech whitefield location, aptech whitefield phone number, aptech whitefield near itpl, aptech whitefield directions, aptech centre near me, aptech centre in whitefield, computer institute near itpl whitefield, computer institute near me, aptech whitefield enquiry, aptech whitefield working hours',
+      "aptech whitefield contact number, aptech whitefield address, aptech whitefield timings, free demo class computer course whitefield, computer institute in marathahalli, computer classes in kadugodi, computer institute near hoodi, computer institute near brookefield, computer course in kr puram, computer course in mahadevapura, computer classes in varthur, computer classes near hope farm, computer classes in kundalahalli, computer institute near hoskote, aptech whitefield, aptech centre, computer institute, aptech whitefield location, aptech whitefield phone number, aptech whitefield near itpl, aptech whitefield directions, aptech centre near me, aptech centre in whitefield, computer institute near itpl whitefield, computer institute near me, aptech whitefield enquiry, aptech whitefield working hours",
     canonical: `${SITE_URL}/contact`,
-    ogTitle: 'Getting Here: Directions to Our Centre Near ITPL, Bangalore',
+    ogTitle: "Getting Here: Directions to Our Centre Near ITPL, Bangalore",
     ogDescription:
-      'Planning a visit? Get directions and centre timings, then drop in whenever it suits you. Our counsellors can walk you through courses and fees over a chat.',
-    twitterTitle: 'Book Your Free Demo Class at Aptech Whitefield, Bangalore',
+      "Planning a visit? Get directions and centre timings, then drop in whenever it suits you. Our counsellors can walk you through courses and fees over a chat.",
+    twitterTitle: "Book Your Free Demo Class at Aptech Whitefield, Bangalore",
     twitterDescription:
       "Want to try a class before you decide? Call our Whitefield team, pick a time that works for you and sit in on a free demo session for any course you'd like.",
   },
 
   placements: {
-    title: 'Aptech Whitefield Placement Support | IT Jobs in Bangalore',
+    title: "Aptech Whitefield Placement Support | IT Jobs in Bangalore",
     description:
-      'Explore Aptech Whitefield placement support: resume reviews, mock interviews and introductions to companies hiring freshers near ITPL and across Bangalore.',
+      "Explore Aptech Whitefield placement support: resume reviews, mock interviews and introductions to companies hiring freshers near ITPL and across Bangalore.",
     keywords:
-      'aptech whitefield placement, aptech placement record, companies hiring freshers near itpl, it placement training, job oriented courses, it jobs for freshers, it placement training in whitefield, it placement training in bangalore, job oriented courses in whitefield, job oriented courses in bangalore, it jobs for freshers in whitefield, it jobs for freshers near itpl, it jobs near itpl, placement assistance courses bangalore, courses with job guarantee in whitefield, campus placement training bangalore',
+      "aptech whitefield placement, aptech placement record, companies hiring freshers near itpl, it placement training, job oriented courses, it jobs for freshers, it placement training in whitefield, it placement training in bangalore, job oriented courses in whitefield, job oriented courses in bangalore, it jobs for freshers in whitefield, it jobs for freshers near itpl, it jobs near itpl, placement assistance courses bangalore, courses with job guarantee in whitefield, campus placement training bangalore",
     canonical: `${SITE_URL}/placements`,
-    ogTitle: 'From Classroom to Job Offer | Aptech Placements Bangalore',
+    ogTitle: "From Classroom to Job Offer | Aptech Placements Bangalore",
     ogDescription:
-      'Training is only half the job. Our placement team helps you polish your resume, practise interviews and get in front of recruiters who are hiring right now.',
-    twitterTitle: 'Which Companies Are Hiring Freshers Near ITPL, Bangalore?',
+      "Training is only half the job. Our placement team helps you polish your resume, practise interviews and get in front of recruiters who are hiring right now.",
+    twitterTitle: "Which Companies Are Hiring Freshers Near ITPL, Bangalore?",
     twitterDescription:
-      'Curious where Aptech learners end up? See our placement record, the kind of roles freshers land and how we prepare you for interviews from the very first week.',
+      "Curious where Aptech learners end up? See our placement record, the kind of roles freshers land and how we prepare you for interviews from the very first week.",
     structuredData: {
-      '@context': 'https://schema.org',
-      '@type': 'Thing',
-      name: 'Placement Assistance Program',
-      description: '100% job placement assistance for IT professionals',
+      "@context": "https://schema.org",
+      "@type": "Thing",
+      name: "Placement Assistance Program",
+      description: "100% job placement assistance for IT professionals",
     },
   },
 
   corporateTraining: {
-    title: 'IT Training Institute Near ITPL, Bangalore | For Companies',
+    title: "IT Training Institute Near ITPL, Bangalore | For Companies",
     description:
-      'Aptech Whitefield is an IT training institute near ITPL that builds custom AI, data, Python and Power BI programs for teams, at your office or at our centre.',
+      "Aptech Whitefield is an IT training institute near ITPL that builds custom AI, data, Python and Power BI programs for teams, at your office or at our centre.",
     keywords:
-      'it training institute near itpl, corporate it training, employee upskilling, corporate ai training, corporate it training in bangalore, corporate it training in whitefield, corporate it training near itpl, employee upskilling programs in bangalore, employee upskilling whitefield, corporate ai training for companies in bangalore, corporate ai training near itpl, corporate training companies in whitefield, corporate python training bangalore, corporate power bi training bangalore, corporate data science training whitefield',
+      "it training institute near itpl, corporate it training, employee upskilling, corporate ai training, corporate it training in bangalore, corporate it training in whitefield, corporate it training near itpl, employee upskilling programs in bangalore, employee upskilling whitefield, corporate ai training for companies in bangalore, corporate ai training near itpl, corporate training companies in whitefield, corporate python training bangalore, corporate power bi training bangalore, corporate data science training whitefield",
     canonical: `${SITE_URL}/corporate-training`,
-    ogTitle: 'Upskill Your Team Without the Hassle | Aptech Bangalore',
+    ogTitle: "Upskill Your Team Without the Hassle | Aptech Bangalore",
     ogDescription:
       "Just tell us what your team needs to learn and when they're free. We'll shape the syllabus, schedule and format around your business, not the other way round.",
-    twitterTitle: 'Corporate AI, Data & Python Programs for Bangalore Teams',
+    twitterTitle: "Corporate AI, Data & Python Programs for Bangalore Teams",
     twitterDescription:
-      'Bring practical AI, Python and analytics skills to your people. Flexible batches, hands-on labs and trainers who understand how companies near ITPL really work.',
+      "Bring practical AI, Python and analytics skills to your people. Flexible batches, hands-on labs and trainers who understand how companies near ITPL really work.",
   },
 
   schoolsColleges: {
-    title:
-      'Which Computer Course Is Best After 12th? | Bangalore Guide',
+    title: "Which Computer Course Is Best After 12th? | Bangalore Guide",
     description:
-      'Wondering which computer course is best after 12th or a BA? Aptech Whitefield works with schools and colleges to guide students towards skills that get jobs.',
+      "Wondering which computer course is best after 12th or a BA? Aptech Whitefield works with schools and colleges to guide students towards skills that get jobs.",
     keywords:
-      'which computer course is best after 12th, best it course after ba, software engineering diploma after 12th, computer courses after 12th, it courses for students, college it training, computer courses after 12th in whitefield, computer courses after 12th in bangalore, it courses for students in whitefield, it courses for students in bangalore, college it training programs bangalore, college it training in whitefield, computer courses after bcom in bangalore, it courses after graduation bangalore, school coding classes whitefield, industry training for college students bangalore',
+      "which computer course is best after 12th, best it course after ba, software engineering diploma after 12th, computer courses after 12th, it courses for students, college it training, computer courses after 12th in whitefield, computer courses after 12th in bangalore, it courses for students in whitefield, it courses for students in bangalore, college it training programs bangalore, college it training in whitefield, computer courses after bcom in bangalore, it courses after graduation bangalore, school coding classes whitefield, industry training for college students bangalore",
     canonical: `${SITE_URL}/schools-colleges`,
-    ogTitle: 'Helping Students Choose the Right IT Path | Aptech Bangalore',
+    ogTitle: "Helping Students Choose the Right IT Path | Aptech Bangalore",
     ogDescription:
-      'We partner with schools and colleges to run career talks, coding workshops and certification programs, so students leave with real skills and clear direction.',
+      "We partner with schools and colleges to run career talks, coding workshops and certification programs, so students leave with real skills and clear direction.",
     twitterTitle: "Just Finished 12th? Here's What to Study Next in Bangalore",
     twitterDescription:
-      'Choosing a course after 12th or graduation can feel overwhelming. Our counsellors help students compare options honestly, based on interest and job demand.',
+      "Choosing a course after 12th or graduation can feel overwhelming. Our counsellors help students compare options honestly, based on interest and job demand.",
   },
 
   notFound: {
-    title: 'Page Not Found | Aptech Learning Whitefield',
+    title: "Page Not Found | Aptech Learning Whitefield",
     description:
-      'The page you are looking for could not be found. Return to Aptech Learning Whitefield homepage to explore our IT training courses.',
+      "The page you are looking for could not be found. Return to Aptech Learning Whitefield homepage to explore our IT training courses.",
     canonical: `${SITE_URL}/404`,
   },
 
   // Course-specific metadata (generic template)
   courseTemplate: {
-    title: '{courseName} Course | Aptech Learning Whitefield - Industry-Ready Training',
+    title:
+      "{courseName} Course | Aptech Learning Whitefield - Industry-Ready Training",
     description:
-      'Master {courseName} with hands-on projects and industry expertise. 100% placement assistance. Enroll at Aptech Learning Whitefield.',
-    keywords: '{courseName}, {courseName} course, {courseName} training, learn {courseName}, certification',
+      "Master {courseName} with hands-on projects and industry expertise. 100% placement assistance. Enroll at Aptech Learning Whitefield.",
+    keywords:
+      "{courseName}, {courseName} course, {courseName} training, learn {courseName}, certification",
   },
 
   // Blog post template
   blogTemplate: {
-    title: '{postTitle} | Aptech Learning Blog',
+    title: "{postTitle} | Aptech Learning Blog",
     description:
-      'Read insights on {postTitle} from Aptech Learning experts. Industry trends, tips, and best practices for IT professionals.',
-    keywords: '{postTitle}, IT training, professional development, industry insights',
+      "Read insights on {postTitle} from Aptech Learning experts. Industry trends, tips, and best practices for IT professionals.",
+    keywords:
+      "{postTitle}, IT training, professional development, industry insights",
   },
 };
 
@@ -538,13 +560,13 @@ export function getHelmetConfig(metadata: SEOMetadata) {
     title: metadata.title,
     meta: [
       {
-        name: 'description',
+        name: "description",
         content: metadata.description,
       },
       ...(metadata.keywords
         ? [
             {
-              name: 'keywords',
+              name: "keywords",
               content: metadata.keywords,
             },
           ]
@@ -552,7 +574,7 @@ export function getHelmetConfig(metadata: SEOMetadata) {
       ...(metadata.ogTitle
         ? [
             {
-              property: 'og:title',
+              property: "og:title",
               content: metadata.ogTitle,
             },
           ]
@@ -560,7 +582,7 @@ export function getHelmetConfig(metadata: SEOMetadata) {
       ...(metadata.ogDescription
         ? [
             {
-              property: 'og:description',
+              property: "og:description",
               content: metadata.ogDescription,
             },
           ]
@@ -568,28 +590,28 @@ export function getHelmetConfig(metadata: SEOMetadata) {
       ...(metadata.ogImage
         ? [
             {
-              property: 'og:image',
+              property: "og:image",
               content: metadata.ogImage,
             },
           ]
         : []),
       {
-        property: 'og:url',
+        property: "og:url",
         content: metadata.canonical || SITE_URL,
       },
       {
-        name: 'twitter:title',
+        name: "twitter:title",
         content: metadata.ogTitle || metadata.title,
       },
       {
-        name: 'twitter:description',
+        name: "twitter:description",
         content: metadata.ogDescription || metadata.description,
       },
     ],
     ...(metadata.canonical && {
       link: [
         {
-          rel: 'canonical',
+          rel: "canonical",
           href: metadata.canonical,
         },
       ],

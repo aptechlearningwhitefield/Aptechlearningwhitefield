@@ -1,15 +1,13 @@
-
 const images = {
-  hero:
-    "/assets/blog-images/best-it-course-after-bsc-aws-vs-azure/aws-vs-azure-image1.png",
-  fundamentals:
-    "/assets/blog-images/best-it-course-after-bsc-aws-vs-azure/aws-vs-azure-image2.png",
-  aws:
-    "/assets/blog-images/best-it-course-after-bsc-aws-vs-azure/aws-vs-azure-image3.png",
-  azure:
-    "/assets/blog-images/best-it-course-after-bsc-aws-vs-azure/aws-vs-azure-image4.png",
-  certification:
-    "/assets/blog-images/best-it-course-after-bsc-aws-vs-azure/aws-vs-azure-image5.png",
+  hero: "/assets/blog-images/best-it-course-after-bsc-aws-vs-azure/best-it-course-after-bsc-aws-azure-bangalore.png",
+  comparison:
+    "/assets/blog-images/best-it-course-after-bsc-aws-vs-azure/aws-vs-azure-cloud-services-comparison.png",
+  handsOnProject:
+    "/assets/blog-images/best-it-course-after-bsc-aws-vs-azure/cloud-computing-hands-on-project-after-bsc.png",
+  learningRoadmap:
+    "/assets/blog-images/best-it-course-after-bsc-aws-vs-azure/cloud-learning-roadmap-portfolio-after-bsc.png",
+  courseChecklist:
+    "/assets/blog-images/best-it-course-after-bsc-aws-vs-azure/cloud-computing-course-checklist-bangalore.png",
 };
 
 const links = {
@@ -53,9 +51,9 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
 
       <p>
         Completing a Bachelor of Science (BSc) degree can open several
-        opportunities for further learning and career development. However,
-        many graduates face an important question: which technical skill should
-        they learn next to prepare for opportunities in the IT industry?
+        opportunities for further learning and career development. However, many
+        graduates face an important question: which technical skill should they
+        learn next to prepare for opportunities in the IT industry?
       </p>
 
       <p>
@@ -67,26 +65,23 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
 
       <p>
         If you are researching the{" "}
-        <a href={links.bestItCourse}>
-          best IT course after BSc
-        </a>
-        , understanding the differences between AWS and Azure can help you
-        choose a learning direction that matches your interests and career
-        goals.
+        <a href={links.bestItCourse}>best IT course after BSc</a>, understanding
+        the differences between AWS and Azure can help you choose a learning
+        direction that matches your interests and career goals.
       </p>
 
       <p>
-        In this guide, we compare AWS and Azure, explore their features,
-        discuss beginner learning paths, and explain how to approach cloud
+        In this guide, we compare AWS and Azure, explore their features, discuss
+        beginner learning paths, and explain how to approach cloud
         certifications when starting your career in Bangalore.
       </p>
 
       <h2>Is Cloud Computing a Good Career Option After BSc?</h2>
 
       <p>
-        Cloud computing involves delivering computing services such as
-        servers, storage, databases, networking, software, and other
-        technology resources through the internet.
+        Cloud computing involves delivering computing services such as servers,
+        storage, databases, networking, software, and other technology resources
+        through the internet.
       </p>
 
       <p>
@@ -126,21 +121,19 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
 
       <p>
         Their services cover areas such as computing, storage, databases,
-        networking, security, monitoring, and application development.
-        However, they have different service names, management interfaces,
-        tools, and ecosystems.
+        networking, security, monitoring, and application development. However,
+        they have different service names, management interfaces, tools, and
+        ecosystems.
       </p>
 
       <ArticleImage
-        src={images.fundamentals}
-        alt="Cloud computing fundamentals including servers, storage, networking and cloud infrastructure."
+        src={images.comparison}
+        alt="AWS and Azure cloud services compared across virtual machines, storage, identity, networking, and monitoring."
       />
 
       <h2>AWS vs Azure: Side-by-Side Comparison</h2>
 
-      <p>
-        Here is a beginner-friendly comparison of the two platforms.
-      </p>
+      <p>Here is a beginner-friendly comparison of the two platforms.</p>
 
       <div className="overflow-x-auto my-8">
         <table className="w-full border-collapse text-sm">
@@ -149,9 +142,7 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
               <th className="border border-slate-200 p-3 text-left">
                 Comparison
               </th>
-              <th className="border border-slate-200 p-3 text-left">
-                AWS
-              </th>
+              <th className="border border-slate-200 p-3 text-left">AWS</th>
               <th className="border border-slate-200 p-3 text-left">
                 Microsoft Azure
               </th>
@@ -162,12 +153,8 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
               <td className="border border-slate-200 p-3 font-semibold">
                 Provider
               </td>
-              <td className="border border-slate-200 p-3">
-                Amazon
-              </td>
-              <td className="border border-slate-200 p-3">
-                Microsoft
-              </td>
+              <td className="border border-slate-200 p-3">Amazon</td>
+              <td className="border border-slate-200 p-3">Microsoft</td>
             </tr>
             <tr>
               <td className="border border-slate-200 p-3 font-semibold">
@@ -176,17 +163,13 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
               <td className="border border-slate-200 p-3">
                 Amazon Web Services
               </td>
-              <td className="border border-slate-200 p-3">
-                Microsoft Azure
-              </td>
+              <td className="border border-slate-200 p-3">Microsoft Azure</td>
             </tr>
             <tr>
               <td className="border border-slate-200 p-3 font-semibold">
                 Computing
               </td>
-              <td className="border border-slate-200 p-3">
-                Amazon EC2
-              </td>
+              <td className="border border-slate-200 p-3">Amazon EC2</td>
               <td className="border border-slate-200 p-3">
                 Azure Virtual Machines
               </td>
@@ -195,9 +178,7 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
               <td className="border border-slate-200 p-3 font-semibold">
                 Storage
               </td>
-              <td className="border border-slate-200 p-3">
-                Amazon S3
-              </td>
+              <td className="border border-slate-200 p-3">Amazon S3</td>
               <td className="border border-slate-200 p-3">
                 Azure Blob Storage
               </td>
@@ -206,9 +187,7 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
               <td className="border border-slate-200 p-3 font-semibold">
                 Database services
               </td>
-              <td className="border border-slate-200 p-3">
-                Amazon RDS
-              </td>
+              <td className="border border-slate-200 p-3">Amazon RDS</td>
               <td className="border border-slate-200 p-3">
                 Azure SQL Database
               </td>
@@ -217,9 +196,7 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
               <td className="border border-slate-200 p-3 font-semibold">
                 Identity management
               </td>
-              <td className="border border-slate-200 p-3">
-                AWS IAM
-              </td>
+              <td className="border border-slate-200 p-3">AWS IAM</td>
               <td className="border border-slate-200 p-3">
                 Microsoft Entra ID
               </td>
@@ -240,10 +217,10 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
       </div>
 
       <p>
-        Both platforms provide services for common cloud computing
-        requirements. The best option depends on the type of work you want to
-        pursue, the tools you want to learn, and the technology environment you
-        want to work with.
+        Both platforms provide services for common cloud computing requirements.
+        The best option depends on the type of work you want to pursue, the
+        tools you want to learn, and the technology environment you want to work
+        with.
       </p>
 
       <h2>1. Understanding AWS (Amazon Web Services)</h2>
@@ -260,8 +237,8 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
       </p>
 
       <ArticleImage
-        src={images.aws}
-        alt="AWS cloud platform learning path covering cloud computing, storage and infrastructure services."
+        src={images.handsOnProject}
+        alt="Learner planning a hands-on cloud deployment project with infrastructure and security checklists."
       />
 
       <h3>Important AWS Services to Understand</h3>
@@ -284,8 +261,8 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
           permissions for AWS resources.
         </li>
         <li>
-          <strong>Amazon VPC:</strong> Allows users to create logically
-          isolated virtual networks in AWS.
+          <strong>Amazon VPC:</strong> Allows users to create logically isolated
+          virtual networks in AWS.
         </li>
       </ul>
 
@@ -293,33 +270,27 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
 
       <p>
         AWS may be worth exploring if you are interested in cloud
-        infrastructure, application hosting, cloud operations, or learning
-        how to deploy applications using Amazon's cloud services.
+        infrastructure, application hosting, cloud operations, or learning how
+        to deploy applications using Amazon's cloud services.
       </p>
 
       <p>
-        It can also be a useful option for learners who want to understand
-        cloud computing concepts through practical exercises and projects.
+        It can also be a useful option for learners who want to understand cloud
+        computing concepts through practical exercises and projects.
       </p>
 
       <h2>2. Understanding Microsoft Azure</h2>
 
       <p>
         Microsoft Azure is Microsoft's cloud computing platform. It provides
-        services for building, deploying, managing, and maintaining
-        applications and infrastructure through Microsoft's global cloud
-        environment.
+        services for building, deploying, managing, and maintaining applications
+        and infrastructure through Microsoft's global cloud environment.
       </p>
 
       <p>
         Azure includes services for virtual machines, storage, databases,
         networking, security, analytics, and application development.
       </p>
-
-      <ArticleImage
-        src={images.azure}
-        alt="Microsoft Azure cloud computing learning path and Azure infrastructure services."
-      />
 
       <h3>Important Azure Services to Understand</h3>
 
@@ -350,8 +321,8 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
 
       <p>
         Azure may be worth exploring if you are interested in Microsoft's cloud
-        ecosystem, enterprise IT environments, cloud administration, or
-        managing applications and infrastructure using Azure services.
+        ecosystem, enterprise IT environments, cloud administration, or managing
+        applications and infrastructure using Azure services.
       </p>
 
       <p>
@@ -376,9 +347,9 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
       </p>
 
       <p>
-        Rather than choosing a platform only because you have heard that it
-        has more jobs, review current job descriptions and identify which
-        technical skills employers are asking for.
+        Rather than choosing a platform only because you have heard that it has
+        more jobs, review current job descriptions and identify which technical
+        skills employers are asking for.
       </p>
 
       <h3>Cloud-Related Roles You Can Explore</h3>
@@ -407,10 +378,9 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
       </ul>
 
       <p>
-        These roles have different entry requirements. Some may require
-        previous IT experience, while others may offer entry-level pathways
-        for candidates with suitable foundational knowledge and practical
-        skills.
+        These roles have different entry requirements. Some may require previous
+        IT experience, while others may offer entry-level pathways for
+        candidates with suitable foundational knowledge and practical skills.
       </p>
 
       <h2>Which Cloud Platform Is Easier for Beginners?</h2>
@@ -421,9 +391,7 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
         programming can influence how quickly you understand each platform.
       </p>
 
-      <p>
-        For example:
-      </p>
+      <p>For example:</p>
 
       <ul>
         <li>
@@ -449,8 +417,8 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
       <h2>What Should BSc Graduates Learn Before Starting AWS or Azure?</h2>
 
       <p>
-        Cloud platforms include many services and technical concepts. Building
-        a foundation before starting certification preparation can make the
+        Cloud platforms include many services and technical concepts. Building a
+        foundation before starting certification preparation can make the
         learning process easier.
       </p>
 
@@ -458,24 +426,24 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
 
       <p>
         Understand how computers work, how operating systems manage resources,
-        and how applications use hardware and software. Familiarity with
-        Windows and Linux is useful when working with cloud environments.
+        and how applications use hardware and software. Familiarity with Windows
+        and Linux is useful when working with cloud environments.
       </p>
 
       <h3>2. Networking Fundamentals</h3>
 
       <p>
         Learn basic networking concepts such as IP addresses, DNS, routing,
-        ports, firewalls, and virtual networks. These concepts help explain
-        how cloud resources communicate with one another.
+        ports, firewalls, and virtual networks. These concepts help explain how
+        cloud resources communicate with one another.
       </p>
 
       <h3>3. Storage and Database Basics</h3>
 
       <p>
         Understand the difference between file storage, object storage, and
-        databases. Learn basic database concepts and how applications store
-        and retrieve information.
+        databases. Learn basic database concepts and how applications store and
+        retrieve information.
       </p>
 
       <h3>4. Security Fundamentals</h3>
@@ -504,14 +472,9 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
 
       <p>
         However, a certification alone does not guarantee a job. Practical
-        knowledge, projects, troubleshooting ability, communication skills,
-        and an understanding of real-world requirements are also important.
+        knowledge, projects, troubleshooting ability, communication skills, and
+        an understanding of real-world requirements are also important.
       </p>
-
-      <ArticleImage
-        src={images.certification}
-        alt="Cloud computing certification preparation and practical AWS and Azure learning."
-      />
 
       <h3>How to Approach AWS Certification</h3>
 
@@ -527,8 +490,8 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
       <p>
         Review Microsoft's current Azure certification options and choose a
         suitable starting point. Focus on cloud concepts, Azure services,
-        identity, security, and practical exercises that match the
-        certification syllabus.
+        identity, security, and practical exercises that match the certification
+        syllabus.
       </p>
 
       <p>
@@ -543,6 +506,11 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
         If you are starting from the beginning, follow a structured learning
         plan instead of trying to study every cloud service at once.
       </p>
+
+      <ArticleImage
+        src={images.learningRoadmap}
+        alt="Cloud learning portfolio showing architecture planning, deployment records, access control, monitoring, and reflection."
+      />
 
       <h3>Stage 1: Build Your Technical Foundation</h3>
 
@@ -573,8 +541,8 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
       <p>
         Work on simple exercises such as creating a virtual machine, configuring
         storage, setting up a basic network, and understanding access
-        permissions. Follow platform documentation and use appropriate
-        security and cost controls.
+        permissions. Follow platform documentation and use appropriate security
+        and cost controls.
       </p>
 
       <h3>Stage 5: Build Small Projects</h3>
@@ -589,20 +557,25 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
 
       <p>
         Once you understand the platform fundamentals, review the relevant
-        certification syllabus. Prepare a portfolio of practical exercises
-        and projects, and compare your skills with the requirements in current
-        job descriptions.
+        certification syllabus. Prepare a portfolio of practical exercises and
+        projects, and compare your skills with the requirements in current job
+        descriptions.
       </p>
 
       <h2>How to Choose the Right Cloud Computing Course in Bangalore</h2>
 
       <p>
-        Selecting a course is an important step. Before enrolling, make sure
-        the programme matches your current knowledge and the type of role you
-        want to explore.
+        Selecting a course is an important step. Before enrolling, make sure the
+        programme matches your current knowledge and the type of role you want
+        to explore.
       </p>
 
       <p>Use this checklist when comparing training options:</p>
+
+      <ArticleImage
+        src={images.courseChecklist}
+        alt="Cloud computing course checklist covering fundamentals, networking, practical labs, security, portfolio projects, and course logistics."
+      />
 
       <ul>
         <li>
@@ -641,14 +614,14 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
 
       <p>
         If you are comparing the{" "}
-        <a href={links.schoolsColleges}>
-          best IT course after BSc
-        </a>
-        , consider your degree background, technical interests, learning
-        requirements, and long-term career plans before making a decision.
+        <a href={links.schoolsColleges}>best IT course after BSc</a>, consider
+        your degree background, technical interests, learning requirements, and
+        long-term career plans before making a decision.
       </p>
 
-      <h2>Why Explore Cloud Computing Training at Aptech Learning Whitefield?</h2>
+      <h2>
+        Why Explore Cloud Computing Training at Aptech Learning Whitefield?
+      </h2>
 
       <p>
         If you are based in Whitefield or nearby areas of Bangalore, exploring
@@ -658,10 +631,8 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
 
       <p>
         Visit{" "}
-        <a href={links.courses}>
-          Aptech Learning Whitefield's courses page
-        </a>{" "}
-        to explore the available programmes and identify a suitable learning
+        <a href={links.courses}>Aptech Learning Whitefield's courses page</a> to
+        explore the available programmes and identify a suitable learning
         direction.
       </p>
 
@@ -677,15 +648,15 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
       <p>
         AWS and Azure are both useful cloud platforms, and either can be a
         starting point for graduates interested in cloud computing. The right
-        choice depends on your interests, existing technical knowledge, and
-        the roles you want to explore.
+        choice depends on your interests, existing technical knowledge, and the
+        roles you want to explore.
       </p>
 
       <p>
         If you are a BSc graduate planning to enter the IT industry, begin by
-        strengthening your computer, networking, operating system, and
-        security fundamentals. Then select one cloud platform, practise its
-        core services, and work on small projects.
+        strengthening your computer, networking, operating system, and security
+        fundamentals. Then select one cloud platform, practise its core
+        services, and work on small projects.
       </p>
 
       <p>
@@ -695,11 +666,9 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
 
       <p>
         Ready to explore your learning options? Visit{" "}
-        <a href={links.courses}>
-          Aptech Learning Whitefield's courses page
-        </a>{" "}
-        to review available programmes and enquire about the right next step
-        for your IT learning journey.
+        <a href={links.courses}>Aptech Learning Whitefield's courses page</a> to
+        review available programmes and enquire about the right next step for
+        your IT learning journey.
       </p>
 
       <h2>Frequently Asked Questions</h2>
@@ -728,36 +697,34 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
       <p>
         Both platforms are used in cloud-related IT roles. Job availability
         varies by employer, industry, experience level, and technical
-        requirements. Review current Bangalore job listings to understand
-        which platform and supporting skills are requested for your target
-        role.
+        requirements. Review current Bangalore job listings to understand which
+        platform and supporting skills are requested for your target role.
       </p>
 
       <h3>4. Can a BSc graduate learn AWS or Azure?</h3>
 
       <p>
         Yes. BSc graduates can start learning AWS or Azure. Basic computer,
-        networking, and operating system knowledge can help. If you are new
-        to IT, strengthen these foundations before progressing to advanced
-        cloud topics.
+        networking, and operating system knowledge can help. If you are new to
+        IT, strengthen these foundations before progressing to advanced cloud
+        topics.
       </p>
 
       <h3>5. Do I need programming knowledge to learn cloud computing?</h3>
 
       <p>
         You do not need to be an advanced programmer to begin learning cloud
-        fundamentals. However, basic scripting and programming knowledge can
-        be useful for automation, application deployment, and more advanced
-        cloud engineering work.
+        fundamentals. However, basic scripting and programming knowledge can be
+        useful for automation, application deployment, and more advanced cloud
+        engineering work.
       </p>
 
       <h3>6. Are AWS and Azure certifications enough to get a job?</h3>
 
       <p>
-        Certifications can demonstrate knowledge of a cloud platform, but
-        they do not guarantee employment. Practical projects, technical
-        fundamentals, troubleshooting skills, and communication are also
-        important.
+        Certifications can demonstrate knowledge of a cloud platform, but they
+        do not guarantee employment. Practical projects, technical fundamentals,
+        troubleshooting skills, and communication are also important.
       </p>
 
       <h3>7. How long does it take to learn AWS or Azure?</h3>
@@ -771,4 +738,3 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
     </article>
   );
 }
-

@@ -11,7 +11,26 @@ const categoryColors: Record<string, string> = {
   'Python': 'bg-green-50 text-green-700',
   'Cybersecurity': 'bg-red-50 text-red-700',
   'Generative AI': 'bg-orange-50 text-orange-700',
-  'Cloud Computing': 'bg-sky-50 text-sky-700'
+  'Cloud Computing': 'bg-sky-50 text-sky-700',
+  'Career Guidance': 'bg-indigo-50 text-indigo-700'
+};
+const blogCoverImages: Record<string, string> = {
+  'ai-machine-learning-career-2026':
+    '/assets/blog-images/ai-machine-learning-career-2026/ai-career-learner.png',
+  'data-science-vs-data-analytics':
+    '/assets/blog-images/data-science-vs-data-analytics/data-science-vs-data-analytics-career.png',
+  'python-for-beginners-whitefield':
+    '/assets/blog-images/python-vs-java/python-vs-java-img1.png',
+  'cybersecurity-career-bangalore':
+    '/assets/blog-images/Skills%20needed%20to%20get%20IT%20Job/Skills%20needed%20to%20get%20IT%20Job%20img1.png',
+  'weekend-computer-classes-whitefield-bangalore':
+    '/assets/blog-images/weekend-computer-classes-whitefield/weekend-computer-classes-image1.png',
+  'best-it-course-after-bsc-aws-vs-azure-bangalore':
+    '/assets/blog-images/best-it-course-after-bsc-aws-vs-azure/best-it-course-after-bsc-aws-azure-bangalore.png',
+  'best-it-course-after-bcom':
+    '/assets/blog-images/best-it-course-after-bcom/best-it-course-after-bcom-career-guide.webp',
+  'which-computer-course-is-best-after-12th':
+    '/assets/blog-images/computer-course-after-12th/computer-course-after-12th-career-guide.webp'
 };
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -98,9 +117,20 @@ export default function BlogPage() {
               delay: i % 3 * 0.08,
               ease: 'easeOut' as const
             }} className={`bg-[#F8FAFC] border border-slate-100 rounded-2xl overflow-hidden hover:shadow-md transition-shadow group ${!post.featured ? 'hidden' : ''}`}>
-                  <div className="h-40 bg-gradient-to-br from-primary/20 to-blue-900/30 flex items-center justify-center">
-                    <BookOpen size={40} className="text-primary/40" />
-                  </div>
+                  {blogCoverImages[post.slug] ? (
+                    <img
+                      src={blogCoverImages[post.slug]}
+                      alt={post.title}
+                      className="w-full h-40 object-cover"
+                      loading="lazy"
+                      width={1200}
+                      height={630}
+                    />
+                  ) : (
+                    <div className="h-40 bg-gradient-to-br from-primary/20 to-blue-900/30 flex items-center justify-center">
+                      <BookOpen size={40} className="text-primary/40" />
+                    </div>
+                  )}
                   <div className="p-6">
                     <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${categoryColors[post.category] ?? 'bg-slate-100 text-slate-600'}`}>
                       {post.category}
@@ -146,9 +176,20 @@ export default function BlogPage() {
               delay: i % 2 * 0.07,
               ease: 'easeOut' as const
             }} className={`bg-white border border-slate-100 rounded-2xl p-6 hover:shadow-md transition-shadow group flex gap-5 ${post.featured ? 'hidden' : ''}`}>
-                  <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                    <BookOpen size={24} className="text-primary/60" />
-                  </div>
+                  {blogCoverImages[post.slug] ? (
+                    <img
+                      src={blogCoverImages[post.slug]}
+                      alt={post.title}
+                      className="w-16 h-16 rounded-xl object-cover shrink-0"
+                      loading="lazy"
+                      width={64}
+                      height={64}
+                    />
+                  ) : (
+                    <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                      <BookOpen size={24} className="text-primary/60" />
+                    </div>
+                  )}
                   <div className="flex-1 min-w-0">
                     <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${categoryColors[post.category] ?? 'bg-slate-100 text-slate-600'}`}>
                       {post.category}

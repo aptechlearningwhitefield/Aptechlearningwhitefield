@@ -1,5 +1,41 @@
 [
   {
+    "id": "bp9",
+    "slug": "which-computer-course-is-best-after-12th",
+    "title": "Which Computer Course Is Best After 12th? A Career Guide",
+    "excerpt": "Compare programming, web development, data analytics, AI, and business technology courses after Class 12. Learn what to consider before choosing a course.",
+    "category": "Career Guidance",
+    "author": "Aptech Learning Whitefield Editorial Team",
+    "date": "2026-10-31",
+    "readTime": "9 min read",
+    "featured": true,
+    "tags": [
+      "Computer Course After 12th",
+      "Career Guidance",
+      "Programming",
+      "Data Analytics",
+      "AI and Machine Learning"
+    ]
+  },
+  {
+    "id": "bp8",
+    "slug": "best-it-course-after-bcom",
+    "title": "Best IT Course After BCom: Skills, Jobs and Career Paths",
+    "excerpt": "Explore IT courses after BCom, including accounting software, Advanced Excel, data analytics, and programming. Compare learning paths and choose based on your interests.",
+    "category": "Career Guidance",
+    "author": "Aptech Learning Whitefield Editorial Team",
+    "date": "2026-10-31",
+    "readTime": "8 min read",
+    "featured": true,
+    "tags": [
+      "IT Courses After BCom",
+      "BCom Career Options",
+      "Accounting Software",
+      "Data Analytics",
+      "Advanced Excel"
+    ]
+  },
+  {
     "id": "bp6",
     "slug": "best-it-course-after-bsc-aws-vs-azure-bangalore",
     "title": "Best IT Course After BSc: AWS vs Azure in Bangalore, Which One Should You Pick?",
@@ -108,24 +144,6 @@
       "Career",
       "Python",
       "Power BI"
-    ]
-  },
-  {
-    "id": "bp5",
-    "slug": "generative-ai-workplace-productivity",
-    "title": "Weekend Computer Classes in Whitefield, Bangalore | GenAI",
-    "excerpt": "Weekend computer classes for working professionals in Whitefield. See how generative AI is changing everyday work and how to upskill without quitting your job.",
-    "category": "Generative AI",
-    "author": "Aptech Learning Whitefield",
-    "date": "2026-06-15",
-    "readTime": "5 min read",
-    "featured": true,
-    "tags": [
-      "Generative AI",
-      "ChatGPT",
-      "Productivity",
-      "Prompt Engineering",
-      "AI Tools"
     ]
   }
 ]
