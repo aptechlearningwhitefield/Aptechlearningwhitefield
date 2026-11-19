@@ -9,26 +9,24 @@ const categoryColors: Record<string, string> = {
   'AI & Machine Learning': 'bg-blue-50 text-blue-700',
   'Data Science': 'bg-purple-50 text-purple-700',
   'Python': 'bg-green-50 text-green-700',
-  'Cybersecurity': 'bg-red-50 text-red-700',
   'Generative AI': 'bg-orange-50 text-orange-700',
-  'Cloud Computing': 'bg-sky-50 text-sky-700',
   'Career Guidance': 'bg-indigo-50 text-indigo-700'
 };
 const blogCoverImages: Record<string, string> = {
+  'choosing-technology-skills-after-bcom':
+    '/assets/blog-images/how-bcom-graduates-it-career/technology-skills-after-bcom-graduate-guide.png',
   'ai-machine-learning-career-2026':
     '/assets/blog-images/ai-machine-learning-career-2026/ai-career-learner.png',
   'data-science-vs-data-analytics':
     '/assets/blog-images/data-science-vs-data-analytics/data-science-vs-data-analytics-career.png',
   'python-for-beginners-whitefield':
     '/assets/blog-images/python-vs-java/python-vs-java-img1.png',
-  'cybersecurity-career-bangalore':
-    '/assets/blog-images/Skills%20needed%20to%20get%20IT%20Job/Skills%20needed%20to%20get%20IT%20Job%20img1.png',
   'weekend-computer-classes-whitefield-bangalore':
     '/assets/blog-images/weekend-computer-classes-whitefield/weekend-computer-classes-image1.png',
-  'best-it-course-after-bsc-aws-vs-azure-bangalore':
-    '/assets/blog-images/best-it-course-after-bsc-aws-vs-azure/best-it-course-after-bsc-aws-azure-bangalore.png',
   'best-it-course-after-bcom':
     '/assets/blog-images/best-it-course-after-bcom/best-it-course-after-bcom-career-guide.webp',
+  'how-bcom-graduates-can-build-it-career':
+    '/assets/blog-images/how-bcom-graduates-it-career/bcom-graduate-exploring-it-career.png',
   'which-computer-course-is-best-after-12th':
     '/assets/blog-images/computer-course-after-12th/computer-course-after-12th-career-guide.webp'
 };
@@ -91,7 +89,7 @@ export default function BlogPage() {
                 IT Career Insights &amp; Tech Guides
               </h1>
               <p className="text-blue-200 text-lg max-w-2xl mx-auto">
-                Expert articles on AI, Data Science, Python, Cybersecurity, and IT careers — written by Aptech Learning Whitefield's training team.
+                Expert articles on AI, Data Science, Python, and IT careers — written by Aptech Learning Whitefield's training team.
               </p>
             </motion.div>
           </div>

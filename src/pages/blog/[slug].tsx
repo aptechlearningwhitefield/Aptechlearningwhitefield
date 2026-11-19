@@ -1,4 +1,3 @@
-
 import { Helmet } from "@dr.pogodin/react-helmet";
 import { Link, useParams, useNavigate } from "react-router";
 import {
@@ -16,24 +15,19 @@ import AiMachineLearningCareerArticle from "../../components/ai-machine-learning
 import DataScienceVsDataAnalyticsArticle from "../../components/data-science-vs-data-analytics-article";
 import WeekendComputerClassesWhitefieldArticle from "../../components/weekend-computer-classes-whitefield-article";
 import PythonVsJavaArticle from "../../components/python-vs-java-article";
-import CybersecurityItSkillsBangaloreArticle from "../../components/cybersecurity-it-skills-bangalore-article";
-import BestItCourseAfterBscAwsVsAzureArticle from "../../components/best-it-course-after-bsc-aws-vs-azure-article";
 import BestItCourseAfterBcomArticle from "../../components/best-it-course-after-bcom-article";
+import ChoosingTechnologySkillsAfterBcomArticle from "../../components/choosing-technology-skills-after-bcom-article";
+import HowBcomGraduatesBuildItCareerArticle from "../../components/how-bcom-graduates-it-career-article";
 import WhichComputerCourseBestAfter12thArticle from "../../components/which-computer-course-best-after-12th-article";
 
 import { SITE_URL as site } from "../../lib/site-url";
-import {
-  blogSeoMetadata,
-  getBlogSeoKeywords,
-} from "../../lib/seo-metadata";
+import { blogSeoMetadata, getBlogSeoKeywords } from "../../lib/seo-metadata";
 
 const categoryColors: Record<string, string> = {
   "AI & Machine Learning": "bg-blue-50 text-blue-700",
   "Data Science": "bg-purple-50 text-purple-700",
   Python: "bg-green-50 text-green-700",
-  Cybersecurity: "bg-red-50 text-red-700",
   "Generative AI": "bg-orange-50 text-orange-700",
-  "Cloud Computing": "bg-sky-50 text-sky-700",
 };
 
 const aiCareerImages = {
@@ -50,13 +44,12 @@ const weekendComputerClassesHero =
 const pythonVsJavaHero =
   "/assets/blog-images/python-vs-java/python-vs-java-img1.png";
 
-const cybersecurityItSkillsHero =
-  "/assets/blog-images/Skills%20needed%20to%20get%20IT%20Job/Skills%20needed%20to%20get%20IT%20Job%20img1.png";
-
-const bestItCourseAfterBscHero =
-  "/assets/blog-images/best-it-course-after-bsc-aws-vs-azure/best-it-course-after-bsc-aws-azure-bangalore.png";
 const bestItCourseAfterBcomHero =
   "/assets/blog-images/best-it-course-after-bcom/best-it-course-after-bcom-career-guide.webp";
+const choosingTechnologySkillsAfterBcomHero =
+  "/assets/blog-images/how-bcom-graduates-it-career/technology-skills-after-bcom-graduate-guide.png";
+const howBcomGraduatesItCareerHero =
+  "/assets/blog-images/how-bcom-graduates-it-career/bcom-graduate-exploring-it-career.png";
 const whichComputerCourseAfter12thHero =
   "/assets/blog-images/computer-course-after-12th/computer-course-after-12th-career-guide.webp";
 
@@ -76,8 +69,7 @@ export default function BlogDetailPage() {
     return null;
   }
 
-  const isAiCareerArticle =
-    post.slug === "ai-machine-learning-career-2026";
+  const isAiCareerArticle = post.slug === "ai-machine-learning-career-2026";
 
   const isDataScienceVsAnalyticsArticle =
     post.slug === "data-science-vs-data-analytics";
@@ -85,17 +77,16 @@ export default function BlogDetailPage() {
   const isWeekendComputerClassesArticle =
     post.slug === "weekend-computer-classes-whitefield-bangalore";
 
-  const isPythonVsJavaArticle =
-    post.slug === "python-for-beginners-whitefield";
-
-  const isCybersecurityItSkillsArticle =
-    post.slug === "cybersecurity-career-bangalore";
-
-  const isBestItCourseAfterBscArticle =
-    post.slug === "best-it-course-after-bsc-aws-vs-azure-bangalore";
+  const isPythonVsJavaArticle = post.slug === "python-for-beginners-whitefield";
 
   const isBestItCourseAfterBcomArticle =
     post.slug === "best-it-course-after-bcom";
+
+  const isChoosingTechnologySkillsAfterBcomArticle =
+    post.slug === "choosing-technology-skills-after-bcom";
+
+  const isHowBcomGraduatesItCareerArticle =
+    post.slug === "how-bcom-graduates-can-build-it-career";
 
   const isWhichComputerCourseAfter12thArticle =
     post.slug === "which-computer-course-is-best-after-12th";
@@ -108,15 +99,15 @@ export default function BlogDetailPage() {
         ? `${site}${weekendComputerClassesHero}`
         : isPythonVsJavaArticle
           ? `${site}${pythonVsJavaHero}`
-          : isCybersecurityItSkillsArticle
-            ? `${site}${cybersecurityItSkillsHero}`
-            : isBestItCourseAfterBscArticle
-              ? `${site}${bestItCourseAfterBscHero}`
-              : isBestItCourseAfterBcomArticle
-                ? `${site}${bestItCourseAfterBcomHero}`
+          : isBestItCourseAfterBcomArticle
+            ? `${site}${bestItCourseAfterBcomHero}`
+            : isChoosingTechnologySkillsAfterBcomArticle
+              ? `${site}${choosingTechnologySkillsAfterBcomHero}`
+              : isHowBcomGraduatesItCareerArticle
+                ? `${site}${howBcomGraduatesItCareerHero}`
                 : isWhichComputerCourseAfter12thArticle
                   ? `${site}${whichComputerCourseAfter12thHero}`
-                : `${site}/airo-assets/images/blogs/default-blog-image`;
+                  : `${site}/airo-assets/images/blogs/default-blog-image`;
 
   const blogSeo = blogSeoMetadata[post.slug];
 
@@ -158,10 +149,7 @@ export default function BlogDetailPage() {
 
         {keywords && <meta name="keywords" content={keywords} />}
 
-        <link
-          rel="canonical"
-          href={`${site}/blogs/${post.slug}`}
-        />
+        <link rel="canonical" href={`${site}/blogs/${post.slug}`} />
 
         <meta property="og:title" content={socialTitle} />
         <meta property="og:description" content={socialDescription} />
@@ -176,9 +164,7 @@ export default function BlogDetailPage() {
 
         <meta name="robots" content="index, follow" />
 
-        <script type="application/ld+json">
-          {JSON.stringify(jsonLd)}
-        </script>
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
       <main>
@@ -204,8 +190,7 @@ export default function BlogDetailPage() {
             <div className="mb-6 flex flex-wrap gap-3 items-center">
               <span
                 className={`text-xs font-bold px-3 py-1.5 rounded-full ${
-                  categoryColors[post.category] ??
-                  "bg-slate-100 text-slate-600"
+                  categoryColors[post.category] ?? "bg-slate-100 text-slate-600"
                 }`}
               >
                 {post.category}
@@ -264,12 +249,12 @@ export default function BlogDetailPage() {
               <WeekendComputerClassesWhitefieldArticle />
             ) : isPythonVsJavaArticle ? (
               <PythonVsJavaArticle />
-            ) : isCybersecurityItSkillsArticle ? (
-              <CybersecurityItSkillsBangaloreArticle />
-            ) : isBestItCourseAfterBscArticle ? (
-              <BestItCourseAfterBscAwsVsAzureArticle />
             ) : isBestItCourseAfterBcomArticle ? (
               <BestItCourseAfterBcomArticle />
+            ) : isChoosingTechnologySkillsAfterBcomArticle ? (
+              <ChoosingTechnologySkillsAfterBcomArticle />
+            ) : isHowBcomGraduatesItCareerArticle ? (
+              <HowBcomGraduatesBuildItCareerArticle />
             ) : isWhichComputerCourseAfter12thArticle ? (
               <WhichComputerCourseBestAfter12thArticle />
             ) : (
@@ -284,11 +269,11 @@ export default function BlogDetailPage() {
                 <div className="space-y-6 text-slate-600">
                   <p>
                     This article from Aptech Learning Whitefield covers
-                    essential insights about{" "}
-                    <strong>{post.category}</strong>. Whether you're a student
-                    looking to start your career, a working professional aiming
-                    to upskill, or someone curious about the IT industry, this
-                    guide provides practical knowledge and actionable steps.
+                    essential insights about <strong>{post.category}</strong>.
+                    Whether you're a student looking to start your career, a
+                    working professional aiming to upskill, or someone curious
+                    about the IT industry, this guide provides practical
+                    knowledge and actionable steps.
                   </p>
 
                   <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">
@@ -311,9 +296,7 @@ export default function BlogDetailPage() {
                     <li>
                       How structured training accelerates your career growth
                     </li>
-                    <li>
-                      Why hands-on learning is crucial in the IT industry
-                    </li>
+                    <li>Why hands-on learning is crucial in the IT industry</li>
                   </ul>
 
                   <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">
@@ -333,11 +316,11 @@ export default function BlogDetailPage() {
                   </h2>
 
                   <p>
-                    Ready to take action? Our comprehensive training programs
-                    in {post.category} are designed to equip you with the
-                    skills and confidence needed to excel in this field.
-                    Whether you're starting from scratch or looking to advance
-                    your expertise, we have the right course for you.
+                    Ready to take action? Our comprehensive training programs in{" "}
+                    {post.category} are designed to equip you with the skills
+                    and confidence needed to excel in this field. Whether you're
+                    starting from scratch or looking to advance your expertise,
+                    we have the right course for you.
                   </p>
                 </div>
 

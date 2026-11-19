@@ -1,5 +1,41 @@
 [
   {
+    "id": "bp11",
+    "slug": "choosing-technology-skills-after-bcom",
+    "title": "Choosing the Right Technology Skills After BCom: A Graduate's Guide",
+    "excerpt": "Compare digital accounting, Advanced Excel, data analytics, and programming to find a practical technology learning path that fits your interests after BCom.",
+    "category": "Career Guidance",
+    "author": "Aptech Learning Whitefield Editorial Team",
+    "date": "2026-11-19",
+    "readTime": "8 min read",
+    "featured": true,
+    "tags": [
+      "Technology Skills After BCom",
+      "Commerce Graduates",
+      "Data Analytics",
+      "Advanced Excel",
+      "Programming"
+    ]
+  },
+  {
+    "id": "bp10",
+    "slug": "how-bcom-graduates-can-build-it-career",
+    "title": "How BCom Graduates Can Build a Career in the IT Industry",
+    "excerpt": "Explore IT career paths after BCom, compare business technology, data analytics and programming skills, and plan your next learning step with confidence.",
+    "category": "Career Guidance",
+    "author": "Aptech Learning Whitefield Editorial Team",
+    "date": "2026-11-14",
+    "readTime": "10 min read",
+    "featured": true,
+    "tags": [
+      "IT Courses After BCom",
+      "Commerce Graduates",
+      "IT Career Options",
+      "Data Analytics",
+      "Programming Skills"
+    ]
+  },
+  {
     "id": "bp9",
     "slug": "which-computer-course-is-best-after-12th",
     "title": "Which Computer Course Is Best After 12th? A Career Guide",
@@ -33,42 +69,6 @@
       "Accounting Software",
       "Data Analytics",
       "Advanced Excel"
-    ]
-  },
-  {
-    "id": "bp6",
-    "slug": "best-it-course-after-bsc-aws-vs-azure-bangalore",
-    "title": "Best IT Course After BSc: AWS vs Azure in Bangalore, Which One Should You Pick?",
-    "excerpt": "Is cloud computing the best IT course after BSc? We compare AWS and Azure, the certifications that matter and the cloud jobs opening up all across Bangalore.",
-    "category": "Cloud Computing",
-    "author": "Aptech Learning Whitefield",
-    "date": "2026-10-30",
-    "readTime": "9 min read",
-    "featured": true,
-    "tags": [
-      "Cloud Computing",
-      "AWS",
-      "Azure",
-      "Certification",
-      "Career"
-    ]
-  },
-  {
-    "id": "bp4",
-    "slug": "cybersecurity-career-bangalore",
-    "title": "Cybersecurity Career in Bangalore: Roles, Skills and How to Get Started",
-    "excerpt": "Skills needed to get IT job in Bangalore are changing fast. See why cybersecurity is booming, which certifications help and how complete beginners can break in.",
-    "category": "Cybersecurity",
-    "author": "Aptech Learning Whitefield",
-    "date": "2026-10-28",
-    "readTime": "9 min read",
-    "featured": true,
-    "tags": [
-      "Cybersecurity",
-      "Career",
-      "Bangalore",
-      "Ethical Hacking",
-      "IT Security"
     ]
   },
   {
@@ -120,13 +120,7 @@
     "date": "2026-07-10",
     "readTime": "7 min read",
     "featured": true,
-    "tags": [
-      "AI",
-      "Machine Learning",
-      "Career",
-      "Bangalore",
-      "IT Training"
-    ]
+    "tags": ["AI", "Machine Learning", "Career", "Bangalore", "IT Training"]
   },
   {
     "id": "bp2",
@@ -138,12 +132,6 @@
     "date": "2026-07-05",
     "readTime": "6 min read",
     "featured": true,
-    "tags": [
-      "Data Science",
-      "Data Analytics",
-      "Career",
-      "Python",
-      "Power BI"
-    ]
+    "tags": ["Data Science", "Data Analytics", "Career", "Python", "Power BI"]
   }
 ]

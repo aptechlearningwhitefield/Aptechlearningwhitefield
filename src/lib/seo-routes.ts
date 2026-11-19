@@ -61,7 +61,7 @@ export const seoRoutes: SeoRoute[] = [
   { path: "/blogs/ai-machine-learning-career-2026", changefreq: "monthly", priority: 0.6 },
   { path: "/blogs/data-science-vs-data-analytics", changefreq: "monthly", priority: 0.6 },
   { path: "/blogs/python-for-beginners-whitefield", changefreq: "monthly", priority: 0.6 },
-  { path: "/blogs/cybersecurity-career-bangalore", changefreq: "monthly", priority: 0.6 },
   { path: "/blogs/cloud-computing-aws-azure-guide", changefreq: "monthly", priority: 0.6 },
   { path: "/blogs/which-computer-course-is-best-after-12th", changefreq: "monthly", priority: 0.6 },
+  { path: "/blogs/how-bcom-graduates-can-build-it-career", changefreq: "monthly", priority: 0.6 },
 ];

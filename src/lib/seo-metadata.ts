@@ -65,20 +65,20 @@ export const courseSeoKeywords: Record<string, string> = {
 };
 
 export const blogSeoKeywords: Record<string, string> = {
+  "choosing-technology-skills-after-bcom":
+    "technology skills after bcom, choosing technology skills after bcom, digital accounting, advanced excel, data analytics, programming after bcom, commerce graduates, technology courses after bcom",
   "which-computer-course-is-best-after-12th":
     "which computer course is best after 12th, computer courses after 12th, best it course after ba, best it course after bsc, best it course after bcom, programming course for beginners, full stack course, data analytics course, artificial intelligence course, computer education in whitefield, computer courses in bangalore",
   "best-it-course-after-bcom":
     "best it course after bcom, tally vs advanced excel for accounting jobs, short term computer courses with job placement, accounting software, business data, excel skills, data analytics, programming fundamentals, career transition, digital skills",
+  "how-bcom-graduates-can-build-it-career":
+    "best it course after bcom, tally vs advanced excel, can non-it graduates learn data science, commerce graduates, it career options, accounting software, business reporting, excel skills, sql, power bi, python programming, data analysis, practical technology projects",
   "ai-machine-learning-career-2026":
     "best course for career switch to it, which course has more job opportunities in bangalore, ai ml career, ai jobs, machine learning jobs, ai ml career in whitefield, ai ml career in bangalore, ai ml career near itpl, ai jobs in bangalore, ai jobs in marathahalli, ai jobs in whitefield, machine learning jobs in kr puram, machine learning jobs for freshers in bangalore, machine learning jobs in whitefield, ai ml career guide for beginners",
   "data-science-vs-data-analytics":
     "data science vs data analytics, data analyst jobs in whitefield, data science course in whitefield, data science courses in bangalore with placement, smart pro data science aptech, data analytics and power bi, data science career, data analyst career, data science vs data analytics in whitefield, data science vs data analytics in bangalore, data science vs data analytics near itpl, data science career in bangalore, data science career in marathahalli, data science career in whitefield, data analyst career for freshers in bangalore, data science vs data analytics guide for beginners",
   "python-for-beginners-whitefield":
     "python vs java which to learn first, python developer salary in bangalore for freshers, python for beginners, learn python, python jobs, python for beginners in whitefield, python for beginners in bangalore, python for beginners near itpl, learn python in bangalore, learn python in marathahalli, learn python in whitefield, python jobs in kr puram, python jobs for freshers in bangalore, python jobs in whitefield, python for beginners guide for beginners",
-  "cybersecurity-career-bangalore":
-    "skills needed to get it job in bangalore, which course has more job opportunities in bangalore, cyber security career, cyber security jobs, ethical hacking career, cyber security career in whitefield, cyber security career in bangalore, cyber security career near itpl, cyber security jobs in bangalore, cyber security jobs in marathahalli, cyber security jobs in whitefield, ethical hacking career in kr puram, ethical hacking career for freshers in bangalore, ethical hacking career in whitefield, cyber security career guide for beginners",
-  "best-it-course-after-bsc-aws-vs-azure-bangalore":
-    "best it course after bsc, which course has more job opportunities in bangalore, aws vs azure, cloud computing career, cloud certification, aws vs azure in whitefield, aws vs azure in bangalore, aws vs azure near itpl, cloud computing career in bangalore, cloud computing career in marathahalli, cloud computing career in whitefield, cloud certification in kr puram, cloud certification for freshers in bangalore, cloud certification in whitefield, aws vs azure guide for beginners",
 };
 
 export interface CourseSEOMetadata {
@@ -295,6 +295,28 @@ export const courseSeoMetadata: Record<string, CourseSEOMetadata> = {
 };
 
 export const blogSeoMetadata: Record<string, CourseSEOMetadata> = {
+  "choosing-technology-skills-after-bcom": {
+    title: "Technology Skills After BCom: A Graduate's Guide | Aptech",
+    description:
+      "Compare digital accounting, Advanced Excel, data analytics, and programming to choose a technology learning path that fits your interests after BCom.",
+    ogTitle: "Choosing the Right Technology Skills After BCom",
+    ogDescription:
+      "A practical guide to technology learning options for commerce graduates, from digital accounting and spreadsheets to analytics and programming.",
+    twitterTitle: "Which Technology Skills Should You Learn After BCom?",
+    twitterDescription:
+      "Compare digital accounting, data analytics, and programming, then choose a learning path that fits your interests and goals.",
+  },
+  "how-bcom-graduates-can-build-it-career": {
+    title: "How BCom Graduates Can Build an IT Career",
+    description:
+      "Explore IT career paths after BCom, compare business technology, data analytics and programming skills, and plan your next learning step with confidence.",
+    ogTitle: "Your Commerce Degree Can Open a Door to Technology",
+    ogDescription:
+      "Discover how commerce graduates can explore business software, reporting, data analysis and programming through practical technology learning.",
+    twitterTitle: "BCom to IT: What Should You Learn First?",
+    twitterDescription:
+      "Compare technology skill paths after BCom and see how your interests, strengths and practical projects can guide your next step.",
+  },
   "which-computer-course-is-best-after-12th": {
     title: "Top Computer Courses After 12th in Bangalore | Aptech Learning",
     description:
@@ -353,28 +375,6 @@ export const blogSeoMetadata: Record<string, CourseSEOMetadata> = {
     twitterTitle: "What Do Python Freshers Earn in Bangalore? Find Out Here",
     twitterDescription:
       "See typical starting salaries, the skills recruiters check for and a simple roadmap to go from zero coding knowledge to your very first Python job near ITPL.",
-  },
-  "cybersecurity-career-bangalore": {
-    title: "Cybersecurity Career in Bangalore: Skills & Jobs | Aptech",
-    description:
-      "Skills needed to get IT job in Bangalore are changing fast. See why cybersecurity is booming, which certifications help and how complete beginners can break in.",
-    ogTitle: "Why Cybersecurity Is One of Bangalore's Hottest IT Careers",
-    ogDescription:
-      "Every breach creates demand for skilled defenders. Learn what security analysts actually do, what the work looks like and how to build the skills to join them.",
-    twitterTitle: "Want a Secure Career? Start in Cybersecurity in Bangalore",
-    twitterDescription:
-      "A practical starter guide for students and career switchers: the tools to learn, the certifications worth your money and how to land that first security role.",
-  },
-  "best-it-course-after-bsc-aws-vs-azure-bangalore": {
-    title: "Best IT Course After BSc: AWS vs Azure in Bangalore | Aptech",
-    description:
-      "Is cloud computing the best IT course after BSc? We compare AWS and Azure, the certifications that matter and the cloud jobs opening up all across Bangalore.",
-    ogTitle: "AWS or Azure: Which Cloud Should You Learn First? Bangalore",
-    ogDescription:
-      "Both platforms are everywhere, but they suit different goals. This guide compares them side by side so you can pick one and start learning with real purpose.",
-    twitterTitle: "Science Grad Wondering What's Next? Try Cloud in Bangalore",
-    twitterDescription:
-      "Cloud skills are among the most requested by employers near ITPL. See how BSc graduates can get started, which certification to take first and why it pays.",
   },
 };
 
