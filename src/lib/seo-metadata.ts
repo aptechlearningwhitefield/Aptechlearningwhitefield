@@ -23,7 +23,7 @@ export const courseListingSeoKeywords =
   "software training institute in whitefield, short term computer courses with job placement, aptech course fees, aptech whitefield fees, aptech course fees and duration, computer courses with emi or education loan, computer course for beginners, it for beginners course, it courses, computer courses, software courses, it courses in whitefield, it courses in bangalore, best it courses in bangalore, it courses near itpl, it courses near me, it courses fees in bangalore, it courses with placement in whitefield, computer courses in whitefield, computer courses in bangalore, software courses in whitefield, software courses bangalore, it courses in marathahalli, it courses in kr puram";
 
 export const blogListingSeoKeywords =
-  "which course has more job opportunities in bangalore, aptech vs online courses which is better, online vs offline computer classes which is better, it career guide, it jobs, tech career tips, it career guide in whitefield, it career guide in bangalore, it career guide near itpl, it jobs in bangalore, it jobs in marathahalli, it jobs in whitefield, tech career tips in kr puram, tech career tips for freshers in bangalore, tech career tips in whitefield, it career guide guide for beginners";
+  "IT course options in Bangalore, aptech vs online courses which is better, online vs offline computer classes which is better, it career guide, it jobs, tech career tips, it career guide in whitefield, it career guide in bangalore, it career guide near itpl, it jobs in bangalore, it jobs in marathahalli, it jobs in whitefield, tech career tips in kr puram, tech career tips for freshers in bangalore, tech career tips in whitefield, it career guides for beginners";
 
 export const courseSeoKeywords: Record<string, string> = {
   "ai-machine-learning":
@@ -65,6 +65,18 @@ export const courseSeoKeywords: Record<string, string> = {
 };
 
 export const blogSeoKeywords: Record<string, string> = {
+  "starting-it-career-bangalore-skills-course-paths":
+    "which course has more job opportunities in bangalore, skills needed to get it job in bangalore, short term computer courses with job placement, companies hiring freshers near itpl, python programming, sql, data analytics, power bi, full stack development, cloud computing, cybersecurity, ai and machine learning, practical projects, entry-level it roles",
+  "best-course-for-career-switch-to-it":
+    "best course for career switch to it, short term computer courses with job placement, career change to it, it courses for non-it graduates, data analytics for career switch, python programming for beginners, full stack development course, cybersecurity course, technology skills for beginners",
+  "best-it-course-after-bsc":
+    "best it course after bsc, it courses for bsc graduates, computer courses after bsc, career options after bsc, bsc to it career, technology skills, data science, data analytics, python programming, software development, sql, power bi",
+  "arts-to-it-how-ba-graduates-can-build-a-technology-career":
+    "best it course after ba, arts graduate it career, ba graduate technology career, data analytics course after ba, python course for arts graduates, web development course after ba",
+  "best-it-course-after-bcom-career-guide":
+    "best it course after bcom, tally vs advanced excel for accounting jobs, accounting software course, data analytics course after bcom, python course after bcom, it career options after bcom",
+  "it-career-options-after-graduation":
+    "it career options after graduation, best course for career switch to it, best it course after bcom, best it course after ba, best it course after bsc, skills needed to get it job in bangalore, programming, data analytics, cloud computing, cybersecurity, computer fundamentals",
   "choosing-technology-skills-after-bcom":
     "technology skills after bcom, choosing technology skills after bcom, digital accounting, advanced excel, data analytics, programming after bcom, commerce graduates, technology courses after bcom",
   "which-computer-course-is-best-after-12th":
@@ -74,7 +86,7 @@ export const blogSeoKeywords: Record<string, string> = {
   "how-bcom-graduates-can-build-it-career":
     "best it course after bcom, tally vs advanced excel, can non-it graduates learn data science, commerce graduates, it career options, accounting software, business reporting, excel skills, sql, power bi, python programming, data analysis, practical technology projects",
   "ai-machine-learning-career-2026":
-    "best course for career switch to it, which course has more job opportunities in bangalore, ai ml career, ai jobs, machine learning jobs, ai ml career in whitefield, ai ml career in bangalore, ai ml career near itpl, ai jobs in bangalore, ai jobs in marathahalli, ai jobs in whitefield, machine learning jobs in kr puram, machine learning jobs for freshers in bangalore, machine learning jobs in whitefield, ai ml career guide for beginners",
+    "best course for career switch to it, ai ml career, ai jobs, machine learning jobs, ai ml career in whitefield, ai ml career in bangalore, ai ml career near itpl, ai jobs in bangalore, ai jobs in marathahalli, ai jobs in whitefield, machine learning jobs in kr puram, machine learning jobs for freshers in bangalore, machine learning jobs in whitefield, ai ml career guide for beginners",
   "data-science-vs-data-analytics":
     "data science vs data analytics, data analyst jobs in whitefield, data science course in whitefield, data science courses in bangalore with placement, smart pro data science aptech, data analytics and power bi, data science career, data analyst career, data science vs data analytics in whitefield, data science vs data analytics in bangalore, data science vs data analytics near itpl, data science career in bangalore, data science career in marathahalli, data science career in whitefield, data analyst career for freshers in bangalore, data science vs data analytics guide for beginners",
   "python-for-beginners-whitefield":
@@ -295,6 +307,61 @@ export const courseSeoMetadata: Record<string, CourseSEOMetadata> = {
 };
 
 export const blogSeoMetadata: Record<string, CourseSEOMetadata> = {
+  "starting-it-career-bangalore-skills-course-paths": {
+    title: "Starting an IT Career in Bangalore: Skills & Course Guide",
+    description:
+      "Explore IT career paths in Bangalore, compare in-demand skills and training options, and learn how to choose a course that matches your interests and goals.",
+    ogTitle: "Your Roadmap to an IT Career in Bangalore",
+    ogDescription:
+      "From data analytics and Python to cloud and cybersecurity, explore practical learning paths and the skills behind different entry-level technology roles.",
+    twitterTitle: "Bangalore IT Careers: Choose Your Learning Path",
+    twitterDescription:
+      "Not sure where to begin in tech? Compare role-focused skills, project ideas and course pathways before choosing your next learning step.",
+  },
+  "best-course-for-career-switch-to-it": {
+    title: "Best Course for Career Switch to IT: Beginner Guide",
+    description:
+      "Planning a career change to IT? Explore beginner-friendly courses, essential technical skills and practical steps to prepare for technology careers.",
+    ogTitle: "Planning a Career Change to IT? A Beginner's Learning Roadmap",
+    ogDescription:
+      "Explore beginner-friendly technology courses, essential skills and a practical roadmap for moving into IT.",
+    twitterTitle: "Best Course for Career Switch to IT: Beginner Guide",
+    twitterDescription:
+      "Learn how to choose an IT course, build technical skills and plan a career transition from a non-technical background.",
+  },
+  "best-it-course-after-bsc": {
+    title: "Best IT Course After BSc: Skills & Career Options",
+    description:
+      "Explore the best IT course after BSc. Compare Data Science, Python, Data Analytics and other technology skills to plan your next career step.",
+    ogTitle: "Best IT Course After BSc: Skills and Career Opportunities",
+    ogDescription:
+      "Compare Data Science, Data Analytics, Python, Full Stack Development and AI learning paths for BSc graduates.",
+    twitterTitle: "Best IT Course After BSc: Skills and Career Options",
+    twitterDescription:
+      "Explore IT course options after BSc and choose a technology learning path that fits your interests and career goals.",
+  },
+  "arts-to-it-how-ba-graduates-can-build-a-technology-career": {
+    title: "Arts to IT: How BA Graduates Can Build a Technology Career",
+    description:
+      "Explore IT course options after BA, including computer fundamentals, data analytics, Python, web development and digital marketing for arts graduates.",
+    ogTitle: "From Arts to IT: A Practical Path for BA Graduates",
+    ogDescription:
+      "Discover technology learning options that can fit the communication, research and critical-thinking strengths of BA graduates.",
+    twitterTitle: "How BA Graduates Can Start an IT Career",
+    twitterDescription:
+      "Compare data analytics, Python, web development and digital marketing before choosing an IT learning path after BA.",
+  },
+  "it-career-options-after-graduation": {
+    title: "IT Career Options After Graduation: Courses & Skills",
+    description:
+      "Explore IT course options after BCom, BA and BSc, compare technology skills, and plan your next career step with practical guidance for graduates in Bangalore.",
+    ogTitle: "Your Degree Is Just the Beginning of Your IT Journey",
+    ogDescription:
+      "Explore technology learning paths for commerce, arts and science graduates, from programming and analytics to cloud computing and cybersecurity.",
+    twitterTitle: "From Graduation to Technology: Where Can You Start?",
+    twitterDescription:
+      "Discover how programming, analytics, cloud computing and cybersecurity can fit different interests and career goals.",
+  },
   "choosing-technology-skills-after-bcom": {
     title: "Technology Skills After BCom: A Graduate's Guide | Aptech",
     description:
@@ -339,6 +406,17 @@ export const blogSeoMetadata: Record<string, CourseSEOMetadata> = {
     twitterDescription:
       "Compare accounting technology, data analytics and programming paths. Use this practical guide to identify a learning direction that fits your goals.",
   },
+  "best-it-course-after-bcom-career-guide": {
+    title: "Best IT Course After BCom | Aptech Learning Whitefield",
+    description:
+      "Explore the best IT course options after BCom, including accounting software, Advanced Excel, data analytics, Python and programming, with practical career guidance.",
+    ogTitle: "Best IT Course After BCom: Skills and Career Paths",
+    ogDescription:
+      "Compare accounting software, spreadsheets, data analytics, Python and programming to choose an IT learning path after BCom.",
+    twitterTitle: "Best IT Course After BCom: What Should You Learn?",
+    twitterDescription:
+      "Discover practical IT learning options after BCom and compare accounting, analytics and programming career paths.",
+  },
   "ai-machine-learning-career-2026": {
     title: "AI & Machine Learning Career 2026: Skills & Roles | Aptech",
     description:
@@ -352,6 +430,14 @@ export const blogSeoMetadata: Record<string, CourseSEOMetadata> = {
   },
   "weekend-computer-classes-whitefield-bangalore": {
     title: "Weekend Computer Classes in Whitefield, Bangalore | Aptech",
+    description:
+      "Explore weekend computer classes in Whitefield, Bangalore, including flexible course options for working professionals and students.",
+    ogTitle: "Weekend Computer Classes in Whitefield",
+    ogDescription:
+      "Compare flexible weekend computer and IT course options in Whitefield, Bangalore.",
+    twitterTitle: "Learn Computer Skills on Weekends in Whitefield",
+    twitterDescription:
+      "Explore practical weekend learning options for computer and IT skills near Whitefield.",
   },
   "data-science-vs-data-analytics": {
     title: "Data Science vs Data Analytics: Which to Choose? | Aptech",

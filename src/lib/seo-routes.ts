@@ -64,4 +64,9 @@ export const seoRoutes: SeoRoute[] = [
   { path: "/blogs/cloud-computing-aws-azure-guide", changefreq: "monthly", priority: 0.6 },
   { path: "/blogs/which-computer-course-is-best-after-12th", changefreq: "monthly", priority: 0.6 },
   { path: "/blogs/how-bcom-graduates-can-build-it-career", changefreq: "monthly", priority: 0.6 },
+  { path: "/blogs/it-career-options-after-graduation", changefreq: "monthly", priority: 0.6 },
+  { path: "/blogs/arts-to-it-how-ba-graduates-can-build-a-technology-career", changefreq: "monthly", priority: 0.6 },
+  { path: "/blogs/best-it-course-after-bsc", changefreq: "monthly", priority: 0.6 },
+  { path: "/blogs/best-course-for-career-switch-to-it", changefreq: "monthly", priority: 0.6 },
+  { path: "/blogs/starting-it-career-bangalore-skills-course-paths", changefreq: "monthly", priority: 0.6 },
 ];

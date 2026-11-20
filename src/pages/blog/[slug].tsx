@@ -16,9 +16,14 @@ import DataScienceVsDataAnalyticsArticle from "../../components/data-science-vs-
 import WeekendComputerClassesWhitefieldArticle from "../../components/weekend-computer-classes-whitefield-article";
 import PythonVsJavaArticle from "../../components/python-vs-java-article";
 import BestItCourseAfterBcomArticle from "../../components/best-it-course-after-bcom-article";
+import BestItCourseAfterBscArticle from "../../components/best-it-course-after-bsc-article";
+import CareerChangeToItArticle from "../../components/career-change-to-it-article";
+import StartingItCareerBangaloreArticle from "../../components/starting-it-career-bangalore-article";
 import ChoosingTechnologySkillsAfterBcomArticle from "../../components/choosing-technology-skills-after-bcom-article";
 import HowBcomGraduatesBuildItCareerArticle from "../../components/how-bcom-graduates-it-career-article";
 import WhichComputerCourseBestAfter12thArticle from "../../components/which-computer-course-best-after-12th-article";
+import ItCareerOptionsAfterGraduationArticle from "../../components/it-career-options-after-graduation-article";
+import ArtsToItBaGraduatesArticle from "../../components/arts-to-it-ba-graduates-article";
 
 import { SITE_URL as site } from "../../lib/site-url";
 import { blogSeoMetadata, getBlogSeoKeywords } from "../../lib/seo-metadata";
@@ -46,12 +51,22 @@ const pythonVsJavaHero =
 
 const bestItCourseAfterBcomHero =
   "/assets/blog-images/best-it-course-after-bcom/best-it-course-after-bcom-career-guide.webp";
+const bestItCourseAfterBscHero =
+  "/assets/blog-images/best-it-course-after-bsc/best-it-course-after-bsc-guide.webp";
+const careerChangeToItHero =
+  "/assets/blog-images/best-course-for-career-switch-to-it/career-change-to-it-beginners-guide.png";
+const startingItCareerBangaloreHero =
+  "/assets/blog-images/starting-it-career-bangalore-skills-course-paths/it-career-pathways-bangalore-hero.png";
 const choosingTechnologySkillsAfterBcomHero =
   "/assets/blog-images/how-bcom-graduates-it-career/technology-skills-after-bcom-graduate-guide.png";
 const howBcomGraduatesItCareerHero =
   "/assets/blog-images/how-bcom-graduates-it-career/bcom-graduate-exploring-it-career.png";
 const whichComputerCourseAfter12thHero =
   "/assets/blog-images/computer-course-after-12th/computer-course-after-12th-career-guide.webp";
+const itCareerOptionsAfterGraduationHero =
+  "/assets/blog-images/it-career-options-after-graduation/it-career-options-after-graduation-hero.webp";
+const artsToItBaGraduatesHero =
+  "/assets/blog-images/arts-to-it-ba-graduates/best-it-course-after-ba-arts-graduates.webp";
 
 export default function BlogDetailPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -80,7 +95,17 @@ export default function BlogDetailPage() {
   const isPythonVsJavaArticle = post.slug === "python-for-beginners-whitefield";
 
   const isBestItCourseAfterBcomArticle =
-    post.slug === "best-it-course-after-bcom";
+    post.slug === "best-it-course-after-bcom" ||
+    post.slug === "best-it-course-after-bcom-career-guide";
+
+  const isBestItCourseAfterBscArticle =
+    post.slug === "best-it-course-after-bsc";
+
+  const isCareerChangeToItArticle =
+    post.slug === "best-course-for-career-switch-to-it";
+
+  const isStartingItCareerBangaloreArticle =
+    post.slug === "starting-it-career-bangalore-skills-course-paths";
 
   const isChoosingTechnologySkillsAfterBcomArticle =
     post.slug === "choosing-technology-skills-after-bcom";
@@ -90,6 +115,10 @@ export default function BlogDetailPage() {
 
   const isWhichComputerCourseAfter12thArticle =
     post.slug === "which-computer-course-is-best-after-12th";
+  const isItCareerOptionsAfterGraduationArticle =
+    post.slug === "it-career-options-after-graduation";
+  const isArtsToItBaGraduatesArticle =
+    post.slug === "arts-to-it-how-ba-graduates-can-build-a-technology-career";
 
   const coverImage = isAiCareerArticle
     ? `${site}${aiCareerImages.learner}`
@@ -101,13 +130,23 @@ export default function BlogDetailPage() {
           ? `${site}${pythonVsJavaHero}`
           : isBestItCourseAfterBcomArticle
             ? `${site}${bestItCourseAfterBcomHero}`
-            : isChoosingTechnologySkillsAfterBcomArticle
-              ? `${site}${choosingTechnologySkillsAfterBcomHero}`
-              : isHowBcomGraduatesItCareerArticle
-                ? `${site}${howBcomGraduatesItCareerHero}`
-                : isWhichComputerCourseAfter12thArticle
-                  ? `${site}${whichComputerCourseAfter12thHero}`
-                  : `${site}/airo-assets/images/blogs/default-blog-image`;
+            : isBestItCourseAfterBscArticle
+              ? `${site}${bestItCourseAfterBscHero}`
+              : isCareerChangeToItArticle
+                ? `${site}${careerChangeToItHero}`
+                : isStartingItCareerBangaloreArticle
+                  ? `${site}${startingItCareerBangaloreHero}`
+                  : isChoosingTechnologySkillsAfterBcomArticle
+                    ? `${site}${choosingTechnologySkillsAfterBcomHero}`
+                    : isHowBcomGraduatesItCareerArticle
+                      ? `${site}${howBcomGraduatesItCareerHero}`
+                      : isWhichComputerCourseAfter12thArticle
+                        ? `${site}${whichComputerCourseAfter12thHero}`
+                        : isItCareerOptionsAfterGraduationArticle
+                          ? `${site}${itCareerOptionsAfterGraduationHero}`
+                          : isArtsToItBaGraduatesArticle
+                            ? `${site}${artsToItBaGraduatesHero}`
+                            : `${site}/airo-assets/images/blogs/default-blog-image`;
 
   const blogSeo = blogSeoMetadata[post.slug];
 
@@ -251,12 +290,22 @@ export default function BlogDetailPage() {
               <PythonVsJavaArticle />
             ) : isBestItCourseAfterBcomArticle ? (
               <BestItCourseAfterBcomArticle />
+            ) : isBestItCourseAfterBscArticle ? (
+              <BestItCourseAfterBscArticle />
+            ) : isCareerChangeToItArticle ? (
+              <CareerChangeToItArticle />
+            ) : isStartingItCareerBangaloreArticle ? (
+              <StartingItCareerBangaloreArticle />
             ) : isChoosingTechnologySkillsAfterBcomArticle ? (
               <ChoosingTechnologySkillsAfterBcomArticle />
             ) : isHowBcomGraduatesItCareerArticle ? (
               <HowBcomGraduatesBuildItCareerArticle />
             ) : isWhichComputerCourseAfter12thArticle ? (
               <WhichComputerCourseBestAfter12thArticle />
+            ) : isItCareerOptionsAfterGraduationArticle ? (
+              <ItCareerOptionsAfterGraduationArticle />
+            ) : isArtsToItBaGraduatesArticle ? (
+              <ArtsToItBaGraduatesArticle />
             ) : (
               <div className="prose prose-lg max-w-none text-slate-700 leading-relaxed">
                 <div className="bg-blue-50 border-l-4 border-primary p-6 rounded-r-lg mb-8">

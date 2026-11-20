@@ -13,6 +13,18 @@ const categoryColors: Record<string, string> = {
   'Career Guidance': 'bg-indigo-50 text-indigo-700'
 };
 const blogCoverImages: Record<string, string> = {
+  'starting-it-career-bangalore-skills-course-paths':
+    '/assets/blog-images/starting-it-career-bangalore-skills-course-paths/it-career-pathways-bangalore-hero.png',
+  'best-course-for-career-switch-to-it':
+    '/assets/blog-images/best-course-for-career-switch-to-it/career-change-to-it-beginners-guide.png',
+  'arts-to-it-how-ba-graduates-can-build-a-technology-career':
+    '/assets/blog-images/arts-to-it-ba-graduates/best-it-course-after-ba-arts-graduates.webp',
+  'best-it-course-after-bcom-career-guide':
+    '/assets/blog-images/best-it-course-after-bcom/best-it-course-after-bcom-career-guide.webp',
+  'best-it-course-after-bsc':
+    '/assets/blog-images/best-it-course-after-bsc/best-it-course-after-bsc-guide.webp',
+  'it-career-options-after-graduation':
+    '/assets/blog-images/it-career-options-after-graduation/it-career-options-after-graduation-hero.webp',
   'choosing-technology-skills-after-bcom':
     '/assets/blog-images/how-bcom-graduates-it-career/technology-skills-after-bcom-graduate-guide.png',
   'ai-machine-learning-career-2026':
@@ -44,8 +56,8 @@ const jsonLd = {
 export default function BlogPage() {
   return <>
       <Helmet>
-        <title>Which Course Has More Job Opportunities in Bangalore? | Blog</title>
-        <meta name="description" content="Which course has more job opportunities in Bangalore? Our blog breaks it down, plus Aptech vs online courses and online vs offline classes, in plain words." />
+        <title>IT Career Guides and Course Advice in Bangalore | Aptech Blog</title>
+        <meta name="description" content="Practical guides from Aptech Learning Whitefield on IT courses, technology skills, career planning and learning options for students and professionals in Bangalore." />
         <meta name="keywords" content={blogListingSeoKeywords} />
         <link rel="canonical" href={`${site}/blogs`} />
         <meta property="og:title" content="Honest IT Career Advice for Bangalore Learners | Aptech Blog" />

@@ -6,15 +6,19 @@
       (function () {
         try {
           var u = new URL(location.href);
-          if (u.searchParams.has('airoShareToken')) {
-            u.searchParams.delete('airoShareToken');
-            history.replaceState(null, '', u.toString());
+          if (u.searchParams.has("airoShareToken")) {
+            u.searchParams.delete("airoShareToken");
+            history.replaceState(null, "", u.toString());
           }
         } catch (e) {}
       })();
     </script>
     <meta name="referrer" content="same-origin" />
-    <link rel="icon" type="image/jpeg" href="/assets/media/logo-horizontal-e92dc8bf.jpg" />
+    <link
+      rel="icon"
+      type="image/jpeg"
+      href="/assets/media/logo-horizontal-e92dc8bf.jpg"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--app-head-->
     <script src="/airo-video-slots.js"></script>

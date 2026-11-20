@@ -1020,59 +1020,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── BLOG ─────────────────────────────────────────────────────────── */}
-        <section className="py-20 bg-white" aria-labelledby="blog-heading">
-          <div className="container mx-auto px-4">
-            <FadeIn className="text-center mb-12">
-              <h2 id="blog-heading" className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-3">
-                {home.blogs.sectionTitle}
-              </h2>
-              <p className="text-slate-600 max-w-2xl mx-auto">{home.blogs.sectionSubtitle}</p>
-            </FadeIn>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {home.blogs.items.map((blog, i) => <motion.article key={blog.id} initial={{
-              opacity: 0,
-              y: 24
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} viewport={{
-              once: true
-            }} transition={{
-              duration: 0.4,
-              delay: i * 0.1,
-              ease: 'easeOut' as const
-            }} className="bg-[#F8FAFC] border border-slate-100 rounded-2xl overflow-hidden hover:shadow-md transition-all group">
-                
-                  <div className="h-44 bg-gradient-to-br from-primary/10 to-blue-100 flex items-center justify-center">
-                    <BookOpen size={40} className="text-primary/40" />
-                  </div>
-                  <div className="p-6">
-                    <span className="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-3">
-                      {blog.category}
-                    </span>
-                    <h3 className="font-bold text-slate-900 text-base leading-snug mb-2 group-hover:text-primary transition-colors">
-                      {blog.title}
-                    </h3>
-                    <p className="text-slate-500 text-sm leading-relaxed mb-4">{blog.excerpt}</p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3 text-xs text-slate-400">
-                        <span>{blog.date}</span>
-                        <span>•</span>
-                        <span>{blog.readTime}</span>
-                      </div>
-                      <Link to={`/blogs/${blog.slug}`} className="text-primary text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all">
-                      
-                        Read More <ArrowRight size={14} />
-                      </Link>
-                    </div>
-                  </div>
-                </motion.article>)}
-            </div>
-          </div>
-        </section>
-
         {/* ── CONTACT & ENQUIRY ────────────────────────────────────────────── */}
         <section className="py-20 relative overflow-hidden" style={{
         background: 'linear-gradient(135deg, #0A1628 0%, #0F2347 60%, #1a3a6b 100%)'

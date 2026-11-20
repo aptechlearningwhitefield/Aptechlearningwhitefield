@@ -1,5 +1,113 @@
 [
   {
+    "id": "bp17",
+    "slug": "starting-it-career-bangalore-skills-course-paths",
+    "title": "Starting an IT Career in Bangalore: Skills and Course Paths to Explore",
+    "excerpt": "Explore IT career paths in Bangalore, compare in-demand skills and training options, and learn how to choose a course that matches your interests and goals.",
+    "category": "Career Guidance",
+    "author": "Aptech Learning Whitefield Editorial Team",
+    "date": "2026-11-20",
+    "readTime": "11 min read",
+    "featured": true,
+    "tags": [
+      "IT Career in Bangalore",
+      "IT Courses",
+      "Technology Skills",
+      "Freshers",
+      "Whitefield"
+    ]
+  },
+  {
+    "id": "bp16",
+    "slug": "best-course-for-career-switch-to-it",
+    "title": "Planning a Career Change to IT? A Beginner's Learning Roadmap",
+    "excerpt": "Planning a career change to IT? Explore beginner-friendly courses, essential technical skills and practical steps to prepare for technology careers.",
+    "category": "Career Guidance",
+    "author": "Aptech Learning Whitefield Editorial Team",
+    "date": "2026-11-20",
+    "readTime": "10 min read",
+    "featured": true,
+    "tags": [
+      "Career Change to IT",
+      "IT Courses for Non-IT Graduates",
+      "Career Guidance",
+      "Python Programming",
+      "Data Analytics"
+    ]
+  },
+  {
+    "id": "bp15",
+    "slug": "best-it-course-after-bsc",
+    "title": "Best IT Course After BSc: Skills, Courses and Career Opportunities",
+    "excerpt": "Explore the best IT course after BSc. Compare Data Science, Python, Data Analytics and other technology skills to plan your next career step.",
+    "category": "Career Guidance",
+    "author": "Aptech Learning Whitefield Editorial Team",
+    "date": "2026-11-20",
+    "readTime": "9 min read",
+    "featured": true,
+    "tags": [
+      "Best IT Course After BSc",
+      "BSc Career Options",
+      "Data Science",
+      "Python Programming",
+      "Data Analytics"
+    ]
+  },
+  {
+    "id": "bp14",
+    "slug": "arts-to-it-how-ba-graduates-can-build-a-technology-career",
+    "title": "Arts to IT: How BA Graduates Can Build a Technology Career",
+    "excerpt": "Explore IT courses after BA, including computer fundamentals, data analytics, Python, web development and digital marketing. Learn how arts graduates can build practical technology skills.",
+    "category": "Career Guidance",
+    "author": "Aptech Learning Whitefield Editorial Team",
+    "date": "2026-11-19",
+    "readTime": "10 min read",
+    "featured": true,
+    "tags": [
+      "Best IT Course After BA",
+      "BA Career Options",
+      "Data Analytics",
+      "Web Development",
+      "Programming"
+    ]
+  },
+  {
+    "id": "bp13",
+    "slug": "best-it-course-after-bcom-career-guide",
+    "title": "Best IT Course After BCom",
+    "excerpt": "Explore IT courses after BCom, including accounting software, Advanced Excel, data analytics, Python and programming. Compare career paths and choose a course based on your interests.",
+    "category": "Career Guidance",
+    "author": "Aptech Learning Whitefield Editorial Team",
+    "date": "2026-11-19",
+    "readTime": "8 min read",
+    "featured": true,
+    "tags": [
+      "Best IT Course After BCom",
+      "Tally and Advanced Excel",
+      "Data Analytics",
+      "Python",
+      "Career Guidance"
+    ]
+  },
+  {
+    "id": "bp12",
+    "slug": "it-career-options-after-graduation",
+    "title": "IT Career Options After Graduation: Courses and Skills",
+    "excerpt": "Explore IT course options after BCom, BA and BSc, compare technology skills, and plan your next career step with practical guidance for graduates in Bangalore.",
+    "category": "Career Guidance",
+    "author": "Aptech Learning Whitefield Editorial Team",
+    "date": "2026-11-19",
+    "readTime": "12 min read",
+    "featured": true,
+    "tags": [
+      "IT Career Options",
+      "Graduate Career Guidance",
+      "Data Analytics",
+      "Cybersecurity",
+      "Cloud Computing"
+    ]
+  },
+  {
     "id": "bp11",
     "slug": "choosing-technology-skills-after-bcom",
     "title": "Choosing the Right Technology Skills After BCom: A Graduate's Guide",

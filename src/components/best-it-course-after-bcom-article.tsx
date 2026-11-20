@@ -2,6 +2,14 @@ import { Link } from "react-router";
 
 const images = {
   hero: "/assets/blog-images/best-it-course-after-bcom/best-it-course-after-bcom-career-guide.webp",
+  roadmap:
+    "/assets/blog-images/best-it-course-after-bcom/it-career-roadmap-for-bcom-graduates.webp",
+  analyticsPowerBi:
+    "/assets/blog-images/best-it-course-after-bcom/bcom-graduate-data-analytics-power-bi.webp",
+  tallyVsExcel:
+    "/assets/blog-images/best-it-course-after-bcom/tally-vs-advanced-excel-accounting.webp",
+  python:
+    "/assets/blog-images/best-it-course-after-bcom/python-data-science-learning-after-bcom.webp",
   commerce:
     "/assets/blog-images/best-it-course-after-bcom/commerce-knowledge-digital-skills.webp",
   analytics:
@@ -75,6 +83,10 @@ export default function BestItCourseAfterBcomArticle() {
         This guide explains the main learning paths, the skills involved, and
         the questions to consider before enrolling in a course.
       </p>
+      <ArticleImage
+        src={images.roadmap}
+        alt="Step-by-step IT career roadmap for BCom graduates."
+      />
 
       <h2>Which IT Course Is Best After BCom?</h2>
       <p>
@@ -197,6 +209,10 @@ export default function BestItCourseAfterBcomArticle() {
         organizing and analyzing different types of business data. The two skill
         areas may complement one another.
       </p>
+      <ArticleImage
+        src={images.tallyVsExcel}
+        alt="Comparison of Tally and advanced Excel workflows for BCom accounting learning."
+      />
 
       <h3>2. Data Analytics</h3>
       <p>
@@ -205,8 +221,8 @@ export default function BestItCourseAfterBcomArticle() {
         want to understand:
       </p>
       <ArticleImage
-        src={images.analytics}
-        alt="Learner working with spreadsheet data and charts as part of a data analytics exercise."
+        src={images.analyticsPowerBi}
+        alt="BCom graduate analyzing business reports and Power BI dashboards."
       />
       <ul>
         <li>Which products are generating more sales?</li>
@@ -228,8 +244,8 @@ export default function BestItCourseAfterBcomArticle() {
         introduce:
       </p>
       <ArticleImage
-        src={images.programming}
-        alt="Beginner practicing programming and problem-solving on a laptop."
+        src={images.python}
+        alt="BCom graduate learning Python programming and data science skills."
       />
       <ul>
         <li>Programming concepts</li>

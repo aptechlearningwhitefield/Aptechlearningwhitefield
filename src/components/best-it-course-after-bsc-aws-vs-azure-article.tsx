@@ -65,9 +65,12 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
 
       <p>
         If you are researching the{" "}
-        <a href={links.bestItCourse}>best IT course after BSc</a>, understanding
-        the differences between AWS and Azure can help you choose a learning
-        direction that matches your interests and career goals.
+        <a href="https://www.aptechwhitefield.com/corporate-training?utm_source=website&utm_medium=blog&utm_campaign=organic">
+          <strong>best IT course after BSc</strong>
+        </a>
+        , understanding the differences between AWS and Azure can help you
+        choose a learning direction that matches your interests and career
+        goals.
       </p>
 
       <p>

@@ -602,6 +602,42 @@
     "sectionSubtitle": "Stay updated with the latest in technology, career tips and industry trends",
     "items": [
       {
+        "id": "b6",
+        "category": "Career Guidance",
+        "title": "Starting an IT Career in Bangalore: Skills and Course Paths to Explore",
+        "excerpt": "Explore IT career paths in Bangalore, compare in-demand skills and training options, and learn how to choose a course that matches your interests and goals.",
+        "date": "November 20, 2026",
+        "readTime": "11 min read",
+        "slug": "starting-it-career-bangalore-skills-course-paths"
+      },
+      {
+        "id": "b5",
+        "category": "Career Guidance",
+        "title": "Planning a Career Change to IT? A Beginner's Learning Roadmap",
+        "excerpt": "Planning a career change to IT? Explore beginner-friendly courses, essential technical skills and practical steps to prepare for technology careers.",
+        "date": "November 20, 2026",
+        "readTime": "10 min read",
+        "slug": "best-course-for-career-switch-to-it"
+      },
+      {
+        "id": "b4",
+        "category": "Career Guidance",
+        "title": "Best IT Course After BSc: Skills, Courses and Career Opportunities",
+        "excerpt": "Explore the best IT course after BSc. Compare Data Science, Python, Data Analytics and other technology skills to plan your next career step.",
+        "date": "November 20, 2026",
+        "readTime": "9 min read",
+        "slug": "best-it-course-after-bsc"
+      },
+      {
+        "id": "b3",
+        "category": "Career Guidance",
+        "title": "IT Career Options After Graduation: Courses and Skills",
+        "excerpt": "Explore IT course options after BCom, BA and BSc, compare technology skills, and plan your next career step with practical guidance for graduates in Bangalore.",
+        "date": "November 19, 2026",
+        "readTime": "12 min read",
+        "slug": "it-career-options-after-graduation"
+      },
+      {
         "id": "b1",
         "category": "AI & Machine Learning",
         "title": "Top 10 AI Skills That Will Get You Hired in 2026",
