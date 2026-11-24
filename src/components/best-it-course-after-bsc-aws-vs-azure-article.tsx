@@ -128,6 +128,40 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
         they have different service names, management interfaces, tools, and
         ecosystems.
       </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Your interest</th>
+            <th>Course to explore</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Working with data and statistics</td>
+            <td>Data Science</td>
+          </tr>
+          <tr>
+            <td>Analysing business information</td>
+            <td>Data Analytics</td>
+          </tr>
+          <tr>
+            <td>Learning programming</td>
+            <td>Python Programming</td>
+          </tr>
+          <tr>
+            <td>Building websites and applications</td>
+            <td>Full Stack Development</td>
+          </tr>
+          <tr>
+            <td>Exploring intelligent technologies</td>
+            <td>AI and Machine Learning</td>
+          </tr>
+          <tr>
+            <td>Creating reports and dashboards</td>
+            <td>Power BI and Data Visualisation</td>
+          </tr>
+        </tbody>
+      </table>
 
       <ArticleImage
         src={images.comparison}
@@ -138,87 +172,40 @@ export default function BestItCourseAfterBscAwsVsAzureArticle() {
 
       <p>Here is a beginner-friendly comparison of the two platforms.</p>
 
-      <div className="overflow-x-auto my-8">
-        <table className="w-full border-collapse text-sm">
-          <thead>
-            <tr className="bg-slate-100">
-              <th className="border border-slate-200 p-3 text-left">
-                Comparison
-              </th>
-              <th className="border border-slate-200 p-3 text-left">AWS</th>
-              <th className="border border-slate-200 p-3 text-left">
-                Microsoft Azure
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border border-slate-200 p-3 font-semibold">
-                Provider
-              </td>
-              <td className="border border-slate-200 p-3">Amazon</td>
-              <td className="border border-slate-200 p-3">Microsoft</td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 p-3 font-semibold">
-                Main platform
-              </td>
-              <td className="border border-slate-200 p-3">
-                Amazon Web Services
-              </td>
-              <td className="border border-slate-200 p-3">Microsoft Azure</td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 p-3 font-semibold">
-                Computing
-              </td>
-              <td className="border border-slate-200 p-3">Amazon EC2</td>
-              <td className="border border-slate-200 p-3">
-                Azure Virtual Machines
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 p-3 font-semibold">
-                Storage
-              </td>
-              <td className="border border-slate-200 p-3">Amazon S3</td>
-              <td className="border border-slate-200 p-3">
-                Azure Blob Storage
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 p-3 font-semibold">
-                Database services
-              </td>
-              <td className="border border-slate-200 p-3">Amazon RDS</td>
-              <td className="border border-slate-200 p-3">
-                Azure SQL Database
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 p-3 font-semibold">
-                Identity management
-              </td>
-              <td className="border border-slate-200 p-3">AWS IAM</td>
-              <td className="border border-slate-200 p-3">
-                Microsoft Entra ID
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 p-3 font-semibold">
-                Learning approach
-              </td>
-              <td className="border border-slate-200 p-3">
-                AWS services and cloud infrastructure
-              </td>
-              <td className="border border-slate-200 p-3">
-                Azure services and Microsoft cloud ecosystem
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
+      <table>
+        <thead>
+          <tr>
+            <th>Your interest</th>
+            <th>Course to explore</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Working with data and statistics</td>
+            <td>Data Science</td>
+          </tr>
+          <tr>
+            <td>Analysing business information</td>
+            <td>Data Analytics</td>
+          </tr>
+          <tr>
+            <td>Learning programming</td>
+            <td>Python Programming</td>
+          </tr>
+          <tr>
+            <td>Building websites and applications</td>
+            <td>Full Stack Development</td>
+          </tr>
+          <tr>
+            <td>Exploring intelligent technologies</td>
+            <td>AI and Machine Learning</td>
+          </tr>
+          <tr>
+            <td>Creating reports and dashboards</td>
+            <td>Power BI and Data Visualisation</td>
+          </tr>
+        </tbody>
+      </table>
       <p>
         Both platforms provide services for common cloud computing requirements.
         The best option depends on the type of work you want to pursue, the

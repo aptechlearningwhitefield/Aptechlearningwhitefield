@@ -51,9 +51,16 @@ export default function BestItCourseAfterBscArticle() {
       <p>
         If you have completed your degree and want to enter the technology
         industry, you may be wondering:{" "}
-        <a href="https://www.aptechwhitefield.com/courses?utm_source=website&utm_medium=blog&utm_campaign=organic">
-          <strong>What is the best IT course after BSc?</strong>
-        </a>
+        <a
+          href="https://www.aptechwhitefield.com/courses?utm_source=website&utm_medium=blog&utm_campaign=organic"
+          style={{
+            color: "#2463eb",
+            fontWeight: 700,
+            textDecoration: "underline",
+          }}
+        >
+          What is the best IT course after BSc?
+        </a>{" "}
         Should you learn Python, Data Science, Data Analytics, Artificial
         Intelligence or software development?
       </p>
@@ -68,8 +75,15 @@ export default function BestItCourseAfterBscArticle() {
 
       <p>
         This guide explains the{" "}
-        <a href="https://www.aptechwhitefield.com/schools-colleges?utm_source=website&utm_medium=backlink&utm_campaign=organic">
-          <strong>best IT course after BSc</strong>
+        <a
+          href="https://www.aptechwhitefield.com/schools-colleges?utm_source=website&utm_medium=backlink&utm_campaign=organic"
+          style={{
+            color: "#2463eb",
+            fontWeight: 700,
+            textDecoration: "underline",
+          }}
+        >
+          best IT course after BSc
         </a>
         , important technical skills, possible career opportunities and how to
         choose a suitable learning programme.
@@ -92,11 +106,52 @@ export default function BestItCourseAfterBscArticle() {
 
       <p>
         Here are some reasons to consider{" "}
-        <a href="https://www.aptechwhitefield.com/courses?utm_source=website&utm_medium=blog&utm_campaign=organic">
-          <strong>IT courses for BSc graduates</strong>
+        <a
+          href="https://www.aptechwhitefield.com/courses?utm_source=website&utm_medium=blog&utm_campaign=organic"
+          style={{
+            color: "#2463eb",
+            fontWeight: 700,
+            textDecoration: "underline",
+          }}
+        >
+          IT courses for BSc graduates
         </a>
         :
       </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Your interest</th>
+            <th>Course to explore</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Working with data and statistics</td>
+            <td>Data Science</td>
+          </tr>
+          <tr>
+            <td>Analysing business information</td>
+            <td>Data Analytics</td>
+          </tr>
+          <tr>
+            <td>Learning programming</td>
+            <td>Python Programming</td>
+          </tr>
+          <tr>
+            <td>Building websites and applications</td>
+            <td>Full Stack Development</td>
+          </tr>
+          <tr>
+            <td>Exploring intelligent technologies</td>
+            <td>AI and Machine Learning</td>
+          </tr>
+          <tr>
+            <td>Creating reports and dashboards</td>
+            <td>Power BI and Data Visualisation</td>
+          </tr>
+        </tbody>
+      </table>
 
       <ul>
         <li>
@@ -315,11 +370,18 @@ export default function BestItCourseAfterBscArticle() {
       </p>
 
       <p>
-        For BSc graduates who want to strengthen their programming knowledge,{" "}
-        <a href="https://www.aptechwhitefield.com/courses/python?utm_source=website&utm_medium=blog&utm_campaign=organic">
-          <strong>python developer salary in bangalore for freshers</strong>
-        </a>{" "}
-        Python can be a useful starting point.
+        For BSc graduates who want to strengthen their programming knowledge{" "}
+        <a
+          href="https://www.aptechwhitefield.com/courses?utm_source=website&utm_medium=blog&utm_campaign=organic"
+          style={{
+            color: "#2463eb",
+            fontWeight: 700,
+            textDecoration: "underline",
+          }}
+        >
+          python developer salary in bangalore for freshers
+        </a>
+        : Python can be a useful starting point.
       </p>
 
       <p>Important beginner topics include:</p>
@@ -433,61 +495,43 @@ export default function BestItCourseAfterBscArticle() {
         However, your interests and learning goals are equally important.
       </p>
 
-      <div className="my-8 overflow-x-auto">
-        <table className="w-full border-collapse text-sm">
-          <thead>
-            <tr className="bg-slate-100">
-              <th scope="col" className="border border-slate-200 p-3 text-left">
-                BSc specialisation
-              </th>
-              <th scope="col" className="border border-slate-200 p-3 text-left">
-                Technology learning paths to explore
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border border-slate-200 p-3">
-                BSc Computer Science
-              </td>
-              <td className="border border-slate-200 p-3">
-                Python, Full Stack Development, Data Science
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 p-3">BSc Mathematics</td>
-              <td className="border border-slate-200 p-3">
-                Data Analytics, Data Science, Python
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 p-3">BSc Statistics</td>
-              <td className="border border-slate-200 p-3">
-                Data Analytics, Data Science, SQL
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 p-3">BSc Physics</td>
-              <td className="border border-slate-200 p-3">
-                Python, Data Analytics, programming
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 p-3">BSc Chemistry</td>
-              <td className="border border-slate-200 p-3">
-                Data Analytics, Python, scientific data handling
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 p-3">Other BSc streams</td>
-              <td className="border border-slate-200 p-3">
-                Computer fundamentals, Excel, Python and beginner-friendly IT
-                courses
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>BSc specialisation</th>
+            <th>Technology learning paths to explore</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>BSc Computer Science</td>
+            <td>Python, Full Stack Development, Data Science</td>
+          </tr>
+          <tr>
+            <td>BSc Mathematics</td>
+            <td>Data Analytics, Data Science, Python</td>
+          </tr>
+          <tr>
+            <td>BSc Statistics</td>
+            <td>Data Analytics, Data Science, SQL</td>
+          </tr>
+          <tr>
+            <td>BSc Physics</td>
+            <td>Python, Data Analytics, programming</td>
+          </tr>
+          <tr>
+            <td>BSc Chemistry</td>
+            <td>Data Analytics, Python, scientific data handling</td>
+          </tr>
+          <tr>
+            <td>Other BSc streams</td>
+            <td>
+              Computer fundamentals, Excel, Python and beginner-friendly IT
+              courses
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
       <p>
         These are suggested learning directions, not fixed eligibility rules.
@@ -502,77 +546,44 @@ export default function BestItCourseAfterBscArticle() {
         practical projects, communication skills and employer requirements.
       </p>
 
-      <div className="my-8 overflow-x-auto">
-        <table className="w-full border-collapse text-sm">
-          <thead>
-            <tr className="bg-slate-100">
-              <th scope="col" className="border border-slate-200 p-3 text-left">
-                Career option
-              </th>
-              <th scope="col" className="border border-slate-200 p-3 text-left">
-                Skills to develop
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border border-slate-200 p-3">
-                Junior Data Analyst
-              </td>
-              <td className="border border-slate-200 p-3">
-                Excel, SQL and Power BI
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 p-3">
-                Python Developer Trainee
-              </td>
-              <td className="border border-slate-200 p-3">
-                Python and programming fundamentals
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 p-3">
-                Junior Web Developer
-              </td>
-              <td className="border border-slate-200 p-3">
-                HTML, CSS and JavaScript
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 p-3">
-                Data Science Trainee
-              </td>
-              <td className="border border-slate-200 p-3">
-                Python, statistics and data analysis
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 p-3">Reporting Analyst</td>
-              <td className="border border-slate-200 p-3">
-                Excel, SQL and data visualisation
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 p-3">
-                Software Developer Trainee
-              </td>
-              <td className="border border-slate-200 p-3">
-                Programming, databases and application development
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 p-3">
-                Business Intelligence Analyst
-              </td>
-              <td className="border border-slate-200 p-3">
-                SQL, Power BI and analytical skills
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
+      <table>
+        <thead>
+          <tr>
+            <th>Career option</th>
+            <th>Skills to develop</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Junior Data Analyst</td>
+            <td>Excel, SQL and Power BI</td>
+          </tr>
+          <tr>
+            <td>Python Developer Trainee</td>
+            <td>Python and programming fundamentals</td>
+          </tr>
+          <tr>
+            <td>Junior Web Developer</td>
+            <td>HTML, CSS and JavaScript</td>
+          </tr>
+          <tr>
+            <td>Data Science Trainee</td>
+            <td>Python, statistics and data analysis</td>
+          </tr>
+          <tr>
+            <td>Reporting Analyst</td>
+            <td>Excel, SQL and data visualisation</td>
+          </tr>
+          <tr>
+            <td>Software Developer Trainee</td>
+            <td>Programming, databases and application development</td>
+          </tr>
+          <tr>
+            <td>Business Intelligence Analyst</td>
+            <td>SQL, Power BI and analytical skills</td>
+          </tr>
+        </tbody>
+      </table>
       <p>
         Before selecting a course, review job descriptions for the roles you are
         interested in. This can help you understand which technical skills and

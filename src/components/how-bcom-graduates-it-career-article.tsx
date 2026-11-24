@@ -1,7 +1,4 @@
-import { Link } from "react-router";
-
-const imageBase =
-  "/assets/blog-images/how-bcom-graduates-it-career";
+const imageBase = "/assets/blog-images/how-bcom-graduates-it-career";
 
 const images = {
   hero: `${imageBase}/bcom-graduate-exploring-it-career.png`,
@@ -62,18 +59,18 @@ export default function HowBcomGraduatesBuildItCareerArticle() {
 
       <h2>Which IT Skills Can BCom Graduates Learn?</h2>
       <p>
-        Commerce graduates can explore accounting software, Advanced Excel,
-        data analytics, Power BI, SQL, Python programming, and introductory
-        data science. Start with skills that connect to your existing knowledge,
-        then build practical experience through exercises and projects.
+        Commerce graduates can explore accounting software, Advanced Excel, data
+        analytics, Power BI, SQL, Python programming, and introductory data
+        science. Start with skills that connect to your existing knowledge, then
+        build practical experience through exercises and projects.
       </p>
 
       <h2>Why Consider Learning IT Skills After BCom?</h2>
       <p>
         Commerce studies introduce business concepts such as financial records,
-        transactions, reporting, and organisational processes. Technology
-        skills can help you understand how these activities are managed using
-        digital tools.
+        transactions, reporting, and organisational processes. Technology skills
+        can help you understand how these activities are managed using digital
+        tools.
       </p>
       <ul>
         <li>
@@ -91,9 +88,8 @@ export default function HowBcomGraduatesBuildItCareerArticle() {
           data handling, and software-supported processes.
         </li>
         <li>
-          <strong>Beginner-friendly starting points:</strong> You can begin
-          with foundational tools and gradually progress to more technical
-          subjects.
+          <strong>Beginner-friendly starting points:</strong> You can begin with
+          foundational tools and gradually progress to more technical subjects.
         </li>
       </ul>
 
@@ -106,10 +102,10 @@ export default function HowBcomGraduatesBuildItCareerArticle() {
       <h3>1. Accounting Software and Advanced Excel</h3>
       <p>
         Accounting software and spreadsheets are useful areas to explore if you
-        enjoy working with financial information, business records, and
-        reports. Learning may include organising financial information,
-        maintaining digital records, using spreadsheet formulas, creating
-        tables, sorting and filtering data, and preparing business summaries.
+        enjoy working with financial information, business records, and reports.
+        Learning may include organising financial information, maintaining
+        digital records, using spreadsheet formulas, creating tables, sorting
+        and filtering data, and preparing business summaries.
       </p>
       <ArticleImage
         src={images.accounting}
@@ -144,7 +140,9 @@ export default function HowBcomGraduatesBuildItCareerArticle() {
               </td>
             </tr>
             <tr>
-              <td className="border border-slate-200 p-3">Typical activities</td>
+              <td className="border border-slate-200 p-3">
+                Typical activities
+              </td>
               <td className="border border-slate-200 p-3">
                 Recording transactions and managing accounts
               </td>
@@ -223,8 +221,8 @@ export default function HowBcomGraduatesBuildItCareerArticle() {
       </p>
       <p>
         Data science generally requires a deeper understanding of analytical and
-        technical concepts than spreadsheet reporting. Build foundational
-        skills before moving to advanced topics.
+        technical concepts than spreadsheet reporting. Build foundational skills
+        before moving to advanced topics.
       </p>
 
       <h2>Can Non-IT Graduates Learn Data Science?</h2>
@@ -316,7 +314,9 @@ export default function HowBcomGraduatesBuildItCareerArticle() {
               <td className="border border-slate-200 p-3">
                 Coding and automation
               </td>
-              <td className="border border-slate-200 p-3">Python programming</td>
+              <td className="border border-slate-200 p-3">
+                Python programming
+              </td>
               <td className="border border-slate-200 p-3">
                 Programming fundamentals
               </td>
@@ -364,8 +364,8 @@ export default function HowBcomGraduatesBuildItCareerArticle() {
         </li>
         <li>
           <strong>Select one learning area.</strong> For example, begin with
-          Advanced Excel for spreadsheet work or Python fundamentals if you
-          want to explore coding.
+          Advanced Excel for spreadsheet work or Python fundamentals if you want
+          to explore coding.
         </li>
         <li>
           <strong>Practise regularly.</strong> Apply concepts by organising
@@ -373,8 +373,8 @@ export default function HowBcomGraduatesBuildItCareerArticle() {
           small Python program.
         </li>
         <li>
-          <strong>Create practical projects.</strong> Keep examples of your
-          work and explain your approach clearly.
+          <strong>Create practical projects.</strong> Keep examples of your work
+          and explain your approach clearly.
         </li>
         <li>
           <strong>Review your next goal.</strong> Once you understand the
@@ -405,22 +405,6 @@ export default function HowBcomGraduatesBuildItCareerArticle() {
         current syllabus and learning details directly with the centre.
       </p>
 
-      <div className="my-10 rounded-xl border border-primary/20 bg-primary/5 p-6 text-center">
-        <h2 className="mb-3 text-2xl font-bold text-slate-900">
-          Ready to explore technology learning after BCom?
-        </h2>
-        <p className="mb-5">
-          Review available courses and discuss which learning pathway may match
-          your interests.
-        </p>
-        <Link
-          to="/courses"
-          className="inline-flex items-center rounded-lg bg-primary px-6 py-3 font-semibold text-white hover:bg-blue-700"
-        >
-          Explore available courses
-        </Link>
-      </div>
-
       <h2>Frequently Asked Questions</h2>
       <h3>Which IT skills can a BCom graduate learn?</h3>
       <p>
@@ -431,10 +415,10 @@ export default function HowBcomGraduatesBuildItCareerArticle() {
 
       <h3>What is the best IT course after BCom?</h3>
       <p>
-        There is no single course that suits every graduate. Accounting
-        software may suit learners interested in financial records, while data
-        analytics, Power BI, or Python may suit those interested in reporting,
-        data, or programming.
+        There is no single course that suits every graduate. Accounting software
+        may suit learners interested in financial records, while data analytics,
+        Power BI, or Python may suit those interested in reporting, data, or
+        programming.
       </p>
 
       <h3>Can non-IT graduates learn data science?</h3>
