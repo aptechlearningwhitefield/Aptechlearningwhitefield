@@ -65,14 +65,20 @@ export const courseSeoKeywords: Record<string, string> = {
 };
 
 export const blogSeoKeywords: Record<string, string> = {
+  "beyond-accounting-bcom-it-career-options":
+    "it career options for bcom graduates, beyond accounting career, bcom to it career, tally vs advanced excel, data analytics course after bcom, python course after bcom, software testing course, bcom graduate jobs, it courses in whitefield",
+  "which-it-course-has-better-job-opportunities-in-bangalore":
+    "which it course has better job opportunities, it course with better jobs in bangalore, short term it courses with placement, full stack developer course, data analytics course, cloud computing course, cybersecurity course, it fresher jobs in bangalore, it courses in whitefield",
   "starting-it-career-bangalore-skills-course-paths":
     "which course has more job opportunities in bangalore, skills needed to get it job in bangalore, short term computer courses with job placement, companies hiring freshers near itpl, python programming, sql, data analytics, power bi, full stack development, cloud computing, cybersecurity, ai and machine learning, practical projects, entry-level it roles",
   "best-course-for-career-switch-to-it":
     "best course for career switch to it, short term computer courses with job placement, career change to it, it courses for non-it graduates, data analytics for career switch, python programming for beginners, full stack development course, cybersecurity course, technology skills for beginners",
+  "best-course-career-switch-to-it":
+    "best course for career switch to it, short term computer courses with job placement, non-it to it career transition, technology skills, programming fundamentals, practical it projects, career guidance, technical training",
   "best-it-course-after-bsc":
     "best it course after bsc, it courses for bsc graduates, computer courses after bsc, career options after bsc, bsc to it career, technology skills, data science, data analytics, python programming, software development, sql, power bi",
   "arts-to-it-how-ba-graduates-can-build-a-technology-career":
-    "best it course after ba, arts graduate it career, ba graduate technology career, data analytics course after ba, python course for arts graduates, web development course after ba",
+    "best it course after ba, best course for arts students after graduation, it courses for arts graduates, arts to it career, technology courses after ba, computer skills for graduates, digital skills, data analytics, programming for beginners, python, web development",
   "best-it-course-after-bcom-career-guide":
     "best it course after bcom, tally vs advanced excel for accounting jobs, accounting software course, data analytics course after bcom, python course after bcom, it career options after bcom",
   "it-career-options-after-graduation":
@@ -307,6 +313,28 @@ export const courseSeoMetadata: Record<string, CourseSEOMetadata> = {
 };
 
 export const blogSeoMetadata: Record<string, CourseSEOMetadata> = {
+  "beyond-accounting-bcom-it-career-options": {
+    title: "Beyond Accounting: IT Career Options for BCom Graduates",
+    description:
+      "Explore IT career options for BCom graduates, including data analytics, Tally, Advanced Excel, software testing, Python, AI and business analysis.",
+    ogTitle: "BCom to IT: Career Options Beyond Accounting",
+    ogDescription:
+      "Discover practical IT career paths for commerce graduates, compare Tally and Advanced Excel, and learn how to build a project portfolio.",
+    twitterTitle: "Beyond Accounting: IT Careers for BCom Graduates",
+    twitterDescription:
+      "Compare data analytics, digital accounting, software testing and Python learning paths for a BCom graduate IT career.",
+  },
+  "which-it-course-has-better-job-opportunities-in-bangalore": {
+    title: "Which IT Course Has Better Job Opportunities in Bangalore?",
+    description:
+      "Compare full stack development, data analytics, cloud computing and cybersecurity courses, practical projects and interview preparation for Bangalore IT careers.",
+    ogTitle: "Which IT Course Has Better Job Opportunities in Bangalore?",
+    ogDescription:
+      "Compare role-specific IT learning paths, project requirements and course-selection factors before choosing your next technology course.",
+    twitterTitle: "Compare IT Courses and Job Opportunities in Bangalore",
+    twitterDescription:
+      "Explore full stack development, data analytics, cloud computing and cybersecurity through a practical fresher career guide.",
+  },
   "starting-it-career-bangalore-skills-course-paths": {
     title: "Starting an IT Career in Bangalore: Skills & Course Guide",
     description:
@@ -329,6 +357,17 @@ export const blogSeoMetadata: Record<string, CourseSEOMetadata> = {
     twitterDescription:
       "Learn how to choose an IT course, build technical skills and plan a career transition from a non-technical background.",
   },
+  "best-course-career-switch-to-it": {
+    title: "Top IT Courses to Build a Successful Career After a Career Switch",
+    description:
+      "Explore IT career-change courses, compare learning paths and understand the skills, projects and placement support to consider before choosing training.",
+    ogTitle: "Top IT Courses to Build a Successful Career After a Career Switch",
+    ogDescription:
+      "A career change can begin with one practical decision. Explore technology learning paths, essential preparation and ways to build experience.",
+    twitterTitle: "Top IT Courses to Build a Successful Career After a Career Switch",
+    twitterDescription:
+      "Which IT path fits your experience? Compare options, plan your learning and prepare for a career transition with practical projects.",
+  },
   "best-it-course-after-bsc": {
     title: "Best IT Course After BSc: Skills & Career Options",
     description:
@@ -341,9 +380,9 @@ export const blogSeoMetadata: Record<string, CourseSEOMetadata> = {
       "Explore IT course options after BSc and choose a technology learning path that fits your interests and career goals.",
   },
   "arts-to-it-how-ba-graduates-can-build-a-technology-career": {
-    title: "Arts to IT: How BA Graduates Can Build a Technology Career",
+    title: "Best IT Course After BA: Skills & Career Options",
     description:
-      "Explore IT course options after BA, including computer fundamentals, data analytics, Python, web development and digital marketing for arts graduates.",
+      "Explore the best IT course after BA. Discover beginner-friendly technology skills, data analytics, Python and career paths for Arts graduates.",
     ogTitle: "From Arts to IT: A Practical Path for BA Graduates",
     ogDescription:
       "Discover technology learning options that can fit the communication, research and critical-thinking strengths of BA graduates.",

@@ -1,107 +1,154 @@
-import { Helmet } from '@dr.pogodin/react-helmet';
+import { Helmet } from "@dr.pogodin/react-helmet";
 import { Link } from "react-router";
-import { motion } from 'motion/react';
-import { BookOpen, Clock, ArrowRight, Tag } from 'lucide-react';
-import { SITE_URL as site } from '../../lib/site-url';
-import { blog_posts } from 'virtual:content';
-import { blogListingSeoKeywords } from '../../lib/seo-metadata';
+import { motion } from "motion/react";
+import { BookOpen, Clock, ArrowRight, Tag } from "lucide-react";
+import { SITE_URL as site } from "../../lib/site-url";
+import { blog_posts } from "virtual:content";
+import { blogListingSeoKeywords } from "../../lib/seo-metadata";
 const categoryColors: Record<string, string> = {
-  'AI & Machine Learning': 'bg-blue-50 text-blue-700',
-  'Data Science': 'bg-purple-50 text-purple-700',
-  'Python': 'bg-green-50 text-green-700',
-  'Generative AI': 'bg-orange-50 text-orange-700',
-  'Career Guidance': 'bg-indigo-50 text-indigo-700'
+  "AI & Machine Learning": "bg-blue-50 text-blue-700",
+  "Data Science": "bg-purple-50 text-purple-700",
+  Python: "bg-green-50 text-green-700",
+  "Generative AI": "bg-orange-50 text-orange-700",
+  "Career Guidance": "bg-indigo-50 text-indigo-700",
 };
 const blogCoverImages: Record<string, string> = {
-  'starting-it-career-bangalore-skills-course-paths':
-    '/assets/blog-images/starting-it-career-bangalore-skills-course-paths/it-career-pathways-bangalore-hero.png',
-  'best-course-for-career-switch-to-it':
-    '/assets/blog-images/best-course-for-career-switch-to-it/career-change-to-it-beginners-guide.png',
-  'arts-to-it-how-ba-graduates-can-build-a-technology-career':
-    '/assets/blog-images/arts-to-it-ba-graduates/best-it-course-after-ba-arts-graduates.webp',
-  'best-it-course-after-bcom-career-guide':
-    '/assets/blog-images/best-it-course-after-bcom/best-it-course-after-bcom-career-guide.webp',
-  'best-it-course-after-bsc':
-    '/assets/blog-images/best-it-course-after-bsc/best-it-course-after-bsc-guide.webp',
-  'it-career-options-after-graduation':
-    '/assets/blog-images/it-career-options-after-graduation/it-career-options-after-graduation-hero.webp',
-  'choosing-technology-skills-after-bcom':
-    '/assets/blog-images/how-bcom-graduates-it-career/technology-skills-after-bcom-graduate-guide.png',
-  'ai-machine-learning-career-2026':
-    '/assets/blog-images/ai-machine-learning-career-2026/ai-career-learner.png',
-  'data-science-vs-data-analytics':
-    '/assets/blog-images/data-science-vs-data-analytics/data-science-vs-data-analytics-career.png',
-  'python-for-beginners-whitefield':
-    '/assets/blog-images/python-vs-java/python-vs-java-img1.png',
-  'weekend-computer-classes-whitefield-bangalore':
-    '/assets/blog-images/weekend-computer-classes-whitefield/weekend-computer-classes-image1.png',
-  'best-it-course-after-bcom':
-    '/assets/blog-images/best-it-course-after-bcom/best-it-course-after-bcom-career-guide.webp',
-  'how-bcom-graduates-can-build-it-career':
-    '/assets/blog-images/how-bcom-graduates-it-career/bcom-graduate-exploring-it-career.png',
-  'which-computer-course-is-best-after-12th':
-    '/assets/blog-images/computer-course-after-12th/computer-course-after-12th-career-guide.webp'
+  "beyond-accounting-bcom-it-career-options":
+    "/assets/blog-images/beyond-accounting-bcom-it-career/bcom-graduate-exploring-it-career-paths.png",
+  "which-it-course-has-better-job-opportunities-in-bangalore":
+    "/assets/blog-images/which-it-course-has-better-job-opportunities/it-career-learning-paths-bangalore.png",
+  "starting-it-career-bangalore-skills-course-paths":
+    "/assets/blog-images/starting-it-career-bangalore-skills-course-paths/it-career-pathways-bangalore-hero.png",
+  "best-course-for-career-switch-to-it":
+    "/assets/blog-images/best-course-for-career-switch-to-it/career-change-to-it-beginners-guide.png",
+  "best-course-career-switch-to-it":
+    "/assets/blog-images/it-career-switch-guide/non-it-to-it-career-transition-guide.png",
+  "arts-to-it-how-ba-graduates-can-build-a-technology-career":
+    "/assets/blog-images/arts-to-it-ba-graduates/best-it-course-after-ba-arts-graduates.png",
+  "best-it-course-after-bcom-career-guide":
+    "/assets/blog-images/best-it-course-after-bcom/best-it-course-after-bcom-career-guide.webp",
+  "best-it-course-after-bsc":
+    "/assets/blog-images/best-it-course-after-bsc/best-it-course-after-bsc-guide.webp",
+  "it-career-options-after-graduation":
+    "/assets/blog-images/it-career-options-after-graduation/it-career-options-after-graduation-hero.webp",
+  "choosing-technology-skills-after-bcom":
+    "/assets/blog-images/how-bcom-graduates-it-career/technology-skills-after-bcom-graduate-guide.png",
+  "ai-machine-learning-career-2026":
+    "/assets/blog-images/ai-machine-learning-career-2026/ai-career-learner.png",
+  "data-science-vs-data-analytics":
+    "/assets/blog-images/data-science-vs-data-analytics/data-science-vs-data-analytics-career.png",
+  "python-for-beginners-whitefield":
+    "/assets/blog-images/python-vs-java/python-vs-java-img1.png",
+  "weekend-computer-classes-whitefield-bangalore":
+    "/assets/blog-images/weekend-computer-classes-whitefield/weekend-computer-classes-image1.png",
+  "best-it-course-after-bcom":
+    "/assets/blog-images/best-it-course-after-bcom/best-it-course-after-bcom-career-guide.webp",
+  "how-bcom-graduates-can-build-it-career":
+    "/assets/blog-images/how-bcom-graduates-it-career/bcom-graduate-exploring-it-career.png",
+  "which-computer-course-is-best-after-12th":
+    "/assets/blog-images/computer-course-after-12th/computer-course-after-12th-career-guide.webp",
 };
 const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Blog',
-  '@id': `${site}/blogs#blog`,
-  name: 'Aptech Learning Whitefield Blog',
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "@id": `${site}/blogs#blog`,
+  name: "Aptech Learning Whitefield Blog",
   url: `${site}/blogs`,
-  description: 'IT career guides and tech tutorials from Aptech Learning Whitefield, Bangalore',
+  description:
+    "IT career guides and tech tutorials from Aptech Learning Whitefield, Bangalore",
   publisher: {
-    '@id': `${site}/#organization`
-  }
+    "@id": `${site}/#organization`,
+  },
 };
 export default function BlogPage() {
-  return <>
+  return (
+    <>
       <Helmet>
-        <title>IT Career Guides and Course Advice in Bangalore | Aptech Blog</title>
-        <meta name="description" content="Practical guides from Aptech Learning Whitefield on IT courses, technology skills, career planning and learning options for students and professionals in Bangalore." />
+        <title>
+          IT Career Guides and Course Advice in Bangalore | Aptech Blog
+        </title>
+        <meta
+          name="description"
+          content="Practical guides from Aptech Learning Whitefield on IT courses, technology skills, career planning and learning options for students and professionals in Bangalore."
+        />
         <meta name="keywords" content={blogListingSeoKeywords} />
         <link rel="canonical" href={`${site}/blogs`} />
-        <meta property="og:title" content="Honest IT Career Advice for Bangalore Learners | Aptech Blog" />
-        <meta property="og:description" content="No hype, no jargon. Practical guides on choosing a course, switching careers, salaries and what employers really look for, written by our own Whitefield team." />
+        <meta
+          property="og:title"
+          content="Honest IT Career Advice for Bangalore Learners | Aptech Blog"
+        />
+        <meta
+          property="og:description"
+          content="No hype, no jargon. Practical guides on choosing a course, switching careers, salaries and what employers really look for, written by our own Whitefield team."
+        />
         <meta property="og:url" content={`${site}/blogs`} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${site}/assets/cheekira-logo.jpg`} />
+        <meta
+          property="og:image"
+          content={`${site}/assets/cheekira-logo.jpg`}
+        />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content={`${site}/assets/cheekira-logo.jpg`} />
-        <meta name="twitter:title" content="Online or Offline Classes? Answers for Bangalore Learners" />
-        <meta name="twitter:description" content="Torn between online courses and classroom learning? Unsure which skill pays off? Read short, useful guides from Aptech Whitefield before you make your move." />
+        <meta
+          name="twitter:image"
+          content={`${site}/assets/cheekira-logo.jpg`}
+        />
+        <meta
+          name="twitter:title"
+          content="Online or Offline Classes? Answers for Bangalore Learners"
+        />
+        <meta
+          name="twitter:description"
+          content="Torn between online courses and classroom learning? Unsure which skill pays off? Read short, useful guides from Aptech Whitefield before you make your move."
+        />
         <meta name="robots" content="index, follow" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
       <main>
         {/* ── Hero ─────────────────────────────────────────────────────────── */}
-        <section className="relative overflow-hidden py-14 md:py-20" style={{
-        background: 'linear-gradient(135deg, #0A1628 0%, #0F2347 55%, #1a3a6b 100%)'
-      }} aria-label="Blog hero">
-          <div className="absolute inset-0 opacity-5 pointer-events-none" style={{
-          backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)',
-          backgroundSize: '40px 40px'
-        }} />
+        <section
+          className="relative overflow-hidden py-14 md:py-20"
+          style={{
+            background:
+              "linear-gradient(135deg, #0A1628 0%, #0F2347 55%, #1a3a6b 100%)",
+          }}
+          aria-label="Blog hero"
+        >
+          <div
+            className="absolute inset-0 opacity-5 pointer-events-none"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
+              backgroundSize: "40px 40px",
+            }}
+          />
           <div className="container mx-auto px-4 relative z-10 text-center">
-            <motion.div initial={{
-            opacity: 0,
-            y: 20
-          }} animate={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.5,
-            ease: 'easeOut' as const
-          }}>
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 20,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 0.5,
+                ease: "easeOut" as const,
+              }}
+            >
               <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-5">
                 <BookOpen size={14} className="text-blue-300" />
-                <span className="text-white/90 text-xs font-medium">Blog &amp; Resources</span>
+                <span className="text-white/90 text-xs font-medium">
+                  Blog &amp; Resources
+                </span>
               </div>
               <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
                 IT Career Insights &amp; Tech Guides
               </h1>
               <p className="text-blue-200 text-lg max-w-2xl mx-auto">
-                Expert articles on AI, Data Science, Python, and IT careers — written by Aptech Learning Whitefield's training team.
+                Expert articles on AI, Data Science, Python, and IT careers —
+                written by Aptech Learning Whitefield's training team.
               </p>
             </motion.div>
           </div>
@@ -110,23 +157,34 @@ export default function BlogPage() {
         {/* ── Featured Articles ─────────────────────────────────────────────── */}
         <section className="py-14 bg-white" aria-labelledby="featured-heading">
           <div className="container mx-auto px-4">
-            <h2 id="featured-heading" className="text-2xl font-extrabold text-slate-900 mb-8">
+            <h2
+              id="featured-heading"
+              className="text-2xl font-extrabold text-slate-900 mb-8"
+            >
               Featured Articles
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {blog_posts.map((post, i) => <motion.article key={post.id} initial={{
-              opacity: 0,
-              y: 20
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} viewport={{
-              once: true
-            }} transition={{
-              duration: 0.4,
-              delay: i % 3 * 0.08,
-              ease: 'easeOut' as const
-            }} className={`bg-[#F8FAFC] border border-slate-100 rounded-2xl overflow-hidden hover:shadow-md transition-shadow group ${!post.featured ? 'hidden' : ''}`}>
+              {blog_posts.map((post, i) => (
+                <motion.article
+                  key={post.id}
+                  initial={{
+                    opacity: 0,
+                    y: 20,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  viewport={{
+                    once: true,
+                  }}
+                  transition={{
+                    duration: 0.4,
+                    delay: (i % 3) * 0.08,
+                    ease: "easeOut" as const,
+                  }}
+                  className={`bg-[#F8FAFC] border border-slate-100 rounded-2xl overflow-hidden hover:shadow-md transition-shadow group ${!post.featured ? "hidden" : ""}`}
+                >
                   {blogCoverImages[post.slug] ? (
                     <img
                       src={blogCoverImages[post.slug]}
@@ -142,7 +200,9 @@ export default function BlogPage() {
                     </div>
                   )}
                   <div className="p-6">
-                    <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${categoryColors[post.category] ?? 'bg-slate-100 text-slate-600'}`}>
+                    <span
+                      className={`text-xs font-semibold px-2.5 py-1 rounded-full ${categoryColors[post.category] ?? "bg-slate-100 text-slate-600"}`}
+                    >
                       {post.category}
                     </span>
                     <h3 className="font-bold text-slate-900 mt-3 mb-2 leading-snug group-hover:text-primary transition-colors">
@@ -156,36 +216,54 @@ export default function BlogPage() {
                         <Clock size={12} />
                         {post.readTime}
                       </span>
-                      <Link to={`/blogs/${post.slug}`} className="text-primary text-xs font-semibold flex items-center gap-1 hover:gap-2 transition-all">
+                      <Link
+                        to={`/blogs/${post.slug}`}
+                        className="text-primary text-xs font-semibold flex items-center gap-1 hover:gap-2 transition-all"
+                      >
                         Read More <ArrowRight size={13} />
                       </Link>
                     </div>
                   </div>
-                </motion.article>)}
+                </motion.article>
+              ))}
             </div>
           </div>
         </section>
 
         {/* ── More Articles ─────────────────────────────────────────────────── */}
-        <section className="py-14 bg-[#F8FAFC]" aria-labelledby="all-posts-heading">
+        <section
+          className="py-14 bg-[#F8FAFC]"
+          aria-labelledby="all-posts-heading"
+        >
           <div className="container mx-auto px-4">
-            <h2 id="all-posts-heading" className="text-2xl font-extrabold text-slate-900 mb-8">
+            <h2
+              id="all-posts-heading"
+              className="text-2xl font-extrabold text-slate-900 mb-8"
+            >
               More Articles
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              {blog_posts.map((post, i) => <motion.article key={post.id} initial={{
-              opacity: 0,
-              y: 16
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} viewport={{
-              once: true
-            }} transition={{
-              duration: 0.35,
-              delay: i % 2 * 0.07,
-              ease: 'easeOut' as const
-            }} className={`bg-white border border-slate-100 rounded-2xl p-6 hover:shadow-md transition-shadow group flex gap-5 ${post.featured ? 'hidden' : ''}`}>
+              {blog_posts.map((post, i) => (
+                <motion.article
+                  key={post.id}
+                  initial={{
+                    opacity: 0,
+                    y: 16,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  viewport={{
+                    once: true,
+                  }}
+                  transition={{
+                    duration: 0.35,
+                    delay: (i % 2) * 0.07,
+                    ease: "easeOut" as const,
+                  }}
+                  className={`bg-white border border-slate-100 rounded-2xl p-6 hover:shadow-md transition-shadow group flex gap-5 ${post.featured ? "hidden" : ""}`}
+                >
                   {blogCoverImages[post.slug] ? (
                     <img
                       src={blogCoverImages[post.slug]}
@@ -201,7 +279,9 @@ export default function BlogPage() {
                     </div>
                   )}
                   <div className="flex-1 min-w-0">
-                    <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${categoryColors[post.category] ?? 'bg-slate-100 text-slate-600'}`}>
+                    <span
+                      className={`text-xs font-semibold px-2 py-0.5 rounded-full ${categoryColors[post.category] ?? "bg-slate-100 text-slate-600"}`}
+                    >
                       {post.category}
                     </span>
                     <h3 className="font-bold text-slate-900 mt-2 mb-1 leading-snug group-hover:text-primary transition-colors text-sm">
@@ -215,12 +295,16 @@ export default function BlogPage() {
                         <Clock size={11} />
                         {post.readTime}
                       </span>
-                      <Link to={`/blogs/${post.slug}`} className="text-primary text-xs font-semibold flex items-center gap-1 hover:gap-2 transition-all">
+                      <Link
+                        to={`/blogs/${post.slug}`}
+                        className="text-primary text-xs font-semibold flex items-center gap-1 hover:gap-2 transition-all"
+                      >
                         Read <ArrowRight size={12} />
                       </Link>
                     </div>
                   </div>
-                </motion.article>)}
+                </motion.article>
+              ))}
             </div>
           </div>
         </section>
@@ -228,15 +312,25 @@ export default function BlogPage() {
         {/* ── Explore by Topic ──────────────────────────────────────────────── */}
         <section className="py-14 bg-white" aria-labelledby="topics-heading">
           <div className="container mx-auto px-4 text-center">
-            <h2 id="topics-heading" className="text-2xl font-extrabold text-slate-900 mb-3">
+            <h2
+              id="topics-heading"
+              className="text-2xl font-extrabold text-slate-900 mb-3"
+            >
               Explore by Topic
             </h2>
-            <p className="text-slate-500 mb-8">Browse articles by the technology you want to learn.</p>
+            <p className="text-slate-500 mb-8">
+              Browse articles by the technology you want to learn.
+            </p>
             <div className="flex flex-wrap justify-center gap-3">
-              {Object.entries(categoryColors).map(([cat, cls]) => <span key={cat} className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold border border-transparent ${cls}`}>
+              {Object.entries(categoryColors).map(([cat, cls]) => (
+                <span
+                  key={cat}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold border border-transparent ${cls}`}
+                >
                   <Tag size={13} />
                   {cat}
-                </span>)}
+                </span>
+              ))}
             </div>
           </div>
         </section>
@@ -248,18 +342,26 @@ export default function BlogPage() {
               Ready to Start Your IT Career?
             </h2>
             <p className="text-slate-500 mb-8 max-w-xl mx-auto">
-              Reading is just the start. Take the next step with hands-on training at Aptech Learning Whitefield.
+              Reading is just the start. Take the next step with hands-on
+              training at Aptech Learning Whitefield.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/courses" className="inline-flex items-center gap-2 bg-primary text-white font-bold px-8 py-3.5 rounded-xl hover:bg-blue-700 transition-all hover:shadow-lg hover:shadow-blue-200">
+              <Link
+                to="/courses"
+                className="inline-flex items-center gap-2 bg-primary text-white font-bold px-8 py-3.5 rounded-xl hover:bg-blue-700 transition-all hover:shadow-lg hover:shadow-blue-200"
+              >
                 <ArrowRight size={16} /> Explore Courses
               </Link>
-              <Link to="/contact" className="inline-flex items-center gap-2 border border-slate-200 text-slate-700 font-semibold px-8 py-3.5 rounded-xl hover:bg-slate-50 transition-colors">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 border border-slate-200 text-slate-700 font-semibold px-8 py-3.5 rounded-xl hover:bg-slate-50 transition-colors"
+              >
                 Book Free Counselling
               </Link>
             </div>
           </div>
         </section>
       </main>
-    </>;
+    </>
+  );
 }

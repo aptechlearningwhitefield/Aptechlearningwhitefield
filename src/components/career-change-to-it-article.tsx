@@ -3,11 +3,11 @@ const images = {
   dataAnalytics:
     "/assets/blog-images/best-course-for-career-switch-to-it/data-analytics-career-switch.png",
   python:
-    "/assets/blog-images/best-course-for-career-switch-to-it/python-programming-career-transition.webp",
+    "/assets/blog-images/best-course-for-career-switch-to-it/python-programming-career-transition.png",
   fullStack:
-    "/assets/blog-images/best-course-for-career-switch-to-it/full-stack-development-career-change.webp",
+    "/assets/blog-images/best-course-for-career-switch-to-it/full-stack-development-career-change.png",
   roadmap:
-    "/assets/blog-images/best-course-for-career-switch-to-it/it-career-switch-learning-roadmap.webp",
+    "/assets/blog-images/best-course-for-career-switch-to-it/it-career-switch-learning-roadmap.png",
 };
 
 function ArticleImage({
@@ -133,69 +133,40 @@ export default function CareerChangeToItArticle() {
         pursue. Here are some learning paths worth exploring:
       </p>
 
-      <div className="my-8 overflow-x-auto">
-        <table className="w-full border-collapse text-sm">
-          <thead>
-            <tr className="bg-slate-100">
-              <th scope="col" className="border border-slate-200 p-3 text-left">
-                Your interest
-              </th>
-              <th scope="col" className="border border-slate-200 p-3 text-left">
-                Course or skill area
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border border-slate-200 p-3">
-                Working with data and reports
-              </td>
-              <td className="border border-slate-200 p-3">Data Analytics</td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 p-3">
-                Programming and coding
-              </td>
-              <td className="border border-slate-200 p-3">
-                Python Programming
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 p-3">
-                Building websites and applications
-              </td>
-              <td className="border border-slate-200 p-3">
-                Full Stack Development
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 p-3">
-                Understanding intelligent technologies
-              </td>
-              <td className="border border-slate-200 p-3">
-                AI and Machine Learning
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 p-3">
-                Managing and analysing business information
-              </td>
-              <td className="border border-slate-200 p-3">
-                Excel, SQL and Power BI
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 p-3">
-                Protecting computer systems
-              </td>
-              <td className="border border-slate-200 p-3">
-                Cybersecurity fundamentals
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
+      <table>
+        <thead>
+          <tr>
+            <th>Your interest</th>
+            <th>Course or skill area</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Working with data and reports</td>
+            <td>Data Analytics</td>
+          </tr>
+          <tr>
+            <td>Programming and coding</td>
+            <td>Python Programming</td>
+          </tr>
+          <tr>
+            <td>Building websites and applications</td>
+            <td>Full Stack Development</td>
+          </tr>
+          <tr>
+            <td>Understanding intelligent technologies</td>
+            <td>AI and Machine Learning</td>
+          </tr>
+          <tr>
+            <td>Managing and analysing business information</td>
+            <td>Excel, SQL and Power BI</td>
+          </tr>
+          <tr>
+            <td>Protecting computer systems</td>
+            <td>Cybersecurity fundamentals</td>
+          </tr>
+        </tbody>
+      </table>
       <p>
         If you are new to technology, begin with computer fundamentals and basic
         digital skills. You can then progress towards a specialised programme
@@ -432,75 +403,42 @@ export default function CareerChangeToItArticle() {
         actually provided.
       </p>
 
-      <div className="my-8 overflow-x-auto">
-        <table className="w-full border-collapse text-sm">
-          <thead>
-            <tr className="bg-slate-100">
-              <th scope="col" className="border border-slate-200 p-3 text-left">
-                Factor
-              </th>
-              <th scope="col" className="border border-slate-200 p-3 text-left">
-                Short-term course
-              </th>
-              <th scope="col" className="border border-slate-200 p-3 text-left">
-                Longer specialised programme
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border border-slate-200 p-3">Learning focus</td>
-              <td className="border border-slate-200 p-3">
-                Specific tools or skills
-              </td>
-              <td className="border border-slate-200 p-3">
-                Broader technical knowledge
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 p-3">Duration</td>
-              <td className="border border-slate-200 p-3">
-                Usually more focused
-              </td>
-              <td className="border border-slate-200 p-3">
-                May require more learning time
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 p-3">Suitable for</td>
-              <td className="border border-slate-200 p-3">
-                Learners targeting a specific skill
-              </td>
-              <td className="border border-slate-200 p-3">
-                Learners building a wider technical foundation
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 p-3">
-                Practical learning
-              </td>
-              <td className="border border-slate-200 p-3">
-                Depends on the syllabus
-              </td>
-              <td className="border border-slate-200 p-3">
-                May include multiple projects and modules
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-slate-200 p-3">
-                Career preparation
-              </td>
-              <td className="border border-slate-200 p-3">
-                Depends on included support
-              </td>
-              <td className="border border-slate-200 p-3">
-                Depends on the programme and institute
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
+      <table>
+        <thead>
+          <tr>
+            <th>Factor</th>
+            <th>Short-term course</th>
+            <th>Longer specialised programme</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Learning focus</td>
+            <td>Specific tools or skills</td>
+            <td>Broader technical knowledge</td>
+          </tr>
+          <tr>
+            <td>Duration</td>
+            <td>Usually more focused</td>
+            <td>May require more learning time</td>
+          </tr>
+          <tr>
+            <td>Suitable for</td>
+            <td>Learners targeting a specific skill</td>
+            <td>Learners building a wider technical foundation</td>
+          </tr>
+          <tr>
+            <td>Practical learning</td>
+            <td>Depends on the syllabus</td>
+            <td>May include multiple projects and modules</td>
+          </tr>
+          <tr>
+            <td>Career preparation</td>
+            <td>Depends on included support</td>
+            <td>Depends on the programme and institute</td>
+          </tr>
+        </tbody>
+      </table>
       <p>
         Before enrolling, ask whether the institute provides resume preparation,
         interview guidance, job referrals or placement assistance. These
